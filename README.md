@@ -101,11 +101,3 @@ A lesson.tex file contains
 \header{'header type'}{'header number'}{'header name'}{'date'}
 ...
 ```
-
-I have a lot of custom environments. Here are all of them:
-
-<object data="environments.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="environments.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="environments.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
