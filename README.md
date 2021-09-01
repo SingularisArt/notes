@@ -60,6 +60,7 @@ Contents of `info.yaml`
 title: 'Honors Linear Algebra'
 short: 'HS LA'
 url: 'https://'
+grade: '100%'
 ```
 
 Contents of `master.tex`:
