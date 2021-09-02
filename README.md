@@ -4,7 +4,11 @@
 
 ```
 ~/Documents/notes/.
+|
 ├── Grade-9
+│   ├── semester-1
+│   └── semester-2
+├── Grade-10
 │   ├── semester-1
 │   ├── semester-2
 │   │   ├── hs-algebra-2
@@ -37,9 +41,6 @@
 │   │   │   │   │   └── ...
 │   │   │   ├── note-taking-class.cls
 │   │   │   └── preamble.tex
-├── Grade-10
-│   ├── semester-1
-│   └── semester-2
 ├── Grade-11
 │   ├── semester-1
 │   └── semester-2
@@ -49,7 +50,7 @@
 ├── current-course
 ```
 
-`current-course` is a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) that points to one of the classes in the current grade/current semester. For example, if I am in grade 9 and semester 2 and I am working on math, it points me to [honors linear algebra 2](Grade-9/semester-2/hs-algebra-2). I use scripts to help me maintain all of my notes, which you can find them [here](https://github.com/SingularisArt/Singularis/tree/master/local/scripts).
+`current-course` is a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) that points to one of the classes in the current grade/current semester. For example, if I am in grade 9 and semester 2 and I am working on math, it points me to [honors algebra 2](Grade-10/semester-2/hs-algebra-2). I use scripts to help me maintain all of my notes, which you can find them [here](https://github.com/SingularisArt/Singularis/tree/master/local/scripts).
 
 The `note-taking-class.cls` file is a class file that I use when taking notes.
 
