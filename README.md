@@ -68,7 +68,7 @@ Contents of `master.tex`:
 ```tex
 \documentclass[a4paper,11pt,openany]{tuftebook}
 
-\input{../../preamble}
+\input{../preamble}
 
 \newcommand\theTitle{'TITLE'}
 \newcommand\theauthor{'AUTHOR'}
