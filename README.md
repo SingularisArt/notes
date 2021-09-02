@@ -86,7 +86,7 @@ Contents of `master.tex`:
     \renewcommand{\thepage}{Page: \roman{page}}
     
     \setcounter{page}{1}
-    \setcounter{chapter}{1}
+    \setcounter{chapter}{0}
     
     \input{copyright.tex}
     \input{preface.tex}
@@ -98,7 +98,7 @@ Contents of `master.tex`:
     \renewcommand{\thepage}{Page: \arabic{page}}
     
     \setcounter{page}{1}
-    \setcounter{chapter}{1}
+    \setcounter{chapter}{0}
     
     \input{unit-1/lesson-1}
     ...
