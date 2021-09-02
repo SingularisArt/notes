@@ -66,21 +66,47 @@ grade: '100%'
 
 Contents of `master.tex`:
 ```tex
-\documentclass[]{note-taking-class}
-\input{../../../preamble.tex}
-...
-\title{Agebra}
-\date{August 30, 2021}
+\documentclass[a4paper,11pt,openany]{tuftebook}
+
+\input{preamble}
+
+\newcommand\theTitle{'TITLE'}
+\newcommand\theauthor{'AUTHOR'}
+\newcommand\thedate{'DATE'}
+
+\title{\theTitle}
+\author{\theauthor}
+\date{\thedate}
 
 \begin{document}
+
     \maketitle
-    \tableofcontents
     
-    % start lesson
-    \input{unit-1/lesson-1.tex}
+    \renewcommand{\thepage}{Page: \roman{page}}
+    \setcounter{page}{1}
+    \pagestyle{plain}
+    
+    \input{copyright.tex}
+    \input{preface.tex}
+    \input{summary.tex}
+    
+    \tableofcontents
+
+    \pagestyle{fancy}
+    \renewcommand{\thepage}{Page: \arabic{page}}
+    \setcounter{page}{1}
+    
+    \input{unit-1/lesson-1}
     ...
-    \input{unit-1/lesson-35.tex}
-    % end lesson
+    \input{unit-1/lesson-35}
+    ...
+    \input{unit-5/lesson-1}
+    ...
+    \input{unit-5/lesson-35}
+    
+    \listoftodos
+    \printbibliography
+    
 \end{document}
 ```
 
