@@ -82,9 +82,11 @@ Contents of `master.tex`:
 
     \maketitle
     
-    \renewcommand{\thepage}{Page: \roman{page}}
-    \setcounter{page}{1}
     \pagestyle{plain}
+    \renewcommand{\thepage}{Page: \roman{page}}
+    
+    \setcounter{page}{1}
+    \setcounter{chapter}{1}
     
     \input{copyright.tex}
     \input{preface.tex}
@@ -94,7 +96,9 @@ Contents of `master.tex`:
 
     \pagestyle{fancy}
     \renewcommand{\thepage}{Page: \arabic{page}}
+    
     \setcounter{page}{1}
+    \setcounter{chapter}{1}
     
     \input{unit-1/lesson-1}
     ...
