@@ -157,7 +157,7 @@ which is the lesson number, date an title of the lecture.
 
 The looks like this:
 
-
+![](media/lesson.png)
 
 ### Bibliography bib
 
