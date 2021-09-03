@@ -1,6 +1,19 @@
 # My Personal Notes
 
-## File structure
+# Table of Contents
+
+* [File Structure](#file-structure)
+    * [Going over the file tree](#going-over-the-file-tree)
+        * [Info yaml](#info-yaml)
+        * [Master tex](#master-tex)
+        * [Bibliography bib](#bibliography-bib)
+* [What is LaTeX](#what-is-latex)
+* [ToDo](#todo)
+    * [Completed](#completed)
+    * [Working on](#working-on)
+    * [Not started yet](#not-started-yet)
+
+# File structure
 
 ```
 ~/Documents/notes/.
@@ -50,11 +63,16 @@
 ├── current-course
 ```
 
+## Going over the file tree
+
 `current-course` is a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) that points to one of the classes in the current grade/current semester. For example, if I am in grade 9 and semester 2 and I am working on math, it points me to [honors algebra 2](Grade-10/semester-2/hs-algebra-2). I use scripts to help me maintain all of my notes, which you can find them [here](https://github.com/SingularisArt/Singularis/tree/master/local/scripts).
 
 The `note-taking-class.cls` file is a class file that I use when taking notes.
 
 The `preamble.tex` is a file that I use in every single `master.tex`. It has all of my default packages, commands, setup, etc.
+
+
+### Info yaml
 
 Contents of `info.yaml`
 ```yaml
@@ -63,6 +81,8 @@ short: 'HS LA'
 url: 'https://'
 grade: '100%'
 ```
+
+### Master tex
 
 Contents of `master.tex`:
 ```tex
@@ -114,6 +134,8 @@ Contents of `master.tex`:
 \end{document}
 ```
 
+### Bibliography bib
+
 Contents of `bibliography.bib`
 ```bibtex
 @book{milnor,
@@ -132,3 +154,13 @@ A lesson.tex file contains
 \header{'header type'}{'header number'}{'header name'}{'date'}
 ...
 ```
+
+# What is LaTeX
+
+# ToDo
+    
+## Completed
+
+## Working on
+
+## Not started yet
