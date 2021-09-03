@@ -9,6 +9,9 @@ My Personal Notes
 * [File Structure](#file-structure)
     * [Going over the file tree](#going-over-the-file-tree)
         * [Info yaml](#info-yaml)
+        * [Currenty Course](#current-course)
+        * [Note Taking Class Cls](#note-taking-class-cls)
+        * [Preamble Tex](#preamble-tex)
         * [Master tex](#master-tex)
         * [Lesson tex](#lesson-tex)
         * [Bibliography bib](#bibliography-bib)
@@ -70,12 +73,17 @@ My Personal Notes
 
 ## Going over the file tree
 
+### Currenty Course
+
 `current-course` is a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) that points to one of the classes in the current grade/current semester. For example, if I am in grade 9 and semester 2 and I am working on math, it points me to [honors algebra 2](Grade-10/semester-2/hs-algebra-2). I use scripts to help me maintain all of my notes, which you can find them [here](https://github.com/SingularisArt/Singularis/tree/master/local/scripts).
+
+### Note Taking Class Cls
 
 The `note-taking-class.cls` file is a class file that I use when taking notes.
 
-The `preamble.tex` is a file that I use in every single `master.tex`. It has all of my default packages, commands, setup, etc.
+### Preamble Tex
 
+The `preamble.tex` is a file that I use in every single `master.tex`. It has all of my default packages, commands, setup, etc.
 
 ### Info yaml
 
