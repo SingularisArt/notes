@@ -14,6 +14,7 @@ My Personal Notes
         * [Preamble Tex](#preamble-tex)
         * [Master tex](#master-tex)
         * [Lesson tex](#lesson-tex)
+        * [Lecture tex](#lecture-tex)
         * [Bibliography bib](#bibliography-bib)
 * [What is LaTeX](#what-is-latex)
 * [ToDo](#todo)
@@ -158,7 +159,18 @@ which is the lesson number, date an title of the lecture.
 The looks like this:
 
 ![](media/lesson.png)
-<img src="media/lesson.png" alt="drawing" width="500"/>
+
+### Lecture tex
+
+A lecture file (just like the [lesson file](#lesson-tex)) contains a line
+```latex
+\lecture{1}{vr 14 feb 2020 16:04}{Introduction}
+```
+which is the lesson number, date an title of the lecture.
+
+The looks like this:
+
+![](media/lecture.png)
 
 ### Bibliography bib
 
