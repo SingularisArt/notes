@@ -149,11 +149,15 @@ Contents of `master.tex`:
 
 ### Lesson tex
 
-A lesson.tex file contains
+A lesson file contains a line
 ```latex
-\header{'header type'}{'header number'}{'header name'}{'date'}
-...
+\lecture{1}{vr 14 feb 2020 16:04}{Introduction}
 ```
+which is the lesson number, date an title of the lecture.
+
+The looks like this:
+
+
 
 ### Bibliography bib
 
