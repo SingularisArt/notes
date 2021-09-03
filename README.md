@@ -1,11 +1,16 @@
-# My Personal Notes
+My Personal Notes
+=================
+
+# Gallery
 
 # Table of Contents
 
+* [Gallery](#gallery)
 * [File Structure](#file-structure)
     * [Going over the file tree](#going-over-the-file-tree)
         * [Info yaml](#info-yaml)
         * [Master tex](#master-tex)
+        * [Lesson tex](#lesson-tex)
         * [Bibliography bib](#bibliography-bib)
 * [What is LaTeX](#what-is-latex)
 * [ToDo](#todo)
@@ -134,6 +139,14 @@ Contents of `master.tex`:
 \end{document}
 ```
 
+### Lesson tex
+
+A lesson.tex file contains
+```latex
+\header{'header type'}{'header number'}{'header name'}{'date'}
+...
+```
+
 ### Bibliography bib
 
 Contents of `bibliography.bib`
@@ -149,12 +162,6 @@ Contents of `bibliography.bib`
 ...
 ```
 
-A lesson.tex file contains
-```latex
-\header{'header type'}{'header number'}{'header name'}{'date'}
-...
-```
-
 # What is LaTeX
 
 # ToDo
@@ -162,5 +169,9 @@ A lesson.tex file contains
 ## Completed
 
 ## Working on
+
+* Add pictures of how my notes look like when using this setup.
+* Add [What is LaTeX](#what-is-latex) section.
+* Expand more on the [Lesson tex](#lesson-tex) and [Master tex](#master-tex) section.
 
 ## Not started yet
