@@ -197,4 +197,4 @@ Contents of `bibliography.bib`
 - [ ] Talk about my scripts.
 - [ ] Add pictures of how my notes look like when using this setup.
 - [ ] Add [What is LaTeX](#what-is-latex) section.
-- [ ] Expand more on the [Lesson tex](#lesson-tex) and [Master tex](#master-tex) section.
+- [ ] Expand more on the [Lesson tex](#lesson-tex), [Lecture tex](#lecture-tex) and [Master tex](#master-tex) section.
