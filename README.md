@@ -193,8 +193,8 @@ Contents of `bibliography.bib`
 
 # ToDo
 
-- [] Add gif of me using my scripts.
-- [] Talk about my scripts.
-- [] Add pictures of how my notes look like when using this setup.
-- [] Add [What is LaTeX](#what-is-latex) section.
-- [] Expand more on the [Lesson tex](#lesson-tex) and [Master tex](#master-tex) section.
+- [ ] Add gif of me using my scripts.
+- [ ] Talk about my scripts.
+- [ ] Add pictures of how my notes look like when using this setup.
+- [ ] Add [What is LaTeX](#what-is-latex) section.
+- [ ] Expand more on the [Lesson tex](#lesson-tex) and [Master tex](#master-tex) section.
