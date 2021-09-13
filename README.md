@@ -17,6 +17,7 @@ My Personal Notes
         * [Lesson Tex](#lesson-tex)
         * [Lecture Tex](#lecture-tex)
         * [Bibliography Bib](#bibliography-bib)
+        * [Figures](#figures)
 * [What is LaTeX](#what-is-latex)
 * [ToDo](#todo)
 
@@ -90,9 +91,7 @@ The `source-lessons.tex` is a file that I use to source all of my lessons/lectur
  \input{unit-5/lesson-35}
 ```
 
-The reason I do this is because I use a bunch of small scripts to do a lot of things for me. For example, I have a script that creates a new `lesson`/`lecture` for me:
-
-![rofi new lesson](media/rofi-new-lesson.gif)
+The reason I do this is because I use a bunch of small scripts to do a lot of things for me. For example, I have a script that creates a new `lesson`/`lecture` for me.
 
 ### Note Taking Class Cls
 
@@ -189,6 +188,10 @@ Contents of `bibliography.bib`
 ...
 ```
 
+### Figures
+
+# My scripts
+
 # What is LaTeX
 
 # ToDo
@@ -198,3 +201,5 @@ Contents of `bibliography.bib`
 - [ ] Add pictures of how my notes look like when using this setup.
 - [ ] Add [What is LaTeX](#what-is-latex) section.
 - [ ] Expand more on the [Lesson tex](#lesson-tex), [Lecture tex](#lecture-tex) and [Master tex](#master-tex) section.
+- [ ] Talk more about my [Figures](#figures)
+- [ ] Talk more about my [Scripts](#scripts)
