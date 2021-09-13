@@ -8,7 +8,7 @@ My Personal Notes
 * [Gallery](#gallery)
 * [File Structure](#file-structure)
     * [Going over the file tree](#going-over-the-file-tree)
-        * [Currenty Course](#current-course)
+        * [Current Course](#current-course)
         * [Source Lessons](#source-lessons)
         * [Note Taking Class Cls](#note-taking-class-cls)
         * [Preamble Tex](#preamble-tex)
