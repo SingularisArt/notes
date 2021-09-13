@@ -4,6 +4,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{ulem}
 \usepackage{textcomp}
 \usepackage{csquotes}
 \usepackage{url}
@@ -47,6 +48,7 @@
 \usepackage[nottoc]{tocbibind}
 \usepackage{tikz}
 \usepackage{tikz-cd}
+\usetikzlibrary{quotes,arrows.meta}
 \usepackage{thmtools}
 \usepackage{thm-restate}
 \usepackage{multirow}
@@ -104,7 +106,7 @@
 \let\epsilon\varepsilon
 
 \newcommand{\fullwidthincfig}[2][0.90]{%
-    % \ifworking{\makebox[0pt][l]{\color{gray}{\scriptsize\textsf{#2}}}}\fi%
+    \ifworking{\makebox[0pt][l]{\color{gray}{\scriptsize\textsf{#2}}}}\fi%
     \def\svgwidth{#1\paperwidth}
     \import{./figures/}{#2.pdf_tex}
 }
