@@ -8,19 +8,17 @@ My Personal Notes
 * [Gallery](#gallery)
 * [File Structure](#file-structure)
     * [Going over the file tree](#going-over-the-file-tree)
-        * [Info yaml](#info-yaml)
         * [Currenty Course](#current-course)
+        * [Source Lessons](#source-lessons)
         * [Note Taking Class Cls](#note-taking-class-cls)
         * [Preamble Tex](#preamble-tex)
-        * [Master tex](#master-tex)
-        * [Lesson tex](#lesson-tex)
-        * [Lecture tex](#lecture-tex)
-        * [Bibliography bib](#bibliography-bib)
+        * [Info yaml](#info-yaml)
+        * [Master Tex](#master-tex)
+        * [Lesson Tex](#lesson-tex)
+        * [Lecture Tex](#lecture-tex)
+        * [Bibliography Bib](#bibliography-bib)
 * [What is LaTeX](#what-is-latex)
 * [ToDo](#todo)
-    * [Completed](#completed)
-    * [Working on](#working-on)
-    * [Not started yet](#not-started-yet)
 
 # File structure
 
@@ -78,6 +76,24 @@ My Personal Notes
 
 `current-course` is a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) that points to one of the classes in the current grade/current semester. For example, if I am in grade 9 and semester 2 and I am working on math, it points me to [honors algebra 2](Grade-10/semester-2/hs-algebra-2). I use scripts to help me maintain all of my notes, which you can find them [here](https://github.com/SingularisArt/Singularis/tree/master/local/scripts).
 
+### Source Lessons
+
+The `source-lessons.tex` is a file that I use to source all of my lessons/lectures in so I don't have to do it in my `master.tex`. Here is the content:
+
+```latex
+ \input{unit-1/lesson-1}
+ ...
+ \input{unit-1/lesson-35}
+ ...
+ \input{unit-5/lesson-1}
+ ...
+ \input{unit-5/lesson-35}
+```
+
+The reason I do this is because I use a bunch of small scripts to do a lot of things for me. For example, I have a script that creates a new `lesson`/`lecture` for me:
+
+![rofi new lesson](media/rofi-new-lesson.gif)
+
 ### Note Taking Class Cls
 
 The `note-taking-class.cls` file is a class file that I use when taking notes.
@@ -96,7 +112,7 @@ url: 'https://'
 grade: '100%'
 ```
 
-### Master tex
+### Master Tex
 
 Contents of `master.tex`:
 ```tex
@@ -134,13 +150,7 @@ Contents of `master.tex`:
     \setcounter{page}{1}
     \setcounter{chapter}{0}
     
-    \input{unit-1/lesson-1}
-    ...
-    \input{unit-1/lesson-35}
-    ...
-    \input{unit-5/lesson-1}
-    ...
-    \input{unit-5/lesson-35}
+    \input{source-lessons}
     
     \listoftodos
     \printbibliography
@@ -148,31 +158,23 @@ Contents of `master.tex`:
 \end{document}
 ```
 
-### Lesson tex
+### Lesson Tex
 
 A lesson file contains a line
 ```latex
-\lecture{1}{vr 14 feb 2020 16:04}{Introduction}
+\lesson{1}{Sep 13 2021 Mon (10:54:11)}{Introduction}
 ```
 which is the lesson number, date an title of the lecture.
 
-The looks like this:
-
-![](media/lesson.png)
-
-### Lecture tex
+### Lecture Tex
 
 A lecture file (just like the [lesson file](#lesson-tex)) contains a line
 ```latex
-\lecture{1}{vr 14 feb 2020 16:04}{Introduction}
+\lecture{1}{Sep 13 2021 Mon (10:54:11)}{Introduction}
 ```
 which is the lesson number, date an title of the lecture.
 
-The looks like this:
-
-![](media/lecture.png)
-
-### Bibliography bib
+### Bibliography Bib
 
 Contents of `bibliography.bib`
 ```bibtex
@@ -190,13 +192,9 @@ Contents of `bibliography.bib`
 # What is LaTeX
 
 # ToDo
-    
-## Completed
 
-## Working on
-
-* Add pictures of how my notes look like when using this setup.
-* Add [What is LaTeX](#what-is-latex) section.
-* Expand more on the [Lesson tex](#lesson-tex) and [Master tex](#master-tex) section.
-
-## Not started yet
+- [ ] Add gif of me using my scripts.
+- [ ] Talk about my scripts.
+- [ ] Add pictures of how my notes look like when using this setup.
+- [ ] Add [What is LaTeX](#what-is-latex) section.
+- [ ] Expand more on the [Lesson tex](#lesson-tex), [Lecture tex](#lecture-tex) and [Master tex](#master-tex) section.
