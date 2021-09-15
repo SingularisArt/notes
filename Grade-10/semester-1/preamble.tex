@@ -138,26 +138,26 @@
 
 \def\@lesson{}
 \def\@lessonabbr{}
-\newcommand{\lesson}[3]{
+\newcommand{\lesson}[4]{
     \ifthenelse{\isempty{#3}}{
         \def\@lesson{Lesson #1}
-        \subsection[\@lesson]{\hr \@lesson \hfill \small{#2}}
+        \subsection[\@lesson]{\hfill \small{#4}\hr \@lesson \hfill \small{#2}}
     }{
         \def\@lesson{Lesson #1: #3}
-        \subsection[\@lesson]{\hr \@lesson \hfill \small{#2}}
+        \subsection[\@lesson]{\hfill \small{#4}\hr \@lesson \hfill \small{#2}}
     }
     \def\@lessonabbr{Les #1}
 }
 
 \def\@lecture{}
 \def\@lectureabbr{}
-\newcommand{\lecture}[3]{
+\newcommand{\lecture}[4]{
     \ifthenelse{\isempty{#3}}{
         \def\@lecture{Lecture #1}
-        \subsection[\@lecture]{\hr \@lecture \hfill \small{#2}}
+        \subsection[\@lecture]{\hfill \small{#4}\hr \@lecture \hfill \small{#2}}
     }{
         \def\@lecture{Lecture #1: #3}
-        \subsection[\@lecture]{\hr \@lecture \hfill \small{#2}}
+        \subsection[\@lecture]{\hfill \small{#4}\hr \@lecture \hfill \small{#2}}
     }
     \def\@lectureabbr{Lec #1}
 }
