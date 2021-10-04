@@ -292,3 +292,6 @@ TSWLatexianTemp*
 
 # glossaries
 *.glstex
+
+# The extra files
+current-course
