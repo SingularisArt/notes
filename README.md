@@ -299,7 +299,7 @@ You can find my scripts [here](https://github.com/SingularisArt/Singularis/blob/
 - [x] Talk about my scripts.
 - [x] Expand more on the [Lesson tex](#lesson-tex), [Lecture tex](#lecture-tex) and [Master tex](#master-tex) section.
 - [x] Talk more about my [Figures](#figures)
-- [ ] Talk more about my [Scripts](#scripts)
+- [ ] Talk more about my [Scripts](#my-scripts)
 - [ ] Add gif of me using my scripts.
 - [ ] Add pictures of how my notes look like when using this setup.
 - [ ] Add [What is LaTeX](#what-is-latex) section.
