@@ -129,6 +129,8 @@ This `unit-info.tex` file contains the unit information. Here is an example file
 \section{Unit 1}
 ```
 
+I put the information here, and then source it in [Source Lessons](#source-lessons).
+
 ### Info yaml
 
 Contents of `info.yaml`
