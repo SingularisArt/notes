@@ -12,6 +12,7 @@ My Personal Notes
         * [Source Lessons](#source-lessons)
         * [Note Taking Class Cls](#note-taking-class-cls)
         * [Preamble Tex](#preamble-tex)
+        * [Unit Info](#unit-info)
         * [Info yaml](#info-yaml)
         * [Master Tex](#master-tex)
         * [Lesson Tex](#lesson-tex)
@@ -57,6 +58,7 @@ My Personal Notes
 │   │   │   │   ├── ...
 │   │   │   │   ├── lesson-35.tex
 │   │   │   │   ├── ...
+│   │   │   │   ├── unit-info.tex
 │   │   │   │   ├── figures
 │   │   │   │   │   ├── graphing-vectors.pdf
 │   │   │   │   │   ├── graphing-vectors.pdf_tex
@@ -94,13 +96,15 @@ My Personal Notes
 The `source-lessons.tex` is a file that I use to source all of my lessons/lectures in so I don't have to do it in my `master.tex`. Here is the content:
 
 ```latex
- \input{unit-1/lesson-1}
- ...
- \input{unit-1/lesson-35}
- ...
- \input{unit-5/lesson-1}
- ...
- \input{unit-5/lesson-35}
+  % Unit 1 started
+  \input{unit-1/unit-info}
+
+  \input{unit-1/lesson-1}
+  \input{unit-1/lesson-2}
+  \input{unit-1/lesson-3}
+  \input{unit-1/lesson-4}
+  \input{unit-1/lesson-5}
+  % Unit 1 ended
 ```
 
 The reason I do this is because I use a bunch of small scripts to do a lot of things for me. For example, I have a script (you can check them out [here](https://github.com/SingularisArt/Singularis/tree/master/local/scripts/school)) that adds a new lesson/lecture (you can check them out [here](https://github.com/SingularisArt/Singularis/blob/master/local/scripts/school/rofi-new-lesson.py)).
@@ -114,6 +118,16 @@ The `note-taking-class.cls` file is a class file that I use when taking notes.
 ### Preamble Tex
 
 The `preamble.tex` is a file that I use in every single `master.tex`. It has all of my default packages, commands, setup, etc.
+
+### Unit Info
+
+This `unit-info.tex` file contains the unit information. Here is an example file:
+
+```latex
+\chapter{Narrative Writing}
+
+\section{Unit 1}
+```
 
 ### Info yaml
 
