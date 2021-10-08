@@ -3,6 +3,17 @@ My Personal Notes
 
 # Gallery
 
+![notes-image-1](media/notes-image-1.png)
+![notes-image-2](media/notes-image-2.png)
+![notes-image-3](media/notes-image-3.png)
+![notes-image-4](media/notes-image-4.png)
+![notes-image-5](media/notes-image-5.png)
+![notes-image-6](media/notes-image-6.png)
+![notes-image-7](media/notes-image-7.png)
+![notes-image-8](media/notes-image-8.png)
+![notes-image-9](media/notes-image-9.png)
+![notes-image-10](media/notes-image-10.png)
+
 # Table of Contents
 
 * [Gallery](#gallery)
