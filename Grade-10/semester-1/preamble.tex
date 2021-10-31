@@ -55,11 +55,73 @@
 \usepackage{hyperref}
 \usepackage[noabbrev]{cleveref}
 \usepackage{ulem}
+\usepackage{pgfplots}
+\usepackage[LGR,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{upgreek}
+\usepackage[misc]{ifsym}
+\usepackage{float}
+\usepackage{caption}
+	\captionsetup{
+		format=plain,
+		labelfont=bf,
+		font=small,
+		justification=centering
+	}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{pgfplots}
+	\usetikzlibrary{
+		calc,
+		patterns,
+		positioning
+	}
+	\pgfplotsset{
+		compat=1.16,
+		samples=200,
+		clip=false,
+		my axis style/.style={
+			axis x line=middle,
+			axis y line=middle,
+			legend pos=outer north east,
+			axis line style={
+				->,
+			},
+			legend style={
+				font=\footnotesize
+			},
+			label style={
+				font=\footnotesize
+			},
+			tick label style={
+				font=\footnotesize
+			},
+			xlabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			ylabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			xlabel=$X$,
+			ylabel=$Y$
+		},
+	}
+	\tikzset{
+		>=stealth
+	}
 \usepackage[
     sorting=nyt,
     style=alphabetic
 ]{biblatex}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % New commands and Re-New commands %
@@ -70,6 +132,10 @@
 \newcommand{\important}[1]{\todo[color=yellow]{IMPORTANT:                       #1.}}
 \newcommand{\urgent}[1]{\todo[color=red]{URGENT:                                \hspace{16.5pt}#1.}}
 \newcommand{\done}[1]{\todo[disable]{#1}\addcontentsline{tdo}{todo}{\sout{DONE: \hspace{26.5pt}#1.}}}
+
+\renewcommand{\bf}{\textbf}
+\renewcommand{\it}{\textit}
+\renewcommand{\rm}{\textrm}
 
 \newcommand\contra{\scalebox{1.5}{$\lightning$}}
 \newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
@@ -93,12 +159,14 @@
 \let\oldcite\cite
 \renewcommand*\cite[1]{\textsubscript{ (\textit{\oldcite{#1}}) }}
 
+\newcommand{\E}{\mathrm{e}}
 \newcommand{\C}{\ensuremath{\mathbb{C}}}
-\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
-\renewcommand{\O}{\ensuremath{\mathbb{O}}}
-\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
-\newcommand{\R}{\ensuremath{\mathbb{R}}}
 \newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+
+\renewcommand{\O}{\ensuremath{\mathbb{O}}}
 
 \let\implies\Rightarrow
 \let\impliedby\Leftarrow
@@ -211,42 +279,34 @@
 
 \makeatother
 \mdfsetup{skipabove=1em,skipbelow=0em}
+
 \theoremstyle{definition}
-\newmdtheoremenv{lemma}{Lemma}
-\newmdtheoremenv{prop}{Proposition}
-\newmdtheoremenv{theorem}{Theorem}
-\newmdtheoremenv{postulate}{Postulate}
-\newmdtheoremenv{myproof}{Proof}
 \newmdtheoremenv{definition}{Definition}
-\newmdtheoremenv{note}{Note}
-\newmdtheoremenv{problem}{Problem}
-\newmdtheoremenv{question}{Question}
-\newmdtheoremenv{corollary}{Corollary}
-\newmdtheoremenv{example}{Example}
-\newmdtheoremenv{notation}{Notation}
+\newmdtheoremenv{lemma}{Lemma}
 \newmdtheoremenv{repetition}{Repetition}
 \newmdtheoremenv{property}{Property}
 \newmdtheoremenv{intuition}{Intuition}
 \newmdtheoremenv{observation}{Observation}
 \newmdtheoremenv{conclusion}{Conclusion}
+
+\newtheorem*{question}{Question}
+\newtheorem*{answer}{Answer}
+\newtheorem*{problem}{Problem}
+\newtheorem*{example}{Example}
+\newtheorem*{notation}{Notation}
+
 \declaretheorem[numbered=no, style=todo, name=TODO]{TODO}
 
-\newenvironment{remark}{\begin{tcolorbox}[
-    arc=0mm,
-    colback=white,
-    colframe=purple,
-    title=Remark,
-    fonttitle=\sffamily,
-    breakable
-]}{\end{tcolorbox}}
-\newenvironment{answer}{\begin{tcolorbox}[
-    arc=0mm,
-    colback=white,
-    colframe=blue,
-    title=Answer,
-    fonttitle=\sffamily,
-    breakable
-]}{\end{tcolorbox}}
+\theoremstyle{plain}
+\newmdtheoremenv{prop}{Proposition}
+\newmdtheoremenv{theorem}{Theorem}
+\newmdtheoremenv{postulate}{Postulate}
+\newmdtheoremenv{corollary}{Corollary}
+
+\theoremstyle{remark}
+\newmdtheoremenv{note}{Note}
+\newmdtheoremenv{hint}{Hint}
+
 \newenvironment{info}{\begin{tcolorbox}[
     arc=0mm,
     colback=white,
@@ -263,7 +323,7 @@
     fonttitle=\sffamily,
     breakable
 ]}{\end{tcolorbox}}
-\newenvironment{warning}{\begin{tcolorbox}[
+\renewenvironment{warning}{\begin{tcolorbox}[
     arc=0mm,
     colback=white,
     colframe=red,
@@ -280,6 +340,8 @@
     breakable
 ]}{\end{tcolorbox}}
 
+\renewcommand{\qedsymbol}{Q.E.D.}
+
 \definecolor{correct}{HTML}{009900}
 \theoremstyle{definition}
 \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
@@ -289,7 +351,6 @@
 \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
 \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
 \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
-\declaretheorem[sibling=definition, style=thmbluebox,  name=Nonexample]{noneg}
 \declaretheorem[numbered=no, style=thmexplanationbox, name=Proof]{explanation}
 \declaretheorem[numbered=no, style=thmproofbox, name=Proof]{replacementproof}
 \declaretheorem[style=thmbluebox,  numbered=no, name=Exercise]{ex}
