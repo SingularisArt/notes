@@ -149,13 +149,13 @@ grade: '100%'
 
 Contents of `master.tex`:
 ```tex
-\documentclass[a4paper,11pt,openany]{tuftebook}
+\documentclass[20pt,a4paper,11pt,openany]{../tuftebook}
 
 \input{../preamble}
 
-\newcommand\theTitle{'TITLE'}
-\newcommand\theauthor{'AUTHOR'}
-\newcommand\thedate{'DATE'}
+\newcommand\theTitle{Honors Government}
+\newcommand\theauthor{Hashem A. Damrah}
+\newcommand\thedate{Sep 7 2021}
 
 \title{\theTitle}
 \author{\theauthor}
@@ -171,11 +171,16 @@ Contents of `master.tex`:
     \setcounter{page}{1}
     \setcounter{chapter}{0}
     
-    \input{copyright.tex}
-    \input{preface.tex}
-    \input{summary.tex}
+    \twocolumn
+    
+    \input{copyright}
+    \input{preface}
+    \input{summary}
+    
+    \onecolumn
     
     \tableofcontents
+    \newpage
 
     \pagestyle{fancy}
     \renewcommand{\thepage}{Page: \arabic{page}}
@@ -183,9 +188,11 @@ Contents of `master.tex`:
     \setcounter{page}{1}
     \setcounter{chapter}{0}
     
+    \newpage
+    
     \input{source-lessons}
     
-    \printbibliography
+    \input{conclusion}
     
 \end{document}
 ```
@@ -215,9 +222,23 @@ Now, this is where it gets fancy.
 \setcounter{chapter}{0}
 ```
 
-This just sets the pagestyle, which is set to `plain`. The `\renewcommand{\thepage}{Page: \roman{page}}` makes the page numbering roman numerals. If you haven't noticed, you when you read the introduction pages of a book, they use roman numerals for page numbers. Then, once it comes for the actual information, they use regular numbers, which is what these lines do:
+This just sets the pagestyle, which is set to `plain`. The `\renewcommand{\thepage}{Page: \roman{page}}` makes the page numbering roman numerals. If you haven't noticed, you when you read the introduction pages of a book, they use roman numerals for page numbers. 
+
+Now, after that, I want to add a section for the `copyright`, `preface`, `summary`. I make those in different files, then I just add it in the `master.tex`, but with a little twist. I make it with 2 columns instead of one. Here's the code:
 
 ```latex
+\twocolumn
+
+\input{copyright}
+\input{preface}
+\input{summary}
+```
+
+Then, after that, I need to switch it back to having only one column on each page, add the table of contents (using this command `\tableofcontents`) and finally, switch back to the original english number system restarting it to 0 and restarting all of the chapters to 0 incase I created any in the `copyright`, `preface`, or `summary`.
+
+```latex
+\onecolumn
+
 \tableofcontents
 
 \pagestyle{fancy}
