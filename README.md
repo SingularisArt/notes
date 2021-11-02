@@ -215,6 +215,7 @@ This `\maketitle` just creates the title of the page.
 Now, this is where it gets fancy.
 
 ```latex
+\maketitle
 \pagestyle{plain}
 \renewcommand{\thepage}{Page: \roman{page}}
 
@@ -222,7 +223,7 @@ Now, this is where it gets fancy.
 \setcounter{chapter}{0}
 ```
 
-This just sets the pagestyle, which is set to `plain`. The `\renewcommand{\thepage}{Page: \roman{page}}` makes the page numbering roman numerals. If you haven't noticed, you when you read the introduction pages of a book, they use roman numerals for page numbers. 
+The first line just creates the title page (`\maketitle`). This just sets the pagestyle, which is set to `plain`. The `\renewcommand{\thepage}{Page: \roman{page}}` makes the page numbering roman numerals. If you haven't noticed, you when you read the introduction pages of a book, they use roman numerals for page numbers. 
 
 Now, after that, I want to add a section for the `copyright`, `preface`, `summary`. I make those in different files, then I just add it in the `master.tex`, but with a little twist. I make it with 2 columns instead of one. Here's the code:
 
