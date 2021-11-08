@@ -38,13 +38,10 @@
 \usepackage{fancyhdr}
 \usepackage{todonotes}
 \usepackage{tcolorbox}
-\usepackage{fourier, erewhon, cabin}
+\usepackage{erewhon, cabin}
 \usepackage[english]{babel}
 \usepackage{titletoc}
 \usepackage{lipsum}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
 \usepackage[nottoc]{tocbibind}
 \usepackage{tikz}
 \usepackage{tikz-cd}
@@ -54,70 +51,11 @@
 \usepackage{multirow}
 \usepackage{hyperref}
 \usepackage[noabbrev]{cleveref}
-\usepackage{ulem}
 \usepackage{pgfplots}
-\usepackage[LGR,T1]{fontenc}
-\usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{upgreek}
 \usepackage[misc]{ifsym}
-\usepackage{float}
-\usepackage{caption}
-	\captionsetup{
-		format=plain,
-		labelfont=bf,
-		font=small,
-		justification=centering
-	}
-\usepackage{amsmath,amsthm,amssymb}
-\usepackage{pgfplots}
-	\usetikzlibrary{
-		calc,
-		patterns,
-		positioning
-	}
-	\pgfplotsset{
-		compat=1.16,
-		samples=200,
-		clip=false,
-		my axis style/.style={
-			axis x line=middle,
-			axis y line=middle,
-			legend pos=outer north east,
-			axis line style={
-				->,
-			},
-			legend style={
-				font=\footnotesize
-			},
-			label style={
-				font=\footnotesize
-			},
-			tick label style={
-				font=\footnotesize
-			},
-			xlabel style={
-				at={
-					(ticklabel* cs:1)
-				},
-				anchor=west,
-				font=\footnotesize,
-			},
-			ylabel style={
-				at={
-					(ticklabel* cs:1)
-				},
-				anchor=west,
-				font=\footnotesize,
-			},
-			xlabel=$X$,
-			ylabel=$Y$
-		},
-	}
-	\tikzset{
-		>=stealth
-	}
 \usepackage[
     sorting=nyt,
     style=alphabetic
@@ -198,7 +136,6 @@
     \thm@preskip=\parskip \thm@postskip=0pt                         % Fix some spacing
 }
 
-\usepackage{xifthen}
 \def\testdateparts#1{\dateparts#1\relax}
 \def\dateparts#1 #2 #3 #4 #5\relax{
     \marginpar{\small\textsf{\mbox{#1 #2 #3 #5}}}
@@ -323,7 +260,7 @@
     fonttitle=\sffamily,
     breakable
 ]}{\end{tcolorbox}}
-\renewenvironment{warning}{\begin{tcolorbox}[
+\newenvironment{warning}{\begin{tcolorbox}[
     arc=0mm,
     colback=white,
     colframe=red,

@@ -20,9 +20,16 @@
     \setcounter{page}{1}
     \setcounter{chapter}{0}
     
-    \input{copyright.tex}
-    \input{preface.tex}
-    \input{summary.tex}
+    \twocolumn
+    
+    \input{copyright}
+    \newpage
+    \input{preface}
+    \newpage
+    \input{summary}
+    \newpage
+    
+    \onecolumn
     
     \tableofcontents
     \newpage
@@ -33,9 +40,14 @@
     \setcounter{page}{1}
     \setcounter{chapter}{0}
     
+    \newpage
+    
     \input{source-lessons}
     
-    \printbibliography
+    \newpage
+    
+    \twocolumn
+    
+    \input{conclusion}
     
 \end{document}
-
