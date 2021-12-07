@@ -4,8 +4,11 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{polynom}
 \usepackage{ulem}
 \usepackage{textcomp}
+\usepackage{media9}
+\usepackage{longdivision}
 \usepackage{csquotes}
 \usepackage{url}
 \usepackage{graphicx}
@@ -146,10 +149,12 @@
 \newcommand{\lesson}[4]{
     \ifthenelse{\isempty{#3}}{
         \def\@lesson{Lesson #1}
-        \subsection[\@lesson]{\hfill \small{#2}\hr \@lesson \hfill \small{#4}}
+        \def\@fullLesson{\hfill \small{#2}\hr \@lesson \hfill \small{#4} \\}
+        \subsection[\@lesson]{\@fullLesson}
     }{
         \def\@lesson{Lesson #1: #3}
-        \subsection[\@lesson]{\hfill \small{#2}\hr \@lesson \hfill \small{#4}}
+        \def\@fullLesson{\hfill \small{#2}\hr \@lesson \hfill \small{#4} \\}
+        \subsection[\@lesson]{\@fullLesson}
     }
     \def\@lessonabbr{Les #1}
 }
@@ -159,10 +164,12 @@
 \newcommand{\lecture}[4]{
     \ifthenelse{\isempty{#3}}{
         \def\@lecture{Lecture #1}
-        \subsection[\@lecture]{\hfill \small{#2}\hr \@lecture \hfill \small{#4}}
+        \def\@fullLecture{\hfill \small{#2}\hr \@lecture \hfill \small{#4} \\}
+        \subsection[\@lecture]{\@fullLecture}
     }{
         \def\@lecture{Lecture #1: #3}
-        \subsection[\@lecture]{\hfill \small{#2}\hr \@lecture \hfill \small{#4}}
+        \def\@fullLecture{\hfill \small{#2}\hr \@lecture \hfill \small{#4} \\}
+        \subsection[\@lecture]{\@fullLecture}
     }
     \def\@lectureabbr{Lec #1}
 }
@@ -186,6 +193,45 @@
     \renewcommand{\footrulewidth}{0.4pt}
 }
 
+\def\pld@CF@loop#1+{%
+    \ifx\relax#1\else
+        \begingroup
+          \pld@AccuSetX11%
+          \def\pld@frac{{}{}}\let\pld@symbols\@empty\let\pld@vars\@empty
+          \pld@false
+          #1%
+          \let\pld@temp\@empty
+          \pld@AccuIfOne{}{\pld@AccuGet\pld@temp
+                            \edef\pld@temp{\noexpand\pld@R\pld@temp}}%
+           \pld@if \pld@Extend\pld@temp{\expandafter\pld@F\pld@frac}\fi
+           \expandafter\pld@CF@loop@\pld@symbols\relax\@empty
+           \expandafter\pld@CF@loop@\pld@vars\relax\@empty
+           \ifx\@empty\pld@temp
+               \def\pld@temp{\pld@R11}%
+           \fi
+          \global\let\@gtempa\pld@temp
+        \endgroup
+        \ifx\@empty\@gtempa\else
+            \pld@ExtendPoly\pld@tempoly\@gtempa
+        \fi
+        \expandafter\pld@CF@loop
+    \fi}
+\def\pld@CMAddToTempoly{%
+    \pld@AccuGet\pld@temp\edef\pld@temp{\noexpand\pld@R\pld@temp}%
+    \pld@CondenseMonomials\pld@false\pld@symbols
+    \ifx\pld@symbols\@empty \else
+        \pld@ExtendPoly\pld@temp\pld@symbols
+    \fi
+    \ifx\pld@temp\@empty \else
+        \pld@if
+            \expandafter\pld@IfSum\expandafter{\pld@temp}%
+                {\expandafter\def\expandafter\pld@temp\expandafter
+                    {\expandafter\pld@F\expandafter{\pld@temp}{}}}%
+                {}%
+        \fi
+        \pld@ExtendPoly\pld@tempoly\pld@temp
+        \pld@Extend\pld@tempoly{\pld@monom}%
+    \fi}
 \makeatother
 
 %%%%%%%%%%%%%%%%%
