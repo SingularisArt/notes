@@ -1,0 +1,43 @@
+\documentclass{tuftebook}
+
+\input{preamble}
+
+\title{Bill of Rights Institute}
+\author{Hashem A. Damrah}
+\date{\today}
+
+\begin{document}
+  \maketitle
+
+  \renewcommand{\thepage}{\roman{page}}
+  \pagestyle{plain}
+  \setcounter{page}{0}
+
+  \include{abstract}
+
+  \newpage
+
+  \tableofcontents
+
+  \newpage
+
+  \renewcommand{\thepage}{\arabic{page}}
+  \setcounter{page}{1}
+  \pagestyle{normal}
+
+  \include{source-chapters}
+
+  \newpage
+
+  \include{conclusion}
+
+  \newpage
+
+  \appendix
+
+  \include{appendix}
+
+  \newpage
+
+  \bibliography{bibliography}
+\end{document}
