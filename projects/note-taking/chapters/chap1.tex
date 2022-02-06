@@ -1,0 +1,399 @@
+\chapter{How I take Notes}
+\label{chap:how_i_take_notes}
+
+\section{My Notes Structure}
+\label{sec:my_notes_structure}
+
+Here's a quick glance at my notes structure:
+
+\begin{minted}{bash}
+.
+|-- current-course -> /home/hashem/Documents/notes/Grade-10/semester-1/hs-algebra-2
+|-- Grade-10
+|   |-- semester-1
+|   |   |-- hs-algebra-2
+|   |   |   |-- assignments
+|   |   |   |   |-- figures
+|   |   |   |   |   |-- seventh-degree-polynomial.pdf
+|   |   |   |   |   |-- seventh-degree-polynomial.pdf_tex
+|   |   |   |   |   |-- seventh-degree-polynomial.svg
+|   |   |   |   |-- latex-files
+|   |   |   |   |   |-- 03.05-Polynomial-Identities-and-Proofs.tex
+|   |   |   |   |   |-- ...
+|   |   |   |   |-- |aster.fdb_latexmk
+|   |   |   |   |-- master.fls
+|   |   |   |   |-- master.tex
+|   |   |   |   |-- pdf-files
+|   |   |   |   |   |-- 03.05-Polynomial-Identities-and-Proofs.pdf
+|   |   |   |   |   |-- ...
+|   |   |   |   |-- preamble.tex
+|   |   |   |-- bibliography.bib
+|   |   |   |-- conclusion.tex
+|   |   |   |-- copyright.tex
+|   |   |   |-- figures
+|   |   |   |   |-- fundamental-theorem-of-algebra.pdf
+|   |   |   |   |-- fundamental-theorem-of-algebra.pdf_tex
+|   |   |   |   |-- fundamental-theorem-of-algebra.svg
+|   |   |   |   |-- ...
+|   |   |   |-- info.yaml
+|   |   |   |-- master.pdf
+|   |   |   |-- master.tex
+|   |   |   |-- preface.tex
+|   |   |   |-- source-lessons.tex
+|   |   |   |-- summary.tex
+|   |   |   |-- texput.log
+|   |   |   |-- unit-1
+|   |   |   |   |-- lesson-1.tex
+|   |   |   |   |-- lesson-2.tex
+|   |   |   |   |-- lesson-3.tex
+|   |   |   |   |-- lesson-4.tex
+|   |   |   |   |-- lesson-5.tex
+|   |   |   |   |-- lesson-6.tex
+|   |   |   |   |-- lesson-8.tex
+|   |   |   |   |-- unit-info.tex
+|   |   |   |-- unit-2
+|   |   |   |   |-- ...
+|   |   |-- ...
+|-- meetings.md
+|-- projects
+|   ├-- government-essay
+|   |   ├-- abstract.tex
+|   |   ├-- appendix.tex
+|   |   ├-- bibliography.bib
+|   |   ├-- chapters
+|   |   |   |-- chap1.tex
+|   |   ├-- conclusion.tex
+|   |   ├-- copyright.tex
+|   |   ├-- master.pdf
+|   |   ├-- master.tex
+|   |   ├-- preamble.tex
+|   |   ├-- preface.tex
+|   |   ├-- source-chapters.tex
+|   |   ├-- summary.tex
+|   |   |-- tuftebook.cls
+|   |-- note-taking
+|       ├-- bibliography.bib
+|       ├-- chapters
+|       |   ├-- chap1.tex
+|       |   |-- chap2.tex
+|       ├-- images
+|       |   ├-- rofi-commands-1.png
+|       |   ├-- rofi-commands-2.png
+|       |   ├-- rofi-current-course.png
+|       |   ├-- rofi-file-browser.png
+|       |   |-- rofi-lessons.png
+|       ├-- master.pdf
+|       ├-- master.tex
+|       ├-- preamble.tex
+|       ├-- source-chapters.aux
+|       ├-- source-chapters.tex
+|       |-- tuftebook.cls
+\end{minted}
+
+% section my_notes_structure (end)
+
+\section{The Tools that I use}
+\label{sec:the_tools_that_i_use}
+
+Here's the bad thing to my setup. A lot of the tools that I use aren't available
+on \textbf{Windows} and/or \textbf{Mac}OS. I use the \textbf{Linux} Operating
+System, and from that, I use a specific distribution of \textbf{Linux} called
+\textbf{Arch Linux}. It's the most minimal distribution. You have to install
+everything, setup everything yourself. I had to setup my own Network Server from
+scratch, which took me a long time. Anyway, onto the tools that I use.
+
+\subsection{List of Tools}
+\label{sub_sec:list_of_tools}
+
+Here's the list for all of the tools that I use the most often:
+
+\begin{enumerate}
+  \item Arch Linux (Linux Distribution)
+  \item DWM (Desktop Window Manager)
+  \item Xfce-4 Terminal (Linux Terminal)
+  \item NeoVim/Vim (My Text Editor)
+  \item Zathura (PDF Viewer)
+  \item LaTeX (PDF Creator)
+  \item Rofi (Menu System)
+  \item Python (My Programming Language)
+  \item Git (Version Control System)
+\end{enumerate}
+
+You can view my system setup
+\hyperlink{https://github.com/SingularisArt/Singularis}{here}.
+The list goes on, but these are the most common tools that I use.
+
+% subsection list_of_tools (end)
+
+% section the_tools_that_i_use (end)
+
+\section{My Scripts}
+\label{sec:my_scripts}
+
+I have a bunch of scripts that I use to set up my environment. You  can view
+them
+\hyperlink{https://github.com/SingularisArt/local/tree/master/scripts/school}{here}.
+I also document them on this blog
+\hyperlink{damrah.netlify.app/post/note-taking-with-latex-part-3/}{post}.
+Anyway, I use this scripts to switch between different classes, create lessons,
+open up a specified lesson, compile my document, and so on. Let me go over them
+real quick.
+
+I don't use Windows or MacOS. I use Linux, and from Linux, I use the Linux
+distribution called \textbf{Arch Linux}, which gives me a big advantage. A lot
+of the tools that I use aren't available on Windows or MacOS.
+
+\subsection{Listing my Scripts}
+\label{sub_sec:listing_my_scripts}
+
+In this section, I'm going to list all of the scripts that I created and
+describe what they do.
+
+\subsubsection{Rofi Commands}
+\label{sub_sub_sec:rofi_commands}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-commands.py}{here}.
+
+This script is probebly my favorite. So, when I take notes on a new lesson, I
+create a new file in a folder for the unit. EX: \textbf{unit-1/lesson-1.tex}. Then, I add
+that to a file called \textbf{source-lessons.tex}. Then, I source that in my
+\textbf{master.tex} file. Here's where the interesting thing happens. This script pops up a menu asking
+what I want to do.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-commands-1.png}
+    \caption{Rofi Commands Prompt}
+    \label{fig:executive-branch-structure}
+\end{figure}
+
+When I select the \textbf{Current Lesson} option, it will add only the current
+lesson that I'm working on to the \textbf{source-lessons.tex} file. Then, it
+will compile my document for me.
+
+When I select the \textbf{Last two lessons} option, it will add the last two
+lessons to my \textbf{source-lessons.tex} file. Then, it will compile my
+document for me. I found that if you get the last two lessons, it will compile
+quickly and you will get a quick memory refresh from the last lesson.
+
+When I select the \textbf{All lessons in Unit} option, it will add all of the
+lessons in the current unit to my \textbf{source-lessons.tex} file. Then, it
+will compile my document for me.
+
+When I select the \textbf{All lessons} option, it will add all of the lessons to
+the \textbf{source-lessons.tex} file. Then, it will compile my document for me.
+
+After I select one of the options, it will give me this prompt.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-commands-2.png}
+    \caption{Rofi Commands Prompt}
+    \label{fig:executive-branch-structure}
+\end{figure}
+
+\newpage
+
+If I select \textbf{Open PDF}, it will open the compiled PDF, otherwise, it will
+just exit.
+
+% subsubsection rofi_commands (end)
+
+\subsubsection{Rofi Compile}
+\label{sub_sub_sec:rofi_compile}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-compile.sh}{here}.
+
+This is a pretty straightforward script. It will compile my document for me.
+Then, it will ask me if I want to open the document or not.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-commands-2.png}
+    \caption{Rofi Commands Prompt}
+    \label{fig:executive-branch-structure}
+\end{figure}
+
+% subsubsection rofi_compile (end)
+
+\subsubsection{Rofi Current Course}
+\label{sub_sub_sec:rofi_current_course}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-current-course.py}{here}.
+
+This script will go through all of my classes. It will ask me which class I'm
+currently working on. Then, it will create a symlink from the selected class
+to the \textbf{current\_class}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-current-course.png}
+    \caption{Rofi Commands Prompt}
+    \label{fig:executive-branch-structure}
+\end{figure}
+
+\newpage
+
+% subsubsection rofi_current_course (end)
+
+\subsubsection{Rofi File Browser}
+\label{sub_sub_sec:rofi_file_browser}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-file-browser.sh}{here}.
+
+This script will open my current course folder in a file browser.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-file-browser.png}
+    \caption{Rofi File Browser}
+    \label{fig:executive-branch-structure}
+\end{figure}
+
+% subsubsection rofi_file_browser (end)
+
+\subsubsection{Rofi Grades}
+\label{sub_sub_sec:rofi_grades}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-grades.py}{here}.
+
+This is a script that I'm currently working on. But, I want this script go and
+parse through my grades from the baker charters website, and use \textbf{Rofi}
+to show me my current grades.
+
+% subsubsection rofi_grades (end)
+
+\subsubsection{Rofi Inkscape}
+\label{sub_sub_sec:rofi_inkscape}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-inkscape.sh}{here}.
+
+This script just shows me a list of all of the figures that I have, which was
+created by \textbf{Inkscape}. When I select one of the figures, it will open it
+in \textbf{Inkscape} so I can edit it. After I save the figure and close, the
+program will recompile my document.
+
+% subsubsection rofi_inkscape (end)
+
+\subsubsection{Rofi Lessons}
+\label{sub_sub_sec:rofi_lessons}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-lessons.py}{here}.
+
+This script will open a list of all of my lessons in my course. When I select
+one, it will open up that lesson in my text editor, which is \textbf{NeoVim}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-lessons.png}
+    \caption{Rofi Lessons}
+    \label{fig:executive-branch-structure}
+\end{figure}
+
+% subsubsection rofi_lessons (end)
+
+\subsubsection{Rofi New Lesson}
+\label{sub_sub_sec:rofi_new_lesson}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-new-lesson.py}{here}.
+
+This script will just ask me a bunch of questions based on the lesson. It will
+ask me for the lesson number, the lesson title, the lesson description, and
+the lesson name. Then, it will create the new lesson in my course. But, if it
+already exists, it will ask me if I want to overwrite the lesson. Then, it will
+add that lesson to the \textbf{source-lessons.tex} file. Then, it will compile
+the document for me.
+
+% subsubsection rofi_new_lesson (end)
+
+\subsubsection{Rofi Nvim}
+\label{sub_sub_sec:rofi_nvim}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-nvim.sh}{here}.
+
+This script wil open my current course folder in my text editor, which is
+\textbf{NeoVim}.
+
+% subsubsection rofi_nvim (end)
+
+\subsubsection{Rofi Projects}
+\label{sub_sub_sec:rofi_projects}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-projects.py}{here}.
+
+This is a work in progress script, but my goal is to have it list all of my
+current projects. Then, when I click on the project, it will give me these
+options:
+
+\begin{enumerate}
+  \item Open Project in File Browser
+  \item Open Project in Text Editor
+  \item Open Project master.tex file in Text Editor
+  \item Compile Project
+  \item View Project master.pdf
+  \item Finished Project
+\end{enumerate}
+
+When I select the first option, it will just, simply, open the project in my
+file browser. When I select the second option, it will open the project in my
+text editor. When I select the third option, it will open the project's
+\textbf{master.tex} file in my text editor. When I select the fourth option, it
+will compile the project. When I select the fifth option, it will open the
+\textbf{master.pdf} file in my pdf viewer. When I select the sixth option, it
+will mark the project as finished.
+
+% subsubsection rofi_projects (end)
+
+\subsubsection{Rofi Source Code}
+\label{sub_sub_sec:rofi_source_code}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-source-code.sh}{here}.
+
+% subsubsection rofi_source_code (end)
+
+\subsubsection{Rofi Web Browser}
+\label{sub_sub_sec:rofi_web_browser}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-web-browser.sh}{here}.
+
+This script will open my current course class in my web browser.
+
+% subsubsection rofi_web_browser (end)
+
+\subsubsection{Rofi Yaml}
+\label{sub_sub_sec:rofi_yaml}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-yaml.sh}{here}.
+
+This script will open my data file for the current course in my text editor.
+
+% subsubsection rofi_yaml (end)
+
+\subsubsection{Rofi Zathura}
+\label{sub_sub_sec:rofi_zathura}
+
+You can view this script
+\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-zathura.sh}{here}.
+
+This script will just open my compiled pdf file in my pdf viewer.
+
+% subsubsection rofi_zathura (end)
+
+% subsection listing_my_scripts (end)
+
+% section my_scripts (end)
+
+\newpage

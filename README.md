@@ -41,52 +41,87 @@ My Personal Notes
 # File structure
 
 ```
-~/Documents/notes/.
-|
-├── Grade-9
-│   ├── semester-1
-│   └── semester-2
+.
+├── current-course -> /home/hashem/Documents/notes/Grade-10/semester-1/hs-algebra-2
 ├── Grade-10
-│   ├── semester-1
-│   ├── semester-2
-│   │   ├── hs-algebra-2
-│   │   │   ├── bibliography.bib
-│   │   │   ├── conclusion.tex
-│   │   │   ├── copyright.tex
-│   │   │   ├── info.yaml
-│   │   │   ├── master.tex
-│   │   │   ├── preface.tex
-│   │   │   ├── summary.tex
-│   │   │   ├── unit-1
-│   │   │   │   ├── lesson-1.tex
-│   │   │   │   ├── ...
-│   │   │   │   ├── lesson-35.tex
-│   │   │   │   ├── ...
-│   │   │   │   ├── unit-info.tex
-│   │   │   │   ├── figures
-│   │   │   │   │   ├── graphing-vectors.pdf
-│   │   │   │   │   ├── graphing-vectors.pdf_tex
-│   │   │   │   │   ├── graphing-vectors.svg
-│   │   │   │   │   └── ...
-│   │   │   ├── unit-2
-│   │   │   │   ├── lesson-1.tex
-│   │   │   │   ├── ...
-│   │   │   │   ├── lesson-35.tex
-│   │   │   │   ├── ...
-│   │   │   │   ├── figures
-│   │   │   │   │   ├── rate-of-change.pdf
-│   │   │   │   │   ├── rate-of-change.pdf_tex
-│   │   │   │   │   ├── rate-of-change.svg
-│   │   │   │   │   └── ...
-│   │   │   ├── note-taking-class.cls
-│   │   │   └── preamble.tex
-├── Grade-11
-│   ├── semester-1
-│   └── semester-2
-├── Grade-12
-│   ├── semester-1
-│   └── semester-2
-├── current-course
+│   ├── semester-1
+│   │   ├── hs-algebra-2
+│   │   │   ├── assignments
+│   │   │   │   ├── figures
+│   │   │   │   │   ├── seventh-degree-polynomial.pdf
+│   │   │   │   │   ├── seventh-degree-polynomial.pdf_tex
+│   │   │   │   │   └── seventh-degree-polynomial.svg
+│   │   │   │   ├── latex-files
+│   │   │   │   │   ├── 03.05-Polynomial-Identities-and-Proofs.tex
+│   │   │   │   │   ├── ...
+│   │   │   │   ├── master.fdb_latexmk
+│   │   │   │   ├── master.fls
+│   │   │   │   ├── master.tex
+│   │   │   │   ├── pdf-files
+│   │   │   │   │   ├── 03.05-Polynomial-Identities-and-Proofs.pdf
+│   │   │   │   │   ├── ...
+│   │   │   │   └── preamble.tex
+│   │   │   ├── bibliography.bib
+│   │   │   ├── conclusion.tex
+│   │   │   ├── copyright.tex
+│   │   │   ├── figures
+│   │   │   │   ├── fundamental-theorem-of-algebra.pdf
+│   │   │   │   ├── fundamental-theorem-of-algebra.pdf_tex
+│   │   │   │   ├── fundamental-theorem-of-algebra.svg
+│   │   │   │   ├── ...
+│   │   │   ├── info.yaml
+│   │   │   ├── master.pdf
+│   │   │   ├── master.tex
+│   │   │   ├── preface.tex
+│   │   │   ├── source-lessons.tex
+│   │   │   ├── summary.tex
+│   │   │   ├── texput.log
+│   │   │   ├── unit-1
+│   │   │   │   ├── lesson-1.tex
+│   │   │   │   ├── lesson-2.tex
+│   │   │   │   ├── lesson-3.tex
+│   │   │   │   ├── lesson-4.tex
+│   │   │   │   ├── lesson-5.tex
+│   │   │   │   ├── lesson-6.tex
+│   │   │   │   ├── lesson-8.tex
+│   │   │   │   └── unit-info.tex
+│   │   │   ├── unit-2
+│   │   │   │   ├── ...
+│   │   ├── ...
+├── meetings.md
+├── projects
+│   ├── government-essay
+│   │   ├── abstract.tex
+│   │   ├── appendix.tex
+│   │   ├── bibliography.bib
+│   │   ├── chapters
+│   │   │   └── chap1.tex
+│   │   ├── conclusion.tex
+│   │   ├── copyright.tex
+│   │   ├── master.pdf
+│   │   ├── master.tex
+│   │   ├── preamble.tex
+│   │   ├── preface.tex
+│   │   ├── source-chapters.tex
+│   │   ├── summary.tex
+│   │   └── tuftebook.cls
+│   └── note-taking
+│       ├── bibliography.bib
+│       ├── chapters
+│       │   ├── chap1.tex
+│       │   └── chap2.tex
+│       ├── images
+│       │   ├── rofi-commands-1.png
+│       │   ├── rofi-commands-2.png
+│       │   ├── rofi-current-course.png
+│       │   ├── rofi-file-browser.png
+│       │   └── rofi-lessons.png
+│       ├── master.pdf
+│       ├── master.tex
+│       ├── preamble.tex
+│       ├── source-chapters.aux
+│       ├── source-chapters.tex
+│       └── tuftebook.cls
 ```
 
 ## Going over the file tree

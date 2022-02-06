@@ -1,0 +1,25 @@
+\documentclass[oneside]{tuftebook}
+
+\input{preamble}
+
+\title{Note Taking Presentation}
+\author{Hashem A. Damrah}
+\date{\today}
+
+\begin{document}
+  \maketitle
+
+  \renewcommand{\thepage}{\roman{page}}
+  \pagestyle{plain}
+  \setcounter{page}{0}
+
+  \tableofcontents
+
+  \newpage
+
+  \renewcommand{\thepage}{\arabic{page}}
+  \setcounter{page}{1}
+  \pagestyle{normal}
+
+  \include{source-chapters}
+\end{document}
