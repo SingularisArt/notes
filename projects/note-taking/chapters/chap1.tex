@@ -90,6 +90,98 @@ Here's a quick glance at my notes structure:
 |       |-- tuftebook.cls
 \end{minted}
 
+There are a lot of main folders/files that you need to know.
+
+\subsection{Source Lessons}
+\label{sub_sec:source-lessons}
+
+This file is where I source all of my lessons. Here's a quick example:
+
+\begin{minted}{tex}
+  % Unit 1 Started
+  \input{unit-1/unit-info.tex}
+  \input{unit-1/lesson-1.tex}
+  \input{unit-1/lesson-2.tex}
+  \input{unit-1/lesson-3.tex}
+  % Unit 1 Ended
+
+
+  % Unit 2 Started
+  \input{unit-2/unit-info.tex}
+  \input{unit-2/lesson-1.tex}
+  \input{unit-2/lesson-2.tex}
+  \input{unit-2/lesson-3.tex}
+  \input{unit-2/lesson-4.tex}
+  \input{unit-2/lesson-5.tex}
+  \input{unit-2/lesson-6.tex}
+  % Unit 2 Ended
+
+
+  % Unit 3 Started
+  \input{unit-3/unit-info.tex}
+  \input{unit-3/lesson-1.tex}
+  \input{unit-3/lesson-2.tex}
+  \input{unit-3/lesson-3.tex}
+  \input{unit-3/lesson-4.tex}
+  \input{unit-3/lesson-5.tex}
+  \input{unit-3/lesson-6.tex}
+  % Unit 3 Ended
+
+
+  % Unit 4 Started
+  \input{unit-4/unit-info.tex}
+  \input{unit-4/lesson-1.tex}
+  \input{unit-4/lesson-2.tex}
+  \input{unit-4/lesson-3.tex}
+  \input{unit-4/lesson-4.tex}
+  \input{unit-4/lesson-5.tex}
+  \input{unit-4/lesson-6.tex}
+  % Unit 4 Ended
+\end{minted}
+
+My scripts use this file a ton to add, remove, and edit lessons.
+
+\subsection{Unit Info}
+\label{sub_sec:unit_info}
+
+This is kind of like the Info~\ref{sub_sec:info} file, but it's for the units.
+Here's an example:
+
+\begin{minted}{tex}
+  \chapter{Citizenship}
+
+  \section{Unit 1}
+\end{minted}
+
+% subsection unit_info (end)
+
+% subsection source-lessons (end)
+
+\subsection{Info}
+\label{sub_sec:info}
+
+Next, we have the \textbf{info.yaml} file. This is where I store all of my
+information about the current course. Here's an example:
+
+\begin{minted}{yaml}
+  title: Government
+  short: GOV
+  url: https://bakercharters.instructure.com/courses/15680/
+\end{minted}
+
+% subsection info (end)
+
+\subsection{Current Course}
+\label{sub_sec:current_course}
+
+This is probebly the most important item. This is a symlink to the current
+course that I'm currently working on. If you don't know, a symlink is just a
+file/folder that points to another file/folder. And, in this case, it's pointing
+to the course that I'm currently working on. I use the Current
+Course~\ref{sub_sub_sec:rofi_current_course} script to switch between courses.
+
+% subsection current_course (end)
+
 % section my_notes_structure (end)
 
 \section{The Tools that I use}
