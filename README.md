@@ -37,6 +37,9 @@ My Personal Notes
    * [Rofi Zathura](#rofi-zathura)
 * [What is LaTeX](#what-is-latex)
 * [ToDo](#todo)
+   * [Completed](#completed)
+   * [Working on](#working-on)
+   * [Need to work on](#need-to-work-on)
 
 # File structure
 
