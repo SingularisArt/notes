@@ -419,11 +419,18 @@ They are all pretty self explanatory, but I'll still go over them:
 
 # ToDo
 
+## Completed
+
 - [x] Talk about my scripts.
 - [x] Expand more on the [Lesson tex](#lesson-tex), [Lecture tex](#lecture-tex)
     and [Master tex](#master-tex) section.
 - [x] Talk more about my [Figures](#figures)
+- [x] Add pictures of how my notes look like when using this setup.
+
+## Working on
+
+## Need to work on
+
 - [ ] Talk more about my [Scripts](#my-scripts)
 - [ ] Add gif of me using my scripts.
-- [ ] Add pictures of how my notes look like when using this setup.
 - [ ] Add [What is LaTeX](#what-is-latex) section.
