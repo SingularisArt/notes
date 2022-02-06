@@ -1,0 +1,40 @@
+\documentclass[20pt,a4paper,11pt,openany]{../tuftebook}
+
+\input{../preamble}
+
+\newcommand\theTitle{Honors English}
+\newcommand\theauthor{Hashem A. Damrah}
+\newcommand\thedate{Feb 02 2022}
+
+\title{\theTitle}
+\author{\theauthor}
+\date{\thedate}
+
+\begin{document}
+
+    \maketitle
+    
+    \pagestyle{plain}
+    \renewcommand{\thepage}{Page: \roman{page}}
+    
+    \setcounter{page}{1}
+    \setcounter{chapter}{0}
+    
+    \input{copyright.tex}
+    \input{preface.tex}
+    \input{summary.tex}
+    
+    \tableofcontents
+    \newpage
+
+    \pagestyle{fancy}
+    \renewcommand{\thepage}{Page: \arabic{page}}
+    
+    \setcounter{page}{1}
+    \setcounter{chapter}{0}
+    
+    \input{source-lessons}
+    
+    \printbibliography
+    
+\end{document}
