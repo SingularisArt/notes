@@ -6,89 +6,68 @@
 
 Here's a quick glance at my notes structure:
 
-\begin{minted}{bash}
-.
-|-- current-course -> /home/hashem/Documents/notes/Grade-10/semester-1/hs-algebra-2
-|-- Grade-10
-|   |-- semester-1
-|   |   |-- hs-algebra-2
-|   |   |   |-- assignments
-|   |   |   |   |-- figures
-|   |   |   |   |   |-- seventh-degree-polynomial.pdf
-|   |   |   |   |   |-- seventh-degree-polynomial.pdf_tex
-|   |   |   |   |   |-- seventh-degree-polynomial.svg
-|   |   |   |   |-- latex-files
-|   |   |   |   |   |-- 03.05-Polynomial-Identities-and-Proofs.tex
-|   |   |   |   |   |-- ...
-|   |   |   |   |-- |aster.fdb_latexmk
-|   |   |   |   |-- master.fls
-|   |   |   |   |-- master.tex
-|   |   |   |   |-- pdf-files
-|   |   |   |   |   |-- 03.05-Polynomial-Identities-and-Proofs.pdf
-|   |   |   |   |   |-- ...
-|   |   |   |   |-- preamble.tex
-|   |   |   |-- bibliography.bib
-|   |   |   |-- conclusion.tex
-|   |   |   |-- copyright.tex
-|   |   |   |-- figures
-|   |   |   |   |-- fundamental-theorem-of-algebra.pdf
-|   |   |   |   |-- fundamental-theorem-of-algebra.pdf_tex
-|   |   |   |   |-- fundamental-theorem-of-algebra.svg
-|   |   |   |   |-- ...
-|   |   |   |-- info.yaml
-|   |   |   |-- master.pdf
-|   |   |   |-- master.tex
-|   |   |   |-- preface.tex
-|   |   |   |-- source-lessons.tex
-|   |   |   |-- summary.tex
-|   |   |   |-- texput.log
-|   |   |   |-- unit-1
-|   |   |   |   |-- lesson-1.tex
-|   |   |   |   |-- lesson-2.tex
-|   |   |   |   |-- lesson-3.tex
-|   |   |   |   |-- lesson-4.tex
-|   |   |   |   |-- lesson-5.tex
-|   |   |   |   |-- lesson-6.tex
-|   |   |   |   |-- lesson-8.tex
-|   |   |   |   |-- unit-info.tex
-|   |   |   |-- unit-2
-|   |   |   |   |-- ...
-|   |   |-- ...
-|-- meetings.md
-|-- projects
-|   ├-- government-essay
-|   |   ├-- abstract.tex
-|   |   ├-- appendix.tex
-|   |   ├-- bibliography.bib
-|   |   ├-- chapters
-|   |   |   |-- chap1.tex
-|   |   ├-- conclusion.tex
-|   |   ├-- copyright.tex
-|   |   ├-- master.pdf
-|   |   ├-- master.tex
-|   |   ├-- preamble.tex
-|   |   ├-- preface.tex
-|   |   ├-- source-chapters.tex
-|   |   ├-- summary.tex
-|   |   |-- tuftebook.cls
-|   |-- note-taking
-|       ├-- bibliography.bib
-|       ├-- chapters
-|       |   ├-- chap1.tex
-|       |   |-- chap2.tex
-|       ├-- images
-|       |   ├-- rofi-commands-1.png
-|       |   ├-- rofi-commands-2.png
-|       |   ├-- rofi-current-course.png
-|       |   ├-- rofi-file-browser.png
-|       |   |-- rofi-lessons.png
-|       ├-- master.pdf
-|       ├-- master.tex
-|       ├-- preamble.tex
-|       ├-- source-chapters.aux
-|       ├-- source-chapters.tex
-|       |-- tuftebook.cls
-\end{minted}
+\begin{frame}[fragile]
+  \begin{lstlisting}[style=tree]
+    /home/hashem/Documents/notes/
+    ├── current-course -> /home/hashem/Documents/notes/Grade-10/semester-1/hs-algebra-2
+    ├── Grade-10
+    │   ├── semester-1
+    │   │   ├── hs-algebra-2
+    │   │   │   ├── assignments
+    │   │   │   │   ├── figures
+    │   │   │   │   │   ├── seventh-degree-polynomial.pdf
+    │   │   │   │   │   ├── seventh-degree-polynomial.pdf_tex
+    │   │   │   │   │   └── seventh-degree-polynomial.svg
+    │   │   │   │   ├── latex-files
+    │   │   │   │   │   ├── 03.05-Polynomial-Identities-and-Proofs.tex
+    │   │   │   │   │   └── ...
+    │   │   │   │   ├── master.tex
+    │   │   │   │   ├── pdf-files
+    │   │   │   │   │   ├── 03.05-Polynomial-Identities-and-Proofs.pdf
+    │   │   │   │   │   └── ...
+    │   │   │   │   └── preamble.tex
+    │   │   │   ├── bibliography.bib
+    │   │   │   ├── conclusion.tex
+    │   │   │   ├── copyright.tex
+    │   │   │   ├── figures
+    │   │   │   │   ├── fundamental-theorem-of-algebra.pdf
+    │   │   │   │   ├── fundamental-theorem-of-algebra.pdf_tex
+    │   │   │   │   ├── fundamental-theorem-of-algebra.svg
+    │   │   │   │   └── ...
+    │   │   │   ├── info.yaml
+    │   │   │   ├── master.pdf
+    │   │   │   ├── master.tex
+    │   │   │   ├── preface.tex
+    │   │   │   ├── source-lessons.tex
+    │   │   │   ├── summary.tex
+    │   │   │   ├── unit-1
+    │   │   │   │   ├── lesson-1.tex
+    │   │   │   │   ├── ...
+    │   │   │   │   └── unit-info.tex
+    │   │   │   └── ...
+    │   │   └── ...
+    │   └── ...
+    ├── projects
+    │   ├── government-essay
+    │   │   ├── abstract.tex
+    │   │   ├── appendix.tex
+    │   │   ├── bibliography.bib
+    │   │   ├── chapters
+    │   │   │   ├── chap1.tex
+    │   │   │   └── ...
+    │   │   ├── conclusion.tex
+    │   │   ├── copyright.tex
+    │   │   ├── master.pdf
+    │   │   ├── master.tex
+    │   │   ├── preamble.tex
+    │   │   ├── preface.tex
+    │   │   ├── source-chapters.tex
+    │   │   ├── summary.tex
+    │   │   └── tuftebook.cls
+    │   └── ...
+    │ ...
+  \end{lstlisting}
+\end{frame}
 
 There are a lot of main folders/files that you need to know.
 
@@ -139,7 +118,9 @@ This file is where I source all of my lessons. Here's a quick example:
   % Unit 4 Ended
 \end{minted}
 
-My scripts use this file a ton to add, remove, and edit lessons.
+Then, I call this file within my \textbf{master.tex} file instead of manually
+adding each lesson to my \textbf{master.tex} file. Also, the majority of my
+scripts use this file to add and remove lessons.
 
 \subsection{Unit Info}
 \label{sub_sec:unit_info}
@@ -168,6 +149,9 @@ information about the current course. Here's an example:
   short: GOV
   url: https://bakercharters.instructure.com/courses/15680/
 \end{minted}
+
+My scripts use this file to get the course information and display it to help me
+switch between courses.
 
 % subsection info (end)
 
@@ -253,6 +237,8 @@ that to a file called \textbf{source-lessons.tex}. Then, I source that in my
 \textbf{master.tex} file. Here's where the interesting thing happens. This script pops up a menu asking
 what I want to do.
 
+I created a mapping, which is \textbf{"Window + Alt + p"}, which runs this script.
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-commands-1.png}
@@ -299,7 +285,9 @@ You can view this script
 \hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-compile.sh}{here}.
 
 This is a pretty straightforward script. It will compile my document for me.
-Then, it will ask me if I want to open the document or not.
+Then, it will ask me if I want to open the document or not. I don't use this
+script that often because I like to manually compile my document to see if there
+are any errors.
 
 \begin{figure}[h]
     \centering
@@ -318,7 +306,10 @@ You can view this script
 
 This script will go through all of my classes. It will ask me which class I'm
 currently working on. Then, it will create a symlink from the selected class
-to the \textbf{current\_class}.
+to the \textbf{current-class}.
+
+I created a mapping, which is \textbf{"Window + Alt + c"}, which runs this script.
+This is probebly my most used script.
 
 \begin{figure}[h]
     \centering
@@ -326,8 +317,6 @@ to the \textbf{current\_class}.
     \caption{Rofi Commands Prompt}
     \label{fig:executive-branch-structure}
 \end{figure}
-
-\newpage
 
 % subsubsection rofi_current_course (end)
 
@@ -339,11 +328,14 @@ You can view this script
 
 This script will open my current course folder in a file browser.
 
+I don't use this script that often because I don't really use a file browser. I
+just mustly use my linux terminal.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-file-browser.png}
     \caption{Rofi File Browser}
-    \label{fig:executive-branch-structure}
+    \label{fig:rofi-file-browser}
 \end{figure}
 
 % subsubsection rofi_file_browser (end)
@@ -371,6 +363,13 @@ created by \textbf{Inkscape}. When I select one of the figures, it will open it
 in \textbf{Inkscape} so I can edit it. After I save the figure and close, the
 program will recompile my document.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-inkscape.png}
+    \caption{Rofi Inkscape}
+    \label{fig:rofi-inkscape}
+\end{figure}
+
 % subsubsection rofi_inkscape (end)
 
 \subsubsection{Rofi Lessons}
@@ -388,6 +387,8 @@ one, it will open up that lesson in my text editor, which is \textbf{NeoVim}.
     \caption{Rofi Lessons}
     \label{fig:executive-branch-structure}
 \end{figure}
+
+\newpage
 
 % subsubsection rofi_lessons (end)
 

@@ -1,0 +1,57 @@
+/home/hashem/Documents/notes/
+├── current-course -> /home/hashem/Documents/notes/Grade-10/semester-1/hs-algebra-2
+├── Grade-10
+│   ├── semester-1
+│   │   ├── hs-algebra-2
+│   │   │   ├── assignments
+│   │   │   │   ├── figures
+│   │   │   │   │   ├── seventh-degree-polynomial.pdf
+│   │   │   │   │   ├── seventh-degree-polynomial.pdf_tex
+│   │   │   │   │   └── seventh-degree-polynomial.svg
+│   │   │   │   ├── latex-files
+│   │   │   │   │   ├── 03.05-Polynomial-Identities-and-Proofs.tex
+│   │   │   │   │   └── ...
+│   │   │   │   ├── master.tex
+│   │   │   │   ├── pdf-files
+│   │   │   │   │   ├── 03.05-Polynomial-Identities-and-Proofs.pdf
+│   │   │   │   │   └── ...
+│   │   │   │   └── preamble.tex
+│   │   │   ├── bibliography.bib
+│   │   │   ├── conclusion.tex
+│   │   │   ├── copyright.tex
+│   │   │   ├── figures
+│   │   │   │   ├── fundamental-theorem-of-algebra.pdf
+│   │   │   │   ├── fundamental-theorem-of-algebra.pdf_tex
+│   │   │   │   ├── fundamental-theorem-of-algebra.svg
+│   │   │   │   └── ...
+│   │   │   ├── info.yaml
+│   │   │   ├── master.pdf
+│   │   │   ├── master.tex
+│   │   │   ├── preface.tex
+│   │   │   ├── source-lessons.tex
+│   │   │   ├── summary.tex
+│   │   │   ├── unit-1
+│   │   │   │   ├── lesson-1.tex
+│   │   │   │   ├── ...
+│   │   │   │   └── unit-info.tex
+│   │   │   └── ...
+│   │   └── ...
+│   └── ...
+├── projects
+│   ├── government-essay
+│   │   ├── abstract.tex
+│   │   ├── appendix.tex
+│   │   ├── bibliography.bib
+│   │   ├── chapters
+│   │   │   ├── chap1.tex
+│   │   │   └── ...
+│   │   ├── conclusion.tex
+│   │   ├── copyright.tex
+│   │   ├── master.pdf
+│   │   ├── master.tex
+│   │   ├── preamble.tex
+│   │   ├── preface.tex
+│   │   ├── source-chapters.tex
+│   │   ├── summary.tex
+│   │   └── tuftebook.cls
+│   └── ...
