@@ -17,7 +17,8 @@ Here's a quick glance at my notes structure:
     │   │   │   │   ├── figures
     │   │   │   │   │   ├── seventh-degree-polynomial.pdf
     │   │   │   │   │   ├── seventh-degree-polynomial.pdf_tex
-    │   │   │   │   │   └── seventh-degree-polynomial.svg
+    │   │   │   │   │   ├── seventh-degree-polynomial.svg
+    │   │   │   │   │   └── ...
     │   │   │   │   ├── latex-files
     │   │   │   │   │   ├── 03.05-Polynomial-Identities-and-Proofs.tex
     │   │   │   │   │   └── ...
@@ -69,7 +70,7 @@ Here's a quick glance at my notes structure:
   \end{lstlisting}
 \end{frame}
 
-There are a lot of main folders/files that you need to know.
+Here are a list of the main folders/files in my notes structure:
 
 \subsection{Source Lessons}
 \label{sub_sec:source-lessons}
@@ -232,12 +233,12 @@ You can view this script
 \hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-commands.py}{here}.
 
 This script is probebly my favorite. So, when I take notes on a new lesson, I
-create a new file in a folder for the unit. EX: \textbf{unit-1/lesson-1.tex}. Then, I add
+create a new file in a folder for the unit. EX: \textbf{unit-1/lesson-1.tex}.
+Then, I add
 that to a file called \textbf{source-lessons.tex}. Then, I source that in my
-\textbf{master.tex} file. Here's where the interesting thing happens. This script pops up a menu asking
+\textbf{master.tex} file. Here's where the interesting thing happens. This
+script pops up a menu asking
 what I want to do.
-
-I created a mapping, which is \textbf{"Window + Alt + p"}, which runs this script.
 
 \begin{figure}[ht]
     \centering
@@ -308,9 +309,6 @@ This script will go through all of my classes. It will ask me which class I'm
 currently working on. Then, it will create a symlink from the selected class
 to the \textbf{current-class}.
 
-I created a mapping, which is \textbf{"Window + Alt + c"}, which runs this script.
-This is probebly my most used script.
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-current-course.png}
@@ -346,9 +344,15 @@ just mustly use my linux terminal.
 You can view this script
 \hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-grades.py}{here}.
 
-This is a script that I'm currently working on. But, I want this script go and
-parse through my grades from the baker charters website, and use \textbf{Rofi}
-to show me my current grades.
+This script will parse my grades tab in the baker charters website. Then, it
+will use \textbf{Rofi} to show me my current grades.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/rofi-grades.png}
+%     \caption{Rofi File Browser}
+%     \label{fig:rofi-grades}
+% \end{figure}
 
 % subsubsection rofi_grades (end)
 
@@ -370,6 +374,8 @@ program will recompile my document.
     \label{fig:rofi-inkscape}
 \end{figure}
 
+% \newpage
+
 % subsubsection rofi_inkscape (end)
 
 \subsubsection{Rofi Lessons}
@@ -387,8 +393,6 @@ one, it will open up that lesson in my text editor, which is \textbf{NeoVim}.
     \caption{Rofi Lessons}
     \label{fig:executive-branch-structure}
 \end{figure}
-
-\newpage
 
 % subsubsection rofi_lessons (end)
 
@@ -447,14 +451,6 @@ will mark the project as finished.
 
 % subsubsection rofi_projects (end)
 
-\subsubsection{Rofi Source Code}
-\label{sub_sub_sec:rofi_source_code}
-
-You can view this script
-\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-source-code.sh}{here}.
-
-% subsubsection rofi_source_code (end)
-
 \subsubsection{Rofi Web Browser}
 \label{sub_sub_sec:rofi_web_browser}
 
@@ -464,16 +460,6 @@ You can view this script
 This script will open my current course class in my web browser.
 
 % subsubsection rofi_web_browser (end)
-
-\subsubsection{Rofi Yaml}
-\label{sub_sub_sec:rofi_yaml}
-
-You can view this script
-\hyperlink{https://github.com/SingularisArt/local/blob/master/scripts/school/rofi-yaml.sh}{here}.
-
-This script will open my data file for the current course in my text editor.
-
-% subsubsection rofi_yaml (end)
 
 \subsubsection{Rofi Zathura}
 \label{sub_sub_sec:rofi_zathura}
