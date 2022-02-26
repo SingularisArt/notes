@@ -12,40 +12,58 @@
 
 \begin{document}
     \maketitle
-    
+
     \pagestyle{plain}
     \renewcommand{\thepage}{Page: \roman{page}}
-    
+
     \setcounter{page}{1}
     \setcounter{chapter}{0}
-    
+
     \twocolumn
-    
+
     \input{copyright}
     \newpage
     \input{preface}
     \newpage
     \input{summary}
     \newpage
-    
     \onecolumn
-    
+
     \tableofcontents
     \newpage
 
     \pagestyle{fancy}
     \renewcommand{\thepage}{Page: \arabic{page}}
-    
+
     \setcounter{page}{1}
     \setcounter{chapter}{0}
-    
+
     \newpage
-    
+
     \input{source-lessons}
-    
+
     \newpage
-    
+
     \twocolumn
-    
+
     \input{conclusion}
+
+    % \begin{conclusion}[Conclusion]
+    %   \lipsum*[3]
+    % \end{conclusion}
+    % \begin{theorem}[Theorem]
+    %   \lipsum*[3]
+    % \end{theorem}
+    % \begin{definition}[Definition]
+    %   \lipsum*[3]
+    % \end{definition}
+    % \begin{example}[Example]
+    %   \lipsum*[3]
+    % \end{example}
+    % \begin{lemma}[Lemma]
+    %   \lipsum*[3]
+    % \end{lemma}
+    % \begin{property}[Property]
+    %   \lipsum*[3]
+    % \end{property}
 \end{document}

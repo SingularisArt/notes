@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\usepackage{amsthm}
+\usepackage[many]{tcolorbox}
+
+\usepackage{blindtext}
+
+\begin{document}
+
+\newtheoremstyle{theorem}
+    {0pt}{0pt}{\normalfont}{0pt}
+    {}{\;}{0.25em}
+    {{\sffamily\bfseries\color{theoremcolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
+        \thmnote{\normalfont\color{black}~(#3)}}
+
+\newtheoremstyle{definition}
+    {0pt}{0pt}{\normalfont}{0pt}
+    {}{\;}{0.25em}
+    {{\sffamily\bfseries\color{definitioncolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
+        \thmnote{\normalfont\color{black}~(#3)}}
+
+\theoremstyle{theorem}
+
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}{Definition}
+
+\colorlet{theoremcolor}{blue!50!cyan}
+\colorlet{definitioncolor}{red!50!orange}
+
+\definecolor{proofcolor}{RGB}{0,0,0}
+
+\tcolorboxenvironment{theorem}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=theoremcolor!10, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{theoremcolor}, arc=.5mm
+}
+
+\tcolorboxenvironment{definition}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=definitioncolor!10, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{definitioncolor}, arc=.5mm
+}
+
+% These patches must be placed after \tcolorboxenvironment !
+\AddToHook{env/theorem/after}{\colorlet{proofcolor}{theoremcolor}}
+\AddToHook{env/definition/after}{\colorlet{proofcolor}{definitioncolor}}
+
+\renewcommand{\proofname}{%
+    \normalfont\sffamily\bfseries%
+    \color{proofcolor}Proof%
+}
+\let\qedsymbolMyOriginal\qedsymbol
+\renewcommand{\qedsymbol}{%
+    \color{proofcolor}\qedsymbolMyOriginal%
+}
+
+
+\begin{theorem}
+    \blindtext
+\end{theorem}
+
+\begin{proof}
+    Some text.
+\end{proof}
+
+\begin{definition}
+    \blindtext
+\end{definition}
+
+\begin{proof}
+    Some text.
+\end{proof}
+
+
+\end{document}
+

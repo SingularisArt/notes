@@ -46,9 +46,6 @@
 \usepackage{titletoc}
 \usepackage{lipsum}
 \usepackage[nottoc]{tocbibind}
-\usepackage{tikz}
-\usepackage{tikz-cd}
-\usetikzlibrary{quotes,arrows.meta}
 \usepackage{thmtools}
 \usepackage{thm-restate}
 \usepackage{multirow}
@@ -59,10 +56,20 @@
 \usepackage{microtype}
 \usepackage{upgreek}
 \usepackage[misc]{ifsym}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{tkz-euclide}
 \usepackage[
     sorting=nyt,
     style=alphabetic
 ]{biblatex}
+
+%%%%%%%%
+% Tikz %
+%%%%%%%%
+
+\usetikzlibrary{quotes,arrows.meta,external}
+\tikzset{external/force remake=true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % New commands and Re-New commands %

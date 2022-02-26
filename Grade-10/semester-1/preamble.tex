@@ -37,6 +37,7 @@
 \usepackage{stmaryrd}
 \usepackage{siunitx}
 \usepackage{mdframed}
+\usepackage{framed}
 \usepackage{etoolbox}
 \usepackage{fancyhdr}
 \usepackage{todonotes}
@@ -264,32 +265,136 @@
 \makeatother
 \mdfsetup{skipabove=1em,skipbelow=0em}
 
+\tcbuselibrary{skins}
+
+% Color definitions
+
+\definecolor{proofcolor}{RGB}{0,0,0}
+
+\colorlet{theorembackgroundcolor}{pink!75!orange!10}
+\definecolor{theorembordercolor}{rgb}{2.0, 0.55, 0.0}
+
+\colorlet{examplebordercolor}{blue!50!cyan}
+\colorlet{examplebackgroundcolor}{blue!50!cyan!10}
+
+\colorlet{definitionbordercolor}{green!50!lime}
+\colorlet{definitionbackgroundcolor}{green!50!lime!10}
+
+\colorlet{propertybordercolor}{pink!50!purple}
+\colorlet{propertybackgroundcolor}{pink!50!purple!10}
+
+
+% Definition style starts here
+
 \theoremstyle{definition}
-\newmdtheoremenv{definition}{Definition}
-\newmdtheoremenv{lemma}{Lemma}
-\newmdtheoremenv{repetition}{Repetition}
-\newmdtheoremenv{property}{Property}
-\newmdtheoremenv{intuition}{Intuition}
-\newmdtheoremenv{observation}{Observation}
-\newmdtheoremenv{conclusion}{Conclusion}
 
-\newtheorem*{question}{Question}
-\newtheorem*{answer}{Answer}
-\newtheorem*{problem}{Problem}
-\newtheorem*{example}{Example}
-\newtheorem*{notation}{Notation}
+\newtheorem{theorem}{Theorem}
+\tcolorboxenvironment{theorem}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=theorembackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{theorembordercolor}, arc=.5mm
+}
+\newtheorem{lemma}{Lemma}
+\tcolorboxenvironment{lemma}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=theorembackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{theorembordercolor}, arc=.5mm
+}
+\newtheorem{conclusion}{Conclusion}
+\tcolorboxenvironment{conclusion}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=theorembackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{theorembordercolor}, arc=.5mm
+}
+\newtheorem{corollary}{Corollary}
+\tcolorboxenvironment{corollary}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=theorembackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{theorembordercolor}, arc=.5mm
+}
 
-\declaretheorem[numbered=no, style=todo, name=TODO]{TODO}
 
-\theoremstyle{plain}
-\newmdtheoremenv{prop}{Proposition}
-\newmdtheoremenv{theorem}{Theorem}
-\newmdtheoremenv{postulate}{Postulate}
-\newmdtheoremenv{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\tcolorboxenvironment{definition}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=definitionbackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{definitionbordercolor}, arc=.5mm
+}
+\newtheorem{question}{Question}
+\tcolorboxenvironment{question}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=definitionbackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{definitionbordercolor}, arc=.5mm
+}
+\newtheorem{answer}{Answer}
+\tcolorboxenvironment{answer}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=definitionbackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{definitionbordercolor}, arc=.5mm
+}
 
-\theoremstyle{remark}
-\newmdtheoremenv{note}{Note}
-\newmdtheoremenv{hint}{Hint}
+
+\newtheorem{example}{Example}
+\tcolorboxenvironment{example}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=examplebackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{examplebordercolor}, arc=.5mm
+}
+\newtheorem{remark}{Remark}
+\tcolorboxenvironment{remark}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{examplebordercolor}, arc=.5mm
+}
+
+
+\newtheorem{property}{Property}
+\tcolorboxenvironment{property}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=propertybackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{propertybordercolor}, arc=.5mm
+}
+\newtheorem{prop}{Proposition}
+\tcolorboxenvironment{prop}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=propertybackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{propertybordercolor}, arc=.5mm
+}
+\newtheorem{postulate}{Postulate}
+\tcolorboxenvironment{postulate}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=propertybackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{propertybordercolor}, arc=.5mm
+}
+
+% These patches must be placed after \tcolorboxenvironment !
+\AddToHook{env/theorem/after}{\colorlet{proofcolor}{theorembordercolor}}
+\AddToHook{env/example/after}{\colorlet{proofcolor}{examplebordercolor}}
+\AddToHook{env/definition/after}{\colorlet{proofcolor}{definitionbordercolor}}
+\AddToHook{env/property/after}{\colorlet{proofcolor}{propertybordercolor}}
+
+\renewcommand{\proofname}{%
+    \normalfont\sffamily\bfseries%
+    \color{proofcolor}Proof%
+}
+\let\qedsymbolMyOriginal\qedsymbol
+\renewcommand{\qedsymbol}{%
+    \color{proofcolor}\qedsymbolMyOriginal%
+}
+
+% Definition style ends here
 
 \newenvironment{info}{\begin{tcolorbox}[
     arc=0mm,
@@ -325,25 +430,3 @@
 ]}{\end{tcolorbox}}
 
 \renewcommand{\qedsymbol}{Q.E.D.}
-
-\definecolor{correct}{HTML}{009900}
-\theoremstyle{definition}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
-\declaretheorem[numbered=no, style=thmexplanationbox, name=Proof]{explanation}
-\declaretheorem[numbered=no, style=thmproofbox, name=Proof]{replacementproof}
-\declaretheorem[style=thmbluebox,  numbered=no, name=Exercise]{ex}
-\declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=RawSienna, backgroundcolor=RawSienna!5,
-    }
-]{todo}
-\AtBeginEnvironment{quote}{\itshape}
