@@ -1,40 +1,39 @@
-\documentclass[20pt,a4paper,11pt,openany]{../tuftebook}
+\documentclass[20pt,a4paper,11pt,openany,tikz]{../tuftebook}
 
 \input{../preamble}
 
-\newcommand\theTitle{Honors English}
-\newcommand\theauthor{Hashem A. Damrah}
-\newcommand\thedate{Sep 7 2021}
+\newcommand\theTitle{Honors English 2B}
+\newcommand\theAuthor{Hashem \textsc{Damrah}}
+\newcommand\theDate{Feb. 2 2022}
 
 \title{\theTitle}
 \author{\theauthor}
 \date{\thedate}
 
 \begin{document}
+  \input{title.tex}
+    
+  \pagestyle{plain}
+  \renewcommand{\thepage}{Page: \roman{page}}
+  
+  \setcounter{page}{1}
+  \setcounter{chapter}{0}
+  
+  \input{copyright.tex}
+  \input{preface.tex}
+  \input{summary.tex}
+  
+  \tableofcontents
+  \newpage
 
-    \maketitle
-    
-    \pagestyle{plain}
-    \renewcommand{\thepage}{Page: \roman{page}}
-    
-    \setcounter{page}{1}
-    \setcounter{chapter}{0}
-    
-    \input{copyright.tex}
-    \input{preface.tex}
-    \input{summary.tex}
-    
-    \tableofcontents
-    \newpage
-
-    \pagestyle{fancy}
-    \renewcommand{\thepage}{Page: \arabic{page}}
-    
-    \setcounter{page}{1}
-    \setcounter{chapter}{0}
-    
-    \input{source-lessons}
-    
-    \printbibliography
-    
+  \pagestyle{fancy}
+  \renewcommand{\thepage}{Page: \arabic{page}}
+  
+  \setcounter{page}{1}
+  \setcounter{chapter}{0}
+  
+  \input{source-lessons.tex}
+  
+  \printbibliography
 \end{document}
+

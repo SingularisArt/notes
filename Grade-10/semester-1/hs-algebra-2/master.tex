@@ -1,66 +1,46 @@
-\documentclass[20pt,a4paper,11pt,openany]{../tuftebook}
+\documentclass{../tuftebook}
 
 \input{../preamble}
 
 \newcommand\theTitle{Honors Algebra 2A}
 \newcommand\theauthor{Hashem A. Damrah}
-\newcommand\thedate{Sep 7 2021}
+\newcommand\thedate{Sep. 07 2021}
 
 \title{\theTitle}
 \author{\theauthor}
 \date{\thedate}
 
+\newlength{\drop}
+\let\cleardoublepage\clearpage
+
 \begin{document}
-    % \maketitle
-    % 
-    % \pagestyle{plain}
-    % \renewcommand{\thepage}{Page: \roman{page}}
-    % 
-    % \setcounter{page}{1}
-    % \setcounter{chapter}{0}
-    % 
-    % \twocolumn
-    % 
-    % \input{copyright}
-    % \newpage
-    % \input{preface}
-    % \newpage
-    % \input{summary}
-    % \newpage
-    % 
-    % \onecolumn
-    % 
-    % \tableofcontents
-    % \newpage
-    %
-    % \pagestyle{fancy}
-    % \renewcommand{\thepage}{Page: \arabic{page}}
-    % 
-    % \setcounter{page}{1}
-    % \setcounter{chapter}{0}
-    % 
-    % \newpage
-    % 
-    % \input{source-lessons}
-    % 
-    % \newpage
-    % 
-    % \twocolumn
-    % 
-    % \input{conclusion}
-  \begin{theorem}
-      \lipsum*[1]
-  \end{theorem}
+    \input{title.tex}
 
-  \begin{proof}
-      Some text.
-  \end{proof}
+    \cleardoublepage
+    \pagestyle{plain}
+    \renewcommand{\thepage}{Page: \roman{page}}
 
-  \begin{definition}
-      \lipsum*[1]
-  \end{definition}
+    \setcounter{page}{1}
+    \setcounter{chapter}{0}
 
-  \begin{proof}
-      Some text.
-  \end{proof}
+    \input{copyright.tex}
+    \input{preface.tex}
+    \input{summary.tex}
+
+    \tableofcontents
+    \newpage
+
+    \cleardoublepage
+    \pagestyle{fancy}
+    \renewcommand{\thepage}{Page: \arabic{page}}
+
+    \cleardoublepage
+
+    \setcounter{page}{1}
+    \setcounter{chapter}{0}
+
+    \input{source-lessons}
+
+    % \printbibliography
 \end{document}
+

@@ -1,69 +1,46 @@
-\documentclass[20pt,a4paper,11pt,openany]{../tuftebook}
+\documentclass{../tuftebook}
 
 \input{../preamble}
 
 \newcommand\theTitle{Honors Government}
 \newcommand\theauthor{Hashem A. Damrah}
-\newcommand\thedate{Sep 7 2021}
+\newcommand\thedate{Sep. 07 2021}
 
 \title{\theTitle}
 \author{\theauthor}
 \date{\thedate}
 
-\begin{document}
-    \maketitle
+\newlength{\drop}
+\let\cleardoublepage\clearpage
 
+\begin{document}
+    \input{title.tex}
+
+    \cleardoublepage
     \pagestyle{plain}
     \renewcommand{\thepage}{Page: \roman{page}}
 
     \setcounter{page}{1}
     \setcounter{chapter}{0}
 
-    \twocolumn
-
-    \input{copyright}
-    \newpage
-    \input{preface}
-    \newpage
-    \input{summary}
-    \newpage
-    \onecolumn
+    \input{copyright.tex}
+    \input{preface.tex}
+    \input{summary.tex}
 
     \tableofcontents
     \newpage
 
+    \cleardoublepage
     \pagestyle{fancy}
     \renewcommand{\thepage}{Page: \arabic{page}}
+
+    \cleardoublepage
 
     \setcounter{page}{1}
     \setcounter{chapter}{0}
 
-    \newpage
-
     \input{source-lessons}
 
-    \newpage
-
-    \twocolumn
-
-    \input{conclusion}
-
-    % \begin{conclusion}[Conclusion]
-    %   \lipsum*[3]
-    % \end{conclusion}
-    % \begin{theorem}[Theorem]
-    %   \lipsum*[3]
-    % \end{theorem}
-    % \begin{definition}[Definition]
-    %   \lipsum*[3]
-    % \end{definition}
-    % \begin{example}[Example]
-    %   \lipsum*[3]
-    % \end{example}
-    % \begin{lemma}[Lemma]
-    %   \lipsum*[3]
-    % \end{lemma}
-    % \begin{property}[Property]
-    %   \lipsum*[3]
-    % \end{property}
+    % \printbibliography
 \end{document}
+
