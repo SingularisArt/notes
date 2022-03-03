@@ -1,31 +1,33 @@
 \documentclass{article}
 
-\input{preamble}
+\newcommand{\hmwkTitle}{Homework \#2}
+\newcommand{\hmwkDueDate}{\today}
+\newcommand{\hmwkClass}{Honors Algebra 2}
+\newcommand{\hmwkClassTime}{Section A}
+\newcommand{\hmwkClassInstructor}{Ms. Scott}
+\newcommand{\hmwkAuthorName}{\textbf{Hashem A. Damrah}}
 
-\newcommand{\lessonTitle}{03.05 Polynomial Identities and Proofs}
-\newcommand{\teacherName}{Ms. Beatty}
+\title {
+  \vspace{2in}
+  \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+  \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ at 11:59 pm} \\
+  \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+  \vspace{3in}
+}
 
-\newcommand\theTitle{\lessonTitle}
-\newcommand\theauthor{Hashem A. Damrah}
-\newcommand\thedate{\today}
+\author{\hmwkAuthorName}
+\date{}
 
-\title{\theTitle}
-\author{\theauthor}
-\date{\thedate}
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter} \\ }
+
+\input{preamble.tex}
+\input{front-page.tex}
 
 \begin{document}
-    \maketitle
+  \maketitle
 
-    \pagestyle{plain}
-    \renewcommand{\thepage}{Page: \roman{page}}
-    
-    \setcounter{page}{1}
-    
-    \pagestyle{fancy}
-    \renewcommand{\thepage}{Page: \arabic{page}}
-    
-    \setcounter{page}{1}
-    
-    \setlength{\parindent}{4em}
-    \input{latex-files/03.05-Polynomial-Identities-and-Proofs.tex}
+  \pagebreak
+
+  % \input{latex-files/unit-1/}
+  % \printbibliography
 \end{document}

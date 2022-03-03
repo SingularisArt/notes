@@ -1,46 +1,39 @@
-\documentclass{../tuftebook}
+\documentclass[20pt,a4paper,11pt,openany,tikz]{../tuftebook}
 
 \input{../preamble}
 
 \newcommand\theTitle{Honors Government}
-\newcommand\theauthor{Hashem A. Damrah}
-\newcommand\thedate{Sep. 07 2021}
+\newcommand\theAuthor{Hashem \textsc{Damrah}}
+\newcommand\theDate{Sep. 7 2021}
 
 \title{\theTitle}
 \author{\theauthor}
 \date{\thedate}
 
-\newlength{\drop}
-\let\cleardoublepage\clearpage
-
 \begin{document}
-    \input{title.tex}
+  \input{title.tex}
+    
+  \pagestyle{plain}
+  \renewcommand{\thepage}{Page: \roman{page}}
+  
+  \setcounter{page}{1}
+  \setcounter{chapter}{0}
+  
+  \input{copyright.tex}
+  \input{preface.tex}
+  \input{summary.tex}
+  
+  \tableofcontents
+  \newpage
 
-    \cleardoublepage
-    \pagestyle{plain}
-    \renewcommand{\thepage}{Page: \roman{page}}
-
-    \setcounter{page}{1}
-    \setcounter{chapter}{0}
-
-    \input{copyright.tex}
-    \input{preface.tex}
-    \input{summary.tex}
-
-    \tableofcontents
-    \newpage
-
-    \cleardoublepage
-    \pagestyle{fancy}
-    \renewcommand{\thepage}{Page: \arabic{page}}
-
-    \cleardoublepage
-
-    \setcounter{page}{1}
-    \setcounter{chapter}{0}
-
-    \input{source-lessons}
-
-    % \printbibliography
+  \pagestyle{fancy}
+  \renewcommand{\thepage}{Page: \arabic{page}}
+  
+  \setcounter{page}{1}
+  \setcounter{chapter}{0}
+  
+  \input{source-lessons}
+  
+  \printbibliography
 \end{document}
 

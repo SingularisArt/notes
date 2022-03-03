@@ -1,90 +1,119 @@
 \lesson{4}{Sep 22 2021 Wen (12:43:32)}{Complex Numbers}{Unit 1}
 
-\subsubsection*{Imaginary Numbers}
+\begin{definition}[Imaginary Numbers]
+  \label{def:imaginary_numbers}
 
-What pairs of identical factors will produce $-1$ when multiplied? \\ $1 \times
-1$ doesn't work since it equals positive $1$. The same is true of $-1 \times 1$
-which also equals positive $1$. \\ $1 \times -1$ equals $-1$, but these are not
-identical factors.
+  Here's a quick question. Solve this equation: $a \times b = -1$. They must not
+  be identical factors, meaning it cannot be $1 \times -1 = -1$.
 
-\begin{definition}[$i$]
-    To solve this problem, the concept of the imaginary number \textit{i} was
-    invented. The imaginary number was defined to be:
-    
-    \[ i = \sqrt{-1} \]
-    
-    With this definition, the square root of negative radicands, in addition to
-    positive radicands, may be simplified.
+  To solve this problem, we came up with the imaginary number $i$. It's defined
+  to:
+
+  \[ i = \sqrt{-1} \].
+
+  With this definition, the square root of a negative radicand, in addition to
+  positive radicands can be simplified.
 \end{definition}
 
-\begin{example}[$i$]
-    Simplify: $\sqrt{-8}$
-    
-    \begin{align}
-        \sqrt{-1} \times \sqrt{8} &= i \times \sqrt{8} \\
-                                  &= i \sqrt{8} \\
-                                  &= i \sqrt{4} \times \sqrt{2} \\
-                                  &= 2i \sqrt{2}
-    \end{align}
+\subsubsection{History of the Imaginary Numbers}
+\label{sub_sub_sec:history_of_the_imaginary_numbers}
+
+Thought history, there have been times when a mathematical construct was
+invented before its purpose was discovered. For example, early man knew the
+concept of $1$ before knowing $0$. Numbers, at that time, were used to count
+sheep and other animals as a source for food. There was no need to define the
+concept of $0$. But, when fractions were defined, they were thought of useless.
+What purpose could there be to have a number between $0$ and $1$. But today,
+fractions become part of our daily life. Imaginary numbers have the same
+history. It's use will come out eventually, we just don't know when.
+
+Solving an equation such as: $x^{2} - 9 = 0$ should be already familiar. The
+goal is to isolate the variable on one side by first adding $9$ to both sides.
+
+\begin{equation}
+  \label{eqt:history_of_the_imaginary_numbers_1}
+  \begin{split}
+    x^{2} &= 9 \\
+    \sqrt{x^{2}} &= \sqrt{9} \\
+    \boxed{x = \pm 3}
+  \end{split}
+.\end{equation}
+
+Notice that the $\sqrt{9}$ is indicated as  $\pm 3$. The reason this is because
+there are two pairs of identical factors that produce $9$ when multiplied: $3
+\times 3 = 9$ and $-3 \times -3 = 9$.
+
+But, how do you solve an equation such as: $x^{2} + 1 = 0$? You begin just as in
+the last equation. Isolate the variable, but this time, subtract $1$ from both
+sides of the equal sign.
+
+\begin{equation}
+  \label{eqt:history_of_the_imaginary_numbers_2}
+  \begin{split}
+    x^{2} + 1 &= 0 \\
+    x^{2} &= -1 \\
+    \sqrt{x^{2}} &= \sqrt{-1} \\
+  \end{split}
+.\end{equation}
+
+This is what troubled mathematicians for centuries. All of the radicans they
+have been working with have all been positive. So, to overcome this obstacle,
+they invented $i$.
+
+\begin{example}
+  \label{exm:history_of_the_imaginary_numbers_3}
+
+  Let's try and simplify the following expression: $\sqrt{-4}$
+  
+  \begin{equation}
+    \label{eqt:history_of_the_imaginary_numbers_4}
+    \begin{split}
+      \sqrt{-4} &= \sqrt{-1} \times \sqrt{4} \\
+            &= i \times \sqrt{4} \\
+            &= i\sqrt{4} \\
+            &= \boxed{2i}
+    \end{split}
+  .\end{equation}
 \end{example}
 
-\subsubsection*{Squaring Imaginary Numbers}
+% subsubsection history_of_the_imaginary_numbers (end)
 
-You know that $i = \sqrt{-1}$ \\
-Consequently, $i^2 = (\sqrt{-1})^2$ \\
-Since squaring a square root will eliminate the square root sign:
+\subsubsection{Using $i$ to help solve equations}
+\label{sub_sub_sec:using_i_to_help_solve_equations}
 
-\begin{align}
-    \sqrt{3^2} &= \sqrt{3} \times \sqrt{3} \\
-               &= \sqrt{9} \\
-               &= 3
-\end{align}
+You already know that $i = \sqrt{-1}$, but what about the different powers of
+$i$. Take a look at the table below (\ref{tab:different_powers_of_i})
 
-Then:
+\begin{table}[h]
+  \centering
+  \caption{Different Powers of $i$}
+  \label{tab:different_powers_of_i}
 
-\begin{align}
-    i^2 &= (\sqrt{-1})^2 \\
-        &= i^2 \\
-        &= -1
-\end{align}
+  \begin{tabular}{|l|c|c|r|}
+    \hline
+    $i = i$ & $i^{5} = i$ & $i^{9} = i$ & $i^{13} = i$ \\ \hline
+    $i^{2} = -1$ & $i^{6} = -1$ & $i^{10} = -1$ & $i^{14} = -1$ \\ \hline
+    $i^{3} = -i$ & $i^{7} = -i$ & $i^{11} = -i$ & $i^{15} = -i$ \\ \hline
+    $i^{4} = 1$ & $i^{8} = 1$ & $i^{12} = 1$ & $i^{16} = 1$ \\ \hline
+  \end{tabular}
+\end{table}
 
-\subsubsection*{Cubing Imaginary Numbers}
+\begin{example}
+  \label{exm:different_powers_of_i}
 
-What about cubing the imaginary number:
+  Simplify: $i^{27}$:
 
-\begin{align}
-    i^3 &= i \times i \times i \\
-        &= i^3 \\
-        &= (i \times i) \times i \\
-        &= i^3 = i^2 \times i \\
-        &= i^3 = -1 \times i \\
-        &= i^3 \\
-        &= -i
-\end{align}
+  First, you take the exponent ($27$) and divide it by $4$ and keep the
+  remainder. The reason we divide it by $4$ is because that's how many version
+  of $i$ there are.
 
-\subsubsection{Biquadrate Imaginary Numbers}
+  \longdivision[stage=1]{27}{4}
 
-\textbf{i} to the fourth power can be found in a similar way:
-
-\begin{align}
-    i^4 &= i \times i \times i \times i \\
-        &= i^4 \\
-        &= (i \times i) \times (i \times i) \\
-        &= i^4 \\
-        &= -1 \times -1 \\
-        &= i = 1
-\end{align}
-
-\subsubsection*{Simplifying $i$}
-
-\begin{example}[Simplifying $i$]
-    Simplify: $i^{27}$
-    
-    \begin{align}
-        \frac{27}{4} &= 6 R \longrightarrow 3 \\
-                     &= i^{R \longrightarrow 3} \\
-                     &= -i
-    \end{align}
+  We raise $i$ to the power of $3$, which is the remainder of $27 \div 4$.
+  If we look at the different powers of $i$ table
+  (\ref{tab:different_powers_of_i}), we will see that $i^{3} = -i$.
 \end{example}
+
+% subsubsection using_i_to_help_solve_equations (end)
 
 \newpage

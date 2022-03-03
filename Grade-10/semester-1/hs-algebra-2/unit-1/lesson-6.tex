@@ -1,132 +1,506 @@
 \lesson{6}{Sep 27 2021 Mon (07:30:12)}{Polynomial Operations}{Unit 1}
 
-\subsubsection*{Adding Polynomials}
+\subsubsection{Adding Polynomials}
+\label{sub_sub_sec:adding_polynomials}
 
-The most important part of adding or subtracting polynomials is identifying
-like terms. Like terms are terms containing the exact same “variable part.”
-Exponents for the variables must be exactly the same. Coefficients can, and
-probably will, be different. Identify the like terms in the following matching
-exercise.
+\begin{definition}[Like Terms]
+  \label{def:like_terms}
 
-\begin{example}[Adding Polynomials]
-    Add: $(2x^3 + 4x^2 - x + 7) + (3x^2 + 6x + 10)$
-    
-    \begin{enumerate}
-        \item Again, there is an understood $1$ in front of each set of
-            parentheses. As you've seen, distributing this $1$ will not change
-            the expression. Therefore, the parentheses may simply be removed.
-        \item Highlight each pair of terms containing the same variable part.
-            Combine the like terms.
-    \end{enumerate}
+  Like terms are terms that have the same \textbf{variable} and
+  \textbf{exponent}. 
 
-    Note: Since there is no other term with a variable part of $x^3$, the term
-    $2x^3$ stays the same in the final answer.
-    
-    \begin{align}
-        (2x^3 + 4x^2 - x + 7) + (3x^2 + 6x + 10) &= 2x^3 + 4x^2 - x + 7 + 3x^2 + 6x + 10 \\
-                                                 &= 2x^3 + 7x^2 + 5x + 17
-    \end{align}
+  Ex: $5y^{2}$ and $5909y^{2}$. \\
+  Ex: $9zsa^{d}$ and $8sa^{d}z$.
+\end{definition}
+
+The most important part of adding or subtracting polynomials is identifying \textbf{like
+terms} (\ref{def:like_terms}).
+
+\begin{example}
+  \label{exm:adding_polynomials}
+  Let's add the following polynomials: $(7x^{2} + 3x - 5) + (2x^{2} - 4x + 9)$
+
+  \begin{equation}
+    \label{eqt:adding_polynomials}
+    \begin{split}
+      \textrm{Step $1$:} \quad &\textrm{Distribute any Coefficient} \\
+      1(7x^{2} + 3x - 5) + 1(2x^{2} - 4x + 9) &= 7x^{2} + 3x - 5 + 2x^{2} - 4x + 9 \\
+      \textrm{Step $2$:} \quad &\textrm{Identify the Like Terms} \\
+      7x^{2} + 3x - 5 + 2x^{2} - 4x + 9 &= \boxed{9x^{2} - x + 4} \\
+    \end{split}
+  .\end{equation}
+
+  The reason there's a $1$ in front of each polynomial is because we're adding,
+  and when you add, you distribute a positive $1$. Take a look at this
+  polynomial: $5(3x^{2} + 3x - 1) + 4(x^{2} + 2)$. You distribute a positive $5$ 
+  to the first polynomial and a positive $4$ to the second polynomial.
 \end{example}
 
-\subsubsection*{Subtracting Polynomials}
+% subsubsection adding_polynomials (end)
+
+\subsubsection{Subtracting Polynomials}
+\label{sub_sub_sec:subtracting_polynomials}
+
+\begin{review}[Distributive Property]
+  \label{rev:distributive_property}
+
+  \begin{equation}
+    \label{eqt:distributive_property}
+    \begin{split}
+      a(b + c) &= a(b) + a(c) \\
+      -a(b + c) &= -(a(b)) + -(a(c)) \\
+    \end{split}
+  .\end{equation}
+\end{review}
 
 Subtracting polynomials is almost exactly like adding polynomials. The only
-“difference” is that now a negative one must be distributed.
+difference is you distribute a negative coefficient instead of a positive one.
 
-\begin{example}[Subtracting Polynomials]
-    Subtract: $(4x^2 - 5) - (x^3 + 2x^2 + 7)$
-    
-    The understood $1$ in front of the first set of parentheses will not change
-    the binomial within. However, the trinomial in the second set of
-    parentheses will change because a negative one ($-1$) must be distributed!
-    In effect, it will change the signs of those three terms.
+\begin{example}
+  \label{exm:subtracting_polynomials}
+  Let's subtract the following polynomials:
+  $(9x^{2} + x + 2) - (7x^{2} + 3x - 4)$.
 
-    \begin{enumerate}
-        \item Highlight each pair of terms containing the same variable part.
-        \item  Combine the like terms. Since $-x^3$ does not have a like term,
-            it is written down as is. Arrange terms in descending order, from
-            greatest exponent to least.
-    \end{enumerate}
+  \begin{equation}
+    \label{eqt:subtracting_polynomials}
+    \begin{split}
+      \textrm{Step $1$:} \quad &\textrm{Distribute any Coefficient} \\
+      (9x^{2} + x + 2) - (7x^{2} + 3x - 4) &= 9x^{2} + x + 2 - 7x^{2} - 3x + 4 \\
+      \textrm{Step $2$:} \quad &\textrm{Identify the Like Terms} \\
+      9x^{2} + x + 2 - 7x^{2} - 3x + 4 &= \boxed{2x^{2} - 2x + 6}
+    \end{split}
+  .\end{equation}
 
-    \begin{align}
-        1(4x^2 - 5) - 1(x^3 + 2x^2 + 7) &= 4x^2 - 5 - x^3 - 2x^2 - 7 \\
-                                        &= 4x^2 - 5 - x^3 - 2x^2 - 7 \\
-                                        &= -x^3 + 2x^2 - 12
-    \end{align}
+  This time, instead of distributing a positive $1$, we distribute a negative
+  $1$ because we're subtracting. Take a look at the \textbf{Distributive
+  Property} review (\ref{rev:distributive_property}) if you need a refresher.
 \end{example}
 
-\subsubsection*{Inverses of Functions}
+% sub subsection subtracting_polynomials (end)
 
-Finding the inverse of an integer means performing an operation that will
-cancel that number. For example, if you are given the number $7$, you could add
-$-7$ to it to cancel it.
+\subsubsection{Using the Distributive Property}
+\label{sub_sub_sec:using_the_distributive_property}
 
-Let's look at an example:
+\paragraph{Multiplying by a Monomial}
+\label{par:multiplying_by_a_monomial}
 
-\begin{example}[Inverse of Functions]
-    \begin{align}
-        f(x) &= 3x - 5 \\
-             &= y = 3x - 5 \\
-             &= x + 5 = 3y \\
-             &= \frac{x + 5}{3} = y \\
-             &= f^{-1}x = \frac{x + 5}{3}
-    \end{align}
+\begin{definition}[Monomial]
+  \label{def:monomial}
+
+  A monomial is a polynomial with only one term. Ex:
+  $\quad 7 \quad 4x \quad 19z^{10}$.
+\end{definition}
+
+\begin{example}
+  \label{exm:multiplying_by_a_monomial}
+
+  Let's try to multiply the following monomial by the following polynomial:
+  $3x^{2}(5x^{2} - 7x + 8)$
+  
+  \begin{equation}
+    \label{eqt:multiplying_by_a_monomial}
+    \begin{split}
+      3x^{2}(5x^{2} - 7x + 8) &= 3x^{2} \times 5x^{2} \\
+                        &= 15x^{4} \\
+      3x^{2}(5x^{2} - 7x + 8) &= 3x^{2} \times (-7x) \\
+                        &= -21x^{3} \\
+      3x^{2}(5x^{2} - 7x + 8) &= 3x^{2} \times 8 \\
+                        &= 24x^{2} \\
+                        &= \boxed{15x^{4} - 21x^{3} + 24x^{2}} \\
+    \end{split}
+  .\end{equation}
 \end{example}
 
-\subsubsection*{Operations on Functions}
+% paragraph multiplying_by_a_monomial (end)
 
-\paragraph*{Addition}
+\paragraph{Multiplying by a Binomial}
+\label{par:multiplying_by_a_binomial}
+
+\begin{definition}[Binomial]
+  \label{def:monomial}
+
+  A binomial is a polynomial with only two term. Ex:
+  $\quad 7 + 9x \quad 4y^{3} - 4x \quad 19z^{10} \times 8z$.
+\end{definition}
+
+\begin{example}
+  \label{exm:multiplying_by_a_binomial}
+
+  Let's try to multiply the following monomial by the following polynomial:
+  $(x - 7)^{2}$. The following polynomial can also be written as: $(x - 7)(x - 7)$
+  
+  \begin{equation}
+    \label{eqt:multiplying_by_a_binomial}
+    \begin{split}
+      (x - 7)(x - 7) &= x \times x \\
+                        &= x^{2} \\
+      (x - 7)(x - 7) &= x \times (-7) \\
+                        &= -7x \\
+      (x - 7)(x - 7) &= (-7) \times x \\
+                        &= -7x \\
+      (x - 7)(x - 7) &= (-7) \times (-7) \\
+                        &= 49 = x^{2} - 7x - 7x + 49 \\
+                        &= \boxed{x^{2} - 14x + 49}
+    \end{split}
+  .\end{equation}
+\end{example}
+
+% paragraph multiplying_by_a_binomial (end)
+
+\paragraph{Multiplying by a Trinomial}
+\label{par:multiplying_by_a_trinomial}
+
+\begin{definition}[Trinomial]
+  \label{def:trinomial}
+
+  A trinomial is a polynomial with three terms. Ex:
+  $\quad 8x + 1 - y \quad u + 8x - 1 \quad 1 \times 14x - z$
+\end{definition}
+
+\begin{example}
+  \label{exm:multiplying_by_a_trinomial}
+
+  Let's try to multiply the following polynomial by the following binomial
+  $(4x^{2} - 5x + 9)(x - 5)$
+  
+  \begin{equation}
+    \label{eqt:multiplying_by_a_trinomial}
+    \begin{split}
+      (4x^{2} - 5x + 9)(x - 5) &= 4x^{2} \times x \\
+                            &= 4x^{3} \\
+      (4x^{2} - 5x + 9)(x - 5) &= 4x^{2} \times (-5) \\
+                            &= -20x^{2} \\
+      (4x^{2} - 5x + 9)(x - 5) &= (-5x) \times x \\
+                            &= -5x^{2} \\
+      (4x^{2} - 5x + 9)(x - 5) &= (-5x) \times (-5) \\
+                            &= 25x \\
+      (4x^{2} - 5x + 9)(x - 5) &= 9 \times x \\
+                            &= 9x \\
+      (4x^{2} - 5x + 9)(x - 5) &= 9 \times (-5) \\
+                            &= -45 = 4x^{3} - 20x^{2} - 5x + 25x + 9x - 45 \\
+                            &= \boxed{4x^{3} - 25x^{2} + 34x - 45}
+    \end{split}
+  .\end{equation}
+\end{example}
+
+% paragraph multiplying_by_a_trinomial (end)
+
+% subsubsection using_the_distributive_property (end)
+
+\subsubsection{Equations vs Functions}
+\label{sub_sub_sec:equations_vs_functions}
+
+\begin{definition}[Equation]
+  \label{def:equation}
+
+  An equation is usually defined as the state of being equal and is often shown
+  as a math expression with equal values on either side, or refers to a problem
+  where many things need to be taken into account. Ex: $2 + 2 = 4 + 2 - 1(2)$
+\end{definition}
+
+\begin{definition}[Function]
+  \label{def:function}
+
+  A function in mathematics is an expression, rule, or law that defines a
+  relationship between one variable and another variable. Ex: $f(x) = x^{2} + x$
+
+  In order for an equation to be a function, there must be only one $y$ value
+  for each $x$ value. The function $f(x) = x^{2}$ isn't a function. If you input
+  $f(2) = 2^{2} = 4$ and $f(-2) = -2^{2} = 4$. You get the same $y$ value for
+  two different $x$ values. So, it doesn't meet the requirements to be a
+  function.
+\end{definition}
+
+The mathematical term function (\ref{def:function}) applies to some equations
+(\ref{def:equation}) in math.
+But, not all equations are functions.
+
+\begin{example}
+  \label{exm:equations_vs_functions_1}
+
+  $y = 2x + 3$ 
+
+  Let's take a look at the equations $x/y$ table:
+
+  \begin{center}
+    \begin{tabular}{|r|l|}
+      \hline
+      x & y \\ \hline
+      -2 & -1 \\ \hline
+      -1 & 1 \\ \hline
+      0 & 3 \\ \hline
+      1 & 5 \\ \hline
+      2 & 7 \\ \hline
+    \end{tabular}
+  \end{center}
+
+  Since this equation doesn't have any $y$ values for multiple $x$ values, then
+  it's considered a function.
+\end{example}
+
+% subsubsection equations_vs_functions (end)
+
+\subsubsection{Vertical Line Test}
+\label{sub_sub_sec:vertical_line_test}
+
+\begin{definition}[Vertical Line Test]
+  \label{def:vertical_line_test}
+
+  The \textbf{Vertical Line Test} is a visual method to determine if an equation
+  is a function or not. You first must graph the equation. Then, if you two or
+  more $y$ intercepts, then it's not a function because it has the same $y$ 
+  value for multiple $x$ values.
+
+  Likewise, if it has $1$ or $0$ $y$ intercepts, then it's a function.
+\end{definition}
+
+Another way to determine of an equation is a function is to graph the equation
+and perform the \textbf{Vertical Line Test} (\ref{def:vertical_line_test}).
+
+\begin{example}
+  \label{exm:vertical_line_test}
+
+  Let's graph the equation: $y = 2x + 3$:
+
+  \begin{figure}[H]
+    \centering
+    \incfig{vertical_line_test}
+    \caption{Vertical Line Test}
+    \label{fig:vertical_line_test}
+  \end{figure}
+
+  Since there aren't any multiple $y$ intercepts, then it's a function.
+\end{example}
+
+% subsubsection vertical_line_test (end)
+
+\subsubsection{Inverses of Functions}
+\label{sub_sub_sec:inverses_of_functions}
+
+Finding the inverse of an integer means performing an operating that will cancel
+that number. For example, if you are given the number $7$, you could add $-7$ to
+it to cancel it: $7 + (-7) = 0$. Or you could multiply it by it's reciprocal:
+$7 \times \frac{1}{7} = 1$.
+
+With equations and functions, finding the inverse requires reversing the
+variables and solving for $y$.
+
+\begin{example}
+  \label{exm:inverses_of_functions}
+
+  Let $f(x) = 3x - 5$. Find its inverse represented by the function notation:
+  $f^{-1}(x)$ 
+
+  \begin{equation}
+    \label{eqt:inverses_of_functions}
+    \begin{split}
+      f(x) &= 3x - 5 \\
+      y &= 3x - 5 \\
+      x &= 3y - 5 \\
+      x + 5 &= 3y \\
+      \frac{x + 5}{3} &= \frac{3y}{3} \\
+      \frac{x + 5}{3} &= y \\
+      f^{-1}(x) &= \frac{x + 5}{3} \\
+    \end{split}
+  .\end{equation}
+\end{example}
+
+% subsubsection inverses_of_functions (end)
+
+\subsubsection{Operations on Functions}
+\label{sub_sub_sec:operations_on_functions}
+
+\paragraph{Addition}
+\label{par:addition}
 
 The addition of two functions $f(x)$ and $g(x)$ is represented using the
-notation $f(x) + g(x)$.
+following notation: $f(x) + g(x)$
 
-Let $f(x) = 4x - 7$ and $g(x) = 10x - 3$. To add $f(x)$ and $g(x)$, the
-expressions $4x - 7$ and $10x - 3$ need to be added.
+\begin{example}
+  \label{exm:addition}
 
-Therefore, this could be written as $f(x) + g(x) - (4x - 7) + (10x - 3)$.
+  Let $f(x) = 4x - 7$
+  
+  Let $g(x) = 10x - 3$
+  
+  \begin{equation}
+    \label{eqt:addition_1}
+    \begin{split}
+      f(x) &= 4x - 7 \\
+      g(x) &= 10x - 3 \\
+      f(x) + g(x) &= (4x - 7) + (10x - 3) \\
+                  &= 4x - 7 + 10x - 3 \\
+                  &= \boxed{14x - 10} \\
+    \end{split}
+  .\end{equation}
+\end{example}
 
-\begin{enumerate}
-    \item Simplify the right side by first distributing any coefficients
-        outside the parentheses. If no number or variable appears before the
-        parentheses, an understood 1 exists.
-    \item When 1 is distributed to each term within each set of parentheses,
-        the expression remains unchanged.
-    \item Identify and combine like terms.
-\end{enumerate}
+% paragraph addition (end)
 
-\begin{align}
-    f(x) + g(x) &= (4x - 7) + (10x - 3) \\
-                &= 1(4x - 7) + 1(10x - 3) \\
-                &= 4x - 7 + 10x - 3 \\
-                &= 14x - 10 \\
-                &= f(x) + g(x) = 14x - 10
-\end{align}
+\paragraph{Subtraction}
+\label{par:subtraction}
 
-\paragraph*{Subtraction}
+Subtracting functions is similar to adding functions. The only difference is
+that you need to be very caucus with the signs.
 
-Subtraction of functions is similar to addition. The only difference is that
-you must be very careful of sign changes!
+\begin{example}
+  \label{exm:subtraction}
 
-Let $f(x) = 4x - 7$ and $g(x) = 10x - 3$. To subtract $f(x)$ and $g(x)$, the
-expressions $4x - 7$ and $10x - 3$ need to be subtracted.
+  Let $f(x) = 4x - 7$
+  
+  Let $g(x) = 10x - 3$
+  
+  \begin{equation}
+    \label{eqt:addition_1}
+    \begin{split}
+      f(x) &= 4x - 7 \\
+      g(x) &= 10x - 3 \\
+      f(x) - g(x) &= (4x - 7) - (10x - 3) \\
+                  &= 4x - 7 - 10x + 3 \\
+                  &= \boxed{-6x - 4} \\
+    \end{split}
+  .\end{equation}
+\end{example}
 
-Therefore, this could be written as $f(x) - g(x) = (4x - 7) - (10x - 3)$.
+% paragraph subtraction (end)
 
-\begin{enumerate}
-    \item Simplify the right side by first distributing any coefficients
-        outside the parentheses. If no number or variable appears before the
-        parentheses, an understood 1 exists.
-    \item Be very careful not to forget to distribute the $-1$ to each term in
-        the second set of parentheses.
-    Identify and combine like terms.
-\end{enumerate}
+\paragraph{Multiplication}
+\label{par:multiplication}
 
-\begin{align}
-    f(x) - g(x) &= (4x - 7) - (10x - 3) \\
-                &= 1(4x - 7) - 1(10x - 3) \\
-                &= 4x - 7 - 10x - 3 \\
-                &= -6x - 4 \\
-                &= f(x) - g(x) = -6x - 4
-\end{align}
+The multiplication of functions is usually just an extension of the distribute
+property (\ref{rev:distributive_property}). The notation used to multiply
+functions is $f(x) \times g(x)$.
+
+\begin{example}
+  \label{exm:multiplication}
+
+  Let $f(x) = 4x - 7$
+
+  Let $g(x) = 10x - 3$ 
+
+  \begin{equation}
+    \label{eqt:multiplication}
+    \begin{split}
+      f(x) \times g(x) &= (4x - 7)(10x - 3) \\
+                  &= 4x \times 10x = 40x^{2} \\
+                  &= 4x \times (-3) = -12x \\
+                  &= (-7) \times 10x = -70x \\
+                  &= (-7) \times (-3) = 21 \\
+                  &= 40x^{2} - 12x - 70x + 21 \\
+                  &= \boxed{40x^{2} - 82x + 21} \\
+    \end{split}
+  .\end{equation}
+
+\end{example}
+
+% paragraph multiplication (end)
+
+% subsubsection operations_on_functions (end)
+
+\subsubsection{Function Composition of Polynomials}
+\label{sub_sub_sec:function_composition_of_polynomials}
+
+\begin{definition}[Function Composition]
+  \label{def:function_composition}
+
+  \textbf{Function Composition} is applying the function to the result of
+  another.  
+
+  There are multiple ways for writing function compositions. Here's one way:
+  $(f \circ g)(x)$. This is the same thing as: $f(g(x))$. 
+
+  What this means is we solve for $g(x)$, then whatever the output of that is, we
+  plug that into $f(x)$.
+\end{definition}
+
+\begin{example}
+  \label{exm:function_composition_of_polynomials_1}
+
+  Given the functions $f(x) = 2x^{2} - 4x + 1$ and $g(x) = x^{2} + 3$, find
+  $(f \circ g)(x)$.
+  
+  \begin{equation}
+    \label{eqt:function_composition_of_polynomials}
+    \begin{split}
+      \textrm{Step 1:} \quad & \quad \textrm{Substitute expression} \\
+      f(x) = 2x^{2} - 4x + 1 \quad & \quad g(x) = x^{2} + 3 \\
+      f(g(x)) &= 2(x^{2} + 3)^{2} - 4(x^{2} + 3) + 1 \\
+      \textrm{Step 2:} \quad & \quad \textrm{Simplify} \\
+                & \textrm{Rewrite $(x^{2} + 3)^{2}$ as $(x^{2} + 3)(x^{2} + 3)$} \\
+              &= 2(x^{2} + 3)(x^{2} + 3) - 4(x^{2} + 3) + 1 \\
+                & \textrm{Multiply $(x^{2} + 3)(x^{2} + 3)$} \\
+              &= 2(x^{4} + 3x^{2} + 3x^{2} + 9) - 4(x^{2} + 3) + 1 \\
+              &= 2(x^{4} + 6x^{2} + 9) - 4(x^{2} + 3) + 1 \\
+                & \textrm{Distribute the $2$ and $-4$} \\
+              &= 2x^{4} + 12x^{2} + 18 - 4x^{2} - 12 + 1 \\
+                & \textrm{Combine like terms} \\
+              &= \boxed{2x^{4} + 8x^{2} + 7} \\
+    \end{split}
+  .\end{equation}
+\end{example}
+
+Function composition (\ref{def:function_composition}) is different from function
+multiplication. By substituting the function $g(x)$ into the function $f(x)$,
+you are evaluating $f(x)$ at $g(x)$. As $g(x)$ changes for each $x$ value, the
+composition of $f(g(x))$ will also change because you will be evaluating $f(x)$
+at the new $g(x)$ value each time.
+
+If you're given a specific value for $g(x)$, then you could simply substitute
+that value into $f(x)$ to solve for the composition, $f(x)$.
+
+\begin{example}
+  \label{exm:function_composition_of_polynomials_2}
+
+  If you are given $g(4) = 10$ and you're asked to find $f(g(4))$, you would
+  substitute $10$ into $f(x)$. You're evaluating $f(x)$ at the answer for
+  $g(4)$. Most often, you will need to write a new function, $f(g(x))$, using
+  the original functions so that you can have a new function that will represent
+  all $x$ values.
+\end{example}
+
+Paying attention to the units that each function, $f(x)$ and $g(x)$, is measured
+in will help you figure out what represent. If $f(x)$ is measured in
+$\frac{\textrm{dollars}}{\textrm{bagel}}$ and $g(x)$ is measured in
+$\frac{\textrm{bagels}}{\textrm{hour}}$, then the composition of $f(g(x))$ is taking a function
+measured in $\frac{\textrm{bagels}}{\textrm{hour}}$ and substituting that into a
+function being measured in $\frac{\textrm{dollars}}{\textrm{bagel}}$.
+This means the composition $f(g(x))$ will be measured in
+$\frac{\textrm{dollars}}{\textrm{hour}}$
+
+% subsubsection function_composition_of_polynomials (end)
+
+\subsubsection{Verifying Inverses}
+\label{sub_sub_sec:verifying_inverses}
+
+Function composition is often used to verify inverse functions. If $f(g(x)) =
+g(f(x)) = x$, then the functions are inverses of each other.
+
+\begin{example}
+  \label{exm:verifying_inverses}
+
+  Verify that $f(x) = \frac{x + 5}{3}$ is the inverse of $g(x) = 3x - 5$:
+
+  Use function composition to evaluate $(f \circ g)(x)$:
+
+  \begin{equation}
+    \label{eqt:verifying_inverses}
+    \begin{alignedat}{3}
+      (f \circ g)(x) &= \frac{(3x - 5) + 5}{3} && \\
+                 &= \frac{3x}{3} = \boxed{x} && \\
+      \textrm{Step 1:} \quad  & \quad \textrm{Now Simplify} && \\
+                 &= 3(\frac{x + 5}{3}) - 5  &&= \frac{3(x) + 3(5)}{3} - 5 \\
+                                          & &&= \frac{3x + 15}{3} - 5 \\
+                                          & &&= \frac{3x}{3} + 5 - 5 \\
+                                          & &&= \frac{3x}{3} \\
+                                          & &&= \boxed{x} \\
+    \end{alignedat}
+  \end{equation}
+
+  Because $(f \circ g)(x) = (g \circ f)(x) = x$, then $f(x)$ and $g(x)$ are
+  inverses.
+\end{example}
+
+% subsubsection verifying_inverses (end)
 
 \newpage
+

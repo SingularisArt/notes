@@ -1,32 +1,33 @@
 \documentclass{article}
 
-\input{preamble}
+\newcommand{\hmwkTitle}{Homework \#2}
+\newcommand{\hmwkDueDate}{\today}
+\newcommand{\hmwkClass}{Honors Government}
+\newcommand{\hmwkClassTime}{Section A}
+\newcommand{\hmwkClassInstructor}{Mrs. SG}
+\newcommand{\hmwkAuthorName}{\textbf{Hashem A. Damrah}}
 
-\newcommand{\lessonTitle}{04.07 Courts and Civil Liberties Review}
-\newcommand{\teacherName}{Mrs. SG}
+\title {
+  \vspace{2in}
+  \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+  \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ at 11:59 pm} \\
+  \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+  \vspace{3in}
+}
 
-\newcommand\theTitle{\lessonTitle}
-\newcommand\theauthor{Hashem A. Damrah}
-\newcommand\thedate{\today}
+\author{\hmwkAuthorName}
+\date{}
 
-\title{\theTitle}
-\author{\theauthor}
-\date{\thedate}
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter} \\ }
+
+\input{preamble.tex}
+\input{front-page.tex}
 
 \begin{document}
-    \maketitle
+  \maketitle
 
-    \pagestyle{plain}
-    \renewcommand{\thepage}{Page: \roman{page}}
-    
-    \setcounter{page}{1}
+  \pagebreak
 
-    \pagestyle{fancy}
-    \renewcommand{\thepage}{Page: \arabic{page}}
-    
-    \setcounter{page}{1}
-    
-    \setlength{\parindent}{4em}
-    \input{latex-files/04.02-Judicial-Review}
+  % \input{latex-files/unit-1/}
+  % \printbibliography
 \end{document}
-

@@ -1,38 +1,145 @@
 \lesson{2}{Sep 14 2021 Tue (09:54:31)}{Properties of Rational Exponents}{Unit 1}
 
-\begin{property}[Product Property]
-    When multiplying $2$ of the same variable, the exponents are added.
-    \textbf{Fractions} must have common \textbf{denominators} before being
-    \textbf{added} or \textbf{subtracted}.
-    
-    \begin{align}
-        a^{\frac{2}{5}} \times a^{\frac{1}{2}}  &= a^{\frac{4}{10}} \times a^{\frac{5}{10}} \\
-                                                &= a^{\frac{9}{10}}
-    \end{align}
+\subsubsection{Dividing Rational Exponents}
+\label{sub_sub_sec:dividing_rational_exponents}
+
+You already know that when like variables are multiplied, their exponents are
+added. But what happens when you divide them? Look at this
+property~\ref{prop:quotient_of_a_power_property}
+
+\begin{property}[Quotient of a Power Property]
+  \label{prop:quotient_of_a_power_property}
+
+  To divide powers of the same base, subtract the exponents:
 \end{property}
 
-\begin{property}[Quotient Property]
-    When dividing $2$ of the same variable, the exponents are \textbf{subtracted}.
-    \textbf{Fractions} must have been common \textbf{denominators} before being
-    \textbf{added} or \textbf{subtracted}.
-    
-    \begin{align}
-        \frac{b^{\frac{5}{6}}}{b^{\frac{1}{4}}} &= \frac{b^{\frac{10}{12}}}{b^{\frac{3}{12}}} \\
-                                                &= b^{\frac{10}{12} - \frac{3}{12}} \\
-                                                &= b^{\frac{7}{12}}
-    \end{align}
+\begin{example}
+  \label{exm:quotient_of_a_power_property}
+
+  \begin{equation}
+    \label{eqt:quotient_of_a_power_property}
+    \begin{split}
+      \frac{a^{5}}{a^{3}} &= \frac{\cancel{a} \times \cancel{a} \times
+                       \cancel{a} \times a \times a}{\cancel{a} \times \cancel{a} \times
+                       \cancel{a}}
+                    = a^{2} \\
+                    &= a^{5 - 3}
+    \end{split}
+  .\end{equation}
+\end{example}
+
+\begin{review}[Finding a Common Denominator]
+  \label{rev:finding_a_common_denominator}
+
+  Look at the factors: $\frac{1}{2}$ and $\frac{1}{4}$.
+
+  First, you start by listing the multiples of each denominator:
+
+  \[ 2: 2, \boxed{4}, 6, 8, 10, 12, \ldots \].
+  \[ 4: \boxed{4}, 8, 12, 16, 20, 24 \ldots \].
+
+  So, we just found our common denominator: $4$. Since the first fraction:
+  $\frac{1}{4}$, already has a denominator of $4$, we can just leave it alone.
+  But, the second fraction: $\frac{1}{2}$, needs to have a denominator of $4$.
+  So, we just do: $4 \div 2 = 2$. So, we multiply the second fraction by
+  $\frac{2}{2}$.
+
+  \[ \frac{1}{2} \times \frac{2}{4} = \frac{2}{4} \].
+
+  Multiplying the numerator and denominator by the same factor is the same as
+  multiplying the entire fraction by 1 since $\frac{2}{2} = 1$. By multiplying 
+  $\frac{1}{2}$ by $\frac{2}{2}$, the value of the fraction hasn't changed. In
+  fact, if you simplify the new fraction we got, which was $\frac{2}{4}$, it
+  goes back to the original fraction: $\frac{1}{2}$. But now, it just has a
+  common denominator of $4$, which is what we need to add the exponents.
+\end{review}
+
+% subsubsection dividing_rational_exponents (end)
+
+\subsubsection{Raising a Power to a Power}
+\label{sub_sub_sec:raising_a_power_to_a_power}
+
+Multiplication of powers with the same base involves the addition of exponents.
+Division of powers with the same base involves the subtraction of exponents.
+What operation is performed on the exponents of $2$ and $3$ to result in the
+exponent of $6$? Take a look at this property
+property~\ref{prop:raising_a_power_to_a_power}.
+
+\begin{property}[Power of a Power Property]
+  \label{prop:power_of_a_power_property}
+  To raise a power to a power, multiply the exponents:
+
+  \[ \left(a^{m}\right)^{n} = a^{m \times n} \].
 \end{property}
 
-\begin{property}[Negative Exponents]
-    When simplifying \textbf{negative exponents}, take the \textbf{reciprocal} of the
-    \textbf{expression} and make the \textbf{exponent positive}.
-    
-    \begin{align}
-        c^{-3}              &= \frac{1}{c^3} \\
-        \frac{1}{d^{-4}}    &= \frac{1}{\frac{1}{d^4}} \\
-                         &= 1 \div \frac{1}{d^4} \\
-                         &= d^4
-    \end{align}
-\end{property}
+\begin{example}
+  \label{exm:power_of_a_power_property}
+
+  \begin{equation}
+    \label{eqt:raising_a_power_to_a_power}
+    \begin{split}
+      \left(c^{\frac{1}{2}}\right)^{\frac{1}{4}} &= c^{\frac{1}{2} \times \frac{1}{4}} \\
+                  &= c^{\frac{1}{8}} \\
+                  &= \sqrt[8]{c}
+    \end{split}
+  .\end{equation}
+\end{example}
+
+% subsubsection raising_a_power_to_a_power (end)
+
+\subsubsection{Negative Rational Exponents}
+\label{sub_sub_sec:negative_rational_exponents}
+
+Let's take a look at the pattern that forms as you look at decreasing powers of
+$4$:
+
+\begin{equation}
+  \label{eqt:negative_rational_exponents}
+  \begin{split}
+    4^{4} &= 4 \times 4 \times 4 \times 4 \times 4 = 256 \\
+    4^{3} &= 4 \times 4 \times 4 = 64 \\
+    4^{2} &= 4 \times 4 = 16 \\
+    4^{1} &= 4 = 4 \\
+    4^{0} &= 1 \\
+    4^{-1} &= \frac{1}{4^{1}} = \frac{1}{4} \\
+    4^{-2} &= \frac{1}{4^{2}} = \frac{1}{16} \\
+    4^{-3} &= \frac{1}{4^{3}} = \frac{1}{64} \\
+    4^{-4} &= \frac{1}{4^{4}} = \frac{1}{256} \\
+  \end{split}
+.\end{equation}
+
+Recall that the inverse of a positive is a negative, and vise versa. Also, the
+inverse of multiplication is division and the inverse of addition is
+subtraction. When the exponent is positive, it tells you to multiply the base
+the number of times, which is indicated by the exponent.
+
+\[ 4^{3} = 4 \times 4 \times 4 = 64 \].
+
+Inversely, a negative exponent tells you to divide the base by the number of
+times indicated by the exponent.
+
+\[ 4^{-3} = 4 \div 4 \div 4 = 0.015625 \].
+
+or
+
+\[ 4^{-3} = \frac{1}{4^{3}} = \frac{1}{64} = 0.015625 \].
+
+\begin{example}
+  \label{exm:negative_rational_exponents}
+
+  Simplify the following expression:
+
+  \begin{equation}
+    \label{eqt:negative_rational_exponents_simplify_2}
+    \begin{split}
+      9^{-\frac{1}{2}} &= \frac{1}{9^{\frac{1}{1}}} \\
+             &= \frac{1}{\sqrt{9}} \\
+             &= \frac{1}{3}
+    \end{split}
+  .\end{equation}
+\end{example}
+
+% subsubsection negative_rational_exponents (end)
 
 \newpage
+

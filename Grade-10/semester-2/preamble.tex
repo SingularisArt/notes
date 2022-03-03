@@ -1,11 +1,12 @@
-%%%%%%%%%%%%
-% PACKAGES %
-%%%%%%%%%%%%
+% %%%%%%%%%%%%
+% % PACKAGES %
+% %%%%%%%%%%%%
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{polynom}
 \usepackage{ulem}
+\usepackage{cancel}
 \usepackage{textcomp}
 \usepackage{media9}
 \usepackage{longdivision}
@@ -46,6 +47,9 @@
 \usepackage{titletoc}
 \usepackage{lipsum}
 \usepackage[nottoc]{tocbibind}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{quotes,arrows.meta}
 \usepackage{thmtools}
 \usepackage{thm-restate}
 \usepackage{multirow}
@@ -56,9 +60,6 @@
 \usepackage{microtype}
 \usepackage{upgreek}
 \usepackage[misc]{ifsym}
-\usepackage{tikz}
-\usepackage{tikz-cd}
-\usepackage{tkz-euclide}
 \usepackage[
     sorting=nyt,
     style=alphabetic
@@ -247,20 +248,17 @@
 % Settings %
 %%%%%%%%%%%%
 
-\sisetup{locale = FR}                     % Si unitx
+\sisetup{locale = FR}                                               % Si unitx
 \let\svlim\lim\def\lim{\svlim\limits}
-\tcbuselibrary{breakable}                 % Make boxes breakable
-\pdfsuppresswarningpagegroup=1            % Fix some stuff
+\tcbuselibrary{breakable}                                           % Make boxes breakable
+\pdfsuppresswarningpagegroup=1                                      % Fix some stuff
 \addbibresource{bibliography.bib}
-\hypersetup{                              % Make table of contents clickable
+\hypersetup{                                                        % Make table of contents clickable
     colorlinks,
     linkcolor={black},
     citecolor={black},
     urlcolor={blue!80!black}
 }
-
-\let\cleardoublepage\clearpage            % Clear double page
-\newlength{\drop}
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -286,8 +284,8 @@
 \definecolor{definitionbordercolor}{RGB}{0, 150, 85}
 \definecolor{definitionbackgroundcolor}{RGB}{239, 247, 243}
 
-\definecolor{propertybordercolor}{RGB}{223, 255, 0}
-\definecolor{propertybackgroundcolor}{RGB}{246, 250, 220}
+\definecolor{propertybordercolor}{RGB}{128, 0, 128}
+\definecolor{propertybackgroundcolor}{RGB}{255, 240, 255}
 
 
 \newtheoremstyle{theorem}
@@ -309,59 +307,6 @@
     {0pt}{0pt}{\normalfont}{0pt}
     {}{\;}{0.25em}
     {{\sffamily\bfseries\color{propertybordercolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
-        \thmnote{\normalfont\color{black}~(#3)}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-% Theorem Environments %
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-\makeatother
-\mdfsetup{skipabove=1em,skipbelow=0em}
-
-\tcbuselibrary{skins}
-
-% Color definitions
-
-\definecolor{proofcolor}{RGB}{0,0,0}
-
-% Dark orange and Dark Red rgb
-\definecolor{theorembordercolor}{RGB}{151, 63, 5}
-\definecolor{theorembackgroundcolor}{RGB}{248, 241, 234}
-
-\definecolor{examplebordercolor}{RGB}{0, 110, 184}
-\definecolor{examplebackgroundcolor}{RGB}{240, 244, 250}
-
-\definecolor{definitionbordercolor}{RGB}{0, 150, 85}
-\definecolor{definitionbackgroundcolor}{RGB}{239, 247, 243}
-
-\definecolor{propertybordercolor}{RGB}{223, 255, 0}
-\definecolor{propertybackgroundcolor}{RGB}{246, 250, 220}
-
-\definecolor{solutionbordercolor}{RGB}{26, 26, 26}
-
-
-\newtheoremstyle{theorem}
-    {0pt}{0pt}{\normalfont}{0pt}
-    {}{\;}{0.25em}
-    {{\sffamily\bfseries\color{theorembordercolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
-        \thmnote{\normalfont\color{black}~(#3)}}
-\newtheoremstyle{definition}
-    {0pt}{0pt}{\normalfont}{0pt}
-    {}{\;}{0.25em}
-    {{\sffamily\bfseries\color{definitionbordercolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
-        \thmnote{\normalfont\color{black}~(#3)}}
-\newtheoremstyle{example}
-    {0pt}{0pt}{\normalfont}{0pt}
-    {}{\;}{0.25em}
-    {{\sffamily\bfseries\color{examplebordercolor}\thmname{#1}.}
-        \thmnote{\normalfont\color{black}~(#3)}}
-\newtheoremstyle{property}
-    {0pt}{0pt}{\normalfont}{0pt} {}{\;}{0.25em}
-    {{\sffamily\bfseries\color{propertybordercolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
-        \thmnote{\normalfont\color{black}~(#3)}}
-\newtheoremstyle{solution}
-    {0pt}{0pt}{\normalfont}{0pt} {}{\;}{0.25em}
-    {{\sffamily\bfseries\color{solutionbordercolor}\thmname{#1}.}
         \thmnote{\normalfont\color{black}~(#3)}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -420,8 +365,29 @@
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem*{note}{Note}
 
 \tcolorboxenvironment{definition}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=definitionbackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{definitionbordercolor}, arc=.5mm
+}
+\tcolorboxenvironment{question}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=definitionbackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{definitionbordercolor}, arc=.5mm
+}
+\tcolorboxenvironment{answer}{
+    enhanced jigsaw, pad at break*=1mm, breakable,
+    left=4mm, right=4mm, top=1mm, bottom=1mm,
+    colback=definitionbackgroundcolor, boxrule=0pt, frame hidden,
+    borderline west={0.5mm}{0mm}{definitionbordercolor}, arc=.5mm
+}
+\tcolorboxenvironment{note}{
     enhanced jigsaw, pad at break*=1mm, breakable,
     left=4mm, right=4mm, top=1mm, bottom=1mm,
     colback=definitionbackgroundcolor, boxrule=0pt, frame hidden,
@@ -471,38 +437,6 @@
     colback=propertybackgroundcolor, boxrule=0pt, frame hidden,
     borderline west={0.5mm}{0mm}{propertybordercolor}, arc=.5mm
 }
-
-
-%%%%%%%%%%%%
-% Question %
-%%%%%%%%%%%%
-
-\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
-
-\mdtheorem[style=question]{question}{Problem}
-
-\mdfdefinestyle{question}{
-  linecolor=black,linewidth=1pt,
-  frametitlerule=true,
-  frametitlebackgroundcolor=gray!20,
-  innertopmargin=\topskip,
-}
-
-
-%%%%%%%%%%%%
-% Solution %
-%%%%%%%%%%%%
-
-\theoremstyle{solution}
-\newtheorem{solution}{Solution}
-
-\tcolorboxenvironment{solution}{
-    enhanced jigsaw, pad at break*=1mm, breakable,
-    left=4mm, right=4mm, top=1mm, bottom=1mm,
-    colback=white, boxrule=0pt, frame hidden,
-    borderline west={0.5mm}{0mm}{solutionbordercolor}, arc=.5mm
-}
-
 
 %%%%%%%%%
 % Proof %
