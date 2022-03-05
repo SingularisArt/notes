@@ -6,6 +6,8 @@
 \newcommand\theAuthor{Hashem \textsc{Damrah}}
 \newcommand\theDate{Feb. 2 2022}
 
+\input{acronyms.tex}
+
 \title{\theTitle}
 \author{\theauthor}
 \date{\thedate}
@@ -32,7 +34,11 @@
   \setcounter{page}{1}
   \setcounter{chapter}{0}
   
-  \input{source-lessons}
+  \input{source-lessons.tex}
+
+  \newpage
+
+  \input{list-of.tex}
   
   \printbibliography
 \end{document}
