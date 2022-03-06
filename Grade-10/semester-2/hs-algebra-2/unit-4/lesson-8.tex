@@ -1,0 +1,196 @@
+\lesson{8}{Mar 04 2022 Fri (22:30:44)}{Remainder to evaluate polynomial}{Unit 4}
+
+\begin{theorem}[Division Algorithm]
+  \label{thrm:division_algorithm}
+
+  Let $P(x)$ be any polynomial and $d(x)$ any non constant polynomial or degree
+  less than or equal to $P(x)$.
+
+  Then, there exist unique polynomials $Q(x)$ and $R(x)$ such that:
+
+  \begin{equation}
+    \label{eqt:division_algorithm}
+    \begin{split}
+      P(x) = d(x)Q(x) + R(x) \\
+    \end{split}
+  .\end{equation}
+
+  where either $R(x) = 0$ or the degree of $R(x)$ is less than the degree of
+  $d(x)$.
+\end{theorem}
+
+\begin{note}
+  \label{nte:remainder_theorem}
+
+  Note that we can divide both sides of the equation above by $d(x) \ne 0$ to
+  obtain:
+
+  \begin{equation}
+    \label{eqt:division_algorithm_remainder}
+    \begin{split}
+      \frac{P(x)}{d(x)} = Q(x) + \frac{R(x)}{d(x)}
+    \end{split}
+  .\end{equation}
+
+  This shows the connection with division: when $P(x)$ is divided by $d(x)$, the
+  result is $Q(x)$ and the remainder is $R(x)$.
+\end{note}
+
+\begin{remark}
+  \label{rmk:remainder_theorem}
+
+  \begin{itemize}
+    \label{item:remainder_theorem}
+  
+    \item In the statement of the division algorithm, the polynomial $d(x)$ must
+      be \textbf{"Non constant"}
+
+      A constant polynomial $d(x)$ is one of the form $d(x) = c$ for some value
+      $c$. Thus, a non constant polynomial is one that is not of this form, that
+      is, one whose degree is at least $1$.
+
+    \item A \textbf{Similar Division Algorithm} exists for integers.
+    \item If $R(x) = 0$, then  $d(x)$ divided $P(x)$ or divided evenly into
+      $P(x)$, or is a factor of $P(x)$
+  \end{itemize}
+\end{remark}
+
+\begin{theorem}[Remainder Theorem]
+  \label{thrm:remainder_theorem}
+
+  If a number $c$ is substituted for $x$ in the polynomial $P(x)$, then the
+  result, $P(c)$ is the remainder obtained when $P(x)$ is divided by $x - c$.
+\end{theorem}
+
+\begin{proof}
+  \label{prf:remainder_theorem}
+
+  By the division algorithm (\ref{thrm:division_algorithm}), when we divided
+  $P(x)$ by $x - c$, we get a quotient $Q(x)$ and a remainder $R(x)$. We can
+  write this as follows:
+
+  \begin{equation}
+    \label{eqt:prf_remainder_theorem_1}
+    \begin{split}
+      P(x) = (x - c)Q(x) + R(x) \\
+    \end{split}
+  .\end{equation}
+
+  The degree of $R(x)$ must be less than the degree of $x - c$, so $R(x)$ must
+  be constant. This means that $R(x) = r$ for some number $r$.
+
+  \begin{equation}
+    \label{eqt:prf_remainder_theorem_2}
+    \begin{split}
+      P(x) = (x - c)Q(x) + r \\
+    \end{split}
+  .\end{equation}
+
+  We see that $P(c) = r$:
+
+  \begin{equation}
+    \label{eqt:prf_remainder_theorem_3}
+    \begin{split}
+      P(c)  &= (c - c)Q(c) + r \\
+            &= 0 \times Q(c) + r \\
+            &= r
+    \end{split}
+  .\end{equation}
+
+  Thus, $P(c)$ is equal to the remainder when $P(x)$ is divided by $x - c$.
+\end{proof}
+
+\subsubsection{Synthetic Division}
+\label{sub_sub_sec:synthetic_division}
+
+I'll illustrate these steps by using them to divide
+$P(x) = 4x^{2} - x^{4} - 7 - 2x$ by $x + 1$
+
+\begin{enumerate}
+  \label{enum:steps_for_synthetic_division}
+
+  \item Arrange the coefficients of $P(x)$ in order of descending powers of $x$.
+    Write $0$ as the coefficient for each missing power of $x$.
+
+    \begin{equation}
+      \label{eqt:steps_for_synthetic_division}
+      \begin{split}
+        p(x) = -x^{4} + 0x^{3} - 4x^{2} - 3x - 7 \\
+      \end{split}
+    .\end{equation}
+
+  \item Insert $r$ (which is any number) to the left of the division symbol.
+
+    Then, bring the leading coefficient of the dividend down.
+
+    \polyhornerscheme[x=-1,stage=2]{-4x^4+0x^3-4x^2-3x-7}
+
+  \item Generate the second and third rows of numbers as follows.
+
+    \begin{enumerate}
+      \label{enum:second_and_third_rows}
+    
+      \item After bringing down the first coefficient of the dividend, multiply
+        it by $r$ and place the resulting product under the second coefficient.
+
+        \polyhornerscheme[x=-1,stage=3]{-4x^4+0x^3-4x^2-3x-7}
+
+      \item Add the new number to the second coefficient, and place the sum
+        below.
+
+        \polyhornerscheme[x=-1,stage=4]{-4x^4+0x^3-4x^2-3x-7}
+
+      \item Repeat until you've completed all of the coefficients. Here's how it
+        should look like after you've completed all steps properly:
+
+        \polyhornerscheme[x=-1]{-4x^4+0x^3-4x^2-3x-7}
+
+    \end{enumerate}
+
+    \item The final entry in the last row is the remainder $R$, and the other
+      entries in the row are the coefficients (in descending order) of a
+      polynomial whose degree is $1$ less than that of the dividend; This
+      polynomial is the quotient $Q(x)$ 
+
+      \begin{equation}
+        \label{eqt:final_results}
+        \begin{split}
+          Q(x)  &= -x^{3} + x^{2} + 3x - 5 \\
+          R     &= -2
+        \end{split}
+      .\end{equation}
+\end{enumerate}
+
+% subsubsection synthetic_division (end)
+
+\begin{example}
+  \label{exm:remainder_theorem}
+
+  Use the remainder theorem (\ref{thrm:remainder_theorem}) to find $P(2)$ for
+  $P(x) = 2x^{3} - 4x^{2} - 9$.
+  
+  Specifically, give the quotient and the remainder for the associated division
+  and the values of $P(2)$.
+
+  So, if $P(x) = 2x^{3} - 4x^{2} - 9$ is divided by $x - 2$, then the remainder
+  is $P(2)$.
+
+  We first do the division, rewriting  $P(x) = 2x^{3} - 4x^{2} - 9$ as
+  $P(x) = 2x^{3} - 4x^{2} + 0x - 9$:
+
+  \begin{center}
+    \polyhornerscheme[x=-2]{2x^3-4x^2+0x-9}
+  \end{center}
+
+  So, here's our final result:
+
+  \begin{equation}
+    \label{eqt:final_result_2}
+    \begin{split}
+      Q(x)  &= 2x^{3} - 8x^{2} + 16x \\
+      R     &= -41
+    \end{split}
+  .\end{equation}
+\end{example}
+
+\newpage

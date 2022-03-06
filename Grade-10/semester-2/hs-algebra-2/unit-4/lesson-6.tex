@@ -1,5 +1,83 @@
-\lesson{6}{Mar 04 2022 Fri (21:13:37)}{Solve quadratic inequality that's in factored form}{Unit 4}
+\lesson{6}{Mar 04 2022 Fri (21:13:37)}{Solve quadratic inequality}{Unit 4}
 
+We need to graph the solution to the following inequality on the number line:
+$(x + 7)(x - 2) < 0$
 
+We need to find all values of  $x$ that make the product $(x + 7)(x - 2)$
+negative.
+
+To find these values, we do a sign analysis.
+
+We first look at the sign of $(x + 7)$.
+
+\begin{itemize}
+  \label{item:sign_analysis}
+
+  \item If $x = -7$, then $(x + 7) = 0$.
+  \item If $x < -7$, then $(x + 7)$ is negative.
+  \item If $x > -7$, then $(x + 7)$ is positive.
+\end{itemize}
+
+We show this on the number line.
+
+\begin{tikzpicture}
+  \draw[latex-latex] (-9.5,0) -- (9.5,0);
+  \foreach \x in {-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+  \draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+  \foreach \x in {-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+  \draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below] 
+  {$\x$};
+
+  \draw [red,fill=red,radius=0.1] (-7,0) circle;
+\end{tikzpicture}
+
+Then we look at the sign of $(x - 2)$.
+
+\begin{itemize}
+  \label{item:sign_analysis}
+
+  \item If $x = 2$, then $(x - 2) = 0$.
+  \item If $x < 2$, then $(x - 2)$ is negative.
+  \item If $x > 2$, then $(x - 2)$ is positive.
+\end{itemize}
+
+\begin{tikzpicture}
+  \draw[latex-latex] (-9.5,0) -- (9.5,0);
+  \foreach \x in {-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+  \draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+  \foreach \x in {-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+  \draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below] 
+  {$\x$};
+
+  \draw [red,fill=red,radius=0.1] (-7,0) circle;
+  \draw [red,fill=red,radius=0.1] (2,0) circle;
+\end{tikzpicture}
+
+Finally, to find the sign of $(x + 7)(x - 2)$, we use the rules for the
+sign of a product.
+
+So, we have $(x + 7)(x - 2) < 0$ when $-7 < x \quad x < 2$.
+
+\begin{note}
+  \label{nte:sign_analysis}
+
+  For $x = -7 \quad x = 2$, the product $(x + 7)(x - 2)$ is $0$ and so these
+  values are not part of the solution.
+\end{note}
+
+We graph the solution on the line as follows
+
+\begin{tikzpicture}
+  \draw[latex-latex] (-9.5,0) -- (9.5,0);
+  \foreach \x in {-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+  \draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+  \foreach \x in {-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+  \draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below] 
+  {$\x$};
+
+  \draw [red] (-7,0) -- (2,0);
+  \draw [red,radius=0.1] (-7,0) circle;
+  \draw [red,radius=0.1] (2,0) circle;
+\end{tikzpicture}
 
 \newpage
