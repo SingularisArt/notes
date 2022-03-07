@@ -12,28 +12,28 @@
 
 \begin{document}
   \input{title.tex}
-    
+
   \pagestyle{plain}
   \renewcommand{\thepage}{Page: \roman{page}}
-  
+
   \setcounter{page}{1}
   \setcounter{chapter}{0}
-  
+
   \input{copyright.tex}
   \input{preface.tex}
   \input{summary.tex}
-  
+
   \tableofcontents
   \newpage
 
   \pagestyle{fancy}
   \renewcommand{\thepage}{Page: \arabic{page}}
-  
+
   \setcounter{page}{1}
   \setcounter{chapter}{0}
-  
+
   \input{source-lessons.tex}
-  
+
   \printbibliography
 \end{document}
 
