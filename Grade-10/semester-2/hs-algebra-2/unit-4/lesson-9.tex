@@ -1,30 +1,41 @@
-\lesson{9}{Mar 04 2022 Fri (23:40:39)}{The Factor Theorem}{Unit 4}
+\lesson{9}{Mar 16 2022 Wed (11:07:03)}{Graph a quadratic inequality: Problem Type 2}{Unit 4}
 
-\begin{theorem}[Factor]
-  \label{thrm:factor}
+To graph the inequality $y \le x^{2} - 10x - 23$, we first graph the associated
+parabola $y \le x^{2} - 10x - 23$.
 
-  A polynomial $P(x)$ has a factor $x - c \iff P(c) = 0$.
-\end{theorem}
+A parabola in the form $y = a(x - h)^{2} + k$ has a vertex $(h, k)$.
 
-\begin{example}
-  \label{exm:factor}
+We'll rewrite $y = -10x^{2} = 10x - 23$ in this form. We start with the first
+two terms:
 
-  We must determine whether $x - 2$ is a factor of $P(x) = 2x^{3} - 2x^{2} - 8$.
+\begin{equation}
+  \label{eqt:graph_inequality_problem_type_2}
+  \begin{split}
+    y &= -x^{2} - 10x - 23 \\
+      &= -(x^{2} + 10x) - 23
+  \end{split}
+.\end{equation}
 
-  So, to use the \textbf{Factor Theorem} (\ref{thrm:factor}), we must evaluate
-  $P(2)$.
+Now, we need to complete the square of the expression $x^{2} + 10x$.
 
-  \begin{equation}
-    \label{eqt:factor}
-    \begin{split}
-      P(2)  &= 2(2)^{3} - 2(2)^{2} - 8 \\
-            &= 16 - 8 - 8 \\
-            &= 0
-    \end{split}
-  .\end{equation}
+Since we have $x^{2} + 10x$, we must add $\left(\frac{10}{2}\right)^{2} = 25$
+inside and outside the parenthesis. So, our final answer is:
 
-  So, $P(2) = 0$. By the \textbf{Theorem Factor} (\ref{thrm:factor}), we know
-  that $x - 2$ is a factor of $P(x)$
-\end{example}
+\begin{equation}
+  \label{eqt:final_answer_for_graph_inequality_problem_type_2}
+  \begin{split}
+    y = -(x + 5)^{2} + 2
+  \end{split}
+.\end{equation}
+
+So, now we know that the vertex is at $(-5, 2)$. And we graph the quadratic.
+Since we have $y \le$, we shade below the curve since everything in the curve is
+less than $y$.
+
+\begin{figure}[ht]
+  \centering
+  \incfig{graphing-quadratic-inequality}
+  \label{fig:graphing_quadratic_inequality}
+\end{figure}
 
 \newpage
