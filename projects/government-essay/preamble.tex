@@ -1,169 +1,69 @@
+% %%%%%%%%%%%%
+% % PACKAGES %
+% %%%%%%%%%%%%
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{polynom}
+\usepackage{ulem}
+\usepackage{floatrow}
+\usepackage[acronym]{glossaries}
 \usepackage{textcomp}
-
+\usepackage{media9}
+\usepackage{longdivision}
+\usepackage{csquotes}
 \usepackage{url}
-
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks,
-    linkcolor={black},
-    citecolor={black},
-    urlcolor={blue!80!black}
-}
-\usepackage[noabbrev]{cleveref}
-
-% Adds Bibliography, ... to Table of Contents
-\usepackage[nottoc]{tocbibind}
-
 \usepackage{graphicx}
 \usepackage{float}
-\usepackage[usenames,dvipsnames,svgnames]{xcolor}
-
-% \usepackage{cmbright}
-
-\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
-\usepackage{mathrsfs}
-\usepackage{cancel}
-
-\newcommand\N{\ensuremath{\mathbb{N}}}
-\newcommand\R{\ensuremath{\mathbb{R}}}
-\newcommand\Z{\ensuremath{\mathbb{Z}}}
-\renewcommand\O{\ensuremath{\emptyset}}
-\newcommand\Q{\ensuremath{\mathbb{Q}}}
-\newcommand\C{\ensuremath{\mathbb{C}}}
-\let\implies\Rightarrow
-\let\impliedby\Leftarrow
-\let\iff\Leftrightarrow
-\let\epsilon\varepsilon
-
-\usepackage{tikz}
-\usepackage{tikz-cd}
-
-% theorems
-\usepackage{thmtools}
-\usepackage{thm-restate}
-\usepackage[framemethod=TikZ]{mdframed}
-\mdfsetup{skipabove=1em,skipbelow=0em, innertopmargin=12pt, innerbottommargin=8pt}
-
-\theoremstyle{definition}
-
-\makeatletter
-
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
-
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
-
-
-\declaretheorem[numberwithin=chapter, style=thmgreenbox, name=Definition]{definition}
-\declaretheorem[sibling=definition, style=thmredbox, name=Corollary]{corollary}
-\declaretheorem[sibling=definition, style=thmredbox, name=Proposition]{prop}
-\declaretheorem[sibling=definition, style=thmredbox, name=Theorem]{theorem}
-\declaretheorem[sibling=definition, style=thmredbox, name=Lemma]{lemma}
-\declaretheorem[sibling=definition, style=thmbluebox,  name=Example]{eg}
-\declaretheorem[sibling=definition, style=thmbluebox,  name=Nonexample]{noneg}
-\declaretheorem[sibling=definition, style=thmblueline, name=Remark]{remark}
-
-
-
-
-\declaretheorem[numbered=no, style=thmexplanationbox, name=Proof]{explanation}
-\declaretheorem[numbered=no, style=thmproofbox, name=Proof]{replacementproof}
-\declaretheorem[style=thmbluebox,  numbered=no, name=Exercise]{ex}
-\declaretheorem[style=thmblueline, numbered=no, name=Note]{note}
-
-% \renewenvironment{proof}[1][\proofname]{\begin{replacementproof}}{\end{replacementproof}}
-
-% \AtEndEnvironment{eg}{\null\hfill$\diamond$}%
-
-\newtheorem*{uovt}{UOVT}
-\newtheorem*{notation}{Notation}
-\newtheorem*{previouslyseen}{As previously seen}
-\newtheorem*{problem}{Problem}
-\newtheorem*{observe}{Observe}
-\newtheorem*{property}{Property}
-\newtheorem*{intuition}{Intuition}
-
-
-\declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=RawSienna, backgroundcolor=RawSienna!5,
-    }
-]{todo}
-\declaretheorem[numbered=no, style=todo, name=TODO]{TODO}
-
-
-\usepackage{etoolbox}
-\AtEndEnvironment{vb}{\null\hfill$\diamond$}%
-\AtEndEnvironment{intermezzo}{\null\hfill$\diamond$}%
-
-% http://tex.stackexchange.com/questions/22119/how-can-i-change-the-spacing-before-theorems-with-amsthm
-% \def\thm@space@setup{%
-%   \thm@preskip=\parskip \thm@postskip=0pt
-% }
-
-\usepackage{xifthen}
-
-\makeatother
-
-% figure support (https://castel.dev/post/lecture-notes-2)
+\usepackage{booktabs}
+\usepackage{enumitem}
 \usepackage{import}
 \usepackage{xifthen}
-\pdfminorversion=7
 \usepackage{pdfpages}
 \usepackage{transparent}
-
-
-\makeatletter
-\newif\ifworking
-\@ifclasswith{tuftebook}{working}{\workingtrue}{\workingfalse}
-\makeatother
-
-\newcommand{\incfig}[2][1]{%
-    % \ifworking{\makebox[0pt][c]{\color{gray}{\scriptsize\textsf{#2}}}}\fi%
-    \def\svgwidth{#1\textwidth}
-    \import{./figures/}{#2.pdf_tex}
-}
-
-\newcommand{\fullwidthincfig}[2][0.90]{%
-    % \ifworking{\makebox[0pt][l]{\color{gray}{\scriptsize\textsf{#2}}}}\fi%
-    \def\svgwidth{#1\paperwidth}
-    \import{./figures/}{#2.pdf_tex}
-}
-
-
-
-\newcommand{\minifig}[2]{%
-    \def\svgwidth{#1}%
-    \begingroup%
-    \setbox0=\hbox{\import{./figures/}{#2.pdf_tex}}%
-    \parbox{\wd0}{\box0}\endgroup%
-    \hspace*{0.2cm}
-}
-
-% %http://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
-\pdfsuppresswarningpagegroup=1
-
-\newcommand\todo[1]{\ifworking {{\color{red}{#1}}} \else {}\fi}
-\newcommand\charlotte[1]{\ifworking {{\color{blue}{#1}}} \else {}\fi}
-
-\author{Gilles Castel}
-
-
-
+\usepackage{parskip}
+\usepackage{emptypage}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{cmbright}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{cancel}
+\usepackage{bm}
+\usepackage{systeme}
+\usepackage{stmaryrd}
+\usepackage{siunitx}
+\usepackage{mdframed}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{todonotes}
+\usepackage{tcolorbox}
+\usepackage{erewhon}
+\usepackage{cabin}
+\usepackage[english]{babel}
+\usepackage{titletoc}
+\usepackage{lipsum}
+\usepackage[nottoc]{tocbibind}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{quotes,arrows.meta}
+\usepackage{thmtools}
+\usepackage{thm-restate}
 \usepackage{multirow}
-\def\block(#1,#2)#3{\multicolumn{#2}{c}{\multirow{#1}{*}{$ #3 $}}}
+\usepackage{hyperref}
+\usepackage[noabbrev]{cleveref}
+\usepackage{pgfplots}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{upgreek}
+\usepackage[misc]{ifsym}
+\usepackage[
+	sorting=nyt,
+	style=alphabetic
+]{biblatex}
 
-% \overfullrule=1mm
-
-\newenvironment{myproof}[1][\proofname]{%
-  \proof[\rm \bf #1]%
-}{\endproof}

@@ -1,43 +1,51 @@
-\documentclass{tuftebook}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=0.5in,right=0.5in,top=2cm,bottom=2cm]{geometry}
+\usepackage{crop,graphicx,amsmath,array,color,amssymb,flushend,stfloats,amsthm,chngpage,times,fancyhdr,lipsum,lastpage}
 
-\input{preamble}
+\pagestyle{fancy}
+
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyhf{}%
+  \fancyfoot[R]{Page \bf\thepage\ \rm of \bf\pageref{LastPage}}%
+}
 
 \title{Bill of Rights Institute}
 \author{Hashem A. Damrah}
 \date{\today}
 
+\fancyhf{}
+\fancyhead[L]{Hashem A. Damrah}
+\fancyhead[R]{Honors Grade 10}
+\fancyfoot[R]{Page \bf\thepage\ \rm of \pageref{LastPage}}
+
+
 \begin{document}
   \maketitle
+  \vspace{-112px}
+  \noindent\rule{\linewidth}{1pt} \par
+  \vspace{100px}
+  \vspace{-20px}
+  \noindent\rule{\linewidth}{1pt} \par
+  \vspace{10px}
 
-  \renewcommand{\thepage}{\roman{page}}
-  \pagestyle{plain}
-  \setcounter{page}{0}
+  \vspace{-85px}
+  \noindent
+  \begin{minipage}{0.5\textwidth}
+    \begin{flushleft}
+      \hspace{20px}
+      \includegraphics[scale = 0.28]{Resources/UoB}
+    \end{flushleft}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth}
+    \begin{flushright}
+      \includegraphics[scale = 0.28]{Resources/UoB}
+      \hspace*{20px}
+    \end{flushright}
+  \end{minipage}
+  \vspace{20px}
 
-  \include{abstract}
-
-  \newpage
-
-  \tableofcontents
-
-  \newpage
-
-  \renewcommand{\thepage}{\arabic{page}}
-  \setcounter{page}{1}
-  \pagestyle{normal}
-
-  \include{source-chapters}
-
-  \newpage
-
-  \include{conclusion}
-
-  \newpage
-
-  \appendix
-
-  \include{appendix}
-
-  \newpage
-
-  \bibliography{bibliography}
+  \input{source-chapters.tex}
 \end{document}
+
