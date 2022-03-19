@@ -12,7 +12,7 @@
 
 \NeedsTeXFormat{LaTeX2e} % we need to have LaTeX2e for this to compile
 \ProvidesClass{fphw}[2019/03/19] % fpshw is the name we need to provide to 
-                                  % the documentclass command on the .tex file
+% the documentclass command on the .tex file
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -47,12 +47,12 @@
 \DeclareOption{twoside}{\OptionNotUsed}
 
 
-    % we hardcode some language options
+% we hardcode some language options
 \DeclareOption{spanish}{
-    \renewcommand{\CourseLang}{Curso}
-    \renewcommand{\ProfessorLang}{Docente}
-    \renewcommand{\DateLang}{Fecha de entrega}
-    \renewcommand{\StudentLang}{Nombre estudiante}
+	\renewcommand{\CourseLang}{Curso}
+	\renewcommand{\ProfessorLang}{Docente}
+	\renewcommand{\DateLang}{Fecha de entrega}
+	\renewcommand{\StudentLang}{Nombre estudiante}
 }
 
 \PassOptionsToClass{a4paper}{article}
@@ -68,13 +68,12 @@
 
 
 % we need to load 
-\LoadClass{article}
-
+\LoadClass{report}
 
 % we will modify sections, subsections and sub subsections
 \RequirePackage{titlesec}
 % Modification of section 
-\titleformat{\section}[block]{\normalsize\bfseries\filcenter}{\thesection.}{.3cm}{} 
+\titleformat{\section}[block]{\normalsize\bfseries\filcenter}{\thesection.}{.3cm}{}
 
 % modification of subsection and sub sub section
 \titleformat{\subsection}[runin]{\bfseries}{ \thesubsection.}
@@ -96,31 +95,33 @@
 \fancyhead[LO] {\footnotesize{\ifx\classlocal\undefined{}\else\itshape\classlocal{} --{} \fi}\makeatletter\@title\makeatother }
 \fancyfoot[RO] {\footnotesize\itshape\makeatletter\@author\makeatother}
 
+\makeatletter
+
 % New title style for the document
 \renewcommand{\maketitle}{%
-    \thispagestyle{plain}
-    \begin{center}
-        \ifx\instituteloc\undefined{}\else{\scshape \instituteloc} \\[10pt] \fi
-        \hrule
-        \vspace{10pt}
-        {\LARGE \bfseries \@title} \\[5pt]
-        \StudentLang: {\itshape \@author}
-        \vspace{8pt}
-        \hrule
-        \vspace{10pt}
-        \ifx\classlocal\undefined{}\else\CourseLang: {\itshape \classlocal{} \ifx\professorloc\undefined{}\else{-- }\fi  }\fi
-        \ifx\professorloc\undefined{}\else{\ProfessorLang: {\itshape\professorloc}}\fi 
-        \\
-        \DateLang: {\itshape\@date}
-        \vspace{20pt}
-    \end{center}
+	\thispagestyle{plain}
+	\begin{center}
+		\ifx\instituteloc\undefined{}\else{\scshape \instituteloc} \\[10pt] \fi
+		\hrule
+		\vspace{10pt}
+		{\LARGE \bfseries \@title} \\[5pt]
+		\StudentLang: {\itshape \@author}
+		\vspace{8pt}
+		\hrule
+		\vspace{10pt}
+		\ifx\classlocal\undefined{}\else\CourseLang: {\itshape \classlocal{} \ifx\professorloc\undefined{}\else{-- }\fi  }\fi
+		\ifx\professorloc\undefined{}\else{\ProfessorLang: {\itshape\professorloc}}\fi
+		\\
+		\DateLang: {\itshape\@date}
+		\vspace{20pt}
+	\end{center}
 }
 
 % definition of the "problem" environment
 \newsavebox{\problembox}
 \newenvironment{problem}
-    {\begin{center} \begin{lrbox}{\problembox}\begin{minipage}{.98\textwidth}}
-    {\end{minipage}\end{lrbox}\fbox{\usebox{\problembox}} \end{center} }
+{\begin{center} \begin{lrbox}{\problembox}\begin{minipage}{.98\textwidth}}
+				{\end{minipage}\end{lrbox}\fbox{\usebox{\problembox}} \end{center} }
 
 %%% We finish the class with this command
 \endinput
