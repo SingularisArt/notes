@@ -1,8 +1,9 @@
+\LoadClass[20pt,a4paper,11pt,openany,tikz]{report}
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{tuftebook.cls}[2020/03/24 v1.00a Caesar book]
 
 \RequirePackage{amsmath}
-\LoadClassWithOptions{book}
 \RequirePackage{sidenotes}
 \captionsetup{font=footnotesize, skip=2pt}
 \RequirePackage[maxfloats=45]{morefloats}
@@ -67,8 +68,8 @@
 }
 
 % Basic formatting.
-\renewcommand{\frontmatter}{\pagestyle{empty}}
-\renewcommand{\mainmatter}{\cleardoublepage\pagestyle{fancy}}
+% \renewcommand{\frontmatter}{\pagestyle{empty}}
+% \renewcommand{\mainmatter}{\cleardoublepage\pagestyle{fancy}}
 \RequirePackage{ragged2e}
 \newcommand{\marginparstyle}{\footnotesize}
 \long\def\@ympar#1{

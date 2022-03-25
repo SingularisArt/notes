@@ -6,7 +6,7 @@ current_date=$(date "+%b %d %Y %a (%H:%M:%S)")
 while read line; do
   counter=$((counter+1))
   lesson="lesson-${counter}.tex"
-  lesson_line="\lesson{${counter}}{${current_date}}{${line}}{Unit 7}"
+  lesson_line="\lesson{${counter}}{${current_date}}{${line}}{Unit 5}"
 
   # Clear all files
   true > ${lesson}

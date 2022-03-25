@@ -307,27 +307,38 @@
 \definecolor{propertybordercolor}{RGB}{128, 0, 128}
 \definecolor{propertybackgroundcolor}{RGB}{255, 240, 255}
 
+\definecolor{formulabordercolor}{RGB}{0, 0, 0}
+\definecolor{formulabackgroundcolor}{RGB}{230, 229, 245}
 
 \newtheoremstyle{theorem}
 {0pt}{0pt}{\normalfont}{0pt}
 {}{\;}{0.25em}
 {{\sffamily\bfseries\color{theorembordercolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
-	\thmnote{\normalfont\color{black}~(#3)}}
+\thmnote{\normalfont\color{black}~(#3)}}
+
 \newtheoremstyle{definition}
 {0pt}{0pt}{\normalfont}{0pt}
 {}{\;}{0.25em}
 {{\sffamily\bfseries\color{definitionbordercolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
-	\thmnote{\normalfont\color{black}~(#3)}}
+\thmnote{\normalfont\color{black}~(#3)}}
+
 \newtheoremstyle{example}
 {0pt}{0pt}{\normalfont}{0pt}
 {}{\;}{0.25em}
 {{\sffamily\bfseries\color{examplebordercolor}\thmname{#1}.}
-	\thmnote{\normalfont\color{black}~(#3)}}
+\thmnote{\normalfont\color{black}~(#3)}}
+
 \newtheoremstyle{property}
 {0pt}{0pt}{\normalfont}{0pt}
 {}{\;}{0.25em}
 {{\sffamily\bfseries\color{propertybordercolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
-	\thmnote{\normalfont\color{black}~(#3)}}
+\thmnote{\normalfont\color{black}~(#3)}}
+
+\newtheoremstyle{formula}
+{0pt}{0pt}{\normalfont}{0pt}
+{}{\;}{0.25em}
+{{\sffamily\bfseries\color{formulabordercolor}\thmname{#1}~\thmnumber{\textup{#2}}.}
+\thmnote{\normalfont\color{black}~(#3)}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Theorem Environments %
@@ -451,6 +462,20 @@
 	borderline west={0.5mm}{0mm}{propertybordercolor}, arc=.5mm
 }
 
+%%%%%%%%%%%%
+% Formula %
+%%%%%%%%%%%%
+
+\theoremstyle{formula}
+\newtheorem{formula}{Formula}
+
+\tcolorboxenvironment{formula}{
+	enhanced jigsaw, pad at break*=1mm, breakable,
+	left=4mm, right=4mm, top=1mm, bottom=1mm,
+	colback=formulabackgroundcolor, boxrule=0pt, frame hidden,
+	borderline west={0.5mm}{0mm}{formulabordercolor}, arc=.5mm
+}
+
 %%%%%%%%%
 % Proof %
 %%%%%%%%%
@@ -472,6 +497,8 @@
 
 \AddToHook{env/property/after}{\colorlet{proofcolor}{propertybordercolor}}
 \AddToHook{env/proposition/after}{\colorlet{proofcolor}{propertybordercolor}}
+
+\AddToHook{env/formula/after}{\colorlet{proofcolor}{formulabordercolor}}
 
 \renewcommand{\qedsymbol}{Q.E.D.}
 \let\qedsymbolMyOriginal\qedsymbol

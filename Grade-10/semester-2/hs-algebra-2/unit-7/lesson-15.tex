@@ -1,0 +1,53 @@
+\lesson{15}{Mar 18 2022 Fri (23:06:17)}{Probability of dependent events}{Unit 7}
+
+A department store is holding a drawing to give away free shopping sprees. There
+are $10$  customers who have entered the drawing: $4$ live in the town of
+Gaston, $4$ live in Pike, and $2$ live in Wells. Two winners will be selected at
+random. What is the probability that both winners live in Wells? Write your
+answer as a fraction in simplest form.
+
+We can think of there being a "first winner" and a "second winner." Whether the
+first winner lives in Wells affects the probability that the second winner lives
+in Wells. These two events are dependent.
+
+if $A$ and $B$ are dependent events, then the probability that they both occur
+can be computed as follows.
+
+\begin{equation}
+  \label{eqt:probability_of_A_and_B}
+  \begin{split}
+    P(\textrm{$A$ and $B$}) = P(A) \times P(\textrm{$B$ Given $A$})
+  \end{split}
+.\end{equation}
+
+Before the first winner is selected, there are $10$  customers to choose from,
+and $2$  of them live in Wells. So we have:
+
+\begin{equation}
+  \label{eqt:two_to_choose_from}
+  \begin{split}
+    P(\textrm{"First winner lives in Wells"}) = \frac{2}{10} \times \frac{1}{5}
+  \end{split}
+.\end{equation}
+
+If the first winner lives in Wells, then there will be $1$ customer who lives in
+Wells in the remaining $9$ customers. So we have:
+
+\begin{equation}
+  \label{eqt:remaining_customers}
+  \begin{split}
+    P(\textrm{"Second winner lives in Wells" given "First winner lives in
+    Wells"}) = \frac{1}{9}
+  \end{split}
+.\end{equation}
+
+We can now compute the probability that both winners live in Wells.
+
+\begin{equation}
+  \label{eqt:final_probability}
+  \begin{split}
+    \frac{1}{5} \times \frac{1}{9} = \frac{1}{45}
+  \end{split}
+.\end{equation}
+
+\newpage

@@ -1,0 +1,88 @@
+\lesson{30}{Mar 18 2022 Fri (23:06:17)}{Computing expected value in a game of chance}{Unit 7}
+
+\begin{formula}[Expected Value Formula]
+  \label{frm:expected_value_formula}
+
+  \begin{equation}
+    \label{eqt:expected_value_formula}
+    \begin{split}
+      E = x_1 \times p_1 + x_2 \times p_2 + \ldots + x_n \times p_n
+    \end{split}
+  .\end{equation}
+
+  The values $x_1, x_2, \ldots, x_n$ are all of the possible results.
+
+  The values $p_1, p_2, \ldots, p_n$ are the corresponding probabilities of the
+  results.
+\end{formula}
+
+Each time Reuben decides to play the game of chance, the result is uncertain.
+However, the expected value can be used to predict what could happen if Reuben
+plays the game many times.
+
+To find the expected value of a game of chance, we multiply each possible result
+(in dollars) by its probability and then add these products.
+
+\begin{mdframed}
+  \begin{itemize}
+    \label{item:questions}
+
+    \item[(a)] There are $8$ possible results of playing the game. Each result
+      is a dollar amount. Since the dart will land on a numbered slice at
+      random, each result is equally likely to occur. So, the probability is
+      $\frac{1}{8}$.
+
+      \begin{table}[H]
+        \centering
+        \caption{Expected Value}
+        \label{tab:expected_value_in_table_form}
+
+        \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+          \hline
+          Dart Toss & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ \\
+          \hline
+          Result & $\$1$ & $\$2$ & $\$5$ & $\$8$ & $\$-4$ & $\$-4$ & $\$-4$ &
+            $\$-4$ \\
+          \hline
+          Probability & $\frac{1}{8}$ & $\frac{1}{8}$ & $\frac{1}{8}$ &
+            $\frac{1}{8}$ & $\frac{1}{8}$ & $\frac{1}{8}$ & $\frac{1}{8}$ &
+            $\frac{1}{8}$ \\
+          \hline
+        \end{tabular}
+      \end{table}
+
+      Using the formula for expected value, we get the following.
+
+      \begin{equation}
+        \label{eqt:expected_value_sequence}
+        \begin{alignedat}{3}
+          E  = &1 \left(\frac{1}{8}\right) +
+                2 \left(\frac{1}{8}\right) +
+                5 \left(\frac{1}{8}\right) +
+                8 \left(\frac{1}{8}\right) - \\
+               &4 \left(\frac{1}{8}\right) -
+                4 \left(\frac{1}{8}\right) -
+                4 \left(\frac{1}{8}\right) -
+                4 \left(\frac{1}{8}\right) \\
+            &= \frac{1}{8} + \frac{2}{8} + \frac{5}{8} \frac{8}{8} - \frac{4}{8}
+              - \frac{4}{8} - \frac{4}{8} - \frac{4}{8} \\
+            &= \frac{1 + 2 + 5 + 8 - 4 - 4 - 4 - 4}{8} \\
+            &= \$0
+        \end{alignedat}
+      .\end{equation}
+
+      So, the expected value of playing the game is $\$0$.
+
+      Notice that it's impossible to get a result of $\$0$ any particular time
+      the game is played. This is just an indicator of the outcome after
+      multiple games have been played.
+
+    \item[(b)] 	What can Reuben expect in the long run, after playing the game
+      many times?
+
+      The expected value is zero. So, Reuben can expect to break even (neither
+      gain nor lose money).
+  \end{itemize}
+\end{mdframed}
+
+\newpage

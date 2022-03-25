@@ -1,30 +1,75 @@
 \documentclass{article}
+
 \usepackage[utf8]{inputenc}
 \usepackage[left=0.5in,right=0.5in,top=2cm,bottom=2cm]{geometry}
-\usepackage{crop,graphicx,amsmath,array,color,amssymb,flushend,stfloats,amsthm,chngpage,times,fancyhdr,lipsum,lastpage}
+\usepackage{crop}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{flushend}
+\usepackage{stfloats}
+\usepackage{amsthm}
+\usepackage{chngpage}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{anyfontsize}
+\usepackage[
+  backend=biber,
+  style=reading,
+  sorting=ynt,
+]{biblatex}
+
+\usepackage{setspace}
+
+\addbibresource{bibliography.bib}
+\bibliography{bibliography}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% Save standard definitions
+\let\HeadRule\headrule
+\let\FootRule\footrule
+
+\renewcommand\footrule{\textcolor{orange}{\FootRule}}
 
 \pagestyle{fancy}
 
-\fancypagestyle{plain}{%
-  \renewcommand{\headrulewidth}{0pt}%
-  \fancyhf{}%
-  \fancyfoot[R]{Page \bf\thepage\ \rm of \bf\pageref{LastPage}}%
+\lhead{}
+\chead{}
+\rhead{\includegraphics[scale=0.15]{Resources/bill-of-rights.png}}
+
+\fancyfoot{}
+\lfoot{Hashem A. Damrah (BWA)}
+\cfoot{}
+\rfoot{Page \bf\thepage\ \rm of \bf\pageref{LastPage}}
+
+\fancypagestyle{first}{
+  \fancyfoot[L]{Hashem A. Damrah (BWA)}
+  \fancyfoot[C]{}
+  \fancyfoot[R]{Page \bf\thepage\ \rm of \bf\pageref{LastPage}}
 }
 
 \title{Bill of Rights Institute}
-\author{Hashem A. Damrah}
+\author{Hashem A. Damrah \\ Baker Web Academy (BWA)}
 \date{\today}
 
-\fancyhf{}
-\fancyhead[L]{Hashem A. Damrah}
-\fancyhead[R]{Honors Grade 10}
-\fancyfoot[R]{Words}
-\fancyfoot[R]{Page \bf\thepage\ \rm of \pageref{LastPage}}
-
+\hypersetup{
+	colorlinks,
+	linkcolor={black},
+	citecolor={black},
+	urlcolor={blue!80!black}
+}
 
 \begin{document}
   \maketitle
-  \vspace{-112px}
+  \vspace{-120px}
   \noindent\rule{\linewidth}{1pt} \par
   \vspace{100px}
   \vspace{-20px}
@@ -47,6 +92,11 @@
   \end{minipage}
   \vspace{20px}
 
-  \input{source-chapters.tex}
+  \input{chapters/chap1.tex}
+
+  \newpage
+
+  \printbibliography
+  \nocite{*}
 \end{document}
 

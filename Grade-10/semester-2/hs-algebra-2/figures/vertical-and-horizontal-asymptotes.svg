@@ -3,11 +3,11 @@
 
 <svg
    version="1.1"
-   id="svg2153"
-   width="529.41174"
-   height="231"
-   viewBox="0 0 529.41174 231"
-   sodipodi:docname="domain-of-parabola.svg"
+   id="svg55"
+   width="1156.6265"
+   height="552.48193"
+   viewBox="0 0 1156.6265 552.48193"
+   sodipodi:docname="vertical-and-horizontal-asymptotes.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -15,9 +15,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs2157" />
+     id="defs59" />
   <sodipodi:namedview
-     id="namedview2155"
+     id="namedview57"
      pagecolor="#505050"
      bordercolor="#ffffff"
      borderopacity="1"
@@ -25,24 +25,24 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
      showgrid="false"
-     inkscape:zoom="2.4631112"
-     inkscape:cx="264.70587"
-     inkscape:cy="115.50433"
-     inkscape:window-width="1114"
-     inkscape:window-height="875"
-     inkscape:window-x="0"
-     inkscape:window-y="19"
+     inkscape:zoom="1.0679082"
+     inkscape:cx="578.70142"
+     inkscape:cy="276.24097"
+     inkscape:window-width="1534"
+     inkscape:window-height="856"
+     inkscape:window-x="30"
+     inkscape:window-y="28"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2159" />
+     inkscape:current-layer="g61" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
-     id="g2159">
+     id="g61">
     <image
-       width="529.41176"
-       height="231"
+       width="1156.6265"
+       height="552.48193"
        preserveAspectRatio="none"
-       xlink:href="domain-of-parabola.png"
-       id="image2161" />
+       xlink:href="vertical-and-horizontal-asymptotes.png"
+       id="image63" />
   </g>
 </svg>

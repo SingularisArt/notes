@@ -3,11 +3,11 @@
 
 <svg
    version="1.1"
-   id="svg2153"
-   width="529.41174"
-   height="231"
-   viewBox="0 0 529.41174 231"
-   sodipodi:docname="domain-of-parabola.svg"
+   id="svg711"
+   width="822.85712"
+   height="380.98285"
+   viewBox="0 0 822.85712 380.98285"
+   sodipodi:docname="minimum-maximum-of-quadratic.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -15,9 +15,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs2157" />
+     id="defs715" />
   <sodipodi:namedview
-     id="namedview2155"
+     id="namedview713"
      pagecolor="#505050"
      bordercolor="#ffffff"
      borderopacity="1"
@@ -25,24 +25,24 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
      showgrid="false"
-     inkscape:zoom="2.4631112"
-     inkscape:cx="264.70587"
-     inkscape:cy="115.50433"
-     inkscape:window-width="1114"
+     inkscape:zoom="1.5984972"
+     inkscape:cx="411.63664"
+     inkscape:cy="190.49142"
+     inkscape:window-width="1594"
      inkscape:window-height="875"
      inkscape:window-x="0"
      inkscape:window-y="19"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2159" />
+     inkscape:current-layer="g717" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
-     id="g2159">
+     id="g717">
     <image
-       width="529.41176"
-       height="231"
+       width="822.85712"
+       height="380.98285"
        preserveAspectRatio="none"
-       xlink:href="domain-of-parabola.png"
-       id="image2161" />
+       xlink:href="minimum-maximum-of-quadratic.png"
+       id="image719" />
   </g>
 </svg>
