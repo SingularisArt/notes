@@ -1,4 +1,4 @@
-\documentclass[20pt,a4paper,11pt,openany]{tuftebook}
+\documentclass[nocolor]{report}
 
 \input{preamble}
 
@@ -12,40 +12,6 @@
 
 \begin{document}
     \maketitle
-    
-    \pagestyle{plain}
-    \renewcommand{\thepage}{Page: \roman{page}}
-    
-    \setcounter{page}{1}
-    \setcounter{chapter}{0}
-    
-    \twocolumn
-    
-    \input{copyright}
-    \newpage
-    \input{preface}
-    \newpage
-    \input{summary}
-    \newpage
-    
-    \onecolumn
-    
     \tableofcontents
-    \newpage
-
-    \pagestyle{fancy}
-    \renewcommand{\thepage}{Page: \arabic{page}}
-    
-    \setcounter{page}{1}
-    \setcounter{chapter}{0}
-    
-    \newpage
-    
     \input{source-lectures.tex}
-    
-    % \newpage
-    % 
-    % \twocolumn
-    % 
-    % \input{conclusion}
 \end{document}
