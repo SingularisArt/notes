@@ -3,21 +3,21 @@
 
 <svg
    version="1.1"
-   id="svg2929"
-   width="1138.3398"
-   height="543.74707"
-   viewBox="0 0 1138.3398 543.74707"
-   sodipodi:docname="inequality.svg"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   id="svg316"
+   width="780.48779"
+   height="389.20325"
+   viewBox="0 0 780.48779 389.20325"
+   sodipodi:docname="graph-line-through-given-point-with-slope.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs2933" />
+     id="defs320" />
   <sodipodi:namedview
-     id="namedview2931"
+     id="namedview318"
      pagecolor="#505050"
      bordercolor="#ffffff"
      borderopacity="1"
@@ -25,24 +25,24 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
      showgrid="false"
-     inkscape:zoom="1.1455279"
-     inkscape:cx="569.16992"
-     inkscape:cy="271.92704"
+     inkscape:zoom="1.5673045"
+     inkscape:cx="390.47932"
+     inkscape:cy="194.60162"
      inkscape:window-width="1594"
-     inkscape:window-height="875"
+     inkscape:window-height="876"
      inkscape:window-x="0"
-     inkscape:window-y="19"
+     inkscape:window-y="18"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2935" />
+     inkscape:current-layer="g322" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
-     id="g2935">
+     id="g322">
     <image
-       width="1138.3398"
-       height="543.74707"
+       width="780.48779"
+       height="389.20325"
        preserveAspectRatio="none"
-       xlink:href="../images/inequality.png"
-       id="image2937" />
+       xlink:href="graph-line-through-given-point-with-slope.png"
+       id="image324" />
   </g>
 </svg>

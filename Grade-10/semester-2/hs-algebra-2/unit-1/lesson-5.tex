@@ -1,5 +1,262 @@
 \lesson{5}{Mar 18 2022 Fri (16:33:58)}{Transform graph from a function}{Unit 1}
+\label{les_5_unit_1:transform_graph_from_a_function}
 
+\subsubsection{Translating Graphs}
+\label{sub_sub_sec:translating_graphs}
 
+If each of the points of a graph is moved the same distance in the same
+direction, we say that the graph is \textbf{translated} and the resulting
+graph is a transition of the original.
+
+\begin{itemize}
+  \label{item:translating}
+
+  \item \textbf{Horizontally Translating:}
+
+    Suppose that $f$ is a function whose domain (\ref{def:domain}) and range
+    (\ref{def:range}) are subsets of the set of real numbers
+
+    \begin{itemize}
+      \label{item:translating_horizontally}
+    
+      \item The horizontal translation of the graph of $f$ to the right $c$
+        units is the graph of
+
+        \[ g(x) = f(x - c) \].
+
+      \item The horizontal translation of the graph of $f$ to the left $c$
+        units is the graph of
+
+        \[ g(x) = f(x + c) \].
+    \end{itemize}
+
+  \item \textbf{Vertically Translating:}
+
+    Suppose that $f$ is a function whose domain (\ref{def:domain}) and range
+    (\ref{def:range}) are subsets of the set of real numbers
+
+    \begin{itemize}
+      \label{item:translating_vertically}
+    
+      \item The vertical translation of the graph of $f$ upward $c$ units is
+        the graph of
+
+        \[ g(x) = f(x) + c \].
+
+      \item The vertical translation of the graph of $f$ downward $c$ units is
+        the graph of
+
+        \[ g(x) = f(x) - c \].
+    \end{itemize}
+\end{itemize}
+
+\begin{example}
+  \label{exm:translating}
+
+  If $f(x) = x^{2}$, then the graph of $g(x) = x^{2} + 2$ is the vertical
+  translation of the graph of $f$ upward $2$ units. The graph of $h(x) = x^{2} -
+  1$ is the vertical translation of the graph of $f$ downward $1$ unit.
+  
+  \begin{figure}[H]
+    \centering
+    \incfig{starting-graph}
+    \caption{The starting graph $f(x) = x^{2}$}
+    \label{fig:translating_start}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \subfloat[\centering label 1]{{\incfig{graph-down}}}
+    \qquad
+    \subfloat[\centering label 2]{{\incfig{graph-up}}}
+    \caption{Translating Graphs}
+    \label{fig:translating_end}
+  \end{figure}
+
+  When the graph of a function $f$ is translated to get the graph of a function
+  $g$, it is important to 
+\end{example}
+
+\begin{note}
+  \label{nte:translating}
+
+  When the graph of a function $f$ is translated to get the graph of a function
+  $g$, it is important to note that the rigidity of the graph of $f$ is
+  maintained. That is, the graph of $g$ has the same \textbf{"size"} and
+  \textbf{"shape"} as the graph of $f$.
+\end{note}
+
+% subsubsection translating_graphs (end)
+
+\subsubsection{Reflecting Graphs}
+\label{sub_sub_sec:reflecting_graphs}
+
+\begin{itemize}
+  \label{item:reflecting}
+
+  \item Reflecting about the $y$ axis.
+
+    The \textbf{reflection} of the point $(a, b)$ about the $y$ axis is the
+    point $(-a, b)$.
+
+    \begin{marginfigure}
+      \centering
+      \incfig{reflecting-points-y-axis}
+      \label{fig:reflecting_1}
+    \end{marginfigure}
+
+    If $f$ is a function whose domain (\ref{def:domain}) and range
+    (\ref{def:range}) are subsets of the set of real numbers, then the
+    reflection of the graph of $f$ about the $y$ axis is the reflection of
+    every point on the graph of $f$ about the $y$ axis. The reflection of the
+    graph of $f$ about the $y$ axis is the graph of the function $g(x) = f(-x)$
+
+  \item Reflecting about the $x$ axis.
+
+    The reflection of the point $(a, b)$ about the $x$ axis is the point
+    $(a, -b)$.
+
+    \begin{marginfigure}
+      \centering
+      \incfig{reflecting-points-x-axis}
+      \label{fig:reflecting_2}
+    \end{marginfigure}
+
+    If $f$ is a function whose domain (\ref{def:domain}) and range
+    (\ref{def:range}) are subsets of the set of real numbers, then the
+    reflection of the graph of $f$ about the $x$ axis is the reflection of every
+    point on the graph of $f$ about the $x$ axis. The reflection of the graph of
+    $f$ about the $x$ axis is the graph of the function $g(x) = -f(x)$
+\end{itemize}
+
+\begin{example}
+  \label{exm:reflecting}
+
+  The graph of $f(x) = \sqrt{x}$ is shown in blue. The graph of $g(x) =
+  -\sqrt{x}$, which is the reflection of the graph of $f$ about the $x$ axis is
+  shown in red.
+\end{example}
+
+\begin{marginfigure}
+  \centering
+  \incfig{reflecting-line}
+  \label{fig:reflecting_3}
+\end{marginfigure}
+
+% subsubsection reflecting_graphs (end)
+
+\subsubsection{Stretching and Shrinking Graphs}
+\label{sub_sub_sec:stretching_and_shrinking_graphs}
+
+\begin{itemize}
+  \label{item:stretching_and_shrinking}
+
+  \item Vertically Stretching and Shrinking.
+
+    Suppose that $f$ is a function whose domain (\ref{def:domain}) and range
+    (\ref{def:range}) are subsets of the set of real numbers. 
+
+    \begin{itemize}
+      \label{item:vertically_stretching_and_shrinking}
+    
+      \item If $c$ is a number greater than $1$, then the graph of
+
+        \[ g(x) = cf(x) \]
+        
+        is \textbf{Vertical Stretching}, also called
+        \textbf{Vertical Expansion}, of the graph of $f$.
+
+      \item If $c$ is a number between $0$ and $1$, then the graph of
+
+        \[ g(x) = cf(x) \]
+
+        is \textbf{Vertical Shrinking}, also called a \textbf{Vertical
+        Contraction}, of the graph $f$.
+    \end{itemize}
+
+  \item Horizontally Stretching and Shrinking.
+
+    Suppose that $f$ is a function whose domain (\ref{def:domain}) and range
+    (\ref{def:range}) are subsets of the set of real numbers.
+
+    \begin{itemize}
+      \label{item:horizontally_stretching_and_shrinking}
+    
+      \item If $c$ is a number greater than $1$, then the graph of
+
+        \[ g(x) = f(cx) \]
+        
+        is a \textbf{Horizontal Shrinking}, also called a \textbf{Horizontal
+        Contraction}, of the graph of $f$.
+
+      \item If $c$ is a number between $0$ and $1$, then the graph of
+
+        \[ g(x) = f(cx) \]
+
+        is a \textbf{Horizontal Stretching}, also called a \textbf{Horizontal
+        Expansion}, of the graph of $f$.
+    \end{itemize}
+
+    In both cases, for a given $y$ coordinate, the $x$ coordinate of the point
+    on the graph of $g$ is $\frac{1}{c}$ times the $x$ coordinate of the point
+    on the graph of $f$.
+\end{itemize}
+
+\begin{example}
+  \label{exm:stretching_and_shrinking}
+
+  The graph of the function $f(x) = e^{x}$ is shown in blue and the graph of the
+  function $g(x) = e^{2x}$ is shown in red. The graph of $g$ is a horizontal
+  contraction of the graph of $f$ because $g(x) = f(2x)$, that is, for a given
+  $y$ coordinate, the $x$ coordinate of a point on the graph of $g$ is
+  $\frac{1}{2}$ times the $x$ coordinate of the point on the graph of $f$.
+\end{example}
+
+\begin{marginfigure}
+  \centering
+  \incfig{stretching-and-shrinking-line}
+  \label{fig:stretching_and_shrinking}
+\end{marginfigure}
+
+% subsubsection stretching_and_shrinking_graphs (end)
+
+\begin{example}
+  \label{exm:all_put_together}
+
+  Below is the graph of $y = x^{2}$.
+
+  Transform it to make it the graph of $y = -2(x - 4)^{2}$.
+
+  \begin{figure}[H]
+    \centering
+    \incfig{starting-graph}
+    \caption{$y = x^{2}$}
+    \label{fig:images_starting_graph_png}
+  \end{figure}
+
+  We are given the graph of $y = x^{2}$ and asked to graph $y = -2(x - 4)^{2}$.
+
+  Starting with the graph of $y = x^{2}$, we'll first graph $y = (x - 4)^{2}$.
+  To do this, we translate (\ref{sub_sub_sec:translating_graphs}) the graph of
+  $y = x^{2}$ to the right $4$ units.
+
+  \begin{figure}[H]
+    \centering
+    \incfig{right-graph}
+    \caption{Moved to the right by $4$ units.}
+    \label{fig:images_right_graph_png}
+  \end{figure}
+
+  Finally, we'll use the graph of $y = 2(x - 4)^{2}$ to get the graph of $y =
+  -2(x - 4)^{2}$. To do this, we reflect the graph of $y = 2(x - 4^{2})$ across
+  the $x$ axis.
+
+  \begin{figure}[H]
+    \centering
+    \incfig{final-graph}
+    \caption{Reflected across the $x$ axis.}
+    \label{fig:final_graph}
+  \end{figure}
+\end{example}
 
 \newpage

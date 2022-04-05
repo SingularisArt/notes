@@ -1,5 +1,55 @@
 \lesson{4}{Mar 18 2022 Fri (16:49:49)}{Solve tax rate/interest using system of equations}{Unit 2}
+\label{les_4_unit_2:solve_tax_rate/interest_using_system_of_equations}
 
+A theater group made appearances in two cities. The hotel charge before tax in
+the second city was $\$1500$ lower than in the first. The tax in the
+\underline{first city was $3.5\%$}, and the tax in the \underline{second city
+was $6\%$}. The hotel tax paid for the two cities was $\$385$. How much was the
+hotel charge in each city before tax?
 
+Let's first create our needed variables:
+
+$x$ = the hotel charge (in dollars) in the first city before tax
+$y$ = the hotel charge (in dollars) in the second city before tax
+
+Now, let's create a table to help organize all of our data:
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  & Charge before tax & Tax rate & Tax paid \\
+  \hline
+  First city & $x$ & $3.5\% = 0.035$ & $0.035x$ \\
+  \hline
+  Second city & $y$ & $6\% = 0.06$ & $0.06y$ \\
+  \hline
+  Total & & & $385$ \\
+  \hline
+\end{tabular}
+
+Using this information, we can create our system of equations. 
+
+\begin{equation}
+  \label{cse:final_system_of_equations}
+  \begin{cases}
+    y = x - 1500 \\
+    0.035x + 0.06y = 385
+  \end{cases}
+.\end{equation}
+
+Before we go any further, we need to make the second equation into the form of
+$y = mx + b$:
+
+\begin{equation}
+  \label{spt:transform_equation_into_y_mx_b}
+  \begin{split}
+    0.035x + 0.06y &= 385 \\
+    \frac{385 - 0.035x}{0.06} &= y
+  \end{split}
+.\end{equation}
+
+Now, we just need to graph this system of equations and find the point of
+intersection, which gives us the following solution:
+
+$x = 5000 \qquad y=35000$
 
 \newpage

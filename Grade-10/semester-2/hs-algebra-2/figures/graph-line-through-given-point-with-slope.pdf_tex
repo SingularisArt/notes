@@ -1,6 +1,6 @@
-%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04), www.inkscape.org
+%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04, custom), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'quadratic-equation.pdf' (pdf, eps, ps)
+%% Accompanies image file 'graph-line-through-given-point-with-slope.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{286.47214508bp}%
+    \setlength{\unitlength}{585.36584473bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,9 +50,9 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.47766667)%
+  \begin{picture}(1,0.49866667)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{quadratic-equation.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{graph-line-through-given-point-with-slope.pdf}}%
   \end{picture}%
 \endgroup%

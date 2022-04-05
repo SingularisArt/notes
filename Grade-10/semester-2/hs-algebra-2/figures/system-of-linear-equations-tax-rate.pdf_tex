@@ -1,6 +1,6 @@
-%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04), www.inkscape.org
+%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04, custom), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'graphing-quadratic-inequality.pdf' (pdf, eps, ps)
+%% Accompanies image file 'system-of-linear-equations-tax-rate.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{251.45516968bp}%
+    \setlength{\unitlength}{24000bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,9 +50,9 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.463)%
+  \begin{picture}(1,0.48466666)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{graphing-quadratic-inequality.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{system-of-linear-equations-tax-rate.pdf}}%
   \end{picture}%
 \endgroup%

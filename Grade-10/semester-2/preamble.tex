@@ -62,6 +62,7 @@
 \usepackage{microtype}
 \usepackage{upgreek}
 \usepackage[misc]{ifsym}
+\usepackage{tokcycle}
 \usepackage[
 	sorting=nyt,
 	style=alphabetic
@@ -170,32 +171,38 @@
 
 \def\@lesson{}
 \def\@lessonabbr{}
+\newcommand{\converttolabel}[1]{\expandafter\tokencyclexpress#1\endtokencyclexpress}
+\LetLtxMacro{\oldlesson}{\lesson}
 \newcommand{\lesson}[4]{
 	\ifthenelse{\isempty{#3}}{
+    \def\@lessonabbr{Les #1}
 		\def\@lesson{Lesson #1}
 		\def\@fullLesson{\hfill \small{#2}\hr \@lesson \hfill \small{#4} \\}
-		\subsection[\@lesson]{\@fullLesson}
+		\subsection[\@lessonabbr]{\@fullLesson}
 	}{
+    \def\@lessonabbr{Les #1: #3}
 		\def\@lesson{Lesson #1: #3}
 		\def\@fullLesson{\hfill \small{#2}\hr \@lesson \hfill \small{#4} \\}
-		\subsection[\@lesson]{\@fullLesson}
+		\subsection[\@lessonabbr]{\@fullLesson}
 	}
-	\def\@lessonabbr{Les #1}
 }
 
 \def\@lecture{}
 \def\@lectureabbr{}
 \newcommand{\lecture}[4]{
 	\ifthenelse{\isempty{#3}}{
+    \def\@lectureabbr{Lec #1}
 		\def\@lecture{Lecture #1}
 		\def\@fullLecture{\hfill \small{#2}\hr \@lecture \hfill \small{#4} \\}
-		\subsection[\@lecture]{\@fullLecture}
+		\subsection[\@lectureabbr]{\@fullLecture}
+    \label{\@lecture}
 	}{
+    \def\@lectureabbr{Les #1: #3}
 		\def\@lecture{Lecture #1: #3}
 		\def\@fullLecture{\hfill \small{#2}\hr \@lecture \hfill \small{#4} \\}
-		\subsection[\@lecture]{\@fullLecture}
+		\subsection[\@lectureabbr]{\@fullLecture}
+    \label{\@lecture}
 	}
-	\def\@lectureabbr{Lec #1}
 }
 
 % These are the fancy headers
@@ -205,12 +212,12 @@
 	\fancyhf{}
 
 	\fancyhead[R,L]{\hr}
-	\fancyhead[C]{\leftmark}                                        % Center
+	\fancyhead[C]{}                                                 % Center
 	\fancyhead[RO,LE]{\@lessonabbr}                                 % Right odd,  Left even
 	\fancyhead[RE,LO]{\thepage}                                     % Right even, Left odd
 
 	\fancyfoot[RE,LO]{\theTitle}
-	\fancyfoot[RO,LE]{\theDate}
+	\fancyfoot[RO,LE]{\leftmark}
 	\fancyfoot[C]{\theAuthor}
 
 	\renewcommand{\headrulewidth}{0.4pt}
