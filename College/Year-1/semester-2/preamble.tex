@@ -1,10 +1,10 @@
 % basics
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{sidenotes}
-\usepackage{textcomp}
-\usepackage{url}
-\usepackage{hyperref}
+\usepackage[utf8]{inputenc} %
+\usepackage[T1]{fontenc} %
+\usepackage{sidenotes} %
+\usepackage{textcomp} %
+\usepackage{url} %
+\usepackage{hyperref} % Change color of links
 \hypersetup{
   colorlinks,
   linkcolor={black},
@@ -12,42 +12,29 @@
   urlcolor={blue!80!black}
 }
 \usepackage{graphicx}
-\usepackage{lipsum}
-\usepackage{float}
-\usepackage{booktabs}
-\usepackage[shortlabels]{enumitem}
-\usepackage{emptypage}
-\usepackage{subcaption}
-\usepackage{multicol}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
-\usepackage{mathrsfs}
-\usepackage{cancel}
-\usepackage{bm}
-\usepackage{systeme}
-\usepackage{stmaryrd}
+\usepackage{lipsum} % Generate random text
+\usepackage{float} % 
+\usepackage{booktabs} %
+\usepackage[shortlabels]{enumitem} %
+\usepackage{emptypage} %
+\usepackage{subcaption} %
+\usepackage{multicol} %
+\usepackage[usenames,dvipsnames]{xcolor} %
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb} %
+\usepackage{mathrsfs} %
+\usepackage{cancel} %
+\usepackage{bm} %
+\usepackage{systeme} %
+\usepackage{stmaryrd} %
 
-\newcommand\N{\ensuremath{\mathbb{N}}}
-\newcommand\R{\ensuremath{\mathbb{R}}}
-\newcommand\Z{\ensuremath{\mathbb{Z}}}
-\renewcommand\O{\ensuremath{\emptyset}}
-\newcommand\Q{\ensuremath{\mathbb{Q}}}
-\newcommand\C{\ensuremath{\mathbb{C}}}
-
-\renewcommand\qedsymbol{\color{RawSienna!70!black}Q.E.D.}
-
-\DeclareMathOperator{\sgn}{sgn}
-\let\svlim\lim\def\lim{\svlim\limits}
-\let\implies\Rightarrow
-\let\impliedby\Leftarrow
-\let\iff\Leftrightarrow
-\let\epsilon\varepsilon
-\newcommand\contra{\scalebox{1.1}{$\lightning$}}
-
-% correct
-\definecolor{correct}{HTML}{009900}
-\newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
-\newcommand\green[1]{{\color{correct}{#1}}}
+% \DeclareMathOperator{\sgn}{sgn}
+% \let\svlim\lim\def\lim{\svlim\limits}
+% \let\implies\Rightarrow
+% \let\impliedby\Leftarrow
+% \let\iff\Leftrightarrow
+% \let\epsilon\varepsilon
+% \newcommand\contra{\scalebox{1.1}{$\lightning$}}
+%
 
 % horizontal rule
 \newcommand\hr{
@@ -75,6 +62,17 @@
   force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
 }
 
+% itemize/enumerate
+\def\labelitemi{$\blacksquare$} % Creates a black square
+\def\labelitemii{\tikz\draw[black,fill=black] (0,0) circle (.7ex);} % Creates a black circle
+\def\labelitemiii{$\blacktriangleright$} % Creates a black triangle
+\def\labelitemiv{\tikz\draw[black,fill=black] (0,0) circle (.2ex);} % Creates a black small circle
+
+\renewcommand{\labelenumi}{{\color{thmbluetextcolor}\arabic{enumi}}} % EX: 1.
+\renewcommand{\labelenumii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}}} % EX: 1.1
+\renewcommand{\labelenumiii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}} % EX: 1.1.1
+\renewcommand{\labelenumiv}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}} % EX: 1.1.1.1
+
 % theorems
 \usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
@@ -82,212 +80,256 @@
 
 \theoremstyle{definition}
 
-\colorlet{thmgreencolor}{ForestGreen!70!black}
-\colorlet{thmredcolor}{RawSienna!70!black}
-\colorlet{thmbluecolor}{NavyBlue!70!black}
-\colorlet{thmblueline}{NavyBlue!70!black}
-\colorlet{thmproofcolor}{RawSienna!70!black}
-\colorlet{thmexplanationbox}{NavyBlue!70!black}
+% define our colors
+\colorlet{thmgreentextcolor}{ForestGreen!70!black} % Text color
+\colorlet{thmgreenlinecolor}{ForestGreen} % Line color
+\colorlet{thmgreenbackgroundcolor}{ForestGreen!5} % Background color
+
+\colorlet{thmredtextcolor}{RawSienna!70!black} % Text Color
+\colorlet{thmredlinecolor}{RawSienna} % Line Color
+\colorlet{thmredbackgroundcolor}{RawSienna!5} % Background Color
+
+\colorlet{thmbluetextcolor}{NavyBlue!70!black} % Text Color
+\colorlet{thmbluelinecolor}{NavyBlue} % Line Color
+\colorlet{thmbluebackgroundcolor}{NavyBlue!5} % Background Color
+
+\colorlet{thmprooftextcolor}{RawSienna!70!black} % Text Color
+\colorlet{thmprooflinecolor}{RawSienna} % Line Color
+\colorlet{thmproofbackgroundcolor}{RawSienna!5} % Background Color
 
 \makeatletter
 
-\@ifclasswith{report}{nocolor}{
+\@ifclasswith{report}{nocolor}{ % Check if we're using the [nocolor] argument in
+                                % the document class
+  % Create our environments without color. Just boxed
   \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
   \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
   \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
   \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
   \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
-  \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
   \AtEndEnvironment{eg}{\null\hfill$\diamond$}%
 }{
+  % Create the green environment
   \declaretheoremstyle[
-  headfont=\bfseries\sffamily\color{thmgreencolor}, bodyfont=\normalfont,
+  headfont=\bfseries\sffamily\color{thmgreentextcolor}, bodyfont=\normalfont,
   mdframed={
     linewidth=2pt,
     rightline=false, topline=false, bottomline=false,
-    linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+    linecolor=ForestGreen, backgroundcolor=thmgreenbackgroundcolor,
   }
   ]{thmgreenbox}
 
+  % Create the red environment
   \declaretheoremstyle[
-  headfont=\bfseries\sffamily\color{thmredcolor}, bodyfont=\normalfont,
+  headfont=\bfseries\sffamily\color{thmredtextcolor}, bodyfont=\normalfont,
   mdframed={
     linewidth=2pt,
     rightline=false, topline=false, bottomline=false,
-    linecolor=RawSienna, backgroundcolor=RawSienna!5,
+    linecolor=thmredlinecolor, backgroundcolor=thmredbackgroundcolor,
   }
   ]{thmredbox}
 
+  % Create the blue environment
   \declaretheoremstyle[
-  headfont=\bfseries\sffamily\color{thmbluecolor}, bodyfont=\normalfont,
+  headfont=\bfseries\sffamily\color{thmbluetextcolor}, bodyfont=\normalfont,
   mdframed={
     linewidth=2pt,
     rightline=false, topline=false, bottomline=false,
-    linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+    linecolor=thmbluelinecolor, backgroundcolor=thmbluebackgroundcolor,
   }
   ]{thmbluebox}
 
+  % Create the blue with no background color environment
   \declaretheoremstyle[
-  headfont=\bfseries\sffamily\color{thmblueline}, bodyfont=\normalfont,
+  headfont=\bfseries\sffamily\color{thmbluetextcolor}, bodyfont=\normalfont,
   mdframed={
     linewidth=2pt,
     rightline=false, topline=false, bottomline=false,
-    linecolor=NavyBlue
+    linecolor=thmbluelinecolor
   }
   ]{thmblueline}
 
+  % Create the proof environment, which changes color based on the previous
+  % environment
+  \AddToHook{env/definition/after}{\colorlet{thmprooftextcolor}{thmgreentextcolor}}
+  \AddToHook{env/definition/after}{\colorlet{thmprooflinecolor}{thmgreenlinecolor}}
+  \AddToHook{env/definition/after}{\colorlet{thmproofbackgroundcolor}{thmgreenbackgroundcolor}}
+  \AddToHook{env/prop/after}{\colorlet{thmprooftextcolor}{thmredtextcolor}}
+  \AddToHook{env/prop/after}{\colorlet{thmprooflinecolor}{thmredlinecolor}}
+  \AddToHook{env/prop/after}{\colorlet{thmproofbackgroundcolor}{thmredbackgroundcolor}}
+  \AddToHook{env/theorem/after}{\colorlet{thmprooftextcolor}{thmredtextcolor}}
+  \AddToHook{env/theorem/after}{\colorlet{thmprooflinecolor}{thmredlinecolor}}
+  \AddToHook{env/theorem/after}{\colorlet{thmproofbackgroundcolor}{thmredbackgroundcolor}}
+  \AddToHook{env/lemma/after}{\colorlet{thmprooftextcolor}{thmredtextcolor}}
+  \AddToHook{env/lemma/after}{\colorlet{thmprooflinecolor}{thmredlinecolor}}
+  \AddToHook{env/lemma/after}{\colorlet{thmproofbackgroundcolor}{thmredbackgroundcolor}}
+  \AddToHook{env/corollary/after}{\colorlet{thmprooftextcolor}{thmredtextcolor}}
+  \AddToHook{env/corollary/after}{\colorlet{thmprooflinecolor}{thmredlinecolor}}
+  \AddToHook{env/corollary/after}{\colorlet{thmproofbackgroundcolor}{thmredbackgroundcolor}}
+  \AddToHook{env/remark/after}{\colorlet{thmprooftextcolor}{thmbluetextcolor}}
+  \AddToHook{env/remark/after}{\colorlet{thmprooflinecolor}{thmbluelinecolor}}
+  \AddToHook{env/remark/after}{\colorlet{thmproofbackgroundcolor}{thmbluebackgroundcolor}}
+  \AddToHook{env/example/after}{\colorlet{thmprooftextcolor}{thmbluetextcolor}}
+  \AddToHook{env/example/after}{\colorlet{thmprooflinecolor}{thmbluelinecolor}}
+  \AddToHook{env/example/after}{\colorlet{thmproofbackgroundcolor}{thmbluebackgroundcolor}}
+  \AddToHook{env/solution/after}{\colorlet{thmprooftextcolor}{thmbluetextcolor}}
+  \AddToHook{env/solution/after}{\colorlet{thmprooflinecolor}{thmbluelinecolor}}
+  \AddToHook{env/solution/after}{\colorlet{thmproofbackgroundcolor}{thmbluebackgroundcolor}}
+
   \declaretheoremstyle[
-  headfont=\bfseries\sffamily\color{thmproofcolor}, bodyfont=\normalfont,
+  headfont=\bfseries\sffamily\color{thmprooftextcolor}, bodyfont=\normalfont,
   numbered=no,
   mdframed={
     linewidth=2pt,
     rightline=false, topline=false, bottomline=false,
-    linecolor=RawSienna, backgroundcolor=RawSienna!1,
+    linecolor=thmprooflinecolor
   },
-  qed=\color{thmproofcolor}\qedsymbol
+  qed=\qedsymbol
   ]{thmproofbox}
 
-  \declaretheoremstyle[
-  headfont=\bfseries\sffamily\color{thmexplanationbox}, bodyfont=\normalfont,
-  numbered=no,
-  mdframed={
-    linewidth=2pt,
-    rightline=false, topline=false, bottomline=false,
-    linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
-  },
-  ]
-  {thmexplanationbox}
-
+  % commands to run when we're in the environment
   \AtBeginEnvironment{definition}{
-    \captionsetup{labelfont={color=thmgreencolor}}
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmgreentextcolor}}
 
-    \def\labelitemi{{\color{thmgreencolor}$\blacksquare$}}
-    \def\labelitemii{\tikz\draw[thmgreencolor,fill=thmgreencolor] (0,0) circle (.7ex);}
-    \def\labelitemiii{{\color{thmgreencolor}$\blacktriangleright$}}
-    \def\labelitemiv{\tikz\draw[thmgreencolor,fill=thmgreencolor] (0,0) circle (.2ex);}
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmgreentextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmgreentextcolor,fill=thmgreentextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmgreentextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmgreentextcolor,fill=thmgreentextcolor] (0,0) circle (.2ex);}
 
-    \renewcommand{\labelenumi}{{\color{thmgreencolor}\arabic{enumi}}}
-    \renewcommand{\labelenumii}{{\color{thmgreencolor}\arabic{enumi}.\arabic{enumii}}}
-    \renewcommand{\labelenumiii}{{\color{thmgreencolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-    \renewcommand{\labelenumiv}{{\color{thmgreencolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+    \renewcommand{\labelenumi}{{\color{thmgreentextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmgreentextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmgreentextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmgreentextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
   \AtBeginEnvironment{prop}{
-    \captionsetup{labelfont={color=thmredcolor}}
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmredtextcolor}}
 
-    \def\labelitemi{{\color{thmredcolor}$\blacksquare$}}
-    \def\labelitemii{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.7ex);}
-    \def\labelitemiii{{\color{thmredcolor}$\blacktriangleright$}}
-    \def\labelitemiv{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.2ex);}
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredtextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.2ex);}
 
-    \renewcommand{\labelenumi}{{\color{thmredcolor}\arabic{enumi}}}
-    \renewcommand{\labelenumii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}}}
-    \renewcommand{\labelenumiii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-    \renewcommand{\labelenumiv}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+    \renewcommand{\labelenumi}{{\color{thmredtextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
   \AtBeginEnvironment{theorem}{
-    \captionsetup{labelfont={color=thmredcolor}}
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmredtextcolor}}
 
-    \def\labelitemi{{\color{thmredcolor}$\blacksquare$}}
-    \def\labelitemii{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.7ex);}
-    \def\labelitemiii{{\color{thmredcolor}$\blacktriangleright$}}
-    \def\labelitemiv{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.2ex);}
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredtextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.2ex);}
 
-    \renewcommand{\labelenumi}{{\color{thmredcolor}\arabic{enumi}}}
-    \renewcommand{\labelenumii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}}}
-    \renewcommand{\labelenumiii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-    \renewcommand{\labelenumiv}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+    \renewcommand{\labelenumi}{{\color{thmredtextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
   \AtBeginEnvironment{lemma}{
-    \captionsetup{labelfont={color=thmredcolor}}
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmredtextcolor}}
 
-    \def\labelitemi{{\color{thmredcolor}$\blacksquare$}}
-    \def\labelitemii{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.7ex);}
-    \def\labelitemiii{{\color{thmredcolor}$\blacktriangleright$}}
-    \def\labelitemiv{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.2ex);}
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredtextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.2ex);}
 
-    \renewcommand{\labelenumi}{{\color{thmredcolor}\arabic{enumi}}}
-    \renewcommand{\labelenumii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}}}
-    \renewcommand{\labelenumiii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-    \renewcommand{\labelenumiv}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+    \renewcommand{\labelenumi}{{\color{thmredtextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
   \AtBeginEnvironment{corollary}{
-    \captionsetup{labelfont={color=thmredcolor}}
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmredtextcolor}}
 
-    \def\labelitemi{{\color{thmredcolor}$\blacksquare$}}
-    \def\labelitemii{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.7ex);}
-    \def\labelitemiii{{\color{thmredcolor}$\blacktriangleright$}}
-    \def\labelitemiv{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.2ex);}
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredtextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.2ex);}
 
-    \renewcommand{\labelenumi}{{\color{thmredcolor}\arabic{enumi}}}
-    \renewcommand{\labelenumii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}}}
-    \renewcommand{\labelenumiii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-    \renewcommand{\labelenumiv}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+    \renewcommand{\labelenumi}{{\color{thmredtextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
   \AtBeginEnvironment{remark}{
-    \captionsetup{labelfont={color=thmbluecolor}}
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmbluetextcolor}}
 
-    \def\labelitemi{{\color{thmbluecolor}$\blacksquare$}}
-    \def\labelitemii{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.7ex);}
-    \def\labelitemiii{{\color{thmbluecolor}$\blacktriangleright$}}
-    \def\labelitemiv{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.2ex);}
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmbluetextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.2ex);}
 
-    \renewcommand{\labelenumi}{{\color{thmbluecolor}\arabic{enumi}}}
-    \renewcommand{\labelenumii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}}}
-    \renewcommand{\labelenumiii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-    \renewcommand{\labelenumiv}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+    \renewcommand{\labelenumi}{{\color{thmbluetextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
   \AtBeginEnvironment{example}{
-    \captionsetup{labelfont={color=thmbluecolor}}
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmbluetextcolor}}
 
-    \def\labelitemi{{\color{thmbluecolor}$\blacksquare$}}
-    \def\labelitemii{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.7ex);}
-    \def\labelitemiii{{\color{thmbluecolor}$\blacktriangleright$}}
-    \def\labelitemiv{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.2ex);}
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmbluetextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.2ex);}
 
-    \renewcommand{\labelenumi}{{\color{thmbluecolor}\arabic{enumi}}}
-    \renewcommand{\labelenumii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}}}
-    \renewcommand{\labelenumiii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-    \renewcommand{\labelenumiv}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+    \renewcommand{\labelenumi}{{\color{thmbluetextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
   \AtBeginEnvironment{solution}{
-    \captionsetup{labelfont={color=thmbluecolor}}
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmbluetextcolor}}
 
-    \def\labelitemi{{\color{thmbluecolor}$\blacksquare$}}
-    \def\labelitemii{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.7ex);}
-    \def\labelitemiii{{\color{thmbluecolor}$\blacktriangleright$}}
-    \def\labelitemiv{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.2ex);}
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmbluetextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.2ex);}
 
-    \renewcommand{\labelenumi}{{\color{thmbluecolor}\arabic{enumi}}}
-    \renewcommand{\labelenumii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}}}
-    \renewcommand{\labelenumiii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-    \renewcommand{\labelenumiv}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+    \renewcommand{\labelenumi}{{\color{thmbluetextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
-}
+  \AtBeginEnvironment{proof}{
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmprooftextcolor}}
+    % Change color of the Q.E.D. symbol
+    \renewcommand\qedsymbol{{\color{thmprooftextcolor}Q.E.D.}}
 
-\def\labelitemi{$\blacksquare$}
-\def\labelitemii{\tikz\draw[black,fill=black] (0,0) circle (.7ex);}
-\def\labelitemiii{$\blacktriangleright$}
-\def\labelitemiv{\tikz\draw[black,fill=black] (0,0) circle (.2ex);}
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmprooftextcolor,fill=thmprooftextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmbluetextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmprooftextcolor,fill=thmprooftextcolor] (0,0) circle (.2ex);}
 
-\renewcommand{\labelenumi}{{\color{thmbluecolor}\arabic{enumi}}}
-\renewcommand{\labelenumii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}}}
-\renewcommand{\labelenumiii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-\renewcommand{\labelenumiv}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
-
-\@ifclasswith{report}{nocolor}{
-  \declaretheorem[style=thmproofbox, name=Proof]{replacementproof}
-  \declaretheorem[style=thmexplanationbox, name=Proof]{explanation}
-  \renewenvironment{proof}[1][\proofname]{\begin{replacementproof}}{\end{replacementproof}}
-}{
-  \declaretheorem[style=thmproofbox, name=Proof]{replacementproof}
-  \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
-
-  \declaretheorem[style=thmexplanationbox, name=Proof]{tmpexplanation}
-  \newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
+    \renewcommand{\labelenumi}{{\color{thmprooftextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmprooftextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmprooftextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmprooftextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
 }
 
 \makeatother
 
+% Create the actual environment
 \declaretheorem[style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[style=thmredbox, name=Proposition]{prop}
 \declaretheorem[style=thmredbox, name=Theorem]{theorem}
@@ -297,6 +339,7 @@
 \declaretheorem[style=thmblueline, numbered=no, name=Example]{example}
 \declaretheorem[style=thmblueline, numbered=no, name=Solution]{solution}
 
+% Create simple environments without any fancy configuration
 \newtheorem{exc}{Exercise}
 \newtheorem*{notation}{Notation}
 \newtheorem*{note}{Note}
