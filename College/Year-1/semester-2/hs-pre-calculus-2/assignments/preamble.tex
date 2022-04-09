@@ -1,8 +1,32 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{sidenotes}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  linkcolor={black},
+  citecolor={black},
+  urlcolor={blue!80!black}
+}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage[shortlabels]{enumitem}
+\usepackage{emptypage}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+\usepackage{mathrsfs}
+\usepackage{cancel}
+\usepackage{bm}
+\usepackage{systeme}
+\usepackage{stmaryrd}
 \usepackage{fancyhdr}
 \usepackage{extramarks}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amsfonts}
 \usepackage{tikz}
 \usepackage[plain]{algorithm}
 \usepackage{algpseudocode}
@@ -53,11 +77,24 @@
 \newcounter{partCounter}
 \newcounter{homeworkProblemCounter}
 \setcounter{homeworkProblemCounter}{1}
+\newcounter{homeworkSolutionCounter}
+\setcounter{homeworkSolutionCounter}{1}
 \nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
 
 %
-% Homework Problem Environment
-%
+% Homework Problem and Solution Environment
+
+\newenvironment{solution}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkSolutionCounter}{#1}
+    \fi
+    \section{Solution \arabic{homeworkSolutionCounter}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkSolutionCounter}
+}{
+    \exitProblemHeader{homeworkSolutionCounter}
+}
+
 % This environment takes an optional argument. When given, it will adjust the
 % problem counter. This is useful for when the problems given for your
 % assignment aren't sequential. See the last 3 problems of this template for an
@@ -73,7 +110,6 @@
 }{
     \exitProblemHeader{homeworkProblemCounter}
 }
-\newcommand{\solution}{\subsection*{Solution}}
 
 %
 % Title Page
@@ -91,3 +127,214 @@
 \date{}
 
 \renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+
+%
+% Theorems
+%
+
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfsetup{skipabove=1em,skipbelow=0em, innertopmargin=5pt, innerbottommargin=6pt}
+
+\theoremstyle{definition}
+
+\colorlet{thmgreencolor}{ForestGreen!70!black}
+\colorlet{thmredcolor}{RawSienna!70!black}
+\colorlet{thmbluecolor}{NavyBlue!70!black}
+\colorlet{thmblueline}{NavyBlue!70!black}
+\colorlet{thmproofcolor}{RawSienna!70!black}
+\colorlet{thmexplanationbox}{NavyBlue!70!black}
+
+\makeatletter
+
+\@ifclasswith{report}{nocolor}{
+  \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
+  \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
+  \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
+  \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
+  \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
+  \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
+  \AtEndEnvironment{eg}{\null\hfill$\diamond$}%
+}{
+  \declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{thmgreencolor}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+  }
+  ]{thmgreenbox}
+
+  \declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{thmredcolor}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=RawSienna, backgroundcolor=RawSienna!5,
+  }
+  ]{thmredbox}
+
+  \declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{thmbluecolor}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+  }
+  ]{thmbluebox}
+
+  \declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{thmblueline}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=NavyBlue
+  }
+  ]{thmblueline}
+
+  \declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{thmproofcolor}, bodyfont=\normalfont,
+  numbered=no,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=RawSienna, backgroundcolor=RawSienna!1,
+  },
+  qed=\color{thmproofcolor}\qedsymbol
+  ]{thmproofbox}
+
+  \declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{thmexplanationbox}, bodyfont=\normalfont,
+  numbered=no,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+  },
+  ]
+  {thmexplanationbox}
+
+  \AtBeginEnvironment{definition}{
+    \captionsetup{labelfont={color=thmgreencolor}}
+
+    \def\labelitemi{{\color{thmgreencolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmgreencolor,fill=thmgreencolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmgreencolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmgreencolor,fill=thmgreencolor] (0,0) circle (.2ex);}
+
+    \renewcommand{\labelenumi}{{\color{thmgreencolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmgreencolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmgreencolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmgreencolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
+  \AtBeginEnvironment{prop}{
+    \captionsetup{labelfont={color=thmredcolor}}
+
+    \def\labelitemi{{\color{thmredcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.2ex);}
+
+    \renewcommand{\labelenumi}{{\color{thmredcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
+  \AtBeginEnvironment{theorem}{
+    \captionsetup{labelfont={color=thmredcolor}}
+
+    \def\labelitemi{{\color{thmredcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.2ex);}
+
+    \renewcommand{\labelenumi}{{\color{thmredcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
+  \AtBeginEnvironment{lemma}{
+    \captionsetup{labelfont={color=thmredcolor}}
+
+    \def\labelitemi{{\color{thmredcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.2ex);}
+
+    \renewcommand{\labelenumi}{{\color{thmredcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
+  \AtBeginEnvironment{corollary}{
+    \captionsetup{labelfont={color=thmredcolor}}
+
+    \def\labelitemi{{\color{thmredcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredcolor,fill=thmredcolor] (0,0) circle (.2ex);}
+
+    \renewcommand{\labelenumi}{{\color{thmredcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
+  \AtBeginEnvironment{remark}{
+    \captionsetup{labelfont={color=thmbluecolor}}
+
+    \def\labelitemi{{\color{thmbluecolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmbluecolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.2ex);}
+
+    \renewcommand{\labelenumi}{{\color{thmbluecolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
+  \AtBeginEnvironment{example}{
+    \captionsetup{labelfont={color=thmbluecolor}}
+
+    \def\labelitemi{{\color{thmbluecolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmbluecolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmbluecolor,fill=thmbluecolor] (0,0) circle (.2ex);}
+
+    \renewcommand{\labelenumi}{{\color{thmbluecolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
+}
+
+\def\labelitemi{$\blacksquare$}
+\def\labelitemii{\tikz\draw[black,fill=black] (0,0) circle (.7ex);}
+\def\labelitemiii{$\blacktriangleright$}
+\def\labelitemiv{\tikz\draw[black,fill=black] (0,0) circle (.2ex);}
+
+\renewcommand{\labelenumi}{{\color{thmbluecolor}\arabic{enumi}}}
+\renewcommand{\labelenumii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}}}
+\renewcommand{\labelenumiii}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+\renewcommand{\labelenumiv}{{\color{thmbluecolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+
+\@ifclasswith{report}{nocolor}{
+  \declaretheorem[style=thmproofbox, name=Proof]{replacementproof}
+  \declaretheorem[style=thmexplanationbox, name=Proof]{explanation}
+  \renewenvironment{proof}[1][\proofname]{\begin{replacementproof}}{\end{replacementproof}}
+}{
+  \declaretheorem[style=thmproofbox, name=Proof]{replacementproof}
+  \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
+
+  \declaretheorem[style=thmexplanationbox, name=Proof]{tmpexplanation}
+  \newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
+}
+
+\makeatother
+
+\declaretheorem[style=thmgreenbox, name=Definition]{definition}
+\declaretheorem[style=thmredbox, name=Proposition]{prop}
+\declaretheorem[style=thmredbox, name=Theorem]{theorem}
+\declaretheorem[style=thmredbox, name=Lemma]{lemma}
+\declaretheorem[style=thmredbox, numbered=no, name=Corollary]{corollary}
+\declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}
+\declaretheorem[style=thmblueline, numbered=no, name=Example]{example}
