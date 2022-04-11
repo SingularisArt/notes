@@ -27,14 +27,28 @@
 \usepackage{systeme} %
 \usepackage{stmaryrd} %
 
-% \DeclareMathOperator{\sgn}{sgn}
-% \let\svlim\lim\def\lim{\svlim\limits}
-% \let\implies\Rightarrow
-% \let\impliedby\Leftarrow
-% \let\iff\Leftrightarrow
-% \let\epsilon\varepsilon
-% \newcommand\contra{\scalebox{1.1}{$\lightning$}}
-%
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Fit}{Fitt}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\PDer}{PDer}
+\DeclareMathOperator{\rad}{rad}
+
+\let\svlim\lim\def\lim{\svlim\limits}
+\let\implies\Rightarrow
+\let\impliedby\Leftarrow
+\let\iff\Leftrightarrow
+\let\epsilon\varepsilon
+\newcommand\contra{\scalebox{1.1}{$\lightning$}}
 
 % horizontal rule
 \newcommand\hr{
@@ -328,16 +342,6 @@
 }
 
 \@ifclasswith{report}{nocolor}{
-  \begin{definition}[odsfijfij]
-    \label{def:odsfijfij}
-
-    doifjsfoijd
-  \end{definition}
-  \begin{proof}
-    \label{prf:fij}
-
-    difj
-  \end{proof}
   \declaretheorem[style=thmproofbox, name=proof]{replacementproof}
   \renewenvironment{proof}[1][\proofname]{\begin{replacementproof}}{\end{replacementproof}}
 }{
@@ -462,5 +466,3 @@
   \addtocounter{section}{-1}%
   \section{#3}
 }%
-
-\author{Hashem A. Damrah}
