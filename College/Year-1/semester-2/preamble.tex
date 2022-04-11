@@ -68,10 +68,10 @@
 \def\labelitemiii{$\blacktriangleright$} % Creates a black triangle
 \def\labelitemiv{\tikz\draw[black,fill=black] (0,0) circle (.2ex);} % Creates a black small circle
 
-\renewcommand{\labelenumi}{{\color{thmbluetextcolor}\arabic{enumi}}} % EX: 1.
-\renewcommand{\labelenumii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}}} % EX: 1.1
-\renewcommand{\labelenumiii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}} % EX: 1.1.1
-\renewcommand{\labelenumiv}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}} % EX: 1.1.1.1
+\renewcommand{\labelenumi}{{\color{black}\arabic{enumi}}} % EX: 1)
+\renewcommand{\labelenumii}{{\color{black}\arabic{enumi}.\arabic{enumii}}} % EX: 1.1)
+\renewcommand{\labelenumiii}{{\color{black}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}} % EX: 1.1.1)
+\renewcommand{\labelenumiv}{{\color{black}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}} % EX: 1.1.1.1)
 
 % theorems
 \usepackage{thmtools}
@@ -327,9 +327,28 @@
   }
 }
 
+\@ifclasswith{report}{nocolor}{
+  \begin{definition}[odsfijfij]
+    \label{def:odsfijfij}
+
+    doifjsfoijd
+  \end{definition}
+  \begin{proof}
+    \label{prf:fij}
+
+    difj
+  \end{proof}
+  \declaretheorem[style=thmproofbox, name=proof]{replacementproof}
+  \renewenvironment{proof}[1][\proofname]{\begin{replacementproof}}{\end{replacementproof}}
+}{
+  \declaretheorem[style=thmproofbox, name=proof]{replacementproof}
+  \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
+
+  \newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
+}
+
 \makeatother
 
-% Create the actual environment
 \declaretheorem[style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[style=thmredbox, name=Proposition]{prop}
 \declaretheorem[style=thmredbox, name=Theorem]{theorem}
@@ -339,7 +358,6 @@
 \declaretheorem[style=thmblueline, numbered=no, name=Example]{example}
 \declaretheorem[style=thmblueline, numbered=no, name=Solution]{solution}
 
-% Create simple environments without any fancy configuration
 \newtheorem{exc}{Exercise}
 \newtheorem*{notation}{Notation}
 \newtheorem*{note}{Note}

@@ -3,9 +3,13 @@ My Personal Notes
 
 # Gallery
 
-![notes-image-1](media/note-1.png)
-![notes-image-2](media/note-2.png)
-![notes-image-3](media/note-3.png)
+## [Pre-Calculus 2]()
+
+![notes-image-2](media/pre-calculus-2.png)
+
+## [Real Analysis]()
+
+![real-analysis](media/real-analysis-1.png)
 
 # Table of Contents
 
