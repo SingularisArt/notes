@@ -3,11 +3,11 @@ My Personal Notes
 
 # Gallery
 
-## [Pre-Calculus 2]()
+## [Pre-Calculus 2](College/Year-1/semester-2/hs-pre-calculus-2)
 
 ![notes-image-2](media/pre-calculus-2.png)
 
-## [Real Analysis]()
+## [Real Analysis](University/Math/RealAnalysis)
 
 ![real-analysis](media/real-analysis-1.png)
 
