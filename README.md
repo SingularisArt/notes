@@ -112,8 +112,6 @@ Contents of `master.tex`:
   \maketitle
   \mbox{}\newpage
   \input{source-lectures.tex}
-  \newpage
-  \input{solutions.tex}
 \end{document}
 ```
 
