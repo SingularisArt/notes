@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amsfonts}
+\usepackage{lipsum}
 \usepackage{tikz}
 \usepackage[plain]{algorithm}
 \usepackage{algpseudocode}
@@ -20,7 +21,8 @@
 \textheight=9.0in
 \headsep=0.25in
 
-\linespread{1.1}
+\linespread{2}
+\setlength\parindent{24pt}
 
 \pagestyle{fancy}
 \lhead{\hmwkAuthorName}
@@ -32,31 +34,29 @@
 \renewcommand\headrulewidth{0.4pt}
 \renewcommand\footrulewidth{0.4pt}
 
-\setlength\parindent{0pt}
-
 %
-% Create Problem Sections
+% Create Essay Sections
 %
 
-\newcommand{\enterProblemHeader}[1]{
-    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
-    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+\newcommand{\enterEssayHeader}[1]{
+    \nobreak\extramarks{}{Essay continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Essay (continued)}{Essay continued on next page\ldots}\nobreak{}
 }
 
-\newcommand{\exitProblemHeader}[1]{
-    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+\newcommand{\exitEssayHeader}[1]{
+    \nobreak\extramarks{Essay (continued)}{Essay continued on next page\ldots}\nobreak{}
     \stepcounter{#1}
-    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+    \nobreak\extramarks{Essay}{}\nobreak{}
 }
 
 \setcounter{secnumdepth}{0}
 \newcounter{partCounter}
-\newcounter{homeworkProblemCounter}
-\setcounter{homeworkProblemCounter}{1}
-\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+\newcounter{homeworkEssayCounter}
+\setcounter{homeworkEssayCounter}{1}
+\nobreak\extramarks{Essay}{}\nobreak{}
 
 %
-% Homework Problem Environment
+% Homework Essay Environment
 %
 % This environment takes an optional argument. When given, it will adjust the
 % problem counter. This is useful for when the problems given for your
@@ -65,15 +65,13 @@
 %
 \newenvironment{problem}[1][-1]{
     \ifnum#1>0
-        \setcounter{homeworkProblemCounter}{#1}
+        \setcounter{homeworkEssayCounter}{#1}
     \fi
-    \section{Problem \arabic{homeworkProblemCounter}}
     \setcounter{partCounter}{1}
-    \enterProblemHeader{homeworkProblemCounter}
+    \enterEssayHeader{homeworkEssayCounter}
 }{
-    \exitProblemHeader{homeworkProblemCounter}
+    \exitEssayHeader{homeworkEssayCounter}
 }
-\newcommand{\solution}{\subsection*{Solution}}
 
 %
 % Title Page

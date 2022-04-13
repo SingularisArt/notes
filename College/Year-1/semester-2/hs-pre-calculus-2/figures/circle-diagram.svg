@@ -27,10 +27,10 @@
      inkscape:zoom="1.1296016"
      inkscape:cx="270.89197"
      inkscape:cy="441.74867"
-     inkscape:window-width="714"
-     inkscape:window-height="876"
-     inkscape:window-x="880"
-     inkscape:window-y="18"
+     inkscape:window-width="906"
+     inkscape:window-height="850"
+     inkscape:window-x="33"
+     inkscape:window-y="31"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -295,21 +295,21 @@
     <ellipse
        style="fill:#e6e5f3;stroke-width:0.240928"
        id="path191"
-       cx="65.930611"
-       cy="115.76897"
-       rx="47.04491"
+       cx="65.930687"
+       cy="115.76896"
+       rx="47.044971"
        ry="46.644398" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.846667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart);marker-mid:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend)"
-       d="m 65.924904,56.353641 -0.0064,119.119729"
+       d="m 65.924985,56.35364 -0.0064,119.11973"
        id="path256" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.84666667;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker1538);marker-end:url(#Arrow1Mend)"
-       d="m 7.62948,114.23287 118.62399,-0.11481"
+       style="fill:none;stroke:#000000;stroke-width:0.846667;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker1538);marker-end:url(#Arrow1Mend)"
+       d="M 7.6294815,114.23287 126.25364,114.11806"
        id="path1587" />
     <g
        inkscape:label=""
-       transform="matrix(0.8527595,0,0,0.86278338,-14.032266,-20.192072)"
+       transform="matrix(0.85276066,0,0,0.86278336,-14.032294,-20.192071)"
        id="g1725">
       <g
          fill="#000000"
@@ -326,7 +326,7 @@
     </g>
     <g
        inkscape:label=""
-       transform="matrix(0.8527595,0,0,0.86278338,49.513477,45.173601)"
+       transform="matrix(0.85276066,0,0,0.86278336,49.513535,45.173601)"
        id="g1806">
       <g
          fill="#000000"
@@ -342,33 +342,33 @@
       </g>
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.84666667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 65.811988,114.07091 107.48977,94.594981"
+       style="fill:none;stroke:#000000;stroke-width:0.846667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 65.812069,114.07091 107.48991,94.59498"
        id="path1868" />
     <ellipse
        style="fill:#ff0000;stroke-width:0.746073;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
        id="path1972"
-       cx="107.74953"
+       cx="107.74966"
        cy="94.772148"
-       rx="2.1873043"
+       rx="2.1873071"
        ry="2.2902203" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.84666667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 74.946703,110.01685 c 0.66738,1.45316 0.621151,2.79273 0,4.04005"
+       style="fill:none;stroke:#000000;stroke-width:0.846667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 74.946796,110.01685 c 0.667381,1.45316 0.621152,2.79273 0,4.04005"
        id="path2487"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.84666667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 92.355202,101.54825 c 0.66738,4.55191 0.621151,8.74801 0,12.65514"
+       style="fill:none;stroke:#000000;stroke-width:0.846667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 92.355318,101.54825 c 0.667382,4.55191 0.621153,8.74801 0,12.65514"
        id="path2487-2"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.84666667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="M 44.032042,132.53817 C 60.433837,118.70935 60.433837,118.70935 60.433837,118.70935"
+       style="fill:none;stroke:#000000;stroke-width:0.846667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 44.032093,132.53817 C 60.433911,118.70935 60.433911,118.70935 60.433911,118.70935"
        id="path2773" />
     <g
        inkscape:label=""
-       transform="matrix(0.62080808,0,0,0.61305898,22.228074,62.430366)"
+       transform="matrix(0.62080893,0,0,0.61305896,22.228095,62.430365)"
        id="g4724">
       <g
          fill="#000000"
@@ -385,7 +385,7 @@
     </g>
     <g
        inkscape:label=""
-       transform="matrix(0.8527595,0,0,0.86278338,32.977823,23.000605)"
+       transform="matrix(0.85276066,0,0,0.86278336,32.977859,23.000605)"
        id="g5007">
       <g
          fill="#000000"
@@ -469,7 +469,7 @@
     </g>
     <g
        inkscape:label=""
-       transform="matrix(0.8527595,0,0,0.86278338,-43.421045,71.380293)"
+       transform="matrix(0.85276066,0,0,0.86278336,-43.421113,71.380292)"
        id="g5355">
       <g
          fill="#000000"
@@ -523,20 +523,20 @@
       </g>
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.84666667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 108.92012,96.989475 c 2.38011,4.336665 4.08487,10.312075 3.84997,17.474305"
+       style="fill:none;stroke:#000000;stroke-width:0.846667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 108.92026,96.989474 c 2.38012,4.336666 4.08488,10.312076 3.84998,17.474306"
        id="path7120"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="116.04601"
-       y="108.70901"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52779px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="116.04608"
+       y="108.70908"
        id="text9577"><tspan
          sodipodi:role="line"
          id="tspan9575"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="116.04601"
-         y="108.70901">Arc spanned by  $\theta$</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52779px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="116.04608"
+         y="108.70908">Arc spanned by  $\theta$</tspan></text>
   </g>
 </svg>
