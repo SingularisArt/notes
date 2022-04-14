@@ -295,3 +295,7 @@ TSWLatexianTemp*
 
 # The extra files
 current-course
+
+# My personal notes
+notes/20*
+notes/master.pdf

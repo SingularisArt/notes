@@ -35,7 +35,7 @@ case ${key} in
   r ) xfce4-terminal -e "lf $today_notes_dir" ;;
   n ) cd $notes_dir;
     xfce4-terminal -e "nvim $today_notes_dir/note.tex" ;;
-  z ) zathura $notes_dir/final-notes.pdf ;;
+  z ) zathura $notes_dir/master.pdf ;;
   o ) zathura $master_pdf ;;
   x ) open_xournal ;;
   f ) $node $instant_reference ;;
