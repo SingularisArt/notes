@@ -6,11 +6,12 @@ node="/usr/bin/node"
 python="/usr/bin/pyhon3.10"
 
 root="${HOME}/Documents/school-notes"
+current_course="$root/current-course"
 notes_dir="$root/notes"
 today_notes_dir="$notes_dir/$(date +%F)"
 paper_location="$root/papers"
 instant_reference="Singularis/third-party-tools/instant-reference/copy-reference.js"
-master_pdf="$root/current-course/master.pdf"
+master_pdf="$current_course/master.pdf"
 
 open_xournal () {
   cd $today_notes_dir; 
@@ -38,10 +39,15 @@ case ${key} in
   z ) zathura $notes_dir/master.pdf ;;
   o ) zathura $master_pdf ;;
   x ) open_xournal ;;
+  i ) inkscape-figures edit $current_course/figures ;;
   f ) $node $instant_reference ;;
+  w ) url=$(cat $current_course/info.yaml | shyaml get-value url);
+    google-chrome-stable --app=$url ;;
+  y ) cd $current_course;
+    xfce4-terminal -e "nvim info.yaml" ;;
   c ) ~/Singularis/local/school/main.py --change-course ;;
   l ) ~/Singularis/local/school/main.py --lessons ;;
   m ) ~/Singularis/local/school/main.py --commands ;;
-  w ) ~/Singularis/local/school/main.py --new-lesson ;;
+  s ) ~/Singularis/local/school/main.py --new-lesson ;;
   j ) ~/Singularis/local/school/main.py --projects ;;
 esac
