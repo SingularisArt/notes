@@ -1,0 +1,47 @@
+#!/bin/bash
+
+key="$1"
+vim="nvim"
+node="/usr/bin/node"
+python="/usr/bin/pyhon3.10"
+
+root="${HOME}/Documents/school-notes"
+notes_dir="$root/notes"
+today_notes_dir="$notes_dir/$(date +%F)"
+paper_location="$root/papers"
+instant_reference="Singularis/third-party-tools/instant-reference/copy-reference.js"
+master_pdf="$root/current-course/master.pdf"
+
+open_xournal () {
+  cd $today_notes_dir; 
+
+  if [ -f "note.xoj" ]; then
+    xournal note.xoj;
+  else
+    touch "note.xoj";
+    xournal note.xoj;
+  fi
+}
+
+mkdir -p $today_notes_dir;
+echo $paper_location
+ls $paper_location
+
+case ${key} in
+  p ) cd $paper_location;
+    pdf_file="$(ls . | rofi -dmenu)";
+    string="${pdf_file// /+}"
+    url="https://arxiv.org/search/?query=${string}&searchtype=all&source=header"
+    [ -z "$pdf_file" ] && exit 0;
+    [ -f "$pdf_file" ] && zathura "$(realpath "$pdf_file")" || google-chrome-stable --new-window $url ;;
+  r ) xfce4-terminal -e "lf $today_notes_dir" ;;
+  n ) xfce4-terminal -e "nvim $today_notes_dir/note.tex" ;;
+  o ) zathura $master_pdf ;;
+  x ) touch $today_notes_dir/note.xoj; xournal $today_notes_dir/note.xoj ;;
+  f ) $node $instant_reference;;
+  c ) ~/Singularis/local/school/main.py --change-course ;;
+  l ) ~/Singularis/local/school/main.py --lessons ;;
+  m ) ~/Singularis/local/school/main.py --commands ;;
+  w ) ~/Singularis/local/school/main.py --new-lesson ;;
+  j ) ~/Singularis/local/school/main.py --projects ;;
+esac
