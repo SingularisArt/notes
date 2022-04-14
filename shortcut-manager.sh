@@ -24,21 +24,21 @@ open_xournal () {
 }
 
 mkdir -p $today_notes_dir;
-echo $paper_location
-ls $paper_location
 
 case ${key} in
   p ) cd $paper_location;
     pdf_file="$(ls . | rofi -dmenu)";
     string="${pdf_file// /+}"
-    url="https://arxiv.org/search/?query=${string}&searchtype=all&source=header"
+    url="https://google.com/search?q=$string"
     [ -z "$pdf_file" ] && exit 0;
     [ -f "$pdf_file" ] && zathura "$(realpath "$pdf_file")" || google-chrome-stable --new-window $url ;;
   r ) xfce4-terminal -e "lf $today_notes_dir" ;;
-  n ) xfce4-terminal -e "nvim $today_notes_dir/note.tex" ;;
+  n ) cd $notes_dir;
+    xfce4-terminal -e "nvim $today_notes_dir/note.tex" ;;
+  z ) zathura $notes_dir/final-notes.pdf ;;
   o ) zathura $master_pdf ;;
-  x ) touch $today_notes_dir/note.xoj; xournal $today_notes_dir/note.xoj ;;
-  f ) $node $instant_reference;;
+  x ) open_xournal ;;
+  f ) $node $instant_reference ;;
   c ) ~/Singularis/local/school/main.py --change-course ;;
   l ) ~/Singularis/local/school/main.py --lessons ;;
   m ) ~/Singularis/local/school/main.py --commands ;;

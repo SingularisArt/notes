@@ -1,0 +1,50 @@
+\usepackage{mdframed}
+\mdfsetup{
+    leftmargin=-1em,
+    rightmargin=-1em,
+    middlelinewidth=1.5pt,
+    middlelinecolor=white,
+    innertopmargin=1.5\topskip,
+    innerbottommargin=1\topskip,
+    skipabove=\baselineskip,
+    skipbelow=0,
+    nobreak=true
+}
+
+\newmdenv[
+    backgroundcolor = red!10
+]{wrong}
+
+\newmdenv[
+    backgroundcolor = green!10
+]{correct}
+
+\newmdtheoremenv[linewidth=0]{question}{Question}
+\newmdtheoremenv[linewidth=0]{confusion}{Confusion}
+\newmdtheoremenv[linewidth=0]{answer}{Answer}
+
+\newmdtheoremenv[]{idea}{Idea}
+\newmdtheoremenv[]{claim}{Claim}
+\newmdtheoremenv[]{definition}{Definition}
+\newmdtheoremenv[]{lemma}{Lemma}
+\newmdtheoremenv[linewidth=0]{remark}{Remark}
+\newmdtheoremenv[]{theorem}{Theorem}
+\newmdtheoremenv[]{corollary}{Corollary}
+\newmdtheoremenv[]{problem}{Problem}
+\newmdtheoremenv[]{eg}{Example}
+\newmdtheoremenv[linewidth=0]{todo}{TODO}
+\newmdtheoremenv[backgroundcolor = blue!10, nobreak=false]{marco}{Marco}
+
+\newmdtheoremenv[backgroundcolor=green!5]{mydefinition}{Definition}
+\newmdtheoremenv[backgroundcolor=green!5]{mytheorem}{Theorem}
+\newmdtheoremenv[backgroundcolor=green!5]{mylemma}{Lemma}
+
+\renewmdenv[
+    bottomline=false,
+    topline=false,
+    rightline=false,
+    fontcolor=black!70
+]{quote}
+
+\newmdenv[fontcolor=black!10, linewidth=0]{ditch}
+
