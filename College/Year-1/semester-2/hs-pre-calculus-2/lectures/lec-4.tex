@@ -1,5 +1,230 @@
 \lesson{4}{Apr 12 2022 Tue (16:27:32)}{Part 1: Intro to Trig Functions}
 
+\begin{definition}[Unit Circle]
+  \label{def:unit_circle}
 
+  A \textbf{unit circle} is a circle with a radius of $1$ unit.
+\end{definition}
+
+Now we can define the $\sin$ and $\cos$ functions.
+
+\begin{note}
+  There are $4$ other trigonometric functions that can be defined in
+  terms of $\sin$ and $\cos$ functions so first we'll get familiar with
+  $\sin$ and $\cos$ and then later in this lecture we'll define the $4$ other
+  trigonometric functions.
+\end{note}
+
+\begin{definition}[Sine and Cosine]
+  \label{def:sine_and_cosine}
+
+  The \textbf{sine function}, denoted $\sin(\theta)$, associates each angle
+  $\theta$ with the vertical coordinate of the point $P$ specified by $\theta$
+  on the circumference of a unit circle.
+
+  The \textbf{cosine function}, denoted $\cos(\theta)$, associates each angle
+  $\theta$ with the horizontal coordinate of the point $P$ specified by
+  $\theta$ on the circumference of a unit circle.
+
+  So the point $P$ in Figure \ref{fig:sin_and_cosine} has coordinates:
+  \[ (x, y) = (\cos(\theta), \sin(\theta)) \].
+
+  \begin{figure}[H]
+    \centering
+    \incfig{sin_and_cosine}
+    \caption{}
+    \label{fig:sin_and_cosine}
+  \end{figure}
+\end{definition}
+
+\begin{exc}
+  \label{exc:angle_of_theta}
+
+  The angle of $\theta$ specifies the point
+  $P = \left(-\frac{3}{5}, \frac{4}{5}\right)$ on the circumference
+  of a unit circle. Find $\sin(\theta)$ and $\cos(\theta)$.
+\end{exc}
+
+Let's determine the signs of the sin and cos functions in the four
+quadrants:
+
+\begin{itemize}
+  \label{item:signs_in_the_4_quadrants}
+
+  \item When the terminal side of angle $\theta$ is in Quadrant I, both the $x$
+    and $y$ coordinates of point $P$ are positive. Therefore, \textbf{if
+    $\theta$ is in Quadrant I, $\cos(\theta) > 0$ and $\sin(\theta) > 0$}
+
+  \item When the terminal side of angle $\theta$ is in Quadrant II, the $y$
+    coordinate of point $P$ is positive but the $x$ coordinate is negative.
+    Therefore, \textbf{if $\theta$ is in Quadrant II, $\cos(\theta) < 0$ and
+    $\sin(\theta) > 0$}
+
+  \item When the terminal side of angle $\theta$ is in Quadrant III, both the
+    $x$ and $y$ coordinates of point $P$ are negative. Therefore, \textbf{if
+    $\theta$ is in Quadrant IIII, $\cos(\theta) < 0$ and $\sin(\theta) < 0$}
+
+  \item When the terminal side of angle $\theta$ is in Quadrant IIII, the $x$
+    coordinate of point $P$ is positive but the $y$ coordinate is negative.
+    Therefore, \textbf{if $\theta$ is in Quadrant IIII, $\cos(\theta) > 0$ and
+    $\sin(\theta) < 0$}
+\end{itemize}
+
+Now let's find the sin and cos of a few particular angles. The easiest points
+for us to find on the unit circle are points where the circumference of the
+circle intersects the coordinate axes. Let's start by finding the corresponding
+sin and cos values.
+
+\begin{note}
+  \label{nte:sin_and_cos}
+
+  Keep in mind that {\color{red}cos} represents the {\color{red}x-coordinate}
+  and {\color{green}sin} represents the {\color{green}y-coordinate}.
+\end{note}
+
+\begin{itemize}
+  \label{item:find_sin_and_cos}
+
+  \item The angle $\theta = 90^{\circ}$ ($\theta = \frac{\pi}{2}$ radians),
+    specifies the point $(0, 1)$ on the circumference of a unit circle. Thus
+    \ldots
+
+    \[ \cos \left(\frac{\pi}{2}\right) = 0 \qquad \sin \left(\frac{\pi}{2}\right) = 1 \].
+
+  \item The angle $\theta = 180^{\circ}$ ($\theta = \pi$ radians), specifies the
+    point $(-1, 0)$ on circumference of a unit circle. Thus \ldots
+
+    \[ \cos (\pi) = -1 \qquad \sin (\pi) = 0 \].
+
+  \item The angle $\theta = 270^{\circ}$ ($\theta = \frac{3\pi}{2}$ radians),
+    specifies the point $(0, -1)$ on the circumference of a unit circle. Thus
+    \ldots
+
+    \[ \cos \left(\frac{3\pi}{2}\right) = 0 \qquad \sin \left(\frac{3\pi}{2}\right) = -1 \].
+
+  \item The angle $\theta = 360^{\circ}$ ($\theta = 2\pi$ radians), specifies
+    the point $(1, 0)$ on the circumference of a unit circle. Thus \ldots
+
+    \[ \cos (2\pi) = 1 \qquad \sin (2\pi) = 0 \].
+\end{itemize}
+
+Notice that angles of measure $2\pi$ radians and $0$ radians specify the same
+point: $(1, 0)$. Thus, the sin and cos values for $2\pi$ and $0$ radians are the
+same:
+
+\[ \cos (2\pi) = \cos (0) = 1 \qquad \textrm{and} \qquad \sin (2\pi) = \sin (0) = 0\].
+
+Since any angle $\theta$ and $\theta + 2\pi$ specify the same point on the unit
+circle, the sin and cos values of $\theta$ and $\theta + 2\pi$ are the same.
+Therefore, the period of the sin and cos function is $2\pi$ radians.
+
+\begin{tcolorbox}
+  For all $\theta$, $\sin (\theta) = \sin (\theta + 2\pi)$ and $\cos (\theta) =
+  \cos(\theta + 2\pi)$ so the period of both $s (\theta) = \sin (\theta)$ and
+  $c (\theta) = \cos (\theta)$ is $2\pi$ radians.
+\end{tcolorbox}
+
+Now, we'll sketch graphs of the sin and cos functions.
+
+We first start by organizing the function values in a table:
+
+\begin{table}[htpb]
+  \centering
+  \caption{Values of Sin and Cos}
+  \label{tab:values_of_sin_and_cos}
+
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    $\theta$ (degrees) & $0^{\circ}$ & $90^{\circ}$ & $180^{\circ}$ & $270^{\circ}$ & $360^{\circ}$ & $450^{\circ}$ & $540^{\circ}$ & $630^{\circ}$ & $720^{\circ}$ \\
+    \hline
+    $\theta$ (radians) & $0$ & $\frac{\pi}{2}$ & $\pi$ & $\frac{3\pi}{2}$ & $2\pi$ & $\frac{5\pi}{2}$ & $3\pi$ & $\frac{7\pi}{2}$ & $4\pi$ \\
+    \hline
+    $y = \cos (\theta)$ & $1$ & $0$ & $-1$ & $0$ & $1$ & $0$ & $-1$ & $0$ & $1$ \\
+    \hline
+    $y = \sin (\theta)$ & $0$ & $1$ & $0$ & $-1$ & $0$ & $1$ & $0$ & $-1$ & $0$ \\
+    \hline
+  \end{tabular}
+\end{table}
+
+Here's how it looks like when we graph:
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/sin-cos.png}
+  \caption{The graph of $y = \cos (\theta)$ and $y = \sin (\theta)$}
+  \label{fig:the_graph_of_y_cos_theta_and_y_sin_theta_}
+\end{figure}
+
+Notice that the graphs of $y = \cos (\theta)$ and $y = \sin (\theta)$ are very
+similar. In fact, if we shift $y = \sin (\theta)$ to the left $\frac{\pi}{2}$
+units, we'll obtain the graph of $y = \cos (\theta)$. This means that:
+
+\[ \cos = \sin \left(\theta + \frac{\pi}{2}\right) \].
+
+Similarly, if we shift $y = \cos (\theta)$ to the right $\frac{\pi}{2}$ units,
+we'll obtain the graph of $y = \sin (\theta)$. This means that:
+
+\[ \sin = \cos \left(\theta - \frac{\pi}{2}\right) \].
+
+\begin{definition}[Identity]
+  \label{def:identity}
+
+  An \textbf{identity} is an equation that is true for all values in the domains
+  of the involved expressions.
+\end{definition}
+
+\begin{tcolorbox}
+  \begin{center}
+    Some important trig identities
+  \end{center}
+
+  \begin{minipage}[t]{.50\textwidth}
+      \begin{itemize}
+      \item $\cos (\theta) = \cos (\theta + 2\pi)$
+      \item $\sin (\theta) = \cos \left(\theta - \frac{\pi}{2}\right)$ 
+      \item $\cos (-\theta) = \cos (\theta)$
+      \item $\cos (\theta) = \cos (2\pi - \theta)$
+    \end{itemize}
+  \end{minipage}%
+  \begin{minipage}[t]{.50\textwidth}
+   \begin{itemize}
+      \item $\sin (\theta) = \sin (\theta + 2\pi)$
+      \item $\cos (\theta) = \sin \left(\theta + \frac{\pi}{2}\right)$ 
+      \item $\sin (-\theta) = -\sin (\theta)$
+      \item $\sin (\theta) = \cos (\pi - \theta)$
+    \end{itemize}
+  \end{minipage}
+\end{tcolorbox}
+
+We can generalize the definitions of sin and cos functions so that they are
+applicable to circles of any size, rather than only for unit circles.
+
+\begin{definition}[More Applicable version of Sin and Cos]
+  \label{def:more_applicable_version_of_sin_and_cos}
+  If the point $T = (x, y)$ is specified by the angle $\theta$ on the
+  circumference of a circle of radius $r$ then:
+
+  \[ \cos (\theta) = \frac{x}{r} \qquad \textrm{and} \qquad \sin (\theta) = \frac{y}{r} \].
+
+  \begin{note}
+    \label{nte:more_applicable_version_of_sin_and_cos}
+
+    If $r = 1$, then this definition $\cos (\theta)$ and $\sin (\theta)$ are
+    equivalent to what we saw at the beginning of this lecture.
+
+    \[ \cos (\theta) = \frac{x}{r} = \frac{x}{1} = x \qquad \textrm{and} \qquad \sin (\theta) = \frac{y}{r} = \frac{y}{1} = y \].
+  \end{note}
+
+  If we solve the equations $\cos (\theta) = \frac{x}{r}$ and $\sin (\theta) =
+  \frac{y}{r}$ for $x$ and $y$, we can obtain the coordinates of a point on the
+  circumference of a circle of any $r$ :
+
+  \[ \cos (\theta) = \frac{x}{r} \implies x = r \cos (\theta) \qquad \textrm{and} \qquad \sin (\theta) = \frac{y}{r} \implies y = r \sin (\theta) \].
+
+  If the point $T = (x, y)$ is specified by the angle $\theta$ on the
+  circumference of a circle of radius, $r$, then:
+
+  \[ x = r \cos (\theta) \qquad \textrm{and} \qquad y = r \sin(\theta) \].
+\end{definition}
 
 \newpage

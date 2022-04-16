@@ -10,7 +10,7 @@ current_course="$root/current-course"
 notes_dir="$root/notes"
 today_notes_dir="$notes_dir/$(date +%F)"
 paper_location="$root/papers"
-instant_reference="Singularis/third-party-tools/instant-reference/copy-reference.js"
+instant_reference="${HOME}/Singularis/third-party-tools/instant-reference/copy-reference.js"
 master_pdf="$current_course/master.pdf"
 
 open_xournal () {
@@ -37,6 +37,7 @@ case ${key} in
   n ) cd $notes_dir;
     xfce4-terminal -e "nvim $today_notes_dir/note.tex" ;;
   z ) zathura $notes_dir/master.pdf ;;
+  b ) zathura $current_course/assignments/master.pdf ;;
   o ) zathura $master_pdf ;;
   x ) open_xournal ;;
   i ) inkscape-figures edit $current_course/figures ;;
@@ -45,8 +46,10 @@ case ${key} in
     google-chrome-stable --app=$url ;;
   y ) cd $current_course;
     xfce4-terminal -e "nvim info.yaml" ;;
+  a ) ~/Singularis/local/school/main.py --view-assignments ;;
+  d ) ~/Singularis/local/school/main.py --new-assignment ;;
   c ) ~/Singularis/local/school/main.py --change-course ;;
-  l ) ~/Singularis/local/school/main.py --lessons ;;
+  l ) ~/Singularis/local/school/main.py --view-lessons ;;
   m ) ~/Singularis/local/school/main.py --commands ;;
   s ) ~/Singularis/local/school/main.py --new-lesson ;;
   j ) ~/Singularis/local/school/main.py --projects ;;
