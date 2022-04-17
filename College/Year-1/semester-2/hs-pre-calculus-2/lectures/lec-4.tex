@@ -31,7 +31,7 @@ Now we can define the $\sin$ and $\cos$ functions.
 
   \begin{figure}[H]
     \centering
-    \incfig{sin_and_cosine}
+    \incfig{sin-and-cosine}
     \caption{}
     \label{fig:sin_and_cosine}
   \end{figure}
@@ -226,5 +226,65 @@ applicable to circles of any size, rather than only for unit circles.
 
   \[ x = r \cos (\theta) \qquad \textrm{and} \qquad y = r \sin(\theta) \].
 \end{definition}
+
+\begin{exc}
+  \label{exc:using_r_cos_and_r_sin}
+
+  A circle with a radius of $6$ units is given. The point $Q$ is specified by
+  the angle $\alpha$. Use the sin and cos function to express the exact
+  coordinates of point $Q$.
+\end{exc}
+
+Recall that the cos and sin functions represent the horizontal and vertical
+coordinates of a point on the circumference of a unit circle. This situation
+creates a right triangle with hypotenuse of length $1$ unit and side-lengths of
+$\cos (\theta)$ and $\sin (\theta)$ units.
+
+\begin{figure}[ht]
+  \centering
+  \incfig{circle-to-triangle}
+  \caption{}
+  \label{fig:circle_to_triangle}
+\end{figure}
+
+Now we can apply the Pythagorean Theorem to this right triangle. First let's
+review the Pythagorean Theorem:
+
+\begin{theorem}[Pythagorean Theorem]
+  \label{thrm:pythagorean_theorem}
+
+  If the sides of a right triangle are labeled like the one given in Figure
+  \ref{fig:pythagorean_theorem}, then \ldots
+
+  \begin{figure}[H]
+    \centering
+    \incfig{pythagorean-theorem}
+    \caption{Pythagorean Theorem}
+    \label{fig:pythagorean_theorem}
+  \end{figure}
+
+  \[ a^{2} + b^{2} = c^{2} \].
+\end{theorem}
+
+Applying the Pythagorean Theorem to the right triangle we obtain what is called
+the Pythagorean Identity:
+\[ (\sin (\theta))^{2} + (\cos (\theta))^{2} = 1 \].
+When we use exponents in trigonometric functions we can use unusual notation.
+Instead of using parentheses around the entire expression, we can put the
+exponents between the letters that name the function and the input for the
+function. Thus, we can write an expression like $(\sin (\theta))^{2}$ as
+$\sin^{2} (\theta)$. We can use this notation to express the Pythagorean
+Identity:
+
+\begin{notation}[The Pythagorean Identity]
+  \[ \theta \in \mathbb{R} \textrm{, } \sin^{2} (\theta) + \cos^{2} (\theta) = 1 \].
+\end{notation}
+
+\begin{exc}
+  \label{exc:find_cos}
+
+  If $\sin (A) = \frac{1}{3}$ and $\frac{\pi}{2} < A < \pi$, which means $A$ is
+  in Quadrant II, find $\cos (A)$.
+\end{exc}
 
 \newpage

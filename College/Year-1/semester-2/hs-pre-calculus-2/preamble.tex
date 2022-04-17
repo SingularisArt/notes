@@ -50,6 +50,10 @@
 \let\epsilon\varepsilon
 \newcommand\contra{\scalebox{1.1}{$\lightning$}}
 
+% tables
+\setlength{\tabcolsep}{20pt}
+\renewcommand{\arraystretch}{1.5}
+
 % horizontal rule
 \newcommand\hr{
   \noindent\rule[0.5ex]{\linewidth}{0.5pt}
@@ -142,6 +146,16 @@
     linecolor=thmredlinecolor, backgroundcolor=thmredbackgroundcolor,
   }
   ]{thmredbox}
+
+  % Create the red environment
+  \declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{thmredtextcolor}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, leftline=false, topline=true, bottomline=true,
+    linecolor=thmredlinecolor,
+  }
+  ]{thmredlinesupdown}
 
   % Create the red environment
   \declaretheoremstyle[
@@ -382,7 +396,7 @@
 \declaretheorem[style=thmredbox, name=Theorem]{theorem}
 \declaretheorem[style=thmredbox, name=Lemma]{lemma}
 \declaretheorem[style=thmredbox, numbered=no, name=Corollary]{corollary}
-\declaretheorem[style=thmredname, name=Exercise]{exc}
+\declaretheorem[style=thmredlinesupdown, name=Exercise]{exc}
 \declaretheorem[style=thmredname, name=Solution]{solution}
 \declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}
 \declaretheorem[style=thmblueline, numbered=no, name=Example]{example}
