@@ -11,6 +11,7 @@
   citecolor={black},
   urlcolor={blue!80!black}
 }
+\usepackage{colortbl} % Change color of the tables
 \usepackage{graphicx}
 \usepackage{lipsum} % Generate random text
 \usepackage{float} % 
@@ -51,7 +52,7 @@
 \newcommand\contra{\scalebox{1.1}{$\lightning$}}
 
 % tables
-\setlength{\tabcolsep}{20pt}
+\setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.5}
 
 % horizontal rule
@@ -229,6 +230,9 @@
     % Change color of the captions
     \captionsetup{labelfont={color=thmgreentextcolor}}
 
+    % Change color of table rows and columns
+    \arrayrulecolor{thmgreenlinecolor}
+
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmgreentextcolor}$\blacksquare$}}
     \def\labelitemii{\tikz\draw[thmgreentextcolor,fill=thmgreentextcolor] (0,0) circle (.7ex);}
@@ -244,6 +248,9 @@
     % Change color of the captions
     \captionsetup{labelfont={color=thmredtextcolor}}
 
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
+
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
     \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
@@ -258,6 +265,9 @@
   \AtBeginEnvironment{theorem}{
     % Change color of the captions
     \captionsetup{labelfont={color=thmredtextcolor}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
 
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
@@ -289,6 +299,9 @@
     % Change color of the captions
     \captionsetup{labelfont={color=thmredtextcolor}}
 
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
+
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
     \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
@@ -303,6 +316,9 @@
   \AtBeginEnvironment{remark}{
     % Change color of the captions
     \captionsetup{labelfont={color=thmbluetextcolor}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmbluelinecolor}
 
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
@@ -319,6 +335,9 @@
     % Change color of the captions
     \captionsetup{labelfont={color=thmbluetextcolor}}
 
+    % Change color of table rows and columns
+    \arrayrulecolor{thmbluelinecolor}
+
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
     \def\labelitemii{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.7ex);}
@@ -334,6 +353,9 @@
     % Change color of the captions
     \captionsetup{labelfont={color=thmredtextcolor}}
 
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
+
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
     \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
@@ -348,6 +370,9 @@
   \AtBeginEnvironment{exc}{
     % Change color of the captions
     \captionsetup{labelfont={color=thmredtextcolor}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
 
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
@@ -365,6 +390,9 @@
     \captionsetup{labelfont={color=thmprooftextcolor}}
     % Change color of the Q.E.D. symbol
     \renewcommand\qedsymbol{{\color{thmprooftextcolor}Q.E.D.}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmprooflinecolor}
 
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}

@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04, custom), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'circle-diagram.pdf' (pdf, eps, ps)
+%% Accompanies image file 'sin-cos-in-different-quadrants.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{301.76512436bp}%
+    \setlength{\unitlength}{252.32043552bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,10 +50,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.85303492)%
+  \begin{picture}(1,1.02019555)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{circle-diagram.pdf}}%
-    \put(0.7281033,0.4476286){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Arc spanned by  $\theta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{sin-cos-in-different-quadrants.pdf}}%
+    \put(0.71007096,0.67614835){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(a, b)$\end{tabular}}}}%
+    \put(0.07618971,0.67480766){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(-a, b)$\end{tabular}}}}%
+    \put(0.04311316,0.24189131){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(-a, -b)$\end{tabular}}}}%
+    \put(0.69775412,0.25141963){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(a, -b)$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
