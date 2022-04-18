@@ -111,8 +111,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.406257"
-     inkscape:cx="403.55355"
-     inkscape:cy="211.91006"
+     inkscape:cx="537.59732"
+     inkscape:cy="217.95447"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -120,9 +120,9 @@
      width="200mm"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="874"
+     inkscape:window-width="954"
      inkscape:window-height="876"
-     inkscape:window-x="720"
+     inkscape:window-x="0"
      inkscape:window-y="18"
      inkscape:window-maximized="0"
      inkscape:pagecheckerboard="1">
@@ -258,12 +258,12 @@
        style="font-size:3.175px;font-family:'Hack Nerd Font';-inkscape-font-specification:'Hack Nerd Font, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"
        id="text2372"
-       y="205.47548"
-       x="95.809059"><tspan
+       y="202.93437"
+       x="105.66853"><tspan
          sodipodi:role="line"
          id="tspan2370"
          style="stroke-width:0.264583"
-         x="95.809059"
-         y="205.47548">$P(\cos(\theta), \sin(\theta))$</tspan></text>
+         x="105.66853"
+         y="202.93437">$P = (\cos(\theta), \sin(\theta))$</tspan></text>
   </g>
 </svg>

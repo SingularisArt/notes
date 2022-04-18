@@ -1,0 +1,251 @@
+##########
+# GLOBAL #
+##########
+
+global !p
+texMathZones = ['texMathZone'+x for x in ['A', 'AS', 'B', 'BS', 'C', 'CS', 'D',
+								'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS', 'J', 'JS', 'K',
+								'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z']]
+texIgnoreMathZones = ['texMathText']
+texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
+texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
+ignore = texIgnoreMathZoneIds[0]
+
+def math():
+	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
+	try:
+		first = next(i for i in reversed(synstackids) if i in texIgnoreMathZoneIds or i in texMathZoneIds)
+		return first != ignore
+	except StopIteration:
+		return False
+
+def create_table(snip):
+	rows = snip.buffer[snip.line].split('x')[0]
+	cols = snip.buffer[snip.line].split('x')[1]
+
+	int_val = lambda string: int(''.join(s for s in string if s.isdigit()))
+	
+	rows = int_val(rows)
+	cols = int_val(cols)
+
+	offset = cols + 1
+	old_spacing = snip.buffer[snip.line][:snip.buffer[snip.line].rfind('\t') + 1]
+	
+	snip.buffer[snip.line] = ''
+	
+	final_str = old_spacing + "\\begin{tabular}{|" + "|".join(['$' + str(i + 1) for i in range(cols)]) + "|}\n"
+
+	for i in range(rows):
+		final_str += old_spacing + '\t'
+		final_str += " & ".join(['$' + str(i * cols + j + offset) for j in range(cols)])
+
+		final_str += " \\\\\\\n"
+
+	final_str += old_spacing + "\\end{tabular}\n$0"
+
+	snip.expand_anon(final_str)
+
+def add_row(snip):
+	row_len = int(''.join(s for s in snip.buffer[snip.line] if s.isdigit()))
+	old_spacing = snip.buffer[snip.line][:snip.buffer[snip.line].rfind('\t') + 1]
+
+	snip.buffer[snip.line] = ''
+	
+	final_str = old_spacing
+	final_str += " & ".join(['$' + str(j + 1) for j in range(row_len)])
+	final_str += " \\\\\\"
+
+	snip.expand_anon(final_str)
+
+def complete(t, opts):
+	if t:
+		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+	if len(opts) == 1:
+		return opts[0]
+	return '(' + '|'.join(opts) + ')'
+
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+def not_math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '0'
+
+def comment(): 
+	return vim.eval('vimtex#syntax#in_comment()') == '1'
+
+def env(name):
+	[x,y] = vim.eval("vimtex#env#is_inside('" + name + "')") 
+	return x != '0' and y != '0'
+endglobal
+
+
+################
+# ENVIRONMENTS #
+################
+
+snippet def "Definition Environment" bAi
+\begin{definition}[$1]
+	\label{def:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{definition}
+endsnippet
+
+snippet prop "Proposition Environment" bAi
+\begin{prop}[$1]
+	\label{prop:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{prop}
+endsnippet
+
+snippet thrm "Theorem Environment" bAi
+\begin{theorem}[$1]
+	\label{thrm:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{theorem}
+endsnippet
+
+snippet lem "Lemma Environment" bAi
+\begin{lemma}[$1]
+	\label{lem:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{lemma}
+endsnippet
+
+snippet cor "Corollary Environment" bAi
+\begin{corollary}[$1]
+	\label{cor:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{corollary}
+endsnippet
+
+snippet exc "Exercise Environment" bAi
+\begin{exc}[$1]
+	\label{exc:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{exc}
+endsnippet
+
+snippet sol "Solution Environment" bAi
+\begin{solution}[$1]
+	\label{sol:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{solution}
+endsnippet
+
+snippet rmk "Remark Environment" bAi
+\begin{remark}[$1]
+	\label{rmk:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{remark}
+endsnippet
+
+snippet exm "Remark Environment" bAi
+\begin{example}[$1]
+	\label{exm:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{example}
+endsnippet
+
+snippet nta "Notation Environment" bAi
+\begin{notation}[$1]
+	\label{nta:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{notation}
+endsnippet
+
+snippet not "Note Environment" bAi
+\begin{note}[$1]
+	\label{nta:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{note}
+endsnippet
+
+snippet prev "Previously Seen Environment" bAi
+\begin{previouslyseen}[$1]
+	\label{prev:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{previouslyseen}
+endsnippet
+
+snippet prob "Problem Environment" bAi
+\begin{problem}[$1]
+	\label{prob:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{problem}
+endsnippet
+
+snippet obs "Environment" bAi
+\begin{observe}[$1]
+	\label{obs:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{observe}
+endsnippet
+
+snippet pry "Environment" bAi
+\begin{property}[$1]
+	\label{pry:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{property}
+endsnippet
+
+snippet int "Environment" bAi
+\begin{intuition}[$1]
+	\label{int:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{intuition}
+endsnippet
+
+
+##########
+# LESSON #
+##########
+
+snippet les "Lesson"
+\lesson{${1:NUM}}{`date "+%b %d %Y %a (%H:%M:%S)"`}{${2:NAME}}
+\label{les_$1:${3:${2/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+
+\newpage
+endsnippet
+
+
+########
+# TRIG #
+########
+
+context "math()"
+snippet dtan "Definition of Tangent" Ai
+\tan = \left(${1:\theta}\right) = \frac{\sin \left($1\right)}{\cos \left($1\right)}
+endsnippet
+
+context "math()"
+snippet dcot "Definition of Cotangent" Ai
+\cot \left(${1:\theta}\right) = \frac{1}{tan \left($1\right)}
+endsnippet
+
+context "math()"
+snippet dsec "Definition of Secant" Ai
+\sec \left(${1:\theta}\right) = \frac{1}{cos \left($1\right)}
+endsnippet
+
+context "math()"
+snippet dcsc "Definition of Cosecant" Ai
+\csc \left(${1:\theta}\right) = \frac{1}{sin \left($1\right)}
+endsnippet

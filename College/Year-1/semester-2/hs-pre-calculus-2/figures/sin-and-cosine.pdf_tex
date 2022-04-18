@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{302.24686595bp}%
+    \setlength{\unitlength}{346.45034635bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,11 +50,11 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.7450085)%
+  \begin{picture}(1,0.64995313)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{sin-and-cosine.pdf}}%
-    \put(0.40936035,0.43127085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
-    \put(0.44598526,0.51918728){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P(\cos(\theta), \sin(\theta))$\end{tabular}}}}%
+    \put(0.35713021,0.37624515){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.46975206,0.47373561){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P = (\cos(\theta), \sin(\theta))$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
