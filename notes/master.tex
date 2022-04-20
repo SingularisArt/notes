@@ -11,23 +11,27 @@
 \let\d=\pgfcalendarshorthand
 \newcommand\formatdate[2]{\pgfcalendar{cal}{#1}{#1}{#2}}
 
+% \newcommand\firstdate{\year-\month-\day+-25}
 \newcommand\firstdate{\year-\month-\day+-14}
+% \newcommand\firstdate{\year-\month-\day+-50}
+% \newcommand\firstdate{2021-11-20}
+% \newcommand\firstdate{\year-\month-\day+-41}
 \newcommand\lastdate{\year-\month-\day}
 
-\newcommand\grayrule{{\color{gray} \noindent\makebox[\linewidth]{\rule{\paperwidth}{1.5pt}}}}
+\newcommand\grayrule{{\color{gray} \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}}}
 
 \begin{document}
 \begin{center}
-  \huge{Notes}\\[0.4em]
-  \Large{Hashem A. Damrah}\\[0.2em]
-  \emph{
-    From \formatdate{\firstdate}{\d d- \d mt} to
-    \formatdate{\lastdate}{\d d- \d mt}
-  }
+    \huge{PhD Notes}\\[0.4em]
+    \Large{Gilles Castel}\\[0.2em]
+    \emph{
+        From \formatdate{\firstdate}{\d d- \d mt} to
+        \formatdate{\lastdate}{\d d- \d mt}
+    }
 \end{center}
 
 \tableofcontents
-\bigskip
+\bigskip 
 
 \pgfcalendar{cal}{\firstdate}{\lastdate}{%
   \IfFileExists{./\d y0-\d m0-\d d0/note.tex}{
@@ -41,10 +45,8 @@
     \addcontentsline{toc}{section}{\d wt, \d d0 \d m.}%
     \def\formatteddate{\d{y}0-\d{m}0-\d{d}0}%
     \input{./\formatteddate/note.tex}
-    \IfFileExists{./\d y0-\d m0-\d d0/note.xoj}{
-      \hfill
-      \xournal
-    }{}
+    \IfFileExists{./\formatteddate/note.xoj}{\hfill \xournal}{\hfill \\}
+    flaisjx
   }{}
 }
 \end{document}

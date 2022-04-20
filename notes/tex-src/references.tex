@@ -17,8 +17,7 @@
 \def\formatteddate{}
 \newcommand\fileref[2]{
   \IfFileExists{./\formatteddate/#1}{
-    % \absolutefileref{./\formatteddate/#1}{#2}
-    \href{run:./\formatteddate/#1}{#2}
+    \absolutefileref{./\formatteddate/#1}{#2}
   }{
     \textcolor{gray}{\absolutefileref{./\formatteddate/#1}{#2}}
   }
