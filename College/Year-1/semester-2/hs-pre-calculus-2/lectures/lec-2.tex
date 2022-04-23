@@ -2,8 +2,41 @@
 
 \begin{figure}[htpb]
   \centering
-  \incfig{circle-diagram}
-  \caption{} \label{fig:circle_diagram}
+  \label{fig:circle_diagram}
+
+  \begin{tikzpicture}
+    % The main circle
+    \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (1.60in);
+
+    % (0,0) text at origin
+    \draw (0.50,-0.04) node[fill=blue!25!white,anchor=north] {$(0,0)$};
+
+    % The x-y axis
+    \draw (0,5.2) node[fill=white,anchor=center] {$y$};
+    \draw (5.2,0) node[fill=white,anchor=center] {$x$};
+    \draw[stealth-stealth,ultra thick] (0,5) -- (0,-5);
+    \draw[stealth-stealth,ultra thick] (5,0) -- (-5,0);
+
+    % The main angle line
+    \draw[blue,very thick] (0,0) to node[anchor=south] {$r$} (3.8,1.4);
+
+    % Circling the point the line intersects the circumference
+    \draw[draw=red,fill=red] (3.8,1.4) circle (0.08in);
+    \draw[red] (3.8,2) node[anchor=center] {$P = (\cos (\theta), \sin (\theta))$};
+
+    % Arc telling the arc specified by theta
+    \draw[very thick,red] (3.8,1.4) arc (74:39:0.6cm and 4.2cm);
+
+    % The angle of theta
+    \draw (1.4,0.52) to node[right] {$\theta$} (1.4,0);
+
+    % Arc telling the arc specified by theta
+    \draw[very thick,red] (3.8,1.4) arc (74:39:0.6cm and 4.2cm);
+    \draw[red] (4,0.8) node[anchor=west] {$s$};
+    \draw[ultra thick,green,-stealth] (0,0) -- (5,0);
+  \end{tikzpicture}
+
+  \caption{Diagram of a Circle}
 \end{figure}
 
 \begin{itemize}
@@ -55,13 +88,7 @@ co-terminal to $\theta_1$.
   The \textbf{radian} measure of an angle is the ratio of the length of the arc
   on the circumference of the circle spanned by the angle, $s$, and the radius,
   $r$, of the circle.
-
-  \begin{figure}[H]
-    \centering
-    \incfig{radian}
-    \caption{$\theta$ measures $\frac{s}{r}$ radian.}
-    \label{fig:radian}
-  \end{figure}
+  \[ \theta = \frac{s}{r} \]
 
   \begin{equation}
     \label{edt:entire_revolution_using_raidans}
@@ -79,7 +106,9 @@ co-terminal to $\theta_1$.
   Here's a table with all of the radians:
 
   \begin{table}[H]
-    \label{tbl:degrees_into_radians}
+    \label{tab:degrees_into_radians}
+    \centering
+
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
       \hline
       $\theta$ (degrees) & $0^{\circ}$ & $30^{\circ}$ & $45^{\circ}$ & $60^{\circ}$ & $90^{\circ}$ & $180^{\circ}$ & $270^{\circ}$ & $360^{\circ}$ \\
@@ -88,6 +117,7 @@ co-terminal to $\theta_1$.
       $\frac{\pi}{3}$ & $\frac{\pi}{2}$ & $\pi$ & $\frac{3\pi}{2}$ & $2\pi$ \\
       \hline
     \end{tabular}
+
     \caption{Degrees into Radians}
   \end{table}
 \end{definition}

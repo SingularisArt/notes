@@ -4,6 +4,29 @@
   \label{def:unit_circle}
 
   A \textbf{unit circle} is a circle with a radius of $1$ unit.
+
+  \begin{figure}[H]
+    \centering
+    \label{fig:unit_circle}
+
+    \begin{tikzpicture}
+      % The main circle
+      \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (0.5in);
+
+      % The x-y axis
+      \draw (0,1.9) node[fill=white,anchor=center] {$y$};
+      \draw (1.9,0) node[fill=white,anchor=center] {$x$};
+      \draw[stealth-stealth,ultra thick] (0,1.7) -- (0,-1.7);
+      \draw[stealth-stealth,ultra thick] (1.7,0) -- (-1.7,0);
+
+      % Draw the 1 unit line
+      \draw[very thick,ForestGreen] (0,0) -- (1,0.9);
+      \draw [ForestGreen,fill=ForestGreen,radius=0.1] (0.92,0.85) circle;
+      \draw (1.7,0.3) node[ForestGreen,anchor=west] {$1$ Unit};
+    \end{tikzpicture}
+
+    \caption{Unit Circle}
+  \end{figure}
 \end{definition}
 
 Now we can define the $\sin$ and $\cos$ functions.
@@ -26,18 +49,34 @@ Now we can define the $\sin$ and $\cos$ functions.
   $\theta$ with the horizontal coordinate of the point $P$ specified by
   $\theta$ on the circumference of a unit circle.
 
-  So the point $P$ in Figure \ref{fig:sin_and_cosine} has coordinates:
+  So the point $P$ in the figure below has coordinates:
   \[ (x, y) = (\cos(\theta), \sin(\theta)) \].
 
   \begin{figure}[H]
     \centering
-    \incfig{sin-and-cosine}
-    \caption{}
-    \label{fig:sin_and_cosine}
+    \label{fig:sin_and_cos}
+
+    \begin{tikzpicture}
+      % The main circle
+      \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (0.5in);
+
+      % The x-y axis
+      \draw (0,1.9) node[fill=white,anchor=center] {$y$};
+      \draw (1.9,0) node[fill=white,anchor=center] {$x$};
+      \draw[stealth-stealth,ultra thick] (0,1.7) -- (0,-1.7);
+      \draw[stealth-stealth,ultra thick] (1.7,0) -- (-1.7,0);
+
+      % Draw the 1 unit line
+      \draw[very thick,ForestGreen] (0,0) to node[left] {$1$} (1,0.9);
+      \draw [RawSienna,fill=RawSienna,radius=0.1] (0.92,0.85) circle;
+      \draw (0.95,0.9) node[RawSienna,anchor=west] {$P = (\cos(\theta), \sin(\theta))$};
+    \end{tikzpicture}
+
+    \caption{Sin and Cos on Graph}
   \end{figure}
 \end{definition}
 
-\begin{exc}
+\begin{exc}[Solution here \ref{sol:angle_of_theta}]
   \label{exc:angle_of_theta}
 
   The angle of $\theta$ specifies the point
@@ -69,6 +108,37 @@ quadrants:
     Therefore, \textbf{if $\theta$ is in Quadrant IIII, $\cos(\theta) > 0$ and
     $\sin(\theta) < 0$}
 \end{itemize}
+
+\begin{figure}[htpb]
+  \centering
+  \label{fig:unit_circle}
+
+  \begin{tikzpicture}[every text node part/.style={align=center}]
+    % The main circle
+    \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (1in);
+
+    % The x-y axis
+    \draw (0,3.2) node[fill=white,anchor=center] {$y$};
+    \draw (3.2,0) node[fill=white,anchor=center] {$x$};
+    \draw[stealth-stealth,ultra thick] (0,3) -- (0,-3);
+    \draw[stealth-stealth,ultra thick] (3,0) -- (-3,0);
+
+    % Draw the signs for each quadrant
+    \draw (1.2,1) node[rectangle,draw=RawSienna]
+      {$\cos(\theta) > 0$ \\ $\sin(\theta) > 0$};
+
+    \draw (-1.2,1) node[rectangle,draw=RawSienna]
+      {$\cos(\theta) < 0$ \\ $\sin(\theta) > 0$};
+
+    \draw (-1.2,-1) node[rectangle,draw=RawSienna]
+      {$\cos(\theta) < 0$ \\ $\sin(\theta) < 0$};
+
+    \draw (1.2,-1) node[rectangle,draw=RawSienna]
+      {$\cos(\theta) > 0$ \\ $\sin(\theta) < 0$};
+  \end{tikzpicture}
+
+  \caption{Unit Circle}
+\end{figure}
 
 Now let's find the sin and cos of a few particular angles. The easiest points
 for us to find on the unit circle are points where the circumference of the
@@ -129,9 +199,8 @@ Now, we'll sketch graphs of the sin and cos functions.
 We first start by organizing the function values in a table:
 
 \begin{table}[htpb]
-  \centering
-  \caption{Values of Sin and Cos}
   \label{tab:values_of_sin_and_cos}
+  \centering
 
   \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
     \hline
@@ -144,14 +213,40 @@ We first start by organizing the function values in a table:
     $y = \sin (\theta)$ & $0$ & $1$ & $0$ & $-1$ & $0$ & $1$ & $0$ & $-1$ & $0$ \\
     \hline
   \end{tabular}
+
+  \caption{Values of Sin and Cos}
 \end{table}
 
 Here's how it looks like when we graph:
 
 \begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.8\textwidth]{figures/sin-cos.png}
-  \caption{The graph of $y = \cos (\theta)$ and $y = \sin (\theta)$}
+	\centering
+
+	\begin{tikzpicture}
+		\begin{axis}[
+				my axis style,
+				width=\textwidth,
+				height=.5\textwidth,
+			]
+			\addplot[
+				domain=-10:10,
+        blue,
+				thick,
+				<->
+			]
+			{sin(deg(x))};
+
+			\addplot[
+				domain=-10:10,
+        red,
+				thick,
+				<->
+			]
+			{cos(deg(x))};
+		\end{axis}
+	\end{tikzpicture}
+
+  \caption{The graph of {\color{red}$y = \cos(\theta)$} and {\color{blue}$y = \sin(\theta)$}}
   \label{fig:the_graph_of_y_cos_theta_and_y_sin_theta_}
 \end{figure}
 
@@ -227,7 +322,7 @@ applicable to circles of any size, rather than only for unit circles.
   \[ x = r \cos (\theta) \qquad \textrm{and} \qquad y = r \sin(\theta) \].
 \end{definition}
 
-\begin{exc}
+\begin{exc}[Solution here \ref{sol:using_r_cos_and_r_sin}]
   \label{exc:using_r_cos_and_r_sin}
 
   A circle with a radius of $6$ units is given. The point $Q$ is specified by
@@ -240,11 +335,61 @@ coordinates of a point on the circumference of a unit circle. This situation
 creates a right triangle with hypotenuse of length $1$ unit and side-lengths of
 $\cos (\theta)$ and $\sin (\theta)$ units.
 
-\begin{figure}[ht]
+\begin{figure}[htpb]
   \centering
-  \incfig{circle-to-triangle}
-  \caption{}
   \label{fig:circle_to_triangle}
+
+  \begin{tikzpicture}[my angle/.style = {draw, fill=teal!30,
+                   angle radius=7mm, 
+                   angle eccentricity=1.1, 
+                   right, inner sep=1pt,
+                   font=\footnotesize} 
+                   ]
+
+    % The main circle
+    \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (1.60in);
+
+    % (0,0) text at origin
+    \draw (0.50,-0.04) node[fill=blue!25!white,anchor=north] {$(0,0)$};
+
+    % The x-y axis
+    \draw (0,5.2) node[fill=white,anchor=center] {$y$};
+    \draw (5.2,0) node[fill=white,anchor=center] {$x$};
+    \draw[stealth-stealth,ultra thick] (0,5) -- (0,-5);
+    \draw[stealth-stealth,ultra thick] (5,0) -- (-5,0);
+
+    % The main angle line
+    \draw[blue,very thick] (0,0) to node[anchor=south] {$1$} (3.8,1.4);
+
+    % Circling the point the line intersects the circumference
+    \draw[draw=red,fill=red] (3.8,1.4) circle (0.08in);
+    \draw (3.8,2) node[anchor=center] {$P = (\cos (\theta), \sin (\theta))$};
+
+    % Arc telling the arc specified by theta
+    \draw[very thick,red] (3.8,1.4) to node[anchor=west] {$\sin (\theta)$} (3.8,0);
+
+    % The angle of theta
+    \draw (1.4,0.52) to node[right] {$\theta$} (1.4,0);
+
+    % Arc telling the arc specified by theta
+    \draw[ultra thick,green,-stealth] (0,0) to node[anchor=north] {$\cos (\theta)$} (5,0);
+
+    % Draw the arrow pointing to the triangle
+    \draw [-stealth,ultra thick] (6,0) -- (7,0);
+
+    % Draw the triangle
+    \draw[red] (10,-2) coordinate[label=] (c)
+          -- (10,2) coordinate[label=] (b)
+          -- (7,-2) coordinate[label=] (a)
+          -- cycle;
+
+    \draw[red] (8.5,-2.5) node[anchor=center] {$A$};
+    \draw[red] (10.5,0) node[anchor=center] {$B$};
+    \draw[red] (7.5,0) node[anchor=center] {$C$};
+    \pic[my angle, "$\theta$"] {angle = c--a--b};
+  \end{tikzpicture}
+
+  \caption{Diagram of a Circle}
 \end{figure}
 
 Now we can apply the Pythagorean Theorem to this right triangle. First let's
@@ -258,9 +403,23 @@ review the Pythagorean Theorem:
 
   \begin{figure}[H]
     \centering
-    \incfig{pythagorean-theorem}
-    \caption{Pythagorean Theorem}
     \label{fig:pythagorean_theorem}
+
+    \begin{tikzpicture}[my angle/.style = {draw, fill=teal!30,
+                     angle radius=7mm, 
+                     angle eccentricity=1.1, 
+                     right, inner sep=1pt,
+                     font=\footnotesize} 
+                     ]
+
+      % Draw the triangle
+      \draw[red]  (0,0) coordinate[label=below:$A$] (a) --
+                  (4,0) coordinate[label=below:$B$] (c) --
+                  (4,4) coordinate[label=above:$C$] (b) -- cycle;
+      \pic[my angle, "$\alpha=\SI{45}{\degree}$"] {angle = c--a--b};
+    \end{tikzpicture}
+
+    \caption{Right Triangle}
   \end{figure}
 
   \[ a^{2} + b^{2} = c^{2} \].
@@ -280,7 +439,7 @@ Identity:
   \[ \theta \in \mathbb{R} \textrm{, } \sin^{2} (\theta) + \cos^{2} (\theta) = 1 \].
 \end{notation}
 
-\begin{exc}
+\begin{exc}[Solution here \ref{sol:find_cos}]
   \label{exc:find_cos}
 
   If $\sin (A) = \frac{1}{3}$ and $\frac{\pi}{2} < A < \pi$, which means $A$ is
