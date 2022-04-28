@@ -573,12 +573,17 @@
   \import{./figures/}{#1.pdf_tex}
 }
 
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{xifthen}
+\usepackage{fontawesome}
+
+\newcommand\urlref[2]{%
+  \href{#1}{\raisebox{0.15ex}{\scriptsize \faLink}\:\textup{\textbf{#2}}}%
+}
 \newcommand\pdfref[3]{%
   \href{phd://open-paper?id=#1&page=#2}{%
   \textup{[\textbf{\ifthenelse{\isempty{#3}}{here}{#3}}]}}%
-}
-\newcommand\urlref[2]{%
-  \href{#1}{\raisebox{0.15ex}{\scriptsize \faLink}\:\textup{\textbf{#2}}}%
 }
 \newcommand\absolutefileref[2]{%
   \href{run:#1}{\raisebox{0.15ex}{\scriptsize \faFile}\:\textup{\textbf{#2}}}%

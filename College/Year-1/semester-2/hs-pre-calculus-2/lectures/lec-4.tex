@@ -1,4 +1,5 @@
 \lesson{4}{Apr 12 2022 Tue (16:27:32)}{Part 1: Intro to Trig Functions}
+\label{lec_4:part_1_intro_to_trig_functions}
 
 \begin{definition}[Unit Circle]
   \label{def:unit_circle}
@@ -14,15 +15,15 @@
       \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (0.5in);
 
       % The x-y axis
-      \draw (0,1.9) node[fill=white,anchor=center] {$y$};
-      \draw (1.9,0) node[fill=white,anchor=center] {$x$};
+      \draw (0,1.9) node[anchor=center] {$y$};
+      \draw (1.9,0) node[anchor=center] {$x$};
       \draw[stealth-stealth,ultra thick] (0,1.7) -- (0,-1.7);
       \draw[stealth-stealth,ultra thick] (1.7,0) -- (-1.7,0);
 
       % Draw the 1 unit line
       \draw[very thick,ForestGreen] (0,0) -- (1,0.9);
       \draw [ForestGreen,fill=ForestGreen,radius=0.1] (0.92,0.85) circle;
-      \draw (1.7,0.3) node[ForestGreen,anchor=west] {$1$ Unit};
+      \draw (0.65,0.3) node[ForestGreen,anchor=west] {$1$ Unit};
     \end{tikzpicture}
 
     \caption{Unit Circle}
@@ -32,10 +33,10 @@
 Now we can define the $\sin$ and $\cos$ functions.
 
 \begin{note}
-  There are $4$ other trigonometric functions that can be defined in
-  terms of $\sin$ and $\cos$ functions so first we'll get familiar with
-  $\sin$ and $\cos$ and then later in this lecture we'll define the $4$ other
-  trigonometric functions.
+  There are $4$ other trigonometric functions that can be defined in terms of
+  $\sin$ and $\cos$ functions so first we'll get familiar with $\sin$ and $\cos$
+  and then later in the next lecture \ref{les_5:part_2_intro_to_trig_functions}
+  we'll define the $4$ other trigonometric functions.
 \end{note}
 
 \begin{definition}[Sine and Cosine]
@@ -61,8 +62,8 @@ Now we can define the $\sin$ and $\cos$ functions.
       \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (0.5in);
 
       % The x-y axis
-      \draw (0,1.9) node[fill=white,anchor=center] {$y$};
-      \draw (1.9,0) node[fill=white,anchor=center] {$x$};
+      \draw (0,1.9) node[anchor=center] {$y$};
+      \draw (1.9,0) node[anchor=center] {$x$};
       \draw[stealth-stealth,ultra thick] (0,1.7) -- (0,-1.7);
       \draw[stealth-stealth,ultra thick] (1.7,0) -- (-1.7,0);
 
@@ -76,7 +77,7 @@ Now we can define the $\sin$ and $\cos$ functions.
   \end{figure}
 \end{definition}
 
-\begin{exc}[Solution here \ref{sol:angle_of_theta}]
+\begin{exc}[Solution \ref{sol:angle_of_theta}]
   \label{exc:angle_of_theta}
 
   The angle of $\theta$ specifies the point
@@ -111,7 +112,7 @@ quadrants:
 
 \begin{figure}[htpb]
   \centering
-  \label{fig:unit_circle}
+  \label{fig:quadrants}
 
   \begin{tikzpicture}[every text node part/.style={align=center}]
     % The main circle
@@ -137,7 +138,7 @@ quadrants:
       {$\cos(\theta) > 0$ \\ $\sin(\theta) < 0$};
   \end{tikzpicture}
 
-  \caption{Unit Circle}
+  \caption{Quadrants of a Graph}
 \end{figure}
 
 Now let's find the sin and cos of a few particular angles. The easiest points
@@ -161,10 +162,56 @@ sin and cos values.
 
     \[ \cos \left(\frac{\pi}{2}\right) = 0 \qquad \sin \left(\frac{\pi}{2}\right) = 1 \].
 
+    \begin{figure}[H]
+      \centering
+      \label{fig:90_degree}
+
+      \begin{tikzpicture}
+        % The main circle
+        \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (0.5in);
+
+        % The x-y axis
+        \draw (0,1.9) node[fill=white,anchor=center] {$y$};
+        \draw (1.9,0) node[fill=white,anchor=center] {$x$};
+        \draw[stealth-stealth,ultra thick] (0,1.7) -- (0,-1.7);
+        \draw[stealth-stealth,ultra thick] (1.7,0) -- (-1.7,0);
+        \draw[-stealth,ultra thick,ForestGreen] (0,0) -- (0,1.7);
+
+        % Draw the angle arc
+        \draw (0.7,0) arc[start angle=0,end angle=90,radius=0.7];
+        \node at (0.8,0.5) {$\frac{\pi}{2}$};
+      \end{tikzpicture}
+
+      \caption{}
+    \end{figure}
+
   \item The angle $\theta = 180^{\circ}$ ($\theta = \pi$ radians), specifies the
     point $(-1, 0)$ on circumference of a unit circle. Thus \ldots
 
     \[ \cos (\pi) = -1 \qquad \sin (\pi) = 0 \].
+
+    \begin{figure}[H]
+      \centering
+      \label{fig:180_degree}
+
+      \begin{tikzpicture}
+        % The main circle
+        \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (0.5in);
+
+        % The x-y axis
+        \draw (0,1.9) node[fill=white,anchor=center] {$y$};
+        \draw (1.9,0) node[fill=white,anchor=center] {$x$};
+        \draw[stealth-stealth,ultra thick] (0,1.7) -- (0,-1.7);
+        \draw[stealth-stealth,ultra thick] (1.7,0) -- (-1.7,0);
+        \draw[-stealth,ultra thick,ForestGreen] (0,0) -- (-1.7,0);
+
+        % Draw the angle arc
+        \draw (0.7,0) arc[start angle=0,end angle=180,radius=0.7];
+        \node at (-0.8,0.5) {$\pi$};
+      \end{tikzpicture}
+
+      \caption{}
+    \end{figure}
 
   \item The angle $\theta = 270^{\circ}$ ($\theta = \frac{3\pi}{2}$ radians),
     specifies the point $(0, -1)$ on the circumference of a unit circle. Thus
@@ -172,10 +219,56 @@ sin and cos values.
 
     \[ \cos \left(\frac{3\pi}{2}\right) = 0 \qquad \sin \left(\frac{3\pi}{2}\right) = -1 \].
 
+    \begin{figure}[H]
+      \centering
+      \label{fig:270_degree}
+
+      \begin{tikzpicture}
+        % The main circle
+        \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (0.5in);
+
+        % The x-y axis
+        \draw (0,1.9) node[fill=white,anchor=center] {$y$};
+        \draw (1.9,0) node[fill=white,anchor=center] {$x$};
+        \draw[stealth-stealth,ultra thick] (0,1.7) -- (0,-1.7);
+        \draw[stealth-stealth,ultra thick] (1.7,0) -- (-1.7,0);
+        \draw[-stealth,ultra thick,ForestGreen] (0,0) -- (0,-1.7);
+
+        % Draw the angle arc
+        \draw (0.7,0) arc[start angle=0,end angle=270,radius=0.7];
+        \node at (-0.8,-0.5) {$\frac{3\pi}{2}$};
+      \end{tikzpicture}
+
+      \caption{}
+    \end{figure}
+
   \item The angle $\theta = 360^{\circ}$ ($\theta = 2\pi$ radians), specifies
     the point $(1, 0)$ on the circumference of a unit circle. Thus \ldots
 
     \[ \cos (2\pi) = 1 \qquad \sin (2\pi) = 0 \].
+
+    \begin{figure}[H]
+      \centering
+      \label{fig:360_degree}
+
+      \begin{tikzpicture}
+        % The main circle
+        \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (0.5in);
+
+        % The x-y axis
+        \draw (0,1.9) node[fill=white,anchor=center] {$y$};
+        \draw (1.9,0) node[fill=white,anchor=center] {$x$};
+        \draw[stealth-stealth,ultra thick] (0,1.7) -- (0,-1.7);
+        \draw[stealth-stealth,ultra thick] (1.7,0) -- (-1.7,0);
+        \draw[-stealth,ultra thick,ForestGreen] (0,0) -- (1.7,0);
+
+        % Draw the angle arc
+        \draw (0.7,0) arc[start angle=0,end angle=360,radius=0.7];
+        \node at (0.8,-0.5) {$2\pi$};
+      \end{tikzpicture}
+
+      \caption{}
+    \end{figure}
 \end{itemize}
 
 Notice that angles of measure $2\pi$ radians and $0$ radians specify the same
@@ -195,6 +288,8 @@ Therefore, the period of the sin and cos function is $2\pi$ radians.
 \end{theorem}
 
 Now, we'll sketch graphs of the sin and cos functions.
+
+\newpage
 
 We first start by organizing the function values in a table:
 
@@ -247,7 +342,7 @@ Here's how it looks like when we graph:
 	\end{tikzpicture}
 
   \caption{The graph of {\color{red}$y = \cos(\theta)$} and {\color{blue}$y = \sin(\theta)$}}
-  \label{fig:the_graph_of_y_cos_theta_and_y_sin_theta_}
+  \label{fig:the_graph_of_y_cos_theta_and_y_sin_theta_2}
 \end{figure}
 
 Notice that the graphs of $y = \cos (\theta)$ and $y = \sin (\theta)$ are very
@@ -322,13 +417,40 @@ applicable to circles of any size, rather than only for unit circles.
   \[ x = r \cos (\theta) \qquad \textrm{and} \qquad y = r \sin(\theta) \].
 \end{definition}
 
-\begin{exc}[Solution here \ref{sol:using_r_cos_and_r_sin}]
+\begin{exc}[Solution \ref{sol:using_r_cos_and_r_sin}]
   \label{exc:using_r_cos_and_r_sin}
 
   A circle with a radius of $6$ units is given. The point $Q$ is specified by
   the angle $\alpha$. Use the sin and cos function to express the exact
   coordinates of point $Q$.
+
+  \begin{figure}[H]
+    \centering
+    \label{fig:circle_with_radius_of_6_units}
+
+    \begin{tikzpicture}
+      % The main circle
+      \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (0.5in);
+
+      % The x-y axis
+      \draw (0,1.9) node[fill=white,anchor=center] {$y$};
+      \draw (1.9,0) node[fill=white,anchor=center] {$x$};
+      \draw[stealth-stealth,ultra thick] (0,1.7) -- (0,-1.7);
+      \draw[stealth-stealth,ultra thick] (1.7,0) -- (-1.7,0);
+      \draw[-stealth,ultra thick,ForestGreen] (0,0) -- (0,1.7);
+
+      % Draw the angle arc
+      \draw (0.7,0) arc[start angle=0,end angle=110,radius=0.7];
+      \node at (0.8,0.5) {$\alpha$};
+      \draw (0,0) -- (-0.5,1.2);
+      \draw[fill=RawSienna,RawSienna] (-0.5,1.15) circle (0.1);
+    \end{tikzpicture}
+
+    \caption{}
+  \end{figure}
 \end{exc}
+
+\vspace*{0.1in}
 
 Recall that the cos and sin functions represent the horizontal and vertical
 coordinates of a point on the circumference of a unit circle. This situation
@@ -398,8 +520,7 @@ review the Pythagorean Theorem:
 \begin{theorem}[Pythagorean Theorem]
   \label{thrm:pythagorean_theorem}
 
-  If the sides of a right triangle are labeled like the one given in Figure
-  \ref{fig:pythagorean_theorem}, then \ldots
+  If the sides of a right triangle are labeled. Then \ldots
 
   \begin{figure}[H]
     \centering
@@ -414,8 +535,8 @@ review the Pythagorean Theorem:
 
       % Draw the triangle
       \draw[red]  (0,0) coordinate[label=below:$A$] (a) --
-                  (4,0) coordinate[label=below:$B$] (c) --
-                  (4,4) coordinate[label=above:$C$] (b) -- cycle;
+                  (3,0) coordinate[label=below:$B$] (c) --
+                  (3,3) coordinate[label=above:$C$] (b) -- cycle;
       \pic[my angle, "$\alpha=\SI{45}{\degree}$"] {angle = c--a--b};
     \end{tikzpicture}
 
@@ -427,7 +548,7 @@ review the Pythagorean Theorem:
 
 Applying the Pythagorean Theorem to the right triangle we obtain what is called
 the Pythagorean Identity:
-\[ (\sin (\theta))^{2} + (\cos (\theta))^{2} = 1 \].
+\[ \sin^{2}(\theta) + \cos^{2}(\theta) = 1 \].
 When we use exponents in trigonometric functions we can use unusual notation.
 Instead of using parentheses around the entire expression, we can put the
 exponents between the letters that name the function and the input for the
@@ -435,11 +556,11 @@ function. Thus, we can write an expression like $(\sin (\theta))^{2}$ as
 $\sin^{2} (\theta)$. We can use this notation to express the Pythagorean
 Identity:
 
-\begin{notation}[The Pythagorean Identity]
+\begin{notation}
   \[ \theta \in \mathbb{R} \textrm{, } \sin^{2} (\theta) + \cos^{2} (\theta) = 1 \].
 \end{notation}
 
-\begin{exc}[Solution here \ref{sol:find_cos}]
+\begin{exc}[Solution \ref{sol:find_cos}]
   \label{exc:find_cos}
 
   If $\sin (A) = \frac{1}{3}$ and $\frac{\pi}{2} < A < \pi$, which means $A$ is

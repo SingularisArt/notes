@@ -11,6 +11,7 @@
   citecolor={black},
   urlcolor={blue!80!black}
 }
+\usepackage{colortbl} % Change color of the tables
 \usepackage{graphicx}
 \usepackage{lipsum} % Generate random text
 \usepackage{float} % 
@@ -26,6 +27,10 @@
 \usepackage{bm} %
 \usepackage{systeme} %
 \usepackage{stmaryrd} %
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{upgreek}
+\usepackage[misc]{ifsym}
 
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\GL}{GL}
@@ -50,6 +55,10 @@
 \let\epsilon\varepsilon
 \newcommand\contra{\scalebox{1.1}{$\lightning$}}
 
+% tables
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.5}
+
 % horizontal rule
 \newcommand\hr{
   \noindent\rule[0.5ex]{\linewidth}{0.5pt}
@@ -68,12 +77,62 @@
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usetikzlibrary{intersections, angles, quotes, calc, positioning}
+\usetikzlibrary{tikzmark}
 \usetikzlibrary{arrows.meta}
+\usetikzlibrary{
+	calc,
+	patterns,
+	positioning
+}
+
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.13}
 
 \tikzset{
   force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
+}
+\tikzset{
+  >=stealth
+}
+
+% pgfplots
+\pgfplotsset{
+	compat=1.16,
+	samples=200,
+	clip=false,
+	my axis style/.style={
+			axis x line=middle,
+			axis y line=middle,
+			legend pos=outer north east,
+			axis line style={
+					->,
+				},
+			legend style={
+					font=\footnotesize
+				},
+			label style={
+					font=\footnotesize
+				},
+			tick label style={
+					font=\footnotesize
+				},
+			xlabel style={
+					at={
+							(ticklabel* cs:1)
+						},
+					anchor=west,
+					font=\footnotesize,
+				},
+			ylabel style={
+					at={
+							(ticklabel* cs:1)
+						},
+					anchor=west,
+					font=\footnotesize,
+				},
+			xlabel=$x$,
+			ylabel=$y$
+		},
 }
 
 % itemize/enumerate
@@ -86,6 +145,9 @@
 \renewcommand{\labelenumii}{{\color{black}\arabic{enumi}.\arabic{enumii}}} % EX: 1.1)
 \renewcommand{\labelenumiii}{{\color{black}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}} % EX: 1.1.1)
 \renewcommand{\labelenumiv}{{\color{black}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}} % EX: 1.1.1.1)
+
+% Change color of table rows and columns
+\arrayrulecolor{black}
 
 % theorems
 \usepackage{thmtools}
@@ -142,6 +204,25 @@
     linecolor=thmredlinecolor, backgroundcolor=thmredbackgroundcolor,
   }
   ]{thmredbox}
+
+  % Create the red environment
+  \declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{thmredtextcolor}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, leftline=false, topline=true, bottomline=true,
+    linecolor=thmredlinecolor,
+  }
+  ]{thmredlinesupdown}
+
+  % Create the red environment
+  \declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{thmredtextcolor}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, leftline=false, topline=false, bottomline=false,
+  }
+  ]{thmredname}
 
   % Create the blue environment
   \declaretheoremstyle[
@@ -206,6 +287,9 @@
     % Change color of the captions
     \captionsetup{labelfont={color=thmgreentextcolor}}
 
+    % Change color of table rows and columns
+    \arrayrulecolor{thmgreenlinecolor}
+
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmgreentextcolor}$\blacksquare$}}
     \def\labelitemii{\tikz\draw[thmgreentextcolor,fill=thmgreentextcolor] (0,0) circle (.7ex);}
@@ -221,6 +305,9 @@
     % Change color of the captions
     \captionsetup{labelfont={color=thmredtextcolor}}
 
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
+
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
     \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
@@ -235,6 +322,9 @@
   \AtBeginEnvironment{theorem}{
     % Change color of the captions
     \captionsetup{labelfont={color=thmredtextcolor}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
 
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
@@ -266,6 +356,9 @@
     % Change color of the captions
     \captionsetup{labelfont={color=thmredtextcolor}}
 
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
+
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
     \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
@@ -280,6 +373,9 @@
   \AtBeginEnvironment{remark}{
     % Change color of the captions
     \captionsetup{labelfont={color=thmbluetextcolor}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmbluelinecolor}
 
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
@@ -296,6 +392,9 @@
     % Change color of the captions
     \captionsetup{labelfont={color=thmbluetextcolor}}
 
+    % Change color of table rows and columns
+    \arrayrulecolor{thmbluelinecolor}
+
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
     \def\labelitemii{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.7ex);}
@@ -309,24 +408,48 @@
   }
   \AtBeginEnvironment{solution}{
     % Change color of the captions
-    \captionsetup{labelfont={color=thmbluetextcolor}}
+    \captionsetup{labelfont={color=thmredtextcolor}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
 
     % Change color of the itemize/enumerate
-    \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
-    \def\labelitemii{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.7ex);}
-    \def\labelitemiii{{\color{thmbluetextcolor}$\blacktriangleright$}}
-    \def\labelitemiv{\tikz\draw[thmbluetextcolor,fill=thmbluetextcolor] (0,0) circle (.2ex);}
+    \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredtextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.2ex);}
 
-    \renewcommand{\labelenumi}{{\color{thmbluetextcolor}\arabic{enumi}}}
-    \renewcommand{\labelenumii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}}}
-    \renewcommand{\labelenumiii}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
-    \renewcommand{\labelenumiv}{{\color{thmbluetextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+    \renewcommand{\labelenumi}{{\color{thmredtextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
+  \AtBeginEnvironment{exc}{
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmredtextcolor}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
+
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredtextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.2ex);}
+
+    \renewcommand{\labelenumi}{{\color{thmredtextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
   \AtBeginEnvironment{proof}{
     % Change color of the captions
     \captionsetup{labelfont={color=thmprooftextcolor}}
     % Change color of the Q.E.D. symbol
     \renewcommand\qedsymbol{{\color{thmprooftextcolor}Q.E.D.}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmprooflinecolor}
 
     % Change color of the itemize/enumerate
     \def\labelitemi{{\color{thmbluetextcolor}$\blacksquare$}}
@@ -358,11 +481,11 @@
 \declaretheorem[style=thmredbox, name=Theorem]{theorem}
 \declaretheorem[style=thmredbox, name=Lemma]{lemma}
 \declaretheorem[style=thmredbox, numbered=no, name=Corollary]{corollary}
+\declaretheorem[style=thmredlinesupdown, name=Exercise]{exc}
+\declaretheorem[style=thmredname, name=Solution]{solution}
 \declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}
 \declaretheorem[style=thmblueline, numbered=no, name=Example]{example}
-\declaretheorem[style=thmblueline, numbered=no, name=Solution]{solution}
 
-\newtheorem{exc}{Exercise}
 \newtheorem*{notation}{Notation}
 \newtheorem*{note}{Note}
 \newtheorem*{previouslyseen}{As previously seen}
@@ -450,6 +573,33 @@
   \import{./figures/}{#1.pdf_tex}
 }
 
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{xifthen}
+\usepackage{fontawesome}
+
+\newcommand\urlref[2]{%
+  \href{#1}{\raisebox{0.15ex}{\scriptsize \faLink}\:\textup{\textbf{#2}}}%
+}
+\newcommand\pdfref[3]{%
+  \href{phd://open-paper?id=#1&page=#2}{%
+  \textup{[\textbf{\ifthenelse{\isempty{#3}}{here}{#3}}]}}%
+}
+\newcommand\absolutefileref[2]{%
+  \href{run:#1}{\raisebox{0.15ex}{\scriptsize \faFile}\:\textup{\textbf{#2}}}%
+}
+
+% this will contain the current date in yyyy-mm-dd format
+\def\formatteddate{}
+\newcommand\fileref[2]{
+  \IfFileExists{./\formatteddate/#1}{
+    \absolutefileref{./\formatteddate/#1}{#2}
+  }{
+    \textcolor{gray}{\absolutefileref{./\formatteddate/#1}{#2}}
+  }
+}
+\newcommand{\xournal}{\fileref{note.xoj}{Handwritten notes}}%
+
 % %http://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
 \pdfsuppresswarningpagegroup=1
 
@@ -465,25 +615,3 @@
   \addtocounter{section}{-1}%
   \section{#3}
 }%
-
-\newcommand\pdfref[3]{%
-    \href{phd://open-paper?id=#1&page=#2}{%
-    \textup{[\textbf{\ifthenelse{\isempty{#3}}{here}{#3}}]}}%
-}
-\newcommand\urlref[2]{%
-    \href{#1}{\raisebox{0.15ex}{\scriptsize \faLink}\:\textup{\textbf{#2}}}%
-}
-\newcommand\absolutefileref[2]{%
-    \href{run:#1}{\raisebox{0.15ex}{\scriptsize \faFile}\:\textup{\textbf{#2}}}%
-}
-
-% this will contain the current date in yyyy-mm-dd format
-\def\formatteddate{}
-\newcommand\fileref[2]{
-    \IfFileExists{./\formatteddate/#1}{
-        \absolutefileref{./\formatteddate/#1}{#2}
-    }{
-        \textcolor{gray}{\absolutefileref{./\formatteddate/#1}{#2}}
-    }
-}
-\newcommand{\xournal}{\fileref{note.xoj}{Handwritten notes}}%

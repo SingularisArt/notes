@@ -124,7 +124,7 @@ snippet cor "Corollary Environment" bAi
 endsnippet
 
 snippet exc "Exercise Environment" bAi
-\begin{exc}[$1]
+\begin{exc}[Solution \ref{sol:$1}]
 	\label{exc:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
 	$3
@@ -132,7 +132,7 @@ snippet exc "Exercise Environment" bAi
 endsnippet
 
 snippet sol "Solution Environment" bAi
-\begin{solution}[$1]
+\begin{solution}[Exercise \ref{exc:$1}]
 	\label{sol:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
 	$3
@@ -164,10 +164,10 @@ snippet nta "Notation Environment" bAi
 endsnippet
 
 snippet not "Note Environment" bAi
-\begin{note}[$1]
-	\label{nta:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+\begin{note}
+	\label{not:$1}
 
-	$3
+	$2
 \end{note}
 endsnippet
 

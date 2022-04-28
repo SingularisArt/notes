@@ -1,7 +1,7 @@
 \subsection*{Solutions}
 
 \begin{solution}[Exercise \ref{exc:which_of_the_following_represent_a_set}]
-  \label{sol:which_of_the_following_represent_a_set}
+  \label{sol:which_of_the_following_represent_a_set}$ $
 
   \begin{enumerate}
     \label{enum:sets_and_numbers_example_solution}
@@ -16,7 +16,7 @@
 \end{solution}
 
 \begin{solution}[Exercise \ref{exc:simplify_the_following_expressions}]
-  \label{sol:simplify_the_following_expressions}
+  \label{sol:simplify_the_following_expressions}$ $
 
   \begin{itemize}
     \label{item:simplify_the_following_expressions_solutions}
@@ -135,39 +135,6 @@
   II is negative. If cos was in Quadrant I, then the answer would be positive.
 \end{solution}
 
-\begin{solution}[Exercise \ref{exc:find_tan_sec_csc_and_cot}]
-  \label{sol:find_tan_sec_csc_and_cot}
-
-  \begin{align*}
-      \tan (\pi) &= \frac{\sin (\pi)}{\cos (\pi)} \\
-                 &= \frac{0}{-1} \\
-                 &= 0 \\
-      \cot (\pi) &= \frac{\cos (\pi)}{\sin (\pi)} = \frac{0}{-1} = \textrm{undefined} \\
-      \sec (\pi) &= \frac{1}{\cos (\pi)} \\
-                 &= \frac{1}{-1} \\
-                 &= -1 \\
-      \csc (\pi) &= \frac{1}{\sin (\pi)} = \frac{1}{0} = \textrm{undefined} \\
-      \tan \left(\frac{3\pi}{2}\right) &= \frac{\sin \left(\frac{3\pi}{2}\right)}{\cos \left(\frac{3\pi}{2}\right)} \\
-                                       &= \frac{0}{-1} \\
-                                       &= 0 \\
-      \cot \left(\frac{3\pi}{2}\right) &= \frac{\cos \left(\frac{3\pi}{2}\right)}{\sin \left(\frac{3\pi}{2}\right)} \\
-                                       &= \frac{0}{-1} \\
-                                       &= 0 \\
-      \sec \left(\frac{3\pi}{2}\right) &= \frac{1}{\cos \left(\frac{3\pi}{2}\right)} = \frac{1}{0} = \textrm{undefined} \\
-      \csc \left(\frac{3\pi}{2}\right) &= \frac{1}{\sin \left(\frac{3\pi}{2}\right)} \\
-                                       &= \frac{1}{-1} \\
-                                       &= -1 \\
-      \tan (2\pi) &= \frac{\sin (2\pi)}{\cos (2\pi)} \\
-                  &= \frac{0}{1} \\
-                  &= 0 \\
-      \cot (2\pi) &= \frac{\cos (2\pi)}{\sin (2\pi)} = \frac{1}{0} = \textrm{undefined} \\
-      \sec (2\pi) &= \frac{1}{\cos (2\pi)} \\
-                  &= \frac{1}{1} \\
-                  & 1
-      \csc (2\pi) = \frac{1}{\sin (2\pi)} = \frac{1}{0} = \textrm{undefined}
-  .\end{align*}
-\end{solution}
-
 \begin{solution}[Exercise \ref{exc:find_tan_sec_csc_cot_1}]
   \label{sol:find_tan_sec_csc_cot_1}
 
@@ -227,4 +194,93 @@
 
   The reference angle for $150^{\circ}$ is $30^{\circ}$. \\
   The reference angle for $\frac{5\pi}{4}$ is $\frac{\pi}{4}$.
+\end{solution}
+
+\begin{solution}[Exercise \ref{exc:transform_the_graph_of_f_to_g}]
+  \label{sol:transform_the_graph_of_f_to_g}
+
+  It should be clear that function $g$ is a sinusoidal function of the form
+  $y = A\sin(\omega(t - h)) + k$ where $A = 2, \omega = 1, h = 0, k = -3$.
+
+  After inspecting the rules for the functions $f$ and $g$, we should notice
+  that we could construct the function $g(t) = 2\sin(t) - 3$ by multiplying the
+  outputs of the function $f(t) = \sin(t)$ by $2$ and then subtracting $3$ from
+  the result. We can express this algebraically with the equation below:
+  \[ g(t) = 2 f(t) - 3 \].
+
+  Based on what we know about the graph transformations, we can conclude that we
+  can obtain graph of $g$ by starting with the graph of $f$ and first stretching
+  it vertically by a factor of $2$ and then shifting it down $3$ units. Since
+  $f(t) = \sin(t)$ has amplitude of $1$ unit, if we stretch it vertically by a
+  factor of $2$, then we'll double the amplitude, so we should expect that the
+  amplitude of $g$ to be $2$ units. Also, since $f(t) = \sin(t)$ has midline $y
+  = 0$, when we shift it down $3$ units, the resulting midline for the function
+  $g$ will be $y = -3$.
+
+  \begin{center}
+    \textbf{period:} $2\pi$ units \\
+    \textbf{midline:} $y = -3$ \\
+    \textbf{amplitude:} $2$ units \\
+    \textbf{horizontal shift:} $0$ units
+  \end{center}
+
+  \begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+      \begin{axis}[
+          my axis style,
+          width=\textwidth,
+          height=.5\textwidth,
+        ]
+        \addplot[
+          domain=-10:10,
+          red,
+          thick,
+          <->
+        ]
+        {sin(deg(x))};
+        \addplot[
+          domain=-10:10,
+          blue,
+          thick,
+          <->
+        ]
+        {2*sin(deg(x))-3};
+      \end{axis}
+    \end{tikzpicture}
+
+    \caption{The graph of {\color{red}$f(t) = \sin(t)$} and {\color{blue}$g(t) = 2\sin(t) - 3$}}
+    \label{fig:the_graph_of_y_cos_theta_and_y_sin_theta_1}
+  \end{figure}
+\end{solution}
+
+\begin{solution}[Exercise
+  \ref{exc:find_two_algebraic_rules_for_the_function_y_g_t}]
+  \label{sol:find_two_algebraic_rules_for_the_function_y_g_t}
+
+  Let's start by finding the values of $A, \omega, k$. To do this, we need to
+  find the midline, amplitude, and period.
+
+  The midline is $y = -3$, which dictates what the value of $k$ is. \\
+  The amplitude is the distance from the maximum/minimum to the midline. The
+  amplitude is $4$ units. \\
+  The period is the distance from each maximum/minimum. $6.5 - 0.5 = 6$ units.
+  The period doesn't actually appear as a number in the algebraic rule for the
+  function. But the period is connected with the value that we use of $\omega$.
+  $\omega$ causes a horizontal stretch which gives us the desired period.
+  \[
+  6 = 2\pi \times \frac{1}{\omega} = \frac{2\pi}{6} = \boxed{\frac{\pi}{3}}
+  \].
+  When we're trying to find a formula that involves sin, we want to think in
+  terms of sin waves, which start at the midline and come up out of the midline.
+  So, we'll want to find a place in this function where the function is crossing
+  through the midline and coming up out of the midline. That would be at the
+  point: $(0, -1)$. So, for the sin function, $h = -1$. For cos, it's the
+  opposite. Cos starts at the maximum, and goes down to the midline. That would
+  be at the point: $(0, 0.5)$. So, for the cos function, $h = 0.5$.
+  \[
+  g(t) = 4\sin \left(\frac{\pi}{3} \left(t + 1\right)\right) - 3 \qquad
+    g(t) = 4\cos \left(\frac{\pi}{3} \left(t - \frac{1}{2}\right)\right) - 3
+  \].
 \end{solution}

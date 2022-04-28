@@ -1,4 +1,5 @@
 \lesson{6}{Apr 16 2022 Sat (18:04:27)}{Part 3: Intro to Trig Functions}
+\label{les_6:part_3_intro_to_trig_functions}
 
 Now let's determine the sin and cos of some important angles, namely,
 $30^{\circ}$, $45^{\circ}$, and $60^{\circ}$ ($\frac{\pi}{6}$, $\frac{\pi}{4}$,
@@ -14,21 +15,69 @@ $180^{\circ}$. So, we get:
 So, here's how our triangle will look like:
 
 \begin{figure}[htpb]
+  \label{fig:30_60_90_triangle}
   \centering
-  \incfig{30-deg-triangle}
-  \caption{Our original triangle}
-  \label{fig:30_deg_triangle}
+
+  \begin{tikzpicture}[
+      my angle/.style = {draw, fill=teal!30,
+      angle radius=7mm, 
+      angle eccentricity=1.1, 
+      right, inner sep=1pt,
+      font=\footnotesize} 
+    ]
+    \draw   (0,0) coordinate[label=below:$A$] (a) --
+      (4,0) coordinate[label=below:$C$] (c) --
+      (4,4) coordinate[label=above:$B$] (b) -- cycle;
+
+    \pic[my angle, "$30^{\circ}$"] {angle = c--a--b};
+    \pic[my angle, "$60^{\circ}$"] {angle = a--b--c};
+
+    \draw (4,0) rectangle (3.5,0.5);
+  \end{tikzpicture}
+
+  \caption{Our Original Triangle}
 \end{figure}
 
 Let's take this triangle, flip it, and put it right next to the original. Here's
 how it looks after we did this:
 
 \begin{figure}[htpb]
-  \centering
-  \incfig{30-deg-triangle-after-transformation}
-  \caption{An isosceles triangle}
   \label{fig:30_deg_triangle_after_transformation}
+  \centering
+
+  \begin{tikzpicture}[
+      my angle/.style = {draw, fill=teal!30,
+      angle radius=7mm, 
+      angle eccentricity=1.1, 
+      right, inner sep=1pt,
+      font=\footnotesize} 
+    ]
+    \draw   (0,0) coordinate (a) --
+      (4,0) coordinate (c) --
+      (4,4) coordinate (b) -- cycle;
+    \draw   (0,0) coordinate (A) --
+      (4,0) coordinate (C) --
+      (4,-4) coordinate (B) -- cycle;
+
+    \pic[my angle, "$30^{\circ}$"] {angle = c--a--b};
+    \pic[my angle, "$60^{\circ}$"] {angle = a--b--c};
+    \pic[my angle, "$30^{\circ}$"] {angle = B--A--C};
+    \pic[my angle, "$60^{\circ}$"] {angle = C--B--A};
+
+    \node at (1.5,2) {$1$};
+    \node at (1.5,-2) {$1$};
+    
+    \node at (4.5,2) {$\frac{1}{2}$};
+    \node at (4.5,-2) {$\frac{1}{2}$};
+
+    \draw (4,0) rectangle (3.5,0.5);
+    \draw (4,0) rectangle (3.5,-0.5);
+  \end{tikzpicture}
+
+  \caption{An isosceles triangle}
 \end{figure}
+
+\newpage
 
 This means that $b = \frac{1}{2}$ and from this, we can use the Pythagorean
 Theorem to find the value for $a$:
@@ -38,11 +87,34 @@ Theorem to find the value for $a$:
 Here's the final triangle:
 
 \begin{figure}[htpb]
-  \centering
-  \incfig{final-triangle}
-  \caption{Triangle with all sides and angles}
   \label{fig:final_triangle}
+  \centering
+
+  \begin{tikzpicture}[
+      my angle/.style = {draw, fill=teal!30,
+      angle radius=7mm, 
+      angle eccentricity=1.1, 
+      right, inner sep=1pt,
+      font=\footnotesize} 
+    ]
+    \draw   (0,0) coordinate (a) --
+      (4,0) coordinate (c) --
+      (4,4) coordinate (b) -- cycle;
+
+    \pic[my angle, "$30^{\circ}$"] {angle = c--a--b};
+    \pic[my angle, "$60^{\circ}$"] {angle = a--b--c};
+
+    \node at (1.5,2) {$1$};
+    \node at (4.5,2) {$\frac{1}{2}$};
+    \node at (2,-0.5) {$\frac{\sqrt{3}}{2}$};
+
+    \draw (4,0) rectangle (3.5,0.5);
+  \end{tikzpicture}
+
+  \caption{Triangle with all sides and angles}
 \end{figure}
+
+\newpage
 
 \[ P = (\cos (30^{\circ}), \sin (30^{\circ})) = \left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right) \].
 
@@ -70,21 +142,21 @@ Here's a table of the most common values for sin and cos:
   \caption{Common Values for Sin and Cos}
 \end{table}
 
-\begin{exc}[Solution here \ref{sol:find_tan_sec_csc_cot_1}]
+\begin{exc}[Solution \ref{sol:find_tan_sec_csc_cot_1}]
   \label{exc:find_tan_sec_csc_cot_1}
 
   Find $\tan \left(\frac{\pi}{6}\right)$, $\csc \left(\frac{\pi}{6}\right)$,
   $\csc \left(\frac{\pi}{6}\right)$, and $\cot \left(\frac{\pi}{6}\right)$.
 \end{exc}
 
-\begin{exc}[Solution here \ref{sol:find_tan_sec_csc_cot_2}]
+\begin{exc}[Solution \ref{sol:find_tan_sec_csc_cot_2}]
   \label{exc:find_tan_sec_csc_cot_2}
 
   Find $\tan \left(\frac{\pi}{4}\right)$, $\csc \left(\frac{\pi}{4}\right)$,
   $\csc \left(\frac{\pi}{4}\right)$, and $\cot \left(\frac{\pi}{4}\right)$.
 \end{exc}
 
-\begin{exc}[Solution here \ref{sol:find_tan_sec_csc_cot_3}]
+\begin{exc}[Solution \ref{sol:find_tan_sec_csc_cot_3}]
   \label{exc:find_tan_sec_csc_cot_3}
 
   Find $\tan \left(\frac{\pi}{3}\right)$, $\csc \left(\frac{\pi}{3}\right)$,
