@@ -284,3 +284,93 @@
     g(t) = 4\cos \left(\frac{\pi}{3} \left(t - \frac{1}{2}\right)\right) - 3
   \].
 \end{solution}
+
+\begin{solution}[Exercise \ref{exc:evaluate_invs_sin}]
+  \label{sol:evaluate_invs_sin}$ $
+
+  \begin{itemize}
+    \item To evaluate $\sin^{-1} (-\frac{1}{2})$, we need to find a value, $p$,
+      such that $-\frac{\pi}{2} \le p \le \frac{\pi}{2}$ and $\sin (p) =
+      -\frac{1}{2}$. $p = -\frac{\pi}{6}$. Thus, $\sin^{-1} (-\frac{1}{2}) =
+      -\frac{\pi}{6}$.
+    \item To evaluate $\sin (\sin^{-1} (\frac{\sqrt{3}}{2}))$, we need to first
+      find $\sin^{-1} (\frac{\sqrt{3}}{2})$, such that $-\frac{\pi}{2} \le p
+      \le \frac{\pi}{2}$. $p = \frac{\pi}{3}$. Thus, $\sin^{-1}
+      (\frac{\sqrt{3}}{2}) = \frac{\pi}{3}$. Now we can evaluate that:
+      \[
+      \sin \left(\sin^{-1} \left(\frac{\sqrt{3}}{2}\right)\right) = \sin
+      \left(\left(\frac{\pi}{3}\right)\right) = \frac{\sqrt{3}}{2}
+      \].
+  \end{itemize}
+\end{solution}
+
+\begin{solution}[Exercise \ref{exc:evaluate_invs_cos}]
+  \label{sol:evaluate_invs_cos}$ $
+
+  \begin{itemize}
+    \item To evaluate $\cos^{-1} (0)$, we need to find a value, $p$, such that
+      $0 \le p \le \pi$ and $\cos (p) = 0$. $p = \frac{\pi}{2}$. Thus,
+      $\cos^{-1} (0) = \frac{\pi}{2}$.
+    \item To evaluate $\cos (\cos^{-1} (\frac{1}{2}))$, we need to first find
+      $\cos^{-1} (\frac{1}{2})$, such that $0 \le p \le \pi$. $p =
+      \frac{\pi}{3}$. Thus, $\cos^{-1} (\frac{1}{2}) = \frac{\pi}{3}$. Now we
+      can evaluate that:
+      \[
+      \cos \left(\cos^{-1} \left(\frac{1}{2}\right)\right) = \cos
+      \left(\frac{\pi}{3}\right) = -\sqrt{3}
+      \].
+  \end{itemize}
+\end{solution}
+
+\begin{solution}[Exercise \ref{exc:evaluate_invs_tan}]
+  \label{sol:evaluate_invs_tan}$ $
+  \begin{itemize}
+    \item To evaluate $\tan^{-1} (1)$, we need to find a value, $p$, such that
+      $-\frac{\pi}{2} \le p \le \frac{\pi}{2}$ and $\tan (p) = 1$. $p =
+      \frac{\pi}{4}$. Thus, $\tan^{-1} (1) = \frac{\pi}{4}$.
+    \item To evaluate $\tan (\tan^{-1} (-\sqrt{3}))$, we need to first find
+      $\tan^{-1} (-\sqrt{3})$, such that $-\frac{\pi}{2} \le p \le
+      \frac{\pi}{2}$. $p = -\frac{\pi}{3}$. Thus, $\tan^{-1} (-\sqrt{3}) =
+      -\frac{\pi}{3}$. Now we can evaluate that:
+      \[
+      \tan \left(\tan^{-1} \left(-\sqrt{3}\right)\right) = \tan
+      \left(-\frac{\pi}{3}\right) = -\sqrt{3}
+      \].
+  \end{itemize}
+
+\end{solution}
+
+\begin{solution}[Exercise \ref{exc:inv_sin_2}]
+  \label{sol:inv_sin_2}
+
+  The sin value $-0.555$ isn't a "friendly" sin value. We don't know what input
+  for the sin function is related to the output $-0.555$, so we need to utilize
+  the inverse sin function in order to solve the equation:
+
+  \begin{equation*}
+    \begin{alignedat}{3}
+      &\qquad\sin (t) &&= -0.555 \\
+      &\implies \sin^{-1} (\sin (t)) &&= \sin^{-1} (-0.555) \\
+      &\implies \qquad\qquad t &&= \sin^{-1} (-0.555) \approx -0.588
+    \end{alignedat}
+  .\end{equation*}
+
+  Although we've found one solution to the equation, we aren't done yet! The
+  inverse sin inverse only gives us one value, but we know that the periodic
+  nature of the sin function suggests that there are infinitely many solutions
+  to an equation like this.
+
+  We can find all of the solutions by using the solution that we found using the
+  inverse sin function along with the fact that the sin function has period
+  $2\pi$. Since the sin function has a period of $2\pi$ units, we know that the
+  outputs repeat every $2\pi$ units. So if $t \approx -0.588$ is a solution, the
+  values represented by $t \approx -0.55 + 2k\pi, k \in \mathbb{Z}$. That gives
+  us more solutions, but we're still missing half of the solutions. Since
+  $\sin(t) = (\pi - t)$, we can use this identity to find our other half missing
+  solution. $t = \pi - (-0.588) + 2k\pi, k \in \mathbb{Z}$. Therefore, the
+  complete solution to the equation is:
+  \[
+    t \approx -0.588 + 2k\pi \textrm{ or } t \approx \pi + 0.588 + 2k\pi
+    \textrm{ for all } k \in \mathbb{Z}
+  \].
+\end{solution}

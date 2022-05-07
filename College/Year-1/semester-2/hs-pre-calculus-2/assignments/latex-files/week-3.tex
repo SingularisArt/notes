@@ -1,22 +1,9 @@
 \begin{problem}
   \begin{figure}[H]
     \centering
-
-    \begin{tikzpicture}
-      \begin{axis}[
-          my axis style,
-          width=\textwidth,
-          height=.5\textwidth,
-        ]
-      \addplot[domain=-10:10,
-               mark=none,
-               red,
-               <->]
-         {4*sin(pi/2*(deg(x)-2.5))-4};
-      \end{axis}
-    \end{tikzpicture}
-
+    \includegraphics[width=0.8\textwidth]{images/week-3a.png}
     \caption{}
+    \label{fig:week_3a}
   \end{figure}
 
   \begin{itemize}
@@ -72,22 +59,9 @@
 \begin{problem}
   \begin{figure}[H]
     \centering
-
-    \begin{tikzpicture}
-      \begin{axis}[
-          my axis style,
-          width=\textwidth,
-          height=.5\textwidth,
-        ]
-      \addplot[domain=-5:5,
-               mark=none,
-               red,
-               <->]
-        {4*sin(3*deg(x)-pi/4)-4};
-      \end{axis}
-    \end{tikzpicture}
-
+    \includegraphics[width=0.8\textwidth]{images/week-3b.png}
     \caption{}
+    \label{fig:week_3b}
   \end{figure}
 
   \begin{itemize}
@@ -154,29 +128,10 @@
 \end{problem}
 
 \begin{solution}
-  \begin{figure}[H]
+  \begin{figure}[htpb]
     \centering
-
-    \begin{tikzpicture}
-      \begin{axis}[
-          my axis style,
-          width=\textwidth,
-          height=.5\textwidth,
-        ]
-      % \addplot[domain=-10:10,
-      %          mark=none,
-      %          red,
-      %          <->]
-      %    {4*sin(2(deg(x)+pi/2))+2};
-
-        \addplot[domain=-10:10,
-                 mark=none,
-                 red,
-                 <->]
-          {4*sin(2*deg(x)+pi/2)+2};
-      \end{axis}
-    \end{tikzpicture}
-
+    \incfig{week-3}
     \caption{}
+    \label{fig:week_3}
   \end{figure}
 \end{solution}
