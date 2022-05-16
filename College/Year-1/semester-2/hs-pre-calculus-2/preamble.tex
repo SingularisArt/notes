@@ -18,6 +18,7 @@
 \usepackage{booktabs} %
 \usepackage[shortlabels]{enumitem} %
 \usepackage{emptypage} %
+\usepackage{caption} %
 \usepackage{subcaption} %
 \usepackage{multicol} %
 \usepackage[usenames,dvipsnames]{xcolor} %
@@ -76,6 +77,7 @@
 % tikz
 \usepackage{tikz}
 \usepackage{tikz-cd}
+\usepackage{tkz-euclide}
 \usetikzlibrary{intersections, angles, quotes, calc, positioning}
 \usetikzlibrary{tikzmark}
 \usetikzlibrary{arrows.meta}
@@ -473,6 +475,9 @@
 
   \newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
 }
+
+\captionsetup{justification=centering,margin=0.5cm}
+\captionsetup{labelfont={color=black}}
 
 \makeatother
 

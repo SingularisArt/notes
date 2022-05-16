@@ -374,3 +374,88 @@
     \textrm{ for all } k \in \mathbb{Z}
   \].
 \end{solution}
+
+\begin{solution}[Exercise
+  \ref{exc:find_value_for_all_six_trigonometric_functions}]
+  \label{sol:find_value_for_all_six_trigonometric_functions}
+
+  To find the value for all the $6$ trig functions for the angle $\alpha$, we
+  need to find the value for the hypotenuse. For this, we can use the
+  Pythagorean Theorem:
+  \begin{align*}
+    \qquad&a^{2} + b^{2} = c^{2} \\
+    \implies\qquad&12^{2} + 9^{2} = c^{2} \\
+    \implies\qquad&144 + 81 = c^{2} \\
+    \implies\qquad&225 = c^{2} \\
+    \implies\qquad&\sqrt{225} = \sqrt{c^{2}} \\
+    \implies\qquad&c = 15 \\
+  .\end{align*}
+
+  Now we can use \textbf{SOH CAH TOA} to find the value for all $6$ trig
+  functions.
+  \begin{align*}
+    \sin (\alpha) = \frac{\textrm{OPP}}{\textrm{HYP}}
+      \implies \sin (\alpha) = \frac{9}{15} = \frac{3}{5} \\
+    \cos (\alpha) = \frac{\textrm{ADJ}}{\textrm{HYP}}
+      \implies \cos (\alpha) = \frac{12}{15} = \frac{4}{5} \\
+    \tan (\alpha) = \frac{\textrm{OPP}}{\textrm{ADJ}}
+      \implies \tan (\alpha) = \frac{9}{12} = \frac{3}{4} \\
+    \sec (\alpha) = \frac{1}{\cos (\alpha)}
+      \implies \sec (\alpha) = \frac{1}{\frac{4}{5}} = \frac{5}{4} \\
+    \csc (\alpha) = \frac{1}{\sin (\alpha)}
+      \implies \csc (\alpha) = \frac{1}{\frac{3}{5}} = \frac{5}{3} \\
+    \cot (\alpha) = \frac{1}{\tan (\alpha)}
+      \implies \cot (\alpha) = \frac{1}{\frac{3}{4}} = \frac{4}{3} \\
+  .\end{align*}
+\end{solution}
+
+\begin{solution}[Exercise \ref{exc:solving_a_right_triangle}]
+  \label{sol:solving_a_right_triangle}
+
+  We know that we have an angle with a $90^{\circ}$ and a $60^{\circ}$, which
+  implies that $A = 30^{\circ}$.
+
+  We need to create an equation with only either $b$ or $c$ as the unknown:
+  \begin{align*}
+    \qquad&\sin (30^{\circ}) = \frac{7}{c} \\
+    \implies\qquad&\frac{1}{2} = \frac{7}{c} \\
+    \implies\qquad&c = 14 \\
+  .\end{align*}
+
+  Now we can use the Pythagorean Theorem to solve for $b$ :
+  \begin{align*}
+    \qquad&a^{2} + b^{2} = c^{2} \\
+    \implies\qquad&7^{2} + b^{2} = 14^{2} \\
+    \implies\qquad&49 + b^{2} = 196 \\
+    \implies\qquad&b^{2} = 147 \\
+    \implies\qquad&\sqrt{b^{2}} = \sqrt{147} \\
+    \implies\qquad&b = 7\sqrt{3} \\
+  .\end{align*}
+
+  \begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+      \coordinate (a) at (0,0);
+      \coordinate (b) at (4,0);
+      \coordinate (c) at (4,4);
+
+      \draw (a) -- (c) -- (b) -- cycle;
+
+      \draw[ultra thick,ForestGreen] (a) -- (c);
+      \draw[ultra thick,red] (c) -- (b);
+      \draw[ultra thick,blue] (a) -- (b);
+
+      \tkzLabelSegment (a,c) {$c = 14$};
+      \tkzLabelSegment (c,b) {$7$};
+      \tkzLabelSegment (a,b) {$b = 7\sqrt{3}$};
+      \tkzMarkAngle[mark=none](b,a,c);
+      \tkzMarkAngle[mark=none](a,c,b);
+      \tkzLabelAngle[pos=1.7](b,a,c){$A = 30^{\circ}$};
+      \tkzLabelAngle[pos=0.6](a,c,b){$60^{\circ}$};
+    \end{tikzpicture}
+
+    \caption{}
+    \label{fig:solving_a_right_triangle}
+  \end{figure}
+\end{solution}
