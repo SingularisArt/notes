@@ -15,10 +15,6 @@ since none of its angles measure $90^{\circ}$. We'll start by deriving the
 
 		\draw (a) -- (c) -- (b) -- cycle;
 
-		\draw[ultra thick,ForestGreen] (a) -- (c);
-		\draw[ultra thick,red] (c) -- (b);
-		\draw[ultra thick,blue] (a) -- (b);
-
 		\tkzLabelSegment (a,c) {$b$};
 		\tkzLabelSegment (c,b) {$a$};
 		\tkzLabelSegment[below=2pt](a,b){$c$};
@@ -54,12 +50,9 @@ triangle. See Figure \ref{fig:non_right_triangle_2}.
 		\coordinate (c) at (1.5,4);
 		\coordinate (d) at (1.5,0);
 
-		\draw (a) -- (c) -- (d) -- (b) -- cycle;
+		\draw (a) -- (c) -- (b) -- (d) -- (b) -- cycle;
 
-		\draw[ultra thick,ForestGreen] (a) -- (c);
-		\draw[ultra thick,red] (c) -- (b);
-		\draw[ultra thick,blue] (a) -- (b);
-		\draw[ultra thick,purple] (c) -- (d);
+		\draw[ultra thick,ForestGreen] (c) -- (d);
 
 		\tkzLabelSegment (a,c) {$b$};
 		\tkzLabelSegment (c,b) {$a$};
@@ -188,16 +181,14 @@ the height, $h$, just as we did when we derived the Law of Sin. See Figure
 		\coordinate (c) at (1.5,4);
 		\coordinate (d) at (1.5,0);
 
-		\draw (a) -- (c) -- (d) -- (b) -- cycle;
+		\draw (a) -- (c) -- (b) -- (d) -- (b) -- cycle;
 
-		\draw[ultra thick,ForestGreen] (a) -- (c);
-		\draw[ultra thick,red] (c) -- (b);
-		\draw[ultra thick,blue] (a) -- (b);
-		\draw[ultra thick,purple] (c) -- (d);
+		\draw[ultra thick,ForestGreen] (c) -- (d);
 
 		\tkzLabelSegment (a,c) {$b$};
 		\tkzLabelSegment (c,b) {$a$};
-		\tkzLabelSegment[below=2pt](a,b){$c$};
+		\tkzLabelSegment[below=2pt](a,d){$x$};
+		\tkzLabelSegment[below=2pt](b,d){$c-x$};
 		\tkzMarkAngle[mark=none](b,a,c);
 		\tkzLabelAngle[pos=0.5](b,a,c){$A$};
 		\tkzMarkAngle[mark=none](a,c,b);

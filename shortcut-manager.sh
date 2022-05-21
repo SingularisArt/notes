@@ -48,8 +48,7 @@ case ${key} in
   a ) ~/Singularis/local/school/main.py --rofi-assignments ;;
   c ) ~/Singularis/local/school/main.py --rofi-courses ;;
   l ) ~/Singularis/local/school/main.py --rofi-lectures ;;
-  m ) ~/Singularis/local/school/main.py --commands ;;
-  p ) ~/Singularis/local/school/main.py --projects ;;
+  s ) ~/Singularis/local/school/main.py --source-lectures ;;
   A ) ~/Singularis/local/school/main.py --new-assignment ;;
   C ) ~/Singularis/local/school/main.py --new-course ;;
   L ) ~/Singularis/local/school/main.py --new-lecture ;;
