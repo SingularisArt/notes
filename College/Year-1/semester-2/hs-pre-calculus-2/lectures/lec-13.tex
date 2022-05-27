@@ -1,0 +1,60 @@
+\lesson{13}{May 16 2022 Mon (20:01:59)}{Proving Trigonometric Identities}
+
+Up until now, we've studied trigonometric identites that are useful. But there
+are many other identites that aren't particularly important but they exist and
+they offer us an opportunity to learn another skill, which is proving
+mathematical statements.
+
+Let's try and proof the following identity:
+
+\[ \sin (x) = \frac{\tan (x)}{\sec (x)} \].
+
+\begin{proof}
+  \label{prf:sin_equals_tan_over_sec}
+
+  We can start with either side of the equation, but it's usually most
+  sensible to start with the more complicated side since it will be easier to
+  manipulate it. In this example, $\frac{\tan (x)}{\sec (x)}$ is more
+  complicated than $\sin (x)$, so let's start with $\frac{\tan (x)}{\sec (x)}$ 
+  and try to manipulate it until it looks like $\sin (x)$.
+
+  \begin{align*}
+    \frac{\tan (x)}{\sec (x)} &= \frac{\frac{\sin (x)}{\cos (x)}}{\frac{1}{\cos (x)}} \\
+                              &= \frac{\sin (x)}{\cos (x)} \times \frac{\cos (x)}{1} \\
+                              &= \sin (x)
+  .\end{align*}
+
+  This is a \textit{proof} of the identit $\sin (x) = \frac{\tan (x)}{\sec
+  (x)}$ since we've shown that the right side is equivalent to the left side.
+\end{proof}
+
+Let's now try to proof $\frac{\cos (\theta)}{1 - \sin (\theta)} = \frac{1 +
+\sin (\theta)}{\cos (\theta)}$. The proof of this identity requires a
+relatively commonly employed \textit{"trick"} that is important to become
+familiar with. Sometimes it is useful to use the \textbf{conjugate} of some
+part (often the denominator) of the expression. The \textbf{conjugate} of the
+expression $a + b$ is the expression $a - b$, and vice versa. By multiplying
+the denominator by its conjugate, allows us to manipulate the left side that
+is equivalent to the right side.
+
+\begin{proof}
+  \label{prf:cos_over_1_minus_sin_equals_1_plus_sin_over_cos}
+
+  \begin{equation*}
+    \begin{alignedat}{3}
+      \frac{\cos (\theta)}{1 - \sin (\theta)} &= \frac{\cos (\theta)}{1 - \sin (\theta)} \times \frac{1 + \sin (\theta)}{1 + \sin (\theta)} \qquad&& \textrm{Using the conjugate of $1 - \sin (\theta)$} \\
+                                              &= \frac{\cos (\theta)(1 + \sin (\theta))}{(1 - \sin (\theta))(1 + \sin (\theta))} \\
+                                              &= \frac{\cos (\theta) (1 + \sin (\theta))}{1 - \sin (\theta) + \sin (\theta) = \sin^{2} (\theta)} \\
+                                              &= \frac{\cos (\theta)(1 + \sin (\theta))}{1 - \sin^{2} (\theta)} \\
+                                              &= \frac{\cos (\theta)(1 + \sin (\theta))}{\cos^{2} (\theta)} \qquad&& \textrm{Since $1 - \sin^{2} (\theta) = \cos^{2} (\theta)$} \\
+                                              &= \frac{1 + \sin (\theta)}{\cos (\theta)} \\
+                                              &= \frac{1 + \sin (\theta)}{\cos (\theta)} \\
+    \end{alignedat}
+  .\end{equation*}
+
+  This is a proof that $\frac{\cos (\theta)}{1 - \sin (\theta)} = \frac{1 +
+  \sin (\theta)}{\cos (\theta)}$ since we've shown that the left side is
+  equivalent to the right side.
+\end{proof}
+
+\newpage

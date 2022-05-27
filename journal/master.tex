@@ -11,8 +11,7 @@
 \let\d=\pgfcalendarshorthand
 \newcommand\formatdate[2]{\pgfcalendar{cal}{#1}{#1}{#2}}
 
-% \newcommand\firstdate{\year-\month-\day+-25}
-\newcommand\firstdate{2022-05-15}
+\newcommand\firstdate{2022-05-23}
 \newcommand\lastdate{\year-\month-\day}
 
 \newcommand\grayrule{{\color{gray} \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}}}
@@ -38,8 +37,8 @@
 		}%
 
 		\vspace*{1em}
-		\marginpar{\vspace*{1em}\textsf{ \d w., \d m. \d d- \d y- }}%
-		\addcontentsline{toc}{section}{\d wt, \d mt \d d0. \d y0}%
+		\marginpar{\vspace*{1em}\textsf{ \d m. \d d- \d y- }}%
+		\addcontentsline{toc}{section}{\d mt \d d0. \d y0}%
 		\def\formatteddate{\d{y}0-\d{m}0-\d{d}0}%
 		\input{./\formatteddate/note.tex}
 		\IfFileExists{./\formatteddate/note.xopp}{\hfill \xournal}{\hfill \\}

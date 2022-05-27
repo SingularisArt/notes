@@ -1,3 +1,7 @@
+%%%%%%%%%%%%%%%%%%%%%
+% Required packages %
+%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage{fancyhdr}
 \usepackage{extramarks}
 \usepackage{amsmath}
@@ -10,9 +14,9 @@
 
 \usetikzlibrary{automata,positioning}
 
-%
-% Basic Document Settings
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic Document Settings %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \topmargin=-0.45in
 \evensidemargin=0in
@@ -73,9 +77,9 @@
     \exitEssayHeader{homeworkEssayCounter}
 }
 
-%
-% Title Page
-%
+%%%%%%%%%%%%%%%
+% Title Page %
+%%%%%%%%%%%%%%%
 
 \title{
     \vspace{2in}
@@ -90,9 +94,16 @@
 
 \renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
 
-%
-% References
-%
+%%%%%%%%%%%%%
+% Font size %
+%%%%%%%%%%%%%
+
+\usepackage[fontsize=12pt]{fontsize}
+\changefontsize[12pt]{11pt}
+
+%%%%%%%%%%%%%%
+% References %
+%%%%%%%%%%%%%%
 
 \usepackage{hyperref}
 \hypersetup{hidelinks}

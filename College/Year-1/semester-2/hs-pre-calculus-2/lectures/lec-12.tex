@@ -163,7 +163,43 @@ $a \times b$, we obtain the following:
 	This is an \textbf{identity} since it is true for \textit{all} triangles.
 \end{definition}
 
+\begin{exc}[Solution \ref{sol:law_of_sines}]
+  \label{exc:law_of_sines}
+
+  Find all the missing angles and side-lengths of the triangle given in Figure
+  \ref{fig:law_of_sines_with_missing_angles_and_side_lengths_1} (The triangle is
+  not necessarily drawn to scale.)
+
+	\begin{figure}[H]
+		\centering
+
+		\begin{tikzpicture}
+			\coordinate (a) at (0,0);
+			\coordinate (b) at (4,0);
+			\coordinate (c) at (1.5,4);
+
+			\draw (a) -- (c) -- (b) -- cycle;
+
+			\tkzLabelSegment (a,c) {$m$};
+			\tkzLabelSegment (c,b) {$n$};
+      \tkzLabelSegment[below=2pt](a,b){$8$};
+
+			\tkzMarkAngle[mark=none](b,a,c);
+			\tkzLabelAngle[pos=0.5](b,a,c){$75^{\circ}$};
+			\tkzMarkAngle[mark=none](c,b,a);
+			\tkzLabelAngle[pos=0.5](c,b,a){$\theta$};
+			\tkzMarkAngle[mark=none](a,c,b);
+			\tkzLabelAngle[pos=0.5](a,c,b){$55^{\circ}$};
+		\end{tikzpicture}
+
+		\caption{}
+		\label{fig:law_of_sines_with_missing_angles_and_side_lengths_1}
+	\end{figure}
+\end{exc}
+
 % subsection the_law_of_sin (end)
+
+\newpage
 
 \subsection*{The Law of Cos}
 \label{sub_sec:the_law_of_cos}
@@ -231,7 +267,7 @@ of side $c$ in Figure
 		\tkzMarkAngle[mark=none,size=2.5mm](b1,a1,c1);
 		\tkzLabelAngle[pos=0.5](b1,a1,c1){{\color{purple}$A$}};
 
-		\tkzLabelSegment (c2,b2) {{\color{blue}$b$}};
+		\tkzLabelSegment (c2,b2) {{\color{blue}$a$}};
 		\tkzLabelSegment[below=2pt](a2,b2){{\color{blue}$c - x$}};
 		\tkzLabelSegment[right=0.15](c2,a2){{\color{blue}$h$}};
 
@@ -252,19 +288,28 @@ First, notice that the following is true:
 Now, let's apply the Pythagorean Theorem to each of the two triangles in Figure
 \ref{fig:non_right_triangle_split_into_two_right_triangles_2}. The blue triangle
 on the left gives us:
+
 \[ x^{2} + h^{2} = b^{2} \].
+
 and we can solve this for $h^{2}$ and obtain:
+
 \[ h^{2} = b^{2} - x^{2} \].
+
 The blue triangle on the right gives us:
+
 \[ (c - x)^{2} + h^{2} = a^{2} \].
+
 and we can use the fact that $h^{2} = b^{2} - x^{2}$ to eliminate $h$ from this
 equation:
+
 \begin{align*}
   \qquad&(c - x)^{2} + h^{2} = a^{2} \\
   \implies\qquad&(c - x)^{2} + (b^{2} - x^{2}) = a^{2}
 .\end{align*}
+
 Finally, we can simplify the left side of this equation and use the fact that
 $x = b\cos (A)$ to eliminate $x$:
+
 \begin{align*}
   \qquad&(c - x)^{2} + (b^{2} - x^{2}) = a^{2} \\
   \implies\qquad&c^{2} - 2cx + x^{2} + b^{2} - x^{2} = a^{2} \\
@@ -310,6 +355,40 @@ This last equation is known as the \textbf{Law of Cosines}.
   \[ a^{2} = b^{2} + c^{2} - 2bc \times \cos (A) \].
   This is an \textbf{identity}, since it is true for \textit{all} triangles.
 \end{definition}
+
+\begin{exc}[Solution \ref{sol:law_of_cosines}]
+  \label{exc:law_of_cosines}
+
+  Find all of the missing angles and side-lengths of the triangle given in
+  Figure \ref{fig:law_of_cosines} (The triangle is not necessarily drawn to
+  scale.)
+
+	\begin{figure}[H]
+		\centering
+
+		\begin{tikzpicture}
+			\coordinate (a) at (0,0);
+			\coordinate (b) at (4,0);
+			\coordinate (c) at (1.5,4);
+
+			\draw (a) -- (c) -- (b) -- cycle;
+
+			\tkzLabelSegment (a,c) {$10$};
+			\tkzLabelSegment (c,b) {$w$};
+      \tkzLabelSegment[below=2pt](a,b){$12$};
+
+			\tkzMarkAngle[mark=none](b,a,c);
+			\tkzLabelAngle[pos=0.5](b,a,c){$70^{\circ}$};
+			\tkzMarkAngle[mark=none](c,b,a);
+			\tkzLabelAngle[pos=0.5](c,b,a){$\beta$};
+			\tkzMarkAngle[mark=none](a,c,b);
+			\tkzLabelAngle[pos=0.5](a,c,b){$\alpha$};
+		\end{tikzpicture}
+
+		\caption{}
+		\label{fig:law_of_cosines}
+	\end{figure}
+\end{exc}
 
 % subsection the_law_of_cos (end)
 
