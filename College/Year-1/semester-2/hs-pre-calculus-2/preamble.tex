@@ -246,33 +246,6 @@
   }
   ]{thmblueline}
 
-  % Create the proof environment, which changes color based on the previous
-  % environment
-  \AddToHook{env/prop/after}{\colorlet{thmprooftextcolor}{thmredtextcolor}}
-  \AddToHook{env/prop/after}{\colorlet{thmprooflinecolor}{thmredlinecolor}}
-  \AddToHook{env/prop/after}{\colorlet{thmproofbackgroundcolor}{thmredbackgroundcolor}}
-  \AddToHook{env/theorem/after}{\colorlet{thmprooftextcolor}{thmredtextcolor}}
-  \AddToHook{env/theorem/after}{\colorlet{thmprooflinecolor}{thmredlinecolor}}
-  \AddToHook{env/theorem/after}{\colorlet{thmproofbackgroundcolor}{thmredbackgroundcolor}}
-  \AddToHook{env/lemma/after}{\colorlet{thmprooftextcolor}{thmredtextcolor}}
-  \AddToHook{env/lemma/after}{\colorlet{thmprooflinecolor}{thmredlinecolor}}
-  \AddToHook{env/lemma/after}{\colorlet{thmproofbackgroundcolor}{thmredbackgroundcolor}}
-  \AddToHook{env/corollary/after}{\colorlet{thmprooftextcolor}{thmredtextcolor}}
-  \AddToHook{env/corollary/after}{\colorlet{thmprooflinecolor}{thmredlinecolor}}
-  \AddToHook{env/corollary/after}{\colorlet{thmproofbackgroundcolor}{thmredbackgroundcolor}}
-  \AddToHook{env/remark/after}{\colorlet{thmprooftextcolor}{thmbluetextcolor}}
-  \AddToHook{env/remark/after}{\colorlet{thmprooflinecolor}{thmbluelinecolor}}
-  \AddToHook{env/remark/after}{\colorlet{thmproofbackgroundcolor}{thmbluebackgroundcolor}}
-  \AddToHook{env/example/after}{\colorlet{thmprooftextcolor}{thmbluetextcolor}}
-  \AddToHook{env/example/after}{\colorlet{thmprooflinecolor}{thmbluelinecolor}}
-  \AddToHook{env/example/after}{\colorlet{thmproofbackgroundcolor}{thmbluebackgroundcolor}}
-  \AddToHook{env/solution/after}{\colorlet{thmprooftextcolor}{thmbluetextcolor}}
-  \AddToHook{env/solution/after}{\colorlet{thmprooflinecolor}{thmbluelinecolor}}
-  \AddToHook{env/solution/after}{\colorlet{thmproofbackgroundcolor}{thmbluebackgroundcolor}}
-  \AddToHook{env/definition/after}{\colorlet{thmprooftextcolor}{thmgreentextcolor}}
-  \AddToHook{env/definition/after}{\colorlet{thmprooflinecolor}{thmgreenlinecolor}}
-  \AddToHook{env/definition/after}{\colorlet{thmproofbackgroundcolor}{thmgreenbackgroundcolor}}
-
   \declaretheoremstyle[
   headfont=\bfseries\sffamily\color{thmprooftextcolor}, bodyfont=\normalfont,
   numbered=no,
