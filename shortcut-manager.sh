@@ -1,20 +1,18 @@
 #!/bin/bash
 
 key="$1"
-vim="nvim"
 node="/usr/bin/node"
-python="/usr/bin/pyhon3.10"
 
 root="${HOME}/Documents/notes/school-notes"
-current_course="$root/current-course"
-journal_dir="$root/journal"
+current_course="${root}/current-course"
+journal_dir="${root}/journal"
 today_journal_dir="$journal_dir/$(date +%F)"
-papers="$root/papers"
+papers="${current_course}/papers"
 instant_reference="${HOME}/Singularis/third-party-tools/instant-reference/copy-reference.js"
 master_pdf="$current_course/master.pdf"
 
 open_xournal () {
-  cd $today_journal_dir; 
+  cd "${today_journal_dir}" || exit
 
   if [ -f "note.xoj" ]; then
     xournal note.xoj;
@@ -25,19 +23,19 @@ open_xournal () {
 }
 
 compile () {
-  cd $1;
+  cd "${1}" || exit
   pdflatex master.tex && pdflatex master.tex;
   status=$(echo $?)
-  if [[ $status == 130 ]]; then
+  if [[ "${status}" == 130 ]]; then
     rofi -e "<span color='red'><b>Failed to compile!</b></span>" -markup
-  elif [[ $status == 0 ]]; then
+  elif [[ "${status}" == 0 ]]; then
     rofi -e "<span color='green'><b>Compiled successfully!</b></span>" -markup
   fi
 }
 
 open_browser () {
-  url=$(cat ${current_course}/info.yaml | shyaml get-value url)
-  google-chrome-stable --profile-directory="Profile 2" --app=$url
+  url=$(cat "${current_course}/info.yaml" | shyaml get-value url)
+  google-chrome-stable --profile-directory="Profile 2" --app="${url}"
 }
 
 open_research_paper() {
@@ -51,37 +49,37 @@ mkdir -p "${today_journal_dir}";
 
 case ${key} in
   # School Notes
-  b ) zathura $current_course/assignments/master.pdf ;;
-  o ) zathura $master_pdf ;;
-  O ) compile $current_course ;;
-  i ) inkscape-figures edit $current_course/figures ;;
-  f ) $node $instant_reference ;;
+  b ) zathura "${current_course}/assignments/master.pdf" ;;
+  o ) zathura "${master_pdf}" ;;
+  O ) compile "${current_course}" ;;
+  i ) inkscape-figures edit "${current_course}/figures" ;;
+  f ) $node "${instant_reference}" ;;
   w ) open_browser ;;
-  y ) cd $current_course;
+  y ) cd "${current_course}" || exit;
     xfce4-terminal -e "nvim info.yaml" ;;
-  m ) cd $current_course;
+  m ) cd "${current_course}" || exit;
     xfce4-terminal -e "nvim ." ;;
 
   # Journal
   x ) open_xournal ;;
   r ) xfce4-terminal -e "lf $today_journal_dir" ;;
-  n ) cd $journal_dir;
+  n ) cd "${journal_dir}" || exit;
     xfce4-terminal -e "nvim $today_journal_dir/note.tex" ;;
-  N ) cd $journal_dir;
+  N ) cd "${journal_dir}" || exit;
     xfce4-terminal -e "nvim master.tex" ;;
-  j ) zathura $journal_dir/master.pdf ;;
-  J ) compile $journal_dir ;;
-  M ) cd $journal_dir;
+  j ) zathura "${journal_dir}/master.pdf" ;;
+  J ) compile "${journal_dir}" ;;
+  M ) cd "${journal_dir}" || exit
     xfce4-terminal -e "nvim ." ;;
 
   # Custom made scripts
-  a ) ~/Singularis/local/school/main.py --rofi-assignments ;;
-  c ) ~/Singularis/local/school/main.py --rofi-courses ;;
-  l ) ~/Singularis/local/school/main.py --rofi-lectures ;;
-  s ) ~/Singularis/local/school/main.py --source-lectures ;;
-  A ) ~/Singularis/local/school/main.py --new-assignment ;;
-  C ) ~/Singularis/local/school/main.py --new-course ;;
-  L ) ~/Singularis/local/school/main.py --new-lecture ;;
+  a ) ~/Documents/notes/school-setup/main.py --rofi-assignments ;;
+  c ) ~/Documents/notes/school-setup/main.py --rofi-courses ;;
+  l ) ~/Documents/notes/school-setup/main.py --rofi-lectures ;;
+  s ) ~/Documents/notes/school-setup/main.py --source-lectures ;;
+  A ) ~/Documents/notes/school-setup/main.py --new-assignment ;;
+  C ) ~/Documents/notes/school-setup/main.py --new-course ;;
+  L ) ~/Documents/notes/school-setup/main.py --new-lecture ;;
 
   # Paper searching
   p ) open_research_paper ;;
