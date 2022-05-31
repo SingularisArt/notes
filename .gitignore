@@ -294,8 +294,7 @@ TSWLatexianTemp*
 *.glstex
 
 # The extra files
-current-course
+school-notes/current-course
 
 # My personal notes
-notes/20*
-notes/master.pdf
+journal/2022*

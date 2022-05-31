@@ -123,6 +123,14 @@ snippet cor "Corollary Environment" bAi
 \end{corollary}
 endsnippet
 
+snippet idn "Identity Environment" bAi
+\begin{identity}[$1]
+	\label{idn:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+	$3
+\end{identity}
+endsnippet
+
 snippet exc "Exercise Environment" bAi
 \begin{exc}[Solution \ref{sol:$1}]
 	\label{exc:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}

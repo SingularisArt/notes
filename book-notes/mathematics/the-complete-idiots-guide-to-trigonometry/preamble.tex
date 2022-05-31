@@ -345,6 +345,24 @@
     \renewcommand{\labelenumiii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
     \renewcommand{\labelenumiv}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
   }
+  \AtBeginEnvironment{identity}{
+    % Change color of the captions
+    \captionsetup{labelfont={color=thmredtextcolor}}
+
+    % Change color of table rows and columns
+    \arrayrulecolor{thmredlinecolor}
+
+    % Change color of the itemize/enumerate
+    \def\labelitemi{{\color{thmredtextcolor}$\blacksquare$}}
+    \def\labelitemii{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.7ex);}
+    \def\labelitemiii{{\color{thmredtextcolor}$\blacktriangleright$}}
+    \def\labelitemiv{\tikz\draw[thmredtextcolor,fill=thmredtextcolor] (0,0) circle (.2ex);}
+
+    \renewcommand{\labelenumi}{{\color{thmredtextcolor}\arabic{enumi}}}
+    \renewcommand{\labelenumii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}}}
+    \renewcommand{\labelenumiii}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}}
+    \renewcommand{\labelenumiv}{{\color{thmredtextcolor}\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}}
+  }
   \AtBeginEnvironment{remark}{
     % Change color of the captions
     \captionsetup{labelfont={color=thmbluetextcolor}}
@@ -459,6 +477,7 @@
 \declaretheorem[style=thmredbox, name=Theorem]{theorem}
 \declaretheorem[style=thmredbox, name=Lemma]{lemma}
 \declaretheorem[style=thmredbox, numbered=no, name=Corollary]{corollary}
+\declaretheorem[style=thmredbox, numbered=no, name=Identity]{identity}
 \declaretheorem[style=thmredlinesupdown, name=Exercise]{exc}
 \declaretheorem[style=thmredname, name=Solution]{solution}
 \declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}

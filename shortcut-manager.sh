@@ -5,14 +5,13 @@ vim="nvim"
 node="/usr/bin/node"
 python="/usr/bin/pyhon3.10"
 
-root="${HOME}/Documents/school-notes"
+root="${HOME}/Documents/notes/school-notes"
 current_course="$root/current-course"
 journal_dir="$root/journal"
 today_journal_dir="$journal_dir/$(date +%F)"
-paper_location="$root/papers"
+papers="$root/papers"
 instant_reference="${HOME}/Singularis/third-party-tools/instant-reference/copy-reference.js"
 master_pdf="$current_course/master.pdf"
-papers="${HOME}/Documents/school-notes/current-course/papers"
 
 open_xournal () {
   cd $today_journal_dir; 
@@ -42,13 +41,13 @@ open_browser () {
 }
 
 open_research_paper() {
-  cd ~/Documents/school-notes/current-course/papers
+  cd "${papers}" || exit
   pdf_file="$(ls . | rofi -i -dmenu)"
   [ -z "$pdf_file" ] && exit 0
   [ -f "$pdf_file" ] && zathura "$(realpath "$pdf_file")" || sensible-browser "https://google.com/search?q=$pdf_file"
 }
 
-mkdir -p $today_journal_dir;
+mkdir -p "${today_journal_dir}";
 
 case ${key} in
   # School Notes

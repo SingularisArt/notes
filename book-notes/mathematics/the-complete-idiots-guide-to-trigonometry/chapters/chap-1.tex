@@ -1,0 +1,330 @@
+\chapter{Geometry Tools Needed to Study Trigonometry}
+\label{chap:geometry_tools_needed_to_study_trigonometry}
+
+\section{Right Triangles}
+\label{sec:right_triangles}
+
+There are three main types of angles:
+
+\begin{itemize}
+  \label{item:three_main_types_of_angles}
+
+  \item Acute Angles
+  \item Right Angles
+  \item Obtuse Angles
+\end{itemize}
+
+\begin{definition}[Angles]
+  \label{def:angles}$ $
+
+  An \textbf{acute angle} is an angle with a measure less than $90^{\circ}$.
+
+  An \textbf{right angle} is an angle with a measure of $90^{\circ}$.
+
+  An \textbf{obtuse angle} is an angle with a measure greater than
+  $90^{\circ}$.
+\end{definition}
+
+Recall from geometry that you need three known measures to describe a triangle
+-- the lengths of two sides and the measure of an angle, the lengths of three
+sides, or three other measures. For a right triangle, you need only two
+additional measures, because you already know that one of the angles' measure
+is $90^{\circ}$.
+
+The following four cases describe all possible ways to describe a right triangle:
+
+\begin{enumerate}
+  \label{enum:four_ways_to_describe_a_right_triangle}
+
+  \item The lengths of two legs
+  \item The lengths of one leg and the hypotenuse
+  \item The lengths of one leg and the measure of an acute angle
+  \item The length of the hypotenuse and the measure of one acute angle
+\end{enumerate}
+
+Suppose you need to calculate the lengths of all three sides. For cases $1$ and
+$2$, you only need geometry, specifically, the Pythagorean Theorem. But for
+cases $3$ and $4$, you need trig to get the remaining sides.
+
+\subsection{The Pythagorean Theorem}
+\label{sub_sec:the_pythagorean_theorem}
+
+Let's take a look at the famous geometry tool \textit{Pythagorean Theorem},
+which helps us solve for cases $1$ and $2$.
+
+\begin{theorem}[Pythagorean Theorem]
+  \label{thrm:pythagorean_theorem}
+
+  The \textbf{Pythagorean Theorem} states that if $a$ and $b$ are the lengths
+  of the legs of a right triangle and $c$ is the length of the hypotenuse,
+  then:
+
+  \[ a^{2} + b^{2} = c^{2} \].
+\end{theorem}
+
+Let's illustrate how cases $1$ and $2$ can be solved with the help of the
+Pythagorean Theorem.
+
+\subsubsection{Sample Problem 1}
+\label{sub_sub_sec:sample_problem_1}
+
+Two legs of a right triangle measure $5$ and $12$ inches. Find the hypotenuse.
+
+\begin{center}
+  \begin{tikzpicture}
+    \coordinate [label=above:$A$] (A) at (0,2);
+    \coordinate [label=right:$B$] (B) at (4,0);
+    \coordinate [label=left:$C$] (C) at (0,0);
+
+    \draw (C) -- node[below] {$4$} (B) -- node[above] {$5$} (A) -- (C);
+  \end{tikzpicture}
+\end{center}
+
+Since you know the length of the two legs, you can substitute those into the
+theorem's equation:
+
+\begin{align*}
+  a^{2} + b^{2} &= c^{2} \\
+  5^{2} + 12^{2} &= c^{2} \\
+  25 + 144 &= c^{2} \\
+  169 &= c^{2} \\
+  \sqrt{169} &= c \\
+  c &= 13 \\
+.\end{align*}
+
+\textbf{Solution:} The length of the hypotenuse is $13$ inches long.
+
+% subsubsection sample_problem_1 (end)
+
+% subsection the_pythagorean_theorem (end)
+
+\subsection{Special Right Triangles}
+\label{sub_sec:special_right_triangles}
+
+In this section, we'll take a look at two special kinds of right triangles. For
+these special triangles, if you know the length of any one side of the
+triangle, you can find the length of the other two sides.
+
+\begin{center}
+  \begin{tikzpicture}
+    \coordinate (A) at (0,4);
+    \coordinate (B) at (4,0);
+    \coordinate (C) at (0,0);
+
+    \draw (C) -- node[below] {$a$} (B) -- node[right] {$h$} (A) -- node[left] {$a$} (C);
+
+    \tkzMarkAngle[size=0.5cm](A,B,C)
+    \tkzMarkAngle[size=0.5cm](C,A,B)
+
+    \tkzLabelAngle(A,B,C){$45^{\circ}$};
+    \tkzLabelAngle(C,A,B){$45^{\circ}$};
+
+    \coordinate (A) at (5,4);
+    \coordinate (B) at (7,0);
+    \coordinate (C) at (5,0);
+
+    \draw (C) -- node[below] {$a$} (B) -- node[right] {$h$} (A) -- node[left] {$a$} (C);
+
+    \tkzMarkAngle[size=0.5cm](A,B,C);
+    \tkzMarkAngle[size=0.5cm](C,A,B);
+
+    \tkzLabelAngle(A,B,C){$60^{\circ}$};
+    \tkzLabelAngle(C,A,B){$30^{\circ}$};
+  \end{tikzpicture}
+\end{center}
+
+The triangle on the left is called a $45^{\circ}-45^{\circ}-90^{\circ}$
+triangle, or an isosceles right triangle. The triangle on the right is called a
+$30^{\circ}-60^{\circ}-90^{\circ}$ triangle. The Pythagorean Theorem is used to
+prove the following relationship that exist in these two special right
+triangles.
+
+\begin{definition}[Isosceles Right Triangle]
+  \label{def:isosceles_right_triangle}
+
+  An \textbf{isosceles right triangle} is a triangle that has two equal sides
+  and two equal angles, as well as a third angle that is a right angle. The
+  only triangle that satisfies all these conditions is a
+  $45^{\circ}-45^{\circ}-90^{\circ}$ triangle.
+\end{definition}
+
+\begin{theorem}
+  If each acute angle of a right triangle measures $45^{\circ}$, the hypotenuse
+  is $\sqrt{2}$ times as long as a leg.
+
+  \begin{center}
+    \begin{tikzpicture}
+      \coordinate (A) at (0,4);
+      \coordinate (B) at (4,0);
+      \coordinate (C) at (0,0);
+
+      \draw (C) -- node[below] {$1$} (B) -- node[right] {$\sqrt{2}$} (A) -- node[left] {$1$} (C);
+
+      \tkzMarkAngle[size=0.5cm](A,B,C)
+      \tkzMarkAngle[size=0.5cm](C,A,B)
+
+      \tkzLabelAngle(A,B,C){$45^{\circ}$};
+      \tkzLabelAngle(C,A,B){$45^{\circ}$};
+    \end{tikzpicture}
+  \end{center}
+\end{theorem}
+
+\begin{example}
+  If one leg in a $45^{\circ}-45^{\circ}-90^{\circ}$ triangle is $10$ units
+  long, then the hypotenuse is $10\sqrt{2}$ units long.
+\end{example}
+
+\begin{theorem}
+  If acute angles of a right triangle measure $30^{\circ}$ and $60^{\circ}$,
+  then the hypotenuse is twice as long as the shortest leg and the longer leg
+  is $\sqrt{3}$ times as long as the shortest leg.
+
+  \begin{center}
+    \begin{tikzpicture}
+      \coordinate (A) at (0,4);
+      \coordinate (B) at (2,0);
+      \coordinate (C) at (0,0);
+
+      \draw (C) -- node[below] {$1$} (B) -- node[right] {$2$} (A) -- node[left] {$\sqrt{3}$} (C);
+
+      \tkzMarkAngle[size=0.5cm](A,B,C);
+      \tkzMarkAngle[size=0.5cm](C,A,B);
+
+      \tkzLabelAngle(A,B,C){$60^{\circ}$};
+      \tkzLabelAngle(C,A,B){$30^{\circ}$};
+    \end{tikzpicture}
+  \end{center}
+\end{theorem}
+
+\begin{example}
+  If the shortest leg in a $30^{\circ}-60^{\circ}-90^{\circ}$ triangle is $6$ 
+  units long, then the hypotenuse is $2 \times 6 = 12$ units long, and the
+  longest leg is $6\sqrt{3}$ units long.
+\end{example}
+
+% subsection special_right_triangles (end)
+
+\subsection{Classifying Triangles}
+\label{sub_sec:classifying_triangles}
+
+Any triangle is six elements: three sides and three angles. Throughout this
+book, I use capital letters ($A, B, C$) to denote measures of angles and
+lowercase letters. I also use lowercase letters ($a, b, c$) to denote sides of
+the triangles I use the small letter corresponding to the name of the angle
+opposite to this side. I also use the symbol $\triangle$ to identity a
+triangle. Therefore, an expression $\triangle ABC$ means "the triangle $ABC$".
+
+\begin{center}
+  \begin{tikzpicture}
+    \coordinate [label=above:$A$] (A) at (2,4);
+    \coordinate [label=right:$C$] (B) at (4,0);
+    \coordinate [label=left:$B$]  (C) at (0,0);
+
+    \draw (C) -- node[below] {$a$} (B) -- node[right] {$b$} (A) -- node[left] {$c$} (C);
+  \end{tikzpicture}
+\end{center}
+
+When given the lengths of three sides, you can construct a triangle that is
+determined by these sides; therefore, its angles are determined as well.
+However, you need to be careful thinking this way, because not all arbitrary
+side lengths enable us to construct a triangle. Before constructing a triangle
+given its sides, you need to refer to the \textit{Triangle Inequality}.
+
+\begin{definition}[Triangle Inequality]
+  \label{def:triangle_inequality}
+
+  The \textbf{triangle inequality} states that the sum of the lengths of any
+  two sides of a triangle is greater than the length of the third side.
+\end{definition}
+
+\begin{example}
+  \label{exm:triangle_inequality}
+
+  Let's state whether it's possible for a triangle to exist with sides of the
+  given lengths:
+
+  \textbf{Sample 1:} The given sides are $4$, $5$, and $6$ units long. You
+  need to compare the sums of any two sides with the third side. That means
+  you need to exhaust all possibilities:
+
+  \begin{align*}
+    4 + 5 &= 9 > 6 \\
+    4 + 6 &= 10 > 5 \\
+    5 + 6 &= 11 > 4 \\
+  .\end{align*}
+
+  \textbf{Sample 2:} The given sides are $1$, $2$, and $3$ units long. Let's
+  try all possibilities:
+
+  \begin{align*}
+    2 + 3 = 5 > 1 \\
+    3 + 1 = 4 > 2 \\
+    1 + 2 = 3 = 3 \\
+  .\end{align*}
+
+  The sum of these two sides ($1$ and $2$) are not greater than the third side
+  ($3$). Therefore, this triangle doesn't exist.
+\end{example}
+
+A triangle can be classified as acute (having three acute angles), right
+(having one right angle), and obtuse (having one obtuse angle). As we
+discussed, the lengths of the sides of a triangle determine its angles. Given
+the lengths of the sides, can you tell whether the triangle is acute, right, or
+obtuse?
+
+The pythagorean theorem gives us a partial answer. We know that if the lengths
+satisfy the relationship $a^{2} + b^{2} = c^{2}$, then we know it's a right
+triangle. If it doesn't, then it's either an acute or obtuse triangle.
+
+\begin{align*}
+  \textrm{If } \angle C \textrm{ of } \triangle ABC \textrm{ is acute, then } c^{2} < a^{2} + b^{2} \\
+  \textrm{If } \angle C \textrm{ of } \triangle ABC \textrm{ is obtuse, then } c^{2} > a^{2} + b^{2} \\
+.\end{align*}
+
+Using this information and given the sides' lengths, you can identify the type
+of triangle you are dealing with.
+
+\begin{example}
+  \label{exm:type_of_triangle}
+
+  If the sides are $6$, $7$, $8$, by substituting those values, you get:
+
+  \[ 8^{2} = 64 < 6^{2} + 7^{2} = 36 + 49 = 85 \].
+
+  So, this triangle is an acute triangle.
+\end{example}
+
+\begin{note}
+  \label{not:which_number_is_the_hypotenuse}
+
+  In a triangle, the hypotenuse is always bigger in length than either of the
+  sides. Hence, we always know which number should be substituted for $c$ since
+  it's the largest one of the three.
+
+  If the sides are $6$, $8$, and $10$, then:
+
+  \[ 10^{2} = 100 = 6^{2} + 8^{2} = 36 + 64 = 100 \].
+
+  So the triangle is a right triangle.
+
+  If the sides are $5$, $12$, and $14$, then:
+
+  \[ 14^{2} = 196 > 5^{2} + 12^{2} = 25 + 144 = 169 \].
+
+  So the triangle is an obtuse triangle.
+\end{note}
+
+% subsection classifying_triangles (end)
+
+% section right_triangles (end)
+
+\section{Circles, Arcs, and Chords}
+\label{sec:circles_arcs_and_chords}
+
+
+
+% section circles_arcs_and_chords (end)
+
+% chapter geometry_tools_needed_to_study_trigonometry (end)
+
+\newpage

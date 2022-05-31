@@ -60,11 +60,11 @@ third double-angle identity for cos by substituting $\sin^{2} (\theta) +
   \implies\qquad&\cos (2\theta) = \cos^{2} (\theta) - \sin^{2} (\theta) \\
 .\end{align*}
 
-\begin{definition}[Double-Angle Identities]
-  \label{def:double_angle_identities} $ $
+\begin{identity}[Double-Angle Identities]
+  \label{idn:double_angle_identities} $ $
 
   \begin{tabular}{lr}
-    sin: & $\sin (2\theta) = 2\sin (\theta)\cos (\theta)$ \\
+    sin: & \(\displaystyle \sin (2\theta) = 2\sin (\theta)\cos (\theta) \) \\
          & \\
     cos: & \systeme{
       \cos (2\theta) = 1 - 2\sin^{2} (\theta),
@@ -72,7 +72,7 @@ third double-angle identity for cos by substituting $\sin^{2} (\theta) +
       \cos (2\theta) = \cos^{2} - \sin^{2} (\theta)
     } \\
   \end{tabular}
-\end{definition}
+\end{identity}
 
 \begin{exc}[Solution \ref{sol:sin_alpha_1_over_3_in_quadrant_2}]
   \label{exc:sin_alpha_1_over_3_in_quadrant_2}
@@ -82,5 +82,44 @@ third double-angle identity for cos by substituting $\sin^{2} (\theta) +
 \end{exc}
 
 % subsubsection double_angle_identities (end)
+
+\subsubsection*{Half-Angle Identities}
+\label{sub_sub_sec:half_angle_identities}
+
+We can use the double-angle identities for cos to derive \textbf{half-angle
+identities}. Recall that $\cos (2\theta) = 1 - 2\sin^{2} (\theta)$. We can use
+this identity to find a half-angle identity for sin. Let $\alpha = 2\theta$.
+Then $\theta = \frac{\alpha}{2}$:
+
+\begin{align*}
+  \qquad&\cos (2\theta) = 1 - 2\sin^{2} (\theta) \\
+  \implies\qquad&\cos (\alpha) = 1 - 2 \sin^{2} \left(\frac{\alpha}{2}\right) \\
+  \implies\qquad&2\sin^{2} \left(\frac{\alpha}{2}\right) = 1 - \cos (\alpha) \\
+  \implies\qquad&\sin^{2} \left(\frac{\alpha}{2}\right) = \frac{1 - \cos (\alpha)}{2} \\
+  \implies\qquad&\sin \left(\frac{\alpha}{2}\right) = \pm \sqrt{\frac{1 - \cos (\alpha)}{2}} \\
+.\end{align*}
+
+We can use $\cos (2\theta) = 2\cos^{2} (\theta) - 1$ to find a half-angle
+identity for cos. Let $\alpha = 2\theta$. Then $\theta = \frac{\alpha}{2}$:
+
+\begin{align*}
+  \qquad&\cos (2\theta) = 2\cos^{2} (\theta) - 1 \\
+  \implies\qquad&\cos (\alpha) = 2\cos^{2} \left(\frac{\alpha}{2}\right) - 1 \\
+  \implies\qquad&1 + \cos (\alpha) = 2\cos^{2} \left(\frac{\alpha}{2}\right) \\
+  \implies\qquad&\frac{1 + \cos (\alpha)}{1} = \cos^{2} \left(\frac{\alpha}{2}\right) \\
+  \implies\qquad&\cos \left(\frac{\alpha}{2}\right) = \pm \sqrt{\frac{1 + \cos (\alpha)}{2}} \\
+.\end{align*}
+
+\begin{identity}[Half-Angle Identities]
+  \label{idn:half_angle_identities} $ $
+
+  \begin{tabular}{lr}
+    sin: & \(\displaystyle \cos \left(\frac{\theta}{2}\right) = \pm \sqrt{\frac{1 - \cos (\theta)}{2}} \) \\
+         & \\
+    cos: & \(\displaystyle \cos \left(\frac{\theta}{2}\right) = \pm \sqrt{\frac{1 + \cos (\theta)}{2}} \) \\
+  \end{tabular}
+\end{identity}
+
+% subsubsection half_angle_identities (end)
 
 \newpage
