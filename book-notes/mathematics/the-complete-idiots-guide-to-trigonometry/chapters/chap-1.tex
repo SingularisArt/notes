@@ -70,7 +70,9 @@ Pythagorean Theorem.
 
 Two legs of a right triangle measure $5$ and $12$ inches. Find the hypotenuse.
 
-\begin{center}
+\begin{figure}[htpb]
+  \centering
+
   \begin{tikzpicture}
     \coordinate [label=above:$A$] (A) at (0,2);
     \coordinate [label=right:$B$] (B) at (4,0);
@@ -78,7 +80,9 @@ Two legs of a right triangle measure $5$ and $12$ inches. Find the hypotenuse.
 
     \draw (C) -- node[below] {$4$} (B) -- node[above] {$5$} (A) -- (C);
   \end{tikzpicture}
-\end{center}
+
+  \label{fig:right_triangle_with_5_inch_and_12_inch}
+\end{figure}
 
 Since you know the length of the two legs, you can substitute those into the
 theorem's equation:
@@ -105,7 +109,9 @@ In this section, we'll take a look at two special kinds of right triangles. For
 these special triangles, if you know the length of any one side of the
 triangle, you can find the length of the other two sides.
 
-\begin{center}
+\begin{figure}[htpb]
+  \centering
+
   \begin{tikzpicture}
     \coordinate (A) at (0,4);
     \coordinate (B) at (4,0);
@@ -131,7 +137,9 @@ triangle, you can find the length of the other two sides.
     \tkzLabelAngle(A,B,C){$60^{\circ}$};
     \tkzLabelAngle(C,A,B){$30^{\circ}$};
   \end{tikzpicture}
-\end{center}
+
+  \label{fig:45_45_90_and_30_60_90_triangle}
+\end{figure}
 
 The triangle on the left is called a $45^{\circ}-45^{\circ}-90^{\circ}$
 triangle, or an isosceles right triangle. The triangle on the right is called a
@@ -152,7 +160,9 @@ triangles.
   If each acute angle of a right triangle measures $45^{\circ}$, the hypotenuse
   is $\sqrt{2}$ times as long as a leg.
 
-  \begin{center}
+  \begin{figure}[H]
+    \centering
+
     \begin{tikzpicture}
       \coordinate (A) at (0,4);
       \coordinate (B) at (4,0);
@@ -166,7 +176,9 @@ triangles.
       \tkzLabelAngle(A,B,C){$45^{\circ}$};
       \tkzLabelAngle(C,A,B){$45^{\circ}$};
     \end{tikzpicture}
-  \end{center}
+
+    \label{fig:45_45_90_triangle}
+  \end{figure}
 \end{theorem}
 
 \begin{example}
@@ -179,7 +191,9 @@ triangles.
   then the hypotenuse is twice as long as the shortest leg and the longer leg
   is $\sqrt{3}$ times as long as the shortest leg.
 
-  \begin{center}
+  \begin{figure}[H]
+    \centering
+
     \begin{tikzpicture}
       \coordinate (A) at (0,4);
       \coordinate (B) at (2,0);
@@ -193,7 +207,9 @@ triangles.
       \tkzLabelAngle(A,B,C){$60^{\circ}$};
       \tkzLabelAngle(C,A,B){$30^{\circ}$};
     \end{tikzpicture}
-  \end{center}
+
+    \label{fig:30_60_90_triangle}
+  \end{figure}
 \end{theorem}
 
 \begin{example}
@@ -214,7 +230,9 @@ the triangles I use the small letter corresponding to the name of the angle
 opposite to this side. I also use the symbol $\triangle$ to identity a
 triangle. Therefore, an expression $\triangle ABC$ means "the triangle $ABC$".
 
-\begin{center}
+\begin{figure}[htpb]
+  \centering
+
   \begin{tikzpicture}
     \coordinate [label=above:$A$] (A) at (2,4);
     \coordinate [label=right:$C$] (B) at (4,0);
@@ -222,7 +240,9 @@ triangle. Therefore, an expression $\triangle ABC$ means "the triangle $ABC$".
 
     \draw (C) -- node[below] {$a$} (B) -- node[right] {$b$} (A) -- node[left] {$c$} (C);
   \end{tikzpicture}
-\end{center}
+
+  \label{fig:generic_triangle}
+\end{figure}
 
 When given the lengths of three sides, you can construct a triangle that is
 determined by these sides; therefore, its angles are determined as well.
@@ -321,7 +341,175 @@ of triangle you are dealing with.
 \section{Circles, Arcs, and Chords}
 \label{sec:circles_arcs_and_chords}
 
+Another basic shape talked about in geometry is a circle. Let's review some
+basic elements of a circle because you use them a lot throughout trigonometry.
 
+\subsection{Chords and Arcs}
+\label{sub_sec:chords_and_arcs}
+
+Let's analyze the circle below and take note of its key elements.
+$\overline{OA}$ is a radius. $\overline{RS}$ is a chord. $\overline{BC}$ is a
+diameter.
+
+\newpage
+
+\begin{figure}[htpb]
+  \centering
+
+  \begin{tikzpicture}
+    \coordinate[label=below:$O$]  (O) at (0,0);
+    \coordinate[label=above:$A$]  (A) at (1.4,1.4);
+    \coordinate[label=left:$B$]   (B) at (-2,0.4);
+    \coordinate[label=right:$C$]  (C) at (2,-0.4);
+    \coordinate[label=left:$R$]   (R) at (-1,-1.7);
+    \coordinate[label=right:$S$]  (S) at (1,-1.7);
+
+    \draw[fill=black] (O) circle (0.07);
+
+    \draw (O) circle (2);
+    \draw (O) -- (A);
+    \draw (B) -- (C);
+    \draw (R) -- (S);
+  \end{tikzpicture}
+
+  \label{fig:circle_with_radius_chord_and_diameter}
+\end{figure}
+
+\begin{definition}[Radius]
+  \label{def:radius}
+
+  A \textbf{radius} of a circle is a segment that joins the center of a circle
+  to a point on the circle.
+\end{definition}
+
+\begin{definition}[Chord]
+  \label{def:chord}
+
+  A \textbf{chord} is a straight line segment joining two points that lie on
+  the circumference of a circle. A chord whose endpoints lie opposite to each
+  other on the circle and whose center passes through the circle's center is
+  referred to as the diameter.
+\end{definition}
+
+\begin{definition}[Diameter]
+  \label{def:diameter}
+
+  A \textbf{diameter} is a chord that contains the center.
+\end{definition}
+
+Now, let's discuss central angles and arcs of a circle.
+
+\begin{figure}[htpb]
+  \centering
+
+  \begin{tikzpicture}
+    \coordinate[label=below:$O$]  (O) at (0,0);
+    \coordinate[label=above:$A$]  (A) at (0,2);
+    \coordinate[label=right:$B$]  (B) at (1.9,-0.5);
+    \coordinate[label=below:$Q$]  (Q) at (-1.5,-1.3);
+    \coordinate[label=below:$R$]  (R) at (2,1.5);
+
+    \draw[fill=black] (O) circle (0.07);
+
+    \draw (O) circle (2);
+    \draw (A) -- (O) -- (B);
+
+    \draw[fill=black] (Q) circle (0.07);
+
+    \tkzMarkAngle[size=0.5cm](B,O,A);
+    \tkzLabelAngle(B,O,A){$1$};
+  \end{tikzpicture}
+
+  \label{fig:angles_and_arcs_of_a_circle}
+\end{figure}
+
+$\angle 1$ is the central angle of the circle $O$. $R$ is a minor arc between
+the points $A$ and $B$, which is denoted as arc $AB$. The part that isn't
+between points $A$ and $B$ are referred to as the major arc $AQB$.
+
+\begin{note}
+  To name a major arc, three letters must be used.
+\end{note}
+
+The measure of a minor arc is defined to be the measure of its central angle.
+If the measure of $\angle 1 = 40^{\circ}$, you can write the measure of $AB =
+40^{\circ}$ as well. The measure of a major arc is calculated by subtracting
+$40^{\circ}$ from $360^{\circ}$:
+
+\[ 360^{\circ} - 40^{\circ} = 320^{\circ} \].
+
+\begin{definition}[Central Angle]
+  \label{def:central_angle}
+
+  A \textbf{central angle} of a circle is an angle with a vertex at the center
+  of the circle.
+\end{definition}
+
+\begin{definition}[Minor Arcj]
+  \label{def:minor_arcj}
+
+  A \textbf{minor arc} of a circle is the union of two points on the circle and
+  all the points of the circle that lie on the interior of the central angle
+  with sides that contain the two points. Minor arcs measure less than
+  $180^{\circ}$.
+\end{definition}
+
+\begin{definition}[Major Arc]
+  \label{def:major_arc}
+
+  A \textbf{major arc} is an arc of a circle having measure greater than or
+  equal to $180^{\circ}$.
+\end{definition}
+
+\begin{example}
+  \label{exm:angles_and_arcs_of_a_circle}$ $
+  
+  \begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+      \coordinate[label=below:$O$]  (O) at (0,0);
+      \coordinate[label=above:$A$]  (A) at (0,2);
+      \coordinate[label=right:$B$]  (B) at (1.9,-0.5);
+
+      \draw[fill=black] (O) circle (0.07);
+
+      \draw (O) circle (2);
+      \draw (A) -- (O) -- (B);
+      \tkzLabelSegment[left](A,O){$8$};
+
+      \tkzMarkAngle[size=0.5cm](B,O,A);
+      \tkzLabelAngle(B,O,A){$83^{\circ}$};
+    \end{tikzpicture}
+
+    \label{fig:angles_and_arcs_of_a_circle}
+  \end{figure}
+
+  In a circle of radius $8$, how long is the chord of an arc of $83^{\circ}$?
+  It turns out again that geometry doesn't have the tools to solve this
+  problem. This problem provides a glimpse of types of problems that
+  trigonometry will help solve.
+\end{example}
+
+% subsection chords_and_arcs (end)
+
+\subsection{Area of Circles}
+\label{sub_sec:area_of_circles}
+
+To find the area of a circle, you need to know its radius. You can then use the following formula to calculate its area.
+
+\[ A = \pi r^{2} \].
+
+\begin{example}
+  \label{exm:area_of_a_circle}
+
+  If the radius is $7$ inches, the area of the circle can be calculated by
+  substituting this value into the formula:
+
+  \[ A = \pi r^{2} \implies \pi 7^{2} = 49\pi \].
+\end{example}
+
+% subsection area_of_circles (end)
 
 % section circles_arcs_and_chords (end)
 
