@@ -17,19 +17,15 @@ So, here's how our triangle will look like:
 \begin{figure}[htpb]
   \centering
 
-  \begin{tikzpicture}[
-      my angle/.style = {draw, fill=teal!30,
-      angle radius=7mm, 
-      angle eccentricity=1.1, 
-      right, inner sep=1pt,
-      font=\footnotesize} 
-    ]
+  \begin{tikzpicture}
     \draw   (0,0) coordinate[label=below:$A$] (a) --
       (4,0) coordinate[label=below:$C$] (c) --
       (4,4) coordinate[label=above:$B$] (b) -- cycle;
 
-    \pic[my angle, "$30^{\circ}$"] {angle = c--a--b};
-    \pic[my angle, "$60^{\circ}$"] {angle = a--b--c};
+		\tkzMarkAngle[mark=none](c,a,b);
+		\tkzLabelAngle[pos=0.6](c,a,b){$30^{\circ}$};
+		\tkzMarkAngle[mark=none](a,b,c);
+		\tkzLabelAngle[pos=0.6](a,b,c){$60^{\circ}$};
 
     \draw (4,0) rectangle (3.5,0.5);
   \end{tikzpicture}
@@ -44,13 +40,7 @@ how it looks after we did this:
 \begin{figure}[htpb]
   \centering
 
-  \begin{tikzpicture}[
-      my angle/.style = {draw, fill=teal!30,
-      angle radius=7mm, 
-      angle eccentricity=1.1, 
-      right, inner sep=1pt,
-      font=\footnotesize} 
-    ]
+  \begin{tikzpicture}
     \draw   (0,0) coordinate (a) --
       (4,0) coordinate (c) --
       (4,4) coordinate (b) -- cycle;
@@ -58,10 +48,14 @@ how it looks after we did this:
       (4,0) coordinate (C) --
       (4,-4) coordinate (B) -- cycle;
 
-    \pic[my angle, "$30^{\circ}$"] {angle = c--a--b};
-    \pic[my angle, "$60^{\circ}$"] {angle = a--b--c};
-    \pic[my angle, "$30^{\circ}$"] {angle = B--A--C};
-    \pic[my angle, "$60^{\circ}$"] {angle = C--B--A};
+		\tkzMarkAngle[mark=none](c,a,b);
+		\tkzLabelAngle[pos=0.6](c,a,b){$30^{\circ}$};
+		\tkzMarkAngle[mark=none](a,b,c);
+		\tkzLabelAngle[pos=0.6](a,b,c){$60^{\circ}$};
+		\tkzMarkAngle[mark=none](B,A,C);
+		\tkzLabelAngle[pos=0.6](B,A,C){$30^{\circ}$};
+		\tkzMarkAngle[mark=none](C,B,A);
+		\tkzLabelAngle[pos=0.6](C,B,A){$60^{\circ}$};
 
     \node at (1.5,2) {$1$};
     \node at (1.5,-2) {$1$};
@@ -89,19 +83,15 @@ Here's the final triangle:
 \begin{figure}[htpb]
   \centering
 
-  \begin{tikzpicture}[
-      my angle/.style = {draw, fill=teal!30,
-      angle radius=7mm, 
-      angle eccentricity=1.1, 
-      right, inner sep=1pt,
-      font=\footnotesize} 
-    ]
+  \begin{tikzpicture}
     \draw   (0,0) coordinate (a) --
       (4,0) coordinate (c) --
       (4,4) coordinate (b) -- cycle;
 
-    \pic[my angle, "$30^{\circ}$"] {angle = c--a--b};
-    \pic[my angle, "$60^{\circ}$"] {angle = a--b--c};
+		\tkzMarkAngle[mark=none](c,a,b);
+		\tkzLabelAngle[pos=0.6](c,a,b){$30^{\circ}$};
+		\tkzMarkAngle[mark=none](a,b,c);
+		\tkzLabelAngle[pos=0.6](a,b,c){$60^{\circ}$};
 
     \node at (1.5,2) {$1$};
     \node at (4.5,2) {$\frac{1}{2}$};

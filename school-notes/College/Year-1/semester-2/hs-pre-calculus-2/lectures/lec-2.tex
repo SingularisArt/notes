@@ -5,32 +5,24 @@
   \centering
 
   \begin{tikzpicture}
-    % The main circle
-    \draw[draw=blue!25!white,fill=blue!25!white] (0,0) circle (1.60in);
+    \coordinate (O) at (0,0);
 
-    % (0,0) text at origin
+    \draw[draw=blue!25!white,fill=blue!25!white] (O) circle (1.60in);
+
     \draw (0.50,-0.04) node[fill=blue!25!white,anchor=north] {$(0,0)$};
-
-    % The x-y axis
     \draw (0,5.2) node[fill=white,anchor=center] {$y$};
     \draw (5.2,0) node[fill=white,anchor=center] {$x$};
+
     \draw[stealth-stealth,ultra thick] (0,5) -- (0,-5);
     \draw[stealth-stealth,ultra thick] (5,0) -- (-5,0);
 
-    % The main angle line
     \draw[blue,very thick] (0,0) to node[anchor=south] {$r$} (3.8,1.4);
-
-    % Circling the point the line intersects the circumference
     \draw[draw=red,fill=red] (3.8,1.4) circle (0.08in);
     \draw[red] (3.8,2) node[anchor=center] {$P = (\cos (\theta), \sin (\theta))$};
-
-    % Arc telling the arc specified by theta
     \draw[very thick,red] (3.8,1.4) arc (74:39:0.6cm and 4.2cm);
 
-    % The angle of theta
     \draw (1.4,0.52) to node[right] {$\theta$} (1.4,0);
 
-    % Arc telling the arc specified by theta
     \draw[very thick,red] (3.8,1.4) arc (74:39:0.6cm and 4.2cm);
     \draw[red] (4,0.8) node[anchor=west] {$s$};
     \draw[ultra thick,green,-stealth] (0,0) -- (5,0);
@@ -89,16 +81,16 @@ co-terminal to $\theta_1$.
   The \textbf{radian} measure of an angle is the ratio of the length of the arc
   on the circumference of the circle spanned by the angle, $s$, and the radius,
   $r$, of the circle.
-  \[ \theta = \frac{s}{r} \]
 
-  \begin{equation}
+  \begin{equation*}
     \label{edt:entire_revolution_using_raidans}
     \begin{alignedat}{3}
+      \theta &= \frac{s}{r} \\
       \pi &= \frac{c}{d} \\
           &= \frac{2}{2r} \qquad && \textrm{$d = 2r$} \\
       2\pi &= \frac{c}{r} \qquad && \textrm{Multiply both sides by $2$} \\
     \end{alignedat}
-  .\end{equation}
+  .\end{equation*}
 
   From this, we can conclude that: $2\pi = 360^{\circ}$. From that, we can get
   $\pi = 180^{\circ}$ since we just divided both sides by $2$. From that, we get
@@ -123,7 +115,7 @@ co-terminal to $\theta_1$.
   \end{table}
 \end{definition}
 
-\begin{exc}
+\begin{exc}[Solution \ref{sol:convert_8_radians_into_degrees_and_8_into_radians}]
   \label{exc:convert_8_radians_into_degrees_and_8_into_radians}
 
   Convert $8$ radians into degrees and $8$ degrees into radians:
@@ -141,7 +133,7 @@ co-terminal to $\theta_1$.
   \end{note}
 \end{definition}
 
-\begin{exc}
+\begin{exc}[Solution \ref{sol:what_is_the_arc_length_spanned_by_a_40_degree_angle_on_a_circle_of_radius_30_meters}]
   \label{exc:what_is_the_arc_length_spanned_by_a_40_degree_angle_on_a_circle_of_radius_30_meters}
 
   What is the arc length spanned by a $40^{\circ}$ angle on a circle radius $30$
