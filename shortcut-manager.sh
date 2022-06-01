@@ -3,10 +3,12 @@
 key="$1"
 node="/usr/bin/node"
 
-root="${HOME}/Documents/notes/school-notes"
-current_course="${root}/current-course"
+root="${HOME}/Documents/notes"
 journal_dir="${root}/journal"
-today_journal_dir="$journal_dir/$(date +%F)"
+today_journal_dir="${journal_dir}/$(date +%F)"
+
+school_notes_root="${HOME}/Documents/notes/school-notes"
+current_course="${school_notes_root}/current-course"
 papers="${current_course}/papers"
 instant_reference="${HOME}/Singularis/third-party-tools/instant-reference/copy-reference.js"
 master_pdf="$current_course/master.pdf"
@@ -49,20 +51,30 @@ mkdir -p "${today_journal_dir}";
 
 case ${key} in
   # School Notes
+  # Open my current assignment notes
   b ) zathura "${current_course}/assignments/master.pdf" ;;
+  # Open my class notes
   o ) zathura "${master_pdf}" ;;
+  # Compile my class notes
   O ) compile "${current_course}" ;;
+  # List all my inkspace figures
   i ) inkscape-figures edit "${current_course}/figures" ;;
+  # Get an instant reference to the current open pdf
   f ) $node "${instant_reference}" ;;
+  # Open my current course in the browser
   w ) open_browser ;;
+  # Open my info.yaml file
   y ) cd "${current_course}" || exit;
     xfce4-terminal -e "nvim info.yaml" ;;
+  # Open the source code
   m ) cd "${current_course}" || exit;
     xfce4-terminal -e "nvim ." ;;
+  # Search through my research papers
+  p ) open_research_paper ;;
 
   # Journal
   x ) open_xournal ;;
-  r ) xfce4-terminal -e "lf $today_journal_dir" ;;
+  r ) xfce4-terminal -e "lf ${today_journal_dir}" ;;
   n ) cd "${journal_dir}" || exit;
     xfce4-terminal -e "nvim $today_journal_dir/note.tex" ;;
   N ) cd "${journal_dir}" || exit;
@@ -80,7 +92,4 @@ case ${key} in
   A ) ~/Documents/notes/school-setup/main.py --new-assignment ;;
   C ) ~/Documents/notes/school-setup/main.py --new-course ;;
   L ) ~/Documents/notes/school-setup/main.py --new-lecture ;;
-
-  # Paper searching
-  p ) open_research_paper ;;
 esac
