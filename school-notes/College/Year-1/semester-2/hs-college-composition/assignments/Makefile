@@ -11,6 +11,8 @@ all:
 
 compile:
 	pdflatex $(DOCNAME).tex
+	biber $(DOCNAME)
+	pdflatex $(DOCNAME).tex
 	pdflatex $(DOCNAME).tex
 
 clean:
