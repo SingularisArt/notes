@@ -16,11 +16,11 @@ master_pdf="$current_course/master.pdf"
 open_xournal () {
   cd "${today_journal_dir}" || exit
 
-  if [ -f "note.xoj" ]; then
-    xournal note.xoj;
+  if [ -f "note.xopp" ]; then
+    xournalpp note.xopp;
   else
-    touch "note.xoj";
-    xournal note.xoj;
+    touch "note.xopp";
+    xournalpp note.xopp;
   fi
 }
 
