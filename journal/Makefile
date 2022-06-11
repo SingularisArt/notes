@@ -1,8 +1,17 @@
-all:
-	pdflatex ./master.tex
-	pdflatex ./master.tex
-	pdflatex ./master.tex
-	rm -rf ./master.aux
-	rm -rf ./master.log
-	rm -rf ./master.out
-	rm -rf ./master.toc
+DOCNAME=master
+PDF_VIEWER=zathura
+
+.PHONY:
+	clean
+
+compile:
+	pdflatex $(DOCNAME).tex
+	pdflatex $(DOCNAME).tex
+
+clean:
+	rm -rf *.aux *.bcf *.fdb_latexmk *.fls *.log *.out *.toc
+
+view:
+	make compile
+	make clean
+	$(PDF_VIEWER) $(DOCNAME).pdf
