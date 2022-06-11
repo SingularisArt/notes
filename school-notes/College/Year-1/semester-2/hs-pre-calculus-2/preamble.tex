@@ -566,9 +566,9 @@
 \pdfminorversion=7
 \usepackage{pdfpages}
 \usepackage{transparent}
-\newcommand{\incfig}[1]{%
-  % \def\svgwidth{\columnwidth}
-  \import{./figures/}{#1.pdf_tex}
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
 }
 
 \usepackage{hyperref}

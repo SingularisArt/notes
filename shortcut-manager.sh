@@ -44,7 +44,16 @@ open_research_paper() {
   cd "${papers}" || exit
   pdf_file="$(ls . | rofi -i -dmenu)"
   [ -z "$pdf_file" ] && exit 0
-  [ -f "$pdf_file" ] && zathura "$(realpath "$pdf_file")" || sensible-browser "https://google.com/search?q=$pdf_file"
+  [ -f "$pdf_file" ] && zathura "$(realpath "$pdf_file")" || google-chrome-stable --profile-directory="Profile 2" --app="https://google.com/search?q=$pdf_file"
+}
+
+create_figure() {
+  figure_name=$(rofi -dmenu -window-title "Inkscape figure name");
+  if [ ! -z "${figure_name}" ]; then
+    inkscape-figures create "${figure_name}" "${current_course}/figures" | xclip -selection clipboard;
+  else
+    exit;
+  fi
 }
 
 mkdir -p "${today_journal_dir}";
@@ -57,10 +66,12 @@ case ${key} in
   o ) zathura "${master_pdf}" ;;
   # Compile my class notes
   O ) compile "${current_course}" ;;
-  # List all my inkspace figures
+  # List all my inkscape figures
   i ) inkscape-figures edit "${current_course}/figures" ;;
+  # Create inkscape figure
+  I ) create_figure ;;
   # Get an instant reference to the current open pdf
-  f ) $node "${instant_reference}" ;;
+  f ) ${node} "${instant_reference}" ;;
   # Open my current course in the browser
   w ) open_browser ;;
   # Open my info.yaml file
