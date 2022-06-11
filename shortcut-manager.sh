@@ -5,7 +5,7 @@ node="/usr/bin/node"
 
 root="${HOME}/Documents/notes"
 journal_dir="${root}/journal"
-today_journal_dir="${journal_dir}/$(date +%F)"
+today_journal_dir="${journal_dir}/$(date +%Y/%m/%d)"
 
 school_notes_root="${HOME}/Documents/notes/school-notes"
 current_course="${school_notes_root}/current-course"
