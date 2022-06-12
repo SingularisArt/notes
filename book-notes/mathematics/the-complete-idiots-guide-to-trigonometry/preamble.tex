@@ -62,6 +62,8 @@
   \marginpar{\small\textsf{\mbox{#1 #2 #3 #5}}}
 }
 
+\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
 \def\@lesson{}%
 \newcommand{\lesson}[3]{
   \ifthenelse{\isempty{#3}}{%
@@ -94,24 +96,33 @@
 \pdfminorversion=7
 \usepackage{pdfpages}
 \usepackage{transparent}
-\newcommand{\incfig}[1]{%
-  \import{./figures/}{#1.pdf_tex}
+\newcommand{\incfig}[2][1]{
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
 }
 
 \pdfsuppresswarningpagegroup=1
 
-\newcommand{\nchapter}[2]{%
-  \setcounter{chapter}{#1}%
-  \addtocounter{chapter}{-1}%
+\newcommand{\nchapter}[2]{
+  \setcounter{chapter}{#1}
+  \addtocounter{chapter}{-1}
   \chapter{#2}
 }
 
-\newcommand{\nsection}[3]{%
-  \setcounter{chapter}{#1}%
-  \setcounter{section}{#2}%
-  \addtocounter{section}{-1}%
+\newcommand{\nsection}[3]{
+  \setcounter{chapter}{#1}
+  \setcounter{section}{#2}
+  \addtocounter{section}{-1}
   \section{#3}
-}%
+}
+
+\makeatletter
+
+\newcommand{\solution}{
+  \noindent\textbf{\color{RawSienna!70!black}Solution}
+}
+
+\makeatother
 
 \input{tex-src/reference.tex}
 \input{tex-src/tikz.tex}
