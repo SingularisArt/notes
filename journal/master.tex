@@ -1,0 +1,48 @@
+\documentclass[a4paper]{article}
+
+\input{./tex-src/preamble.tex}
+\input{./tex-src/theorems.tex}
+\input{./tex-src/references.tex}
+
+\usepackage{pgfmath}
+\usepackage{pgfcalendar}
+
+\let\d=\pgfcalendarshorthand
+\newcommand\formatdate[2]{\pgfcalendar{cal}{#1}{#1}{#2}}
+
+\newcommand\firstdate{2022-07-01}
+\newcommand\lastdate{\year-\month-\day}
+
+\newcommand\grayrule{{\color{gray} \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}}}
+
+\begin{document}
+\begin{center}
+	\huge{Journal}\\[0.4em]
+	\Large{Hashem A. Damrah}\\[0.2em]
+	\emph{
+		From \formatdate{\firstdate}{\d mt \d d- \d y-} to
+		\formatdate{\lastdate}{\d mt \d d- \d y-}
+	}
+\end{center}
+
+\tableofcontents
+\bigskip
+
+\pgfcalendar{cal}{\firstdate}{\lastdate}{%
+	\def\formatteddate{\d{y}0/\d{m}0/\d{d}0}%
+	\IfFileExists{./\formatteddate/note.tex}{
+		\ifdate{equals=\firstdate}{}{%
+			\bigskip
+			\ifdate{Monday}{\grayrule\\[-22pt]\grayrule}{\grayrule}
+		}%
+
+		\vspace*{1em}
+		\marginpar{\vspace*{1em}\textsf{ \d m. \d d- \d y- }}%
+		\addcontentsline{toc}{section}{\d mt \d d0. \d y0}%
+		\input{./\formatteddate/note.tex}
+		\begin{flushright}
+			\IfFileExists{./\formatteddate/note.xopp}{\hfill \xournal}{\hfill \\}
+		\end{flushright}
+	}{}
+}
+\end{document}

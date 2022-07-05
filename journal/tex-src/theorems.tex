@@ -1,0 +1,71 @@
+\usepackage{tcolorbox}
+\usepackage{mdframed}
+
+\mdfsetup{
+  leftmargin=-1em,
+  rightmargin=-1em,
+  middlelinewidth=1.5pt,
+  middlelinecolor=white,
+  innertopmargin=1.5\topskip,
+  innerbottommargin=1\topskip,
+  skipabove=\baselineskip,
+  skipbelow=0,
+  nobreak=true
+}
+
+\newmdenv[
+  backgroundcolor = red!10,
+  frametitle=Wrong
+]{wrong}
+\newmdenv[
+  backgroundcolor = green!10,
+  frametitle=Correct
+]{correct}
+\renewmdenv[
+  bottomline=false,
+  topline=false,
+  rightline=false,
+  fontcolor=black!70
+]{quote}
+
+\newenvironment{info}{\begin{tcolorbox}[
+  arc=0mm,
+  colback=white,
+  colframe=gray!60!black,
+  title=Info,
+  fonttitle=\sffamily,
+]}{\end{tcolorbox}}
+\newenvironment{terminology}{\begin{tcolorbox}[
+  arc=0mm,
+  colback=white,
+  colframe=green!60!black,
+  title=Terminology,
+  fonttitle=\sffamily,
+]}{\end{tcolorbox}}
+\newenvironment{warning}{\begin{tcolorbox}[
+  arc=0mm,
+  colback=white,
+  colframe=red!60!black,
+  title=Warning,
+  fonttitle=\sffamily,
+]}{\end{tcolorbox}}
+\newenvironment{caution}{\begin{tcolorbox}[
+  arc=0mm,
+  colback=white,
+  colframe=yellow!60!black,
+  title=Caution,
+  fonttitle=\sffamily,
+]}{\end{tcolorbox}}
+
+\newmdtheoremenv[linewidth=0]{question}{Question}
+\newmdtheoremenv[linewidth=0]{confusion}{Confusion}
+\newmdtheoremenv[linewidth=0]{answer}{Answer}
+
+\newmdtheoremenv[linewidth=0]{remark}{Remark}
+\newmdtheoremenv[linewidth=0]{todo}{TODO}
+
+\newmdtheoremenv[]{idea}{Idea}
+\newmdtheoremenv[]{claim}{Claim}
+\newmdtheoremenv[]{definition}{Definition}
+\newmdtheoremenv[]{problem}{Problem}
+\newmdtheoremenv[]{example}{Example}

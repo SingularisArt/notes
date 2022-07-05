@@ -1,0 +1,62 @@
+% tikz
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{tkz-euclide}
+\usetikzlibrary{intersections, angles, quotes, calc, positioning}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{
+	calc,
+	patterns,
+	positioning
+}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+
+\tikzset{
+  force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
+}
+\tikzset{
+  >=stealth
+}
+
+% pgfplots
+\pgfplotsset{
+	compat=1.16,
+	samples=200,
+	clip=false,
+	my axis style/.style={
+			axis x line=middle,
+			axis y line=middle,
+			legend pos=outer north east,
+			axis line style={
+					->,
+				},
+			legend style={
+					font=\footnotesize
+				},
+			label style={
+					font=\footnotesize
+				},
+			tick label style={
+					font=\footnotesize
+				},
+			xlabel style={
+					at={
+							(ticklabel* cs:1)
+						},
+					anchor=west,
+					font=\footnotesize,
+				},
+			ylabel style={
+					at={
+							(ticklabel* cs:1)
+						},
+					anchor=west,
+					font=\footnotesize,
+				},
+			xlabel=$x$,
+			ylabel=$y$
+		},
+}
