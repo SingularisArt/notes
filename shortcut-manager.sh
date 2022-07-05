@@ -85,7 +85,7 @@ case ${key} in
 
   # Journal
   x ) open_xournal ;;
-  r ) xfce4-terminal -e "lf ${today_journal_dir}" ;;
+  r ) cd ${today_journal_dir} && xfce4-terminal -e "${HOME}/Singularis/local/lfub" ;;
   n ) cd "${journal_dir}" || exit;
     xfce4-terminal -e "nvim $today_journal_dir/note.tex" ;;
   N ) cd "${journal_dir}" || exit;
