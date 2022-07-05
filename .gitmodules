@@ -4,3 +4,6 @@
 [submodule "lecture-notes"]
 	path = lecture-notes
 	url = https://github.com/SingularisArt/lecture-notes
+[submodule "journal"]
+	path = journal
+	url = https://gist.github.com/SingularisArt/1f4dffc9afd31f562af51b67944409af
