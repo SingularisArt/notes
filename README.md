@@ -1,8 +1,6 @@
-# My notes
+# Book Notes
 
-I have all of my notes in this repo. My school notes are located
-[here](school-notes). My journal template [here](journal) (I don't have the
-content that is in my journal. Only my template.) My book notes
-[here](book-notes). My school scripts that help manage my classes, lessons, and
-assignments are located [here](school-setup). My shortcut manager located
-[here](shortcut-manager.sh)
+A collection of all my notes on everybook that I read.
+NOTE: If you don't see any notes, that's because I publish the notes that
+I've finished. That means I haven't finished any notes yet. But you can
+wait.
