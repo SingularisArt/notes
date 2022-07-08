@@ -1,6 +1,0 @@
-[submodule "school-setup"]
-	path = school-setup
-	url = https://github.com/SingularisArt/school-setup/
-[submodule "lecture-notes"]
-	path = lecture-notes
-	url = https://github.com/SingularisArt/lecture-notes
