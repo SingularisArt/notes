@@ -1,0 +1,73 @@
+\lesson{13}{May 16 2022 Mon (20:01:59)}{Proving Trigonometric Identities}
+
+Up until now, we've studied trigonometric identities that are useful. But there
+are many other identities that aren't particularly important but they exist and
+they offer us an opportunity to learn another skill, which is proving
+mathematical statements.
+
+Let's prove the identity $\sin (x) = \frac{\tan (x)}{\sec (x)}$. We prove
+identities by manipulating the expression on one side of the equation until it
+looks like the expression on the other side of the equation. We can start with
+either side of the equation, but it's usually most common to start with the
+\textbf{"more complicated"} side since it will be easier to manipulate it:
+
+\begin{proof}
+  \label{prf:sin_equals_tan_sec}
+
+  \begin{align*}
+    \frac{\tan (x)}{\sec (x)} &= \frac{\frac{\sin (x)}{\cos (x)}}{\frac{1}{\cos (x)}} \\
+                              &= \frac{\sin (x)}{\cos (x)} \times \frac{\cos (x)}{1} \\
+                     \sin (x) &= \sin (x) \\
+  .\end{align*}
+\end{proof}
+
+Let's try to prove the identity $\cot (x) + \tan (x) = \csc (x) \sec(x)$. Here,
+both sides are equally complicated so it's not obvious which side we should
+start with. In such a case, just start with either side and see what happens.
+If you get stuck, start over using the other side. Let's start with the left
+side:
+
+\begin{proof}
+  \label{prf:cot_tan_equal_csc_sec}
+
+  \begin{align*}
+    \cot (x) + \tan (x) &= \frac{\cos (x)}{\sin (x)} + \frac{\sin (x)}{\cos (x)} \\
+                        &= \frac{\cos (x)}{\sin (x)} \times \frac{\cos (x)}{\cos (x)} + \frac{\sin (x)}{\cos (x)} \times \frac{\sin (x)}{\sin (x)} \\
+                        &= \frac{\cos^{2} (x) + \sin^{2} (x)}{\sin (x)\cos (x)} \\
+                        &= \frac{1}{\sin (x)\cos (x)} \\
+       \csc (x)\sec (x) &= \csc (x)\sec (x) \\
+  .\end{align*}
+\end{proof}
+
+Let's try to prove the identity
+$\frac{(1 + \cos (t))(1 - \cos (t))}{\sin (t)} = \sin (t)$. The left side is
+more complicated, so I'll start with that:
+
+\begin{proof}
+  \label{prf:1_cos_1_cos_over_sin_equals_sin}
+
+  \begin{align*}
+    \frac{(1 + \cos (t))(1 - \cos (t))}{\sin (t)} &= \frac{1 - \cos^{2} (t)}{\sin (t)} \\
+                                                  &= \frac{\sin^{2} (t)}{\sin (t)} \\
+                                         \sin (t) &= \sin (t) \\
+  .\end{align*}
+\end{proof}
+
+Let's try to prove the identity function $\frac{\cos (\theta)}{1 - \sin
+(\theta)} = \frac{1 + \sin (\theta)}{\cos (\theta)}$. To prove identities like
+this, we use a \textit{"trick"} called \textbf{conjugate}. A conjugate of an
+expression is the opposite. For example, the conjugate of $a + b$ is $a - b$.
+
+\begin{proof}
+  \label{prf:cos_1_sin_equals_1_sin_cos}
+
+  \begin{align*}
+    \frac{\cos (\theta)}{1 - \sin (\theta)} &= \frac{\cos (\theta)}{1 - \sin (\theta)} \times \frac{1 + \sin (\theta)}{1 + \sin (\theta)} \\
+                                            &= \frac{\cos (\theta)(1 + \sin (\theta))}{(1 - \sin (\theta))(1 + \sin (\theta))} \\
+                                            &= \frac{\cos (\theta)(1 + \sin (\theta))}{1 - \sin^{2} (\theta)} \\
+                                            &= \frac{\cos (\theta)(1 + \sin (\theta))}{\cos^{2} (\theta)} \\
+    \frac{1 + \sin (\theta)}{\cos (\theta)} &= \frac{1 + \sin (\theta)}{\cos (\theta)}
+  .\end{align*}
+\end{proof}
+
+\newpage

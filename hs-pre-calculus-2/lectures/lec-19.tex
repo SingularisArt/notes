@@ -1,0 +1,107 @@
+\lesson{19}{Jun 01 2022 Wed (10:33:28)}{Intro to Vectors}
+\label{les_19:intro_to_vectors}
+
+Vectors are mathematical objects used to represent physical quantities like
+velocity, force, and displacement.
+
+\begin{definition}[Vectors]
+  \label{def:vectors}
+
+  A \textbf{vector} is a mathematical object that has both a magnitude and a
+  direction.
+\end{definition}
+
+In order to distinguish between vectors and scalers, we need to use a different
+notation to denote vectors.
+
+\begin{notation}
+  To denote a vector, we use a small arrow on top.
+  \[ \overrightarrow{\vec{v}} \].
+\end{notation}
+
+A two-dimensional vector can be represented by an arrow on the coordinate
+plane. The length of the arrow represents the \textbf{magnitude} of the vector
+and the \textbf{direction} of the arrow represents the direction of the vector.
+
+\begin{example}
+  \label{exm:vector}
+
+  The vector $\overrightarrow{\vec{v}}$ is depicted as an arrow on the
+  coordinate plane.
+
+  TODO: Draw vector on coordinate plane (with tikz)
+
+  The \textbf{tip} of the vector is where the arrow ends and the \textbf{tail}
+  of the vector is where the arrow begins. Therefore, the tip of
+  $\overrightarrow{\vec{v}}$ is at the point $(4,3)$ and the tail of the vector
+  is at the origin, $(0,0)$.
+\end{example}
+
+\begin{notation}
+  We denote the magnitude of vector $\overrightarrow{\vec{v}}$ by
+  $\Vert \overrightarrow{\vec{v}} \Vert$.
+\end{notation}
+
+To find the magnitude of $\overrightarrow{\vec{v}}$, we need to find the length
+of the arrow. We an do this by thinking of the arrow as being the hypotenuse of
+a right-triangle with side lengths of $4$ and $3$ and then use the Pythagorean
+Theorem to find $\Vert \overrightarrow{\vec{v}} \Vert$.
+
+\begin{align*}
+  \Vert \overrightarrow{\vec{v}} \Vert &= \sqrt{a^{2} + b^{2}} \\
+                                       &= \sqrt{4^{2} + 3^{2}} \\
+                                       &= \sqrt{16 + 9} \\
+                                       &= 5
+.\end{align*}
+
+We can find the angle between the positive $x$-axis and the arrow to describe
+the \textbf{direction} of the vector. We can use trig to find the angle
+$\theta$.
+
+\begin{align*}
+  \tan (\theta) &= \frac{3}{4} \\
+         \theta &= \tan^{-1} \left(\frac{3}{4}\right) \\
+                &\approx 36.9^{\circ} \\
+.\end{align*}
+
+Although the magnitude and direction of the vector describe it completely, it
+is often useful to describe it by using its \textbf{horizontal} and
+\textbf{vertical} components. An example is:
+\[ \overrightarrow{\vec{v}} = \braket{4,3} \].
+
+When graphing vectors, you don't need to start anywhere specific. For example,
+all the arrows in Figure \ref{fig:translation_of_vector_anywhere} represent
+$\overrightarrow{\vec{v}}$ since all of these vectors have a horizontal
+component of $4$ units and a vertical component of $3$ units.
+
+\subsection*{Vector Operations}
+\label{sub_sec:vector_operations}
+
+We can multiply any vector by a scalar and we can add or subtract any two
+vectors.
+
+When we multiply a vector by a scalar, we multiply the components of the vector
+by the scalar. Thus, $\overrightarrow{\vec{a}} = \braket{a_1,a_2}$ and $k \in
+\mathbb{R}$, then $k\overrightarrow{\vec{a}} = \braket{ka_1,ka_2}$ 
+
+\begin{theorem}
+  If $\overrightarrow{\vec{a}} = \braket{a_1,a_3}$ is a vector and $k \in
+  \mathbb{R}$, then $k\overrightarrow{\vec{a}} = \braket{ka_1,ka_2}$ has a
+  magnitude $\vert k \vert \times \Vert \overrightarrow{\vec{a}} \Vert$.
+  If $k > 0$, then $k \times \overrightarrow{\vec{a}}$ points in the same
+  direction as $\overrightarrow{\vec{a}}$. If $k < 0$, then $k \times
+  \overrightarrow{\vec{a}}$ points in the opposite direction as
+  $\overrightarrow{\vec{a}}$.
+\end{theorem}
+
+\begin{exc}[Solution \ref{sol:multiply_vectors_by_scalers}]
+  \label{exc:multiply_vectors_by_scalers}
+
+  Let $\overrightarrow{\vec{v}} = \braket{4,3}$. Find and draw vectors
+  $\overrightarrow{\vec{m}} = 2 \overrightarrow{\vec{v}}$ and
+  $\overrightarrow{\vec{n}} = -2\overrightarrow{\vec{v}}$:
+\end{exc}
+
+% subsection vector_operations (end)
+
+\newpage

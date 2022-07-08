@@ -1,0 +1,212 @@
+\lesson{1}{Apr 04 2022 Mon (10:01:23)}{Sets and Numbers}
+\label{les_1:sets_and_numbers}
+
+\begin{definition}[Set]
+  \label{def:set}
+
+  A set is a collection of objects specified in a manner that enables one to
+  determine if a given object is or isn't in the set.
+\end{definition}
+
+\begin{exc}[Solution \ref{sol:which_of_the_following_represent_a_set}]
+  \label{exc:which_of_the_following_represent_a_set}
+
+  Which of the following represent a set?
+  
+  \begin{enumerate}
+    \label{enum:sets_and_numbers_example}
+
+    \item The students registered for MTH $112$ at PCC this quarter.
+    \item The good students registered for MTH $112$ at PCC this quarter.
+  \end{enumerate}
+\end{exc}
+
+\begin{notation}
+  Roster Notation involves listing the elements in a set within curly brackets:
+  "$\{ \}$" like the following: "$\{ 1, 2, 3, 4 \}$"
+\end{notation}
+
+\begin{definition}[Element]
+  \label{def:element}
+
+  An object in a set is called an \textbf{element} of the set. (symbol: "$\in$")
+\end{definition}
+
+\begin{example}
+  \label{exm:element}
+
+  $5$ is an element of the set $\{ 4, 5, 6, 7, 8, 9 \}$. We can express this
+  symbolically:
+
+  \[ 5 \in \{ 4, 5, 6, 7, 8, 9 \} \].
+\end{example}
+
+\begin{definition}[Subset]
+  \label{def:subset}
+
+  A set $S$ of a set $T$, denoted $S \subseteq T$, if all elements of $S$ are
+  also elements of $T$.
+
+  If $S$ and $T$ are sets and $S = T$, then $S \subseteq T$. Sometimes it's
+  useful to consider a subset $S$ of a set $T$ that isn't equal to $T$. In such
+  case, we write $S \subset T$ and say that $S$ is a proper subset of $T$.
+\end{definition}
+
+\begin{example}
+  \label{exm:subset}
+
+  $\{ 4, 7, 8 \}$ is a subset of the set $\{ 4, 5, 6, 7, 8, 9 \}$.
+
+  We can express this fact symbolically by
+  $\{ 4, 7, 8 \} \subseteq \{ 4, 5, 6, 7, 8, 9 \}$ 
+
+  Since these two sets aren't equal, $\{ 4, 7, 8 \}$ is a proper subset of
+  $\{ 4, 5, 6, 7, 8, 9 \}$, so can write:
+  \[ \{ 4, 7, 8 \} \subset \{ 4, 5, 6, 7, 8, 9 \} \].
+
+  We can use the other symbol as follows:
+  \[ \{ 1, 2, 3 \} \subseteq \{ 1, 2, 3 \} \].
+\end{example}
+
+\begin{definition}[Empty Set]
+  \label{def:empty_set}
+
+  The empty set, denoted $\emptyset$, is the set with no elements
+
+  \[ \emptyset = \{ \} \].
+\end{definition}
+
+\begin{definition}[Union]
+  \label{def:union}
+
+  The union of two sets $A$ and $B$, denoted $A \cup B$, is the set containing
+  all of the elements in either $A$ or $B$ (or both $A$ and $B$).
+\end{definition}
+
+\begin{example}
+  \label{exm:union}
+
+  Consider the sets $\{ 4, 7, 8 \}$, $\{ 0, 2, 4, 6, 8 \}$, and
+  $\{ 1, 3, 5, 7 \}$. Then \ldots
+
+  \begin{itemize}
+    \label{item:union}
+  
+    \item $\{ 4, 7, 8 \} \cup  \{ 1, 3, 5, 7 \} = \{ 1, 3, 4, 5, 7, 8 \}$
+    \item $\{ 4, 7, 8 \} \cup  \{ 0, 2, 4, 6, 8 \} = \{ 0, 2, 4, 6, 7, 8 \}$
+    \item $\{ 0, 2, 4, 6, 8 \} \cup  \{ 1, 3, 5, 7 \} = \{ 0, 1, 2, 3, 4, 5, 6,
+      7, 8 \}$
+  \end{itemize}
+\end{example}
+
+\begin{definition}[Intersection]
+  \label{def:intersection}
+
+  The intersection of two sets $A$ and $B$, denoted $A \cap B$, is the set
+  containing all the elements in both $A$ and $B$.
+\end{definition}
+
+\begin{example}
+  \label{exm:intersection}
+
+  Consider the sets $\{ 4, 7, 8 \}$, $\{ 0, 2, 4, 6, 8 \}$, and
+  $\{ 1, 3, 5, 7 \}$. Then \ldots
+
+  \begin{itemize}
+    \label{item:intersection_1}
+  
+    \item $\{ 4, 7, 8 \} \cap \{ 0, 2, 4, 6, 8 \} = \{ 4, 8 \}$
+    \item $\{ 4, 7, 8 \} \cap \{ 1, 3, 5, 7\} = \{ 7 \}$ 
+    \item $\{ 0, 2, 4, 6, 8 \} \cap \{ 1, 3, 5, 7 \} = \emptyset$
+  \end{itemize}
+\end{example}
+
+\begin{notation}
+  Set Builder Notation.
+
+  "All the whole numbers between $3$ and $10$" $= \{ x | x \in \mathbb{Z}$ and
+  $3 < x < 10 \}$
+\end{notation}
+
+\begin{definition}[Important Sets of Numbers]
+  \label{def:important_sets_of_numbers}
+
+  The set of natural numbers:
+  \[ \mathbb{N} = \{ 1, 2, 3, 4, 5, \ldots \} \].
+
+  The set of integers:
+  \[ \mathbb{Z} = \{ \ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \} \].
+
+  The set of rational numbers:
+  \[ \mathbb{Q} = \left\{x | x = \frac{p}{q} \textrm{ and } p, q \in \mathbb{Z}
+    \textrm{ and } q \ne 0 \right\} \].
+
+  The set of real numbers: $\mathbb{R}$
+  \[ \textrm{(All the numbers on the number line)} \].
+
+  The set of complex numbers:
+  \[ \mathbb{C} = \left\{x | x = a + bi \textrm{ and } a, b \in \mathbb{R}
+    \textrm{ and } i = \sqrt{-1}\right\} \].
+\end{definition}
+
+\begin{note}
+  $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset
+  \mathbb{C}$, the set of natural numbers ($\mathbb{N}$) is a subset of the set
+  of integers ($\mathbb{Z}$) which is a subset of the set of rational numbers
+  ($\mathbb{Q}$) which is a subset of the set of real numbers ($\mathbb{R}$)
+  which is a subset of the set of complex numbers ($\mathbb{C}$).
+\end{note}
+
+\begin{notation}
+  Since we use the real numbers so often, we have special notation for subsets
+  of the real numbers. \textbf{Interval Notation}. Interval Notation involves
+  square or round brackets.
+\end{notation}
+
+\begin{example}
+  \label{exm:interval_notation}
+
+  Quick demo of Interval Notation
+
+  \begin{itemize}
+    \label{item:interval_notation}
+
+    \item $\left\{x | x \in \mathbb{R} \textrm{ and } -2 \le x \le 3\right\}
+      = [-2, 3]$
+    \item $\left\{x | x \in \mathbb{R} \textrm{ and } -2 < x < 3\right\}
+      = (-2, 3)$
+    \item $\left\{x | x \in \mathbb{R} \textrm{ and } -2 < x \le 3\right\}
+      = (-2, 3]$
+    \item $\left\{x | x \in \mathbb{R} \textrm{ and } -2 \le x < 3\right\}
+      = [-2, 3)$
+  \end{itemize}
+
+  When the interval has no upper or lower bound, we use the infinity symbol
+  ($\infty$ or $-\infty$)
+
+  \begin{itemize}
+    \label{item:interval_notation_with_no_upper_or_lower_bound}
+
+    \item $\left\{x | x \in \mathbb{R} \textrm{ and } x \le 4\right\} =
+      (-\infty, 4]$
+    \item $\left\{x | x \in \mathbb{R} \textrm{ and } x \ge 4\right\} =
+      [4, -\infty)$
+  \end{itemize}
+\end{example}
+
+\begin{exc}[Solution \ref{sol:simplify_the_following_expressions}]
+  \label{exc:simplify_the_following_expressions}
+
+  Simplify the following expressions:
+  
+  \begin{itemize}
+    \label{item:simplify_the_following_expressions}
+
+    \item $(-4, \infty) \cup [-8, 3]$
+    \item $(-4, \infty) \cup (-\infty, 2]$
+    \item $(-4, \infty) \cap (-\infty, 2]$
+    \item $(-4, \infty) \cap [-10, -5]$
+  \end{itemize}
+\end{exc}
+
+\newpage

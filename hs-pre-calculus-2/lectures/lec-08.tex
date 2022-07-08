@@ -1,0 +1,150 @@
+\lesson{8}{Apr 23 2022 Sat (19:15:57)}{Sinusoidal Functions}
+\label{les_8:sinusoidal_functions}
+
+\begin{definition}[Sinusoidal Function]
+  \label{def:sinusoidal_function}
+
+  A \textbf{Sinusoidal Function} is a function of the form:
+  \[ y = A\sin(\omega(t - h)) + k \textrm{ or } y = A\cos(\omega(t - h)) + k \].
+
+  where $A, \omega, h, k \in \mathbb{R}$
+\end{definition}
+
+Based on what we know about graph transformations, we should recognize that a
+sinusoidal function is a transformation of $y = \sin(t)$ or $y = \cos(t)$.
+Consequently, sinusoidal function are waves with the same curvy shape as the
+graphs of sin and cos but with different periods, midlines, and/or amplitudes.
+
+\subsubsection*{Summary of Graph Transformation}
+\label{sub_sub_sec:summary_of_graph_transformation}
+
+Suppose that $f$ and $g$ are functions such that
+$g(t) = A \times f(\omega(t - h)) = k$ and $A, \omega, h, k \in \mathbb{R}$. In
+order to transform the graph of the function $f$ into the graph of $g$ \ldots
+
+\begin{enumerate}
+  \label{enum:steps_to_transform_f_to_g}
+
+  \item horizontally stretch/compress the graph of $f$ by a factor of
+    $\frac{1}{\mid \omega \mid}$ and, if $\omega < 0$, reflect it about the
+    $y$-axis.
+  \item shift the graph horizontally $h$ units (shift right if $h$ is positive
+    and left if $h$ is negative).
+  \item vertically stretch/compress the graph by a factor of $\mid A \mid$ and,
+    if $A < 0$, reflect it about the $t$-axis.
+  \item shift the graph vertically $k$ units (shift up if $k$ is positive and
+    down if $k$ is negative).
+\end{enumerate}
+
+\begin{note}
+  The order in which these transformations are performed matters.
+\end{note}
+
+% subsubsection summary_of_graph_transformation (end)
+
+\begin{exc}[Solution \ref{sol:transform_the_graph_of_f_to_g}]
+  \label{exc:transform_the_graph_of_f_to_g}
+
+  Describe how we can transform the graph of $f(t) = \sin(t)$ into the graph of
+  $g(t) = 2\sin(t) - 3$. State the period, midline, and amplitude of $y = g(t)$.
+\end{exc}
+
+Here's a quick summary of sinusoidal functions:
+
+\begin{theorem}
+  The graphs of the sinusoidal functions
+
+  \[ y = A\sin(\omega(t - h)) + k \textrm{ and } y = A\cos(\omega(t - h)) + k \].
+
+  where $A, \omega, h, k \in \mathbb{R}$ have the following properties:
+
+  \begin{center}
+    \textbf{period:} $\frac{2\pi}{\mid \omega \mid} \textrm{ units}$ \\
+    \textbf{midline:} $y = k$ \\
+    \textbf{amplitude:} $\mid A \mid$ units \\
+    \textbf{horizontal shift:} $h$ units \\
+    \textbf{angular frequency:} $\omega$ radians per unit of $t$
+  \end{center}
+\end{theorem}
+
+Now let's try to sketch the graph of:
+\[
+f(t) = 2\sin \left(\pi t - \frac{\pi}{4}\right) - 3
+\].
+
+To do this, we need to find the midline, amplitude, horizontal shift, and
+period. We can determine the midline by noticing that this function has a $-3$,
+which causes the sin wave to be shifted down $3$ units.
+The amplitude can be determined by the number outside the function, which will
+cause a vertical stretch. So, our amplitude is $2$ units. To find the horizontal
+shift, we first need to factor out $\pi$ from the function's input.
+\[
+f(t) = 2\sin \left(\pi \left(t - \frac{1}{4}\right)\right) - 3
+\].
+The reason we did this is because we need to find out how much we're moving left
+or right, and $-\frac{1}{4}$ indicates that we're moving $\frac{1}{4}$ units to
+the right.
+The period comes from two features of the formula. The first one is we're using
+the trig function sin, which has a period of $2\pi$ units and the second feature
+is we have $\pi$ multiplying all of the numbers in the input, which horizontally
+compresses the function.
+\[
+2\pi \times \frac{1}{\pi} = 2 \textrm{ units}
+\].
+
+Here's the final graph:
+
+\begin{figure}[htbp]
+  \centering
+
+  \begin{tikzpicture}
+    \begin{axis}[
+        my axis style,
+        width=\textwidth,
+        height=.5\textwidth,
+      ]
+      \addplot[
+        domain=-10:10,
+        blue,
+        thick,
+        <->
+      ]
+      {2*sin(pi*(deg(x)-1/4))-3};
+    \end{axis}
+  \end{tikzpicture}
+
+  \caption{}
+  \label{fig:final_graph_for_exercise}
+\end{figure}
+
+\begin{exc}[Solution \ref{sol:find_two_algebraic_rules_for_the_function_y_g_t}]
+  \label{exc:find_two_algebraic_rules_for_the_function_y_g_t}
+
+  Find two different algebraic rules (one involving sin and one involving cos)
+  for the function $y = g(t)$ graphed below:
+
+  \begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+      \begin{axis}[
+          my axis style,
+          width=\textwidth,
+          height=.5\textwidth,
+        ]
+        \addplot[
+          domain=-10:10,
+          blue,
+          thick,
+          <->
+        ]
+        {4*sin(pi/3*(deg(x)+1))-3};
+      \end{axis}
+    \end{tikzpicture}
+
+    \caption{}
+    \label{fig:algebraic_rules}
+  \end{figure}
+\end{exc}
+
+\newpage

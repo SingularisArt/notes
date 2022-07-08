@@ -1,0 +1,105 @@
+\lesson{3}{Apr 07 2022 Thu (18:43:36)}{Introduction to Periodic Functions}
+\label{les_3:introduction_to_periodic_functions}
+
+Any activity that repeats on a regular time interval can be described as
+\textit{periodic}.
+
+\begin{definition}[Periodic Function]
+  \label{def:periodic_function}
+
+  A \textbf{periodic function} whose values repeat on regular intervals. Hence,
+  $f$ is a periodic if there exists some constant $c$ such that:
+  \[ f(x + c) = f(x) \].
+
+  for all $x$ in the domain of $f$ such that $f(x + c)$ is defined.
+
+  Recall that this means that if the graph $y = f(x)$ is shifted horizontally $c$ 
+  units then it will appear unaffected.
+\end{definition}
+
+\begin{definition}[Period]
+  \label{def:period}
+
+  The \textbf{period} of a function $f$ is the smallest value $\mid c \mid$ such
+  that $f(x + t)$ for all $x$ in the domain of $f$ such that $f(x + c)$ is
+  defined.
+\end{definition}
+
+\begin{exc}[Solution \ref{sol:period}]
+  \label{exc:period}
+
+  Find the period of the function graphed below:
+
+  \begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+      \begin{axis}[
+          my axis style,
+          width=\textwidth,
+          height=.5\textwidth,
+        ]
+        \addplot[
+          domain=-10:10,
+          red,
+          thick,
+          <->
+        ]
+        {sin(deg(x*3.14))};
+      \end{axis}
+    \end{tikzpicture}
+
+    \caption{}
+    \label{fig:period}
+  \end{figure}
+\end{exc}
+
+\begin{definition}[Midline]
+  \label{def:midline}
+
+  The \textbf{midline} of a periodic function is the horizontal line midway
+  between the function's minimum and maximum values.
+
+  If $y = f(t)$ is periodic and $f_{max}$ and $f_{min}$ are the maximum and
+  minimum values of $f$, then the equation of the midline is:
+  \[ y = \frac{f_{max} - f_min}{2} \].
+\end{definition}
+
+\begin{definition}[Amplitude]
+  \label{def:amplitude}
+
+  The \textbf{amplitude} of a period function is the distance between the
+  function's maximum value and the midline (or the function's minimum value and
+  the midline).
+\end{definition}
+
+\begin{exc}[Solution \ref{sol:midline_and_amplitude}]
+  \label{exc:midline_and_amplitude}
+
+  Find the midline and amplitude of the function graphed below:
+
+  \begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}
+      \begin{axis}[
+          my axis style,
+          width=\textwidth,
+          height=.5\textwidth,
+        ]
+        \addplot[
+          domain=-10:10,
+          red,
+          thick,
+          <->
+        ]
+        {sin(deg(x*3.14))};
+      \end{axis}
+    \end{tikzpicture}
+
+    \caption{}
+    \label{fig:find_the_midline_and_period}
+  \end{figure}
+\end{exc}
+
+\newpage

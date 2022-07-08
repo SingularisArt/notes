@@ -1,0 +1,146 @@
+\lesson{9}{Apr 28 2022 Thu (09:01:09)}{Inverse Trig Functions}
+\label{les_9:inverse_trig_functions}
+
+For example, if $f$ and $f^{-1}$ are inverses of one another and if $f(a) = b$,
+then $f^{-1}(b) = a$. Inverse functions are extremely valuable since they "undo"
+one another and allow us to solve equations. For example, we can solve the
+equation $x^{3} = 10$ by using the inverse of cubing function, namely the
+cube-root of the function, to "undo" the cubing involved in the equation:
+\begin{align*}
+  x^{3} &= 10 \\
+  \sqrt[3]{x^{3}} &= \sqrt[3]{10} \\
+  x &= \sqrt[3]{10} \\
+.\end{align*}
+
+The cubing function has an inverse function because each output value
+corresponds to exactly one input value. This means that the cubing function is
+\textbf{one-to-one}, and it's only one-to-one functions whose inverses are also
+functions.
+
+Unfortunately, the trig functions aren't one-to-one so, in their natural form,
+they don't have inverse functions. For example, consider the output
+$\frac{1}{2}$ for the sin function. This output corresponds to the inputs,
+$\frac{\pi}{6}, \frac{5\pi}{6}, \frac{13\pi}{6}, \frac{17\pi}{6}$, etc.
+
+Since inverse functions can be so valuable, we really want inverse trig
+functions, so we need to restrict the domains of the functions to intervals on
+which they are on-to-one, and then we can construct inverse functions. Let's
+start by constructing the inverse of the sin function.
+
+In order to construct the inverse of the sin function, we need to restrict the
+domain to an interval on which the function is one-to-one, and we need to choose
+an interval of the domain that utilizes the entire range of the sin function,
+$[-1,1]$. We'll choose the interval $-\frac{\pi}{2},\frac{\pi}{2}$.
+
+\begin{definition}[Inverse Sin Function]
+  \label{def:inverse_sin_function}
+
+  The inverse sin function, denoted $y = \sin^{-1} (t)$, is defined by the
+  following:
+  \[
+  \textrm{if } -\frac{\pi}{2} \le y \le \frac{\pi}{2} \textrm{ and } \sin(y) = t
+  \textrm{then } y = \sin^{-1} (t)
+  \].
+
+  By construction, the range of $y = \sin^{-1} (t)$ is $[-\frac{\pi}{2},
+  \frac{\pi}{2}]$, and the domain is the same as the range of the sin function:
+  $[-1,1]$.
+
+  \begin{note}
+    The inverse sin function is often called the \textbf{arcsine function} and
+    denoted $y = \arcsin(t)$
+  \end{note}
+\end{definition}
+
+Now let's construct the inverse of the cos function. Like the sin function, the
+cos function isn't one-to-one, s we'll need to restrict its domain to construct
+the inverse cos function. The cos function is one-to-one on the interval $[0,
+\pi]$ and, on this interval, the graph utilizes the entire range of the cos
+function, $[-1,1]$. So we can define the inverse cos function on this portion of
+the cos function.
+
+\begin{definition}[Inverse Cos Function]
+  \label{def:inverse_cos_function}
+
+  The inverse cos function, denoted $y = \cos^{-1} (t)$, is defined by the
+  following:
+  \[
+  \textrm{if } 0 \le y \le \pi \textrm{ and } \cos(y) = t \textrm{ then } y =
+  \cos^{-1} (t)
+  \].
+
+  By construction, the range of $y = \cos^{-1} (t)$ is $[0, \pi]$, and the
+  domain is the same as the range of the cos function: $[-1, 1]$.
+
+  \begin{note}
+    The inverse cos function is often called the \textbf{arccosine function} and
+    denoted $y = \arccos (t)$
+  \end{note}
+\end{definition}
+
+Now let's define the inverse tan function. The tan function is one-to-one on the
+interval $(-\frac{\pi}{2},\frac{\pi}{2})$, since the period of tangent is $\pi$
+units, this interval represents a complete period of tangent. In order to
+construct the inverse tan function, we restrict the tan function to the interval
+$(-\frac{\pi}{2},\frac{\pi}{2})$.
+
+\begin{definition}[Inverse Tan Function]
+  \label{def:inverse_tan_function}
+
+  The inverse tan function, denoted $y = \tan^{-1} (t)$ is defined by the
+  following:
+  \[
+  \textrm{if } -\frac{\pi}{2} \le y \le \frac{\pi}{2} \textrm{ and } \tan(y) = t
+  \textrm{ then } y = \tan^{-1} (t)
+  \].
+
+  By construction, the range of $y = \tan^{-1} (t)$ is
+  $(-\frac{\pi}{2},\frac{\pi}{2})$, and the domain is the same as the range of
+  the tan function: $\mathbb{R}$.
+
+  \begin{note}
+    The inverse tan function is often called the \textbf{arctangent function}
+    and denoted $y = \arctan (t)$
+  \end{note}
+\end{definition}
+
+\begin{exc}[Solution \ref{sol:evaluate_invs_sin}]
+  Evaluate the following expressions:
+
+  \label{exc:evaluate_invs_sin}
+
+  \begin{itemize}
+    \label{item:evaluate_invs_sin}
+
+    \item $\sin^{-1} (-\frac{1}{2})$
+    \item $\sin (\sin^{-1} (\frac{\sqrt{3}}{2}))$
+  \end{itemize}
+\end{exc}
+
+\begin{exc}[Solution \ref{sol:evaluate_invs_cos}]
+  Evaluate the following expressions:
+
+  \label{exc:evaluate_invs_cos}
+
+  \begin{itemize}
+    \label{item:evaluate_invs_cos}
+
+    \item $\cos^{-1} (0)$
+    \item $\cos (\cos^{-1} (\frac{1}{2}))$
+  \end{itemize}
+\end{exc}
+
+\begin{exc}[Solution \ref{sol:evaluate_invs_tan}]
+  Evaluate the following expressions:
+
+  \label{exc:evaluate_invs_tan}
+
+  \begin{itemize}
+    \label{item:evaluate_invs_tan}
+
+    \item $\tan^{-1} (1)$
+    \item $\tan (\tan^{-1} (-\sqrt{3}))$
+  \end{itemize}
+\end{exc}
+
+\newpage

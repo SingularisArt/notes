@@ -1,0 +1,156 @@
+\lesson{6}{Apr 16 2022 Sat (18:04:27)}{Part 3: Intro to Trig Functions}
+\label{les_6:part_3_intro_to_trig_functions}
+
+Now let's determine the sin and cos of some important angles, namely,
+$30^{\circ}$, $45^{\circ}$, and $60^{\circ}$ ($\frac{\pi}{6}$, $\frac{\pi}{4}$,
+and $\frac{\pi}{3}$ radians). We focus on these angles since we can use some
+basic geometry to easily find their sin and cos values -- but we cannot easily
+find the sin and cos of most other angles.
+
+Let's start by finding the sin and cos of $30^{\circ}$ ($\frac{\pi}{6}$
+radians). The fact about triangles is the sum of all the angles is equal to
+$180^{\circ}$. So, we get:
+\[ 30^{\circ} + 90^{\circ} + c = 180^{\circ} \implies c = 60 \].
+
+So, here's how our triangle will look like:
+
+\begin{figure}[htpb]
+  \centering
+
+  \begin{tikzpicture}
+    \draw   (0,0) coordinate[label=below:$A$] (a) --
+      (4,0) coordinate[label=below:$C$] (c) --
+      (4,4) coordinate[label=above:$B$] (b) -- cycle;
+
+		\tkzMarkAngle[mark=none](c,a,b);
+		\tkzLabelAngle[pos=0.6](c,a,b){$30^{\circ}$};
+		\tkzMarkAngle[mark=none](a,b,c);
+		\tkzLabelAngle[pos=0.6](a,b,c){$60^{\circ}$};
+
+    \draw (4,0) rectangle (3.5,0.5);
+  \end{tikzpicture}
+
+  \caption{Our Original Triangle}
+  \label{fig:30_60_90_triangle}
+\end{figure}
+
+Let's take this triangle, flip it, and put it right next to the original. Here's
+how it looks after we did this:
+
+\begin{figure}[htpb]
+  \centering
+
+  \begin{tikzpicture}
+    \draw   (0,0) coordinate (a) --
+      (4,0) coordinate (c) --
+      (4,4) coordinate (b) -- cycle;
+    \draw   (0,0) coordinate (A) --
+      (4,0) coordinate (C) --
+      (4,-4) coordinate (B) -- cycle;
+
+		\tkzMarkAngle[mark=none](c,a,b);
+		\tkzLabelAngle[pos=0.6](c,a,b){$30^{\circ}$};
+		\tkzMarkAngle[mark=none](a,b,c);
+		\tkzLabelAngle[pos=0.6](a,b,c){$60^{\circ}$};
+		\tkzMarkAngle[mark=none](B,A,C);
+		\tkzLabelAngle[pos=0.6](B,A,C){$30^{\circ}$};
+		\tkzMarkAngle[mark=none](C,B,A);
+		\tkzLabelAngle[pos=0.6](C,B,A){$60^{\circ}$};
+
+    \node at (1.5,2) {$1$};
+    \node at (1.5,-2) {$1$};
+    
+    \node at (4.5,2) {$\frac{1}{2}$};
+    \node at (4.5,-2) {$\frac{1}{2}$};
+
+    \draw (4,0) rectangle (3.5,0.5);
+    \draw (4,0) rectangle (3.5,-0.5);
+  \end{tikzpicture}
+
+  \caption{An isosceles triangle}
+  \label{fig:30_deg_triangle_after_transformation}
+\end{figure}
+
+\newpage
+
+This means that $b = \frac{1}{2}$ and from this, we can use the Pythagorean
+Theorem to find the value for $a$:
+
+\[ \left(\frac{1}{2}\right)^{2} + a^{2} = 1^{2} \implies a = \frac{\sqrt{3}}{2} \].
+
+Here's the final triangle:
+
+\begin{figure}[htpb]
+  \centering
+
+  \begin{tikzpicture}
+    \draw   (0,0) coordinate (a) --
+      (4,0) coordinate (c) --
+      (4,4) coordinate (b) -- cycle;
+
+		\tkzMarkAngle[mark=none](c,a,b);
+		\tkzLabelAngle[pos=0.6](c,a,b){$30^{\circ}$};
+		\tkzMarkAngle[mark=none](a,b,c);
+		\tkzLabelAngle[pos=0.6](a,b,c){$60^{\circ}$};
+
+    \node at (1.5,2) {$1$};
+    \node at (4.5,2) {$\frac{1}{2}$};
+    \node at (2,-0.5) {$\frac{\sqrt{3}}{2}$};
+
+    \draw (4,0) rectangle (3.5,0.5);
+  \end{tikzpicture}
+
+  \caption{Triangle with all sides and angles}
+  \label{fig:final_triangle}
+\end{figure}
+
+\newpage
+
+\[ P = (\cos (30^{\circ}), \sin (30^{\circ})) = \left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right) \].
+
+So, using the definition of sin and cos, here's our final answer:
+\[ P = \left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right) \implies\qquad\sin (30^{\circ}) = \frac{1}{2} \textrm{, } \cos (30^{\circ}) = \frac{\sqrt{3}}{2} \].
+
+Here's a table of the most common values for sin and cos:
+
+\begin{table}[htpb]
+  \label{tab:common_values_for_sin_and_cos}
+  \centering
+
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    $\theta$ (degrees) & $30^{\circ}$ & $45^{\circ}$ & $60^{\circ}$ \\
+    \hline
+    $\theta$ (radians) & $\frac{\pi}{6}$ & $\frac{\pi}{4}$ & $\frac{\pi}{3}$ \\
+    \hline
+    $\cos (\theta)$ & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ \\
+    \hline
+    $\sin (\theta)$ & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ \\
+    \hline
+  \end{tabular}
+
+  \caption{Common Values for Sin and Cos}
+\end{table}
+
+\begin{exc}[Solution \ref{sol:find_tan_sec_csc_cot_1}]
+  \label{exc:find_tan_sec_csc_cot_1}
+
+  Find $\tan \left(\frac{\pi}{6}\right)$, $\csc \left(\frac{\pi}{6}\right)$,
+  $\csc \left(\frac{\pi}{6}\right)$, and $\cot \left(\frac{\pi}{6}\right)$.
+\end{exc}
+
+\begin{exc}[Solution \ref{sol:find_tan_sec_csc_cot_2}]
+  \label{exc:find_tan_sec_csc_cot_2}
+
+  Find $\tan \left(\frac{\pi}{4}\right)$, $\csc \left(\frac{\pi}{4}\right)$,
+  $\csc \left(\frac{\pi}{4}\right)$, and $\cot \left(\frac{\pi}{4}\right)$.
+\end{exc}
+
+\begin{exc}[Solution \ref{sol:find_tan_sec_csc_cot_3}]
+  \label{exc:find_tan_sec_csc_cot_3}
+
+  Find $\tan \left(\frac{\pi}{3}\right)$, $\csc \left(\frac{\pi}{3}\right)$,
+  $\csc \left(\frac{\pi}{3}\right)$, and $\cot \left(\frac{\pi}{3}\right)$.
+\end{exc}
+
+\newpage
